@@ -1,0 +1,27 @@
+
+/* Class = "IBUILabel"; text = "Ready"; ObjectID = "4Md-xA-Hzk"; */
+"4Md-xA-Hzk.text" = "Ready";
+
+/* Class = "IBUIButton"; normalTitle = "About"; ObjectID = "OR6-2w-Lkr"; */
+"OR6-2w-Lkr.normalTitle" = "About";
+
+/* Class = "IBUILabel"; text = "MayDay"; ObjectID = "TSW-X5-H0b"; */
+"TSW-X5-H0b.text" = "MayDay";
+
+/* Class = "IBUILabel"; text = "About"; ObjectID = "b2S-mY-2MP"; */
+"b2S-mY-2MP.text" = "About";
+
+/* Class = "IBUITextView"; text = "In an emergency press power 5 times.  But first check your MayDay Settings to ensure your alerts are delivered to the correct people."; ObjectID = "bC9-uv-efW"; */
+"bC9-uv-efW.text" = "In an emergency press power 5 times.  But first check your MayDay Settings to ensure your alerts are delivered to the correct people.";
+
+/* Class = "IBUIButton"; normalTitle = "Back"; ObjectID = "bWu-di-hVP"; */
+"bWu-di-hVP.normalTitle" = "Back";
+
+/* Class = "IBUILabel"; text = "Settings"; ObjectID = "gtd-gC-i02"; */
+"gtd-gC-i02.text" = "Settings";
+
+/* Class = "IBUIButton"; normalTitle = "Back"; ObjectID = "u2D-uw-a4n"; */
+"u2D-uw-a4n.normalTitle" = "Back";
+
+/* Class = "IBUIButton"; normalTitle = "Settings"; ObjectID = "ved-Dl-NPr"; */
+"ved-Dl-NPr.normalTitle" = "Settings";

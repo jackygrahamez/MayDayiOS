@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D005F5E1AABBD5F00D75004 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F5D1AABBD5F00D75004 /* InterfaceController.m */; };
+		8D005F611AABBD5F00D75004 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F601AABBD5F00D75004 /* NotificationController.m */; };
+		8D005F641AABBD5F00D75004 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F631AABBD5F00D75004 /* GlanceController.m */; };
+		8D005F661AABBD5F00D75004 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D005F651AABBD5F00D75004 /* Images.xcassets */; };
+		8D005F6A1AABBD5F00D75004 /* MayDay WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 8D005F691AABBD5F00D75004 /* MayDay WatchKit App.app */; };
+		8D005F721AABBD5F00D75004 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D005F701AABBD5F00D75004 /* Interface.storyboard */; };
+		8D005F741AABBD5F00D75004 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D005F731AABBD5F00D75004 /* Images.xcassets */; };
+		8D005F771AABBD5F00D75004 /* MayDay WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8D005F571AABBD5F00D75004 /* MayDay WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8D115E531AAABDFE0034F4CE /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D115E521AAABDFE0034F4CE /* warning.png */; };
 		8D3019D91AA40596000C4FF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3019D81AA40596000C4FF7 /* main.m */; };
 		8D3019DC1AA40597000C4FF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3019DB1AA40597000C4FF7 /* AppDelegate.m */; };
 		8D3019DF1AA40597000C4FF7 /* MayDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D3019DD1AA40597000C4FF7 /* MayDay.xcdatamodeld */; };
 		8D3019E21AA40597000C4FF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3019E11AA40597000C4FF7 /* ViewController.m */; };
-		8D3019E51AA40597000C4FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3019E31AA40597000C4FF7 /* Main.storyboard */; };
 		8D3019E71AA40597000C4FF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3019E61AA40597000C4FF7 /* Images.xcassets */; };
 		8D3019EA1AA40597000C4FF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3019E81AA40597000C4FF7 /* LaunchScreen.xib */; };
 		8D3019F61AA40598000C4FF7 /* MayDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3019F51AA40598000C4FF7 /* MayDayTests.m */; };
@@ -28,9 +36,24 @@
 		8D301A1B1AA419B5000C4FF7 /* mobile_fr.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D301A0F1AA419B4000C4FF7 /* mobile_fr.json */; };
 		8D301A1C1AA419B5000C4FF7 /* mobile_ph.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D301A101AA419B4000C4FF7 /* mobile_ph.json */; };
 		8D301A1D1AA419B5000C4FF7 /* mobile_pt.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D301A111AA419B4000C4FF7 /* mobile_pt.json */; };
+		8D3FD4831AAD1C4A00E8A5F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3FD4811AAD1C4A00E8A5F5 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8D005F6B1AABBD5F00D75004 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D3019CB1AA40596000C4FF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D005F681AABBD5F00D75004;
+			remoteInfo = "MayDay WatchKit App";
+		};
+		8D005F751AABBD5F00D75004 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D3019CB1AA40596000C4FF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D005F561AABBD5F00D75004;
+			remoteInfo = "MayDay WatchKit Extension";
+		};
 		8D3019F01AA40597000C4FF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8D3019CB1AA40596000C4FF7 /* Project object */;
@@ -40,7 +63,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8D005F7E1AABBD5F00D75004 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8D005F771AABBD5F00D75004 /* MayDay WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8D005F571AABBD5F00D75004 /* MayDay WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MayDay WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D005F5A1AABBD5F00D75004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D005F5B1AABBD5F00D75004 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8D005F5C1AABBD5F00D75004 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		8D005F5D1AABBD5F00D75004 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		8D005F5F1AABBD5F00D75004 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		8D005F601AABBD5F00D75004 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		8D005F621AABBD5F00D75004 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		8D005F631AABBD5F00D75004 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		8D005F651AABBD5F00D75004 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8D005F691AABBD5F00D75004 /* MayDay WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MayDay WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D005F6F1AABBD5F00D75004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D005F711AABBD5F00D75004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8D005F731AABBD5F00D75004 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8D115E521AAABDFE0034F4CE /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warning.png; sourceTree = "<group>"; };
 		8D3019D31AA40596000C4FF7 /* MayDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MayDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3019D71AA40596000C4FF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D3019D81AA40596000C4FF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,7 +101,6 @@
 		8D3019DE1AA40597000C4FF7 /* MayDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MayDay.xcdatamodel; sourceTree = "<group>"; };
 		8D3019E01AA40597000C4FF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8D3019E11AA40597000C4FF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8D3019E41AA40597000C4FF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D3019E61AA40597000C4FF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8D3019E91AA40597000C4FF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8D3019EF1AA40597000C4FF7 /* MayDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MayDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,10 +120,17 @@
 		8D301A0F1AA419B4000C4FF7 /* mobile_fr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_fr.json; sourceTree = "<group>"; };
 		8D301A101AA419B4000C4FF7 /* mobile_ph.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_ph.json; sourceTree = "<group>"; };
 		8D301A111AA419B4000C4FF7 /* mobile_pt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_pt.json; sourceTree = "<group>"; };
-		8D301A1F1AA423F2000C4FF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		8D3FD4821AAD1C4A00E8A5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8D005F541AABBD5F00D75004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D3019D01AA40596000C4FF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,11 +148,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D005F581AABBD5F00D75004 /* MayDay WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8D005F5C1AABBD5F00D75004 /* InterfaceController.h */,
+				8D005F5D1AABBD5F00D75004 /* InterfaceController.m */,
+				8D005F5F1AABBD5F00D75004 /* NotificationController.h */,
+				8D005F601AABBD5F00D75004 /* NotificationController.m */,
+				8D005F621AABBD5F00D75004 /* GlanceController.h */,
+				8D005F631AABBD5F00D75004 /* GlanceController.m */,
+				8D005F651AABBD5F00D75004 /* Images.xcassets */,
+				8D005F591AABBD5F00D75004 /* Supporting Files */,
+			);
+			path = "MayDay WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		8D005F591AABBD5F00D75004 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D005F5A1AABBD5F00D75004 /* Info.plist */,
+				8D005F5B1AABBD5F00D75004 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D005F6D1AABBD5F00D75004 /* MayDay WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				8D005F701AABBD5F00D75004 /* Interface.storyboard */,
+				8D005F731AABBD5F00D75004 /* Images.xcassets */,
+				8D005F6E1AABBD5F00D75004 /* Supporting Files */,
+			);
+			path = "MayDay WatchKit App";
+			sourceTree = "<group>";
+		};
+		8D005F6E1AABBD5F00D75004 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D005F6F1AABBD5F00D75004 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8D3019CA1AA40596000C4FF7 = {
 			isa = PBXGroup;
 			children = (
 				8D3019D51AA40596000C4FF7 /* MayDay */,
 				8D3019F21AA40597000C4FF7 /* MayDayTests */,
+				8D005F581AABBD5F00D75004 /* MayDay WatchKit Extension */,
+				8D005F6D1AABBD5F00D75004 /* MayDay WatchKit App */,
 				8D3019D41AA40596000C4FF7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +206,8 @@
 			children = (
 				8D3019D31AA40596000C4FF7 /* MayDay.app */,
 				8D3019EF1AA40597000C4FF7 /* MayDayTests.xctest */,
+				8D005F571AABBD5F00D75004 /* MayDay WatchKit Extension.appex */,
+				8D005F691AABBD5F00D75004 /* MayDay WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,12 +215,12 @@
 		8D3019D51AA40596000C4FF7 /* MayDay */ = {
 			isa = PBXGroup;
 			children = (
+				8D3FD4811AAD1C4A00E8A5F5 /* Main.storyboard */,
 				8D3019FF1AA40A35000C4FF7 /* Resources */,
 				8D3019DA1AA40596000C4FF7 /* AppDelegate.h */,
 				8D3019DB1AA40597000C4FF7 /* AppDelegate.m */,
 				8D3019E01AA40597000C4FF7 /* ViewController.h */,
 				8D3019E11AA40597000C4FF7 /* ViewController.m */,
-				8D3019E31AA40597000C4FF7 /* Main.storyboard */,
 				8D3019E61AA40597000C4FF7 /* Images.xcassets */,
 				8D3019E81AA40597000C4FF7 /* LaunchScreen.xib */,
 				8D3019DD1AA40597000C4FF7 /* MayDay.xcdatamodeld */,
@@ -172,6 +276,7 @@
 		8D301A011AA40A49000C4FF7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8D115E521AAABDFE0034F4CE /* warning.png */,
 				8D301A031AA413D0000C4FF7 /* arrow_next.png */,
 			);
 			name = Images;
@@ -199,6 +304,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8D005F561AABBD5F00D75004 /* MayDay WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D005F7D1AABBD5F00D75004 /* Build configuration list for PBXNativeTarget "MayDay WatchKit Extension" */;
+			buildPhases = (
+				8D005F531AABBD5F00D75004 /* Sources */,
+				8D005F541AABBD5F00D75004 /* Frameworks */,
+				8D005F551AABBD5F00D75004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D005F6C1AABBD5F00D75004 /* PBXTargetDependency */,
+			);
+			name = "MayDay WatchKit Extension";
+			productName = "MayDay WatchKit Extension";
+			productReference = 8D005F571AABBD5F00D75004 /* MayDay WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		8D005F681AABBD5F00D75004 /* MayDay WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D005F7C1AABBD5F00D75004 /* Build configuration list for PBXNativeTarget "MayDay WatchKit App" */;
+			buildPhases = (
+				8D005F671AABBD5F00D75004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MayDay WatchKit App";
+			productName = "MayDay WatchKit App";
+			productReference = 8D005F691AABBD5F00D75004 /* MayDay WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		8D3019D21AA40596000C4FF7 /* MayDay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D3019F91AA40598000C4FF7 /* Build configuration list for PBXNativeTarget "MayDay" */;
@@ -206,10 +344,12 @@
 				8D3019CF1AA40596000C4FF7 /* Sources */,
 				8D3019D01AA40596000C4FF7 /* Frameworks */,
 				8D3019D11AA40596000C4FF7 /* Resources */,
+				8D005F7E1AABBD5F00D75004 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8D005F761AABBD5F00D75004 /* PBXTargetDependency */,
 			);
 			name = MayDay;
 			productName = MayDay;
@@ -243,6 +383,12 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "John Shultz";
 				TargetAttributes = {
+					8D005F561AABBD5F00D75004 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					8D005F681AABBD5F00D75004 = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					8D3019D21AA40596000C4FF7 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -267,19 +413,39 @@
 			targets = (
 				8D3019D21AA40596000C4FF7 /* MayDay */,
 				8D3019EE1AA40597000C4FF7 /* MayDayTests */,
+				8D005F561AABBD5F00D75004 /* MayDay WatchKit Extension */,
+				8D005F681AABBD5F00D75004 /* MayDay WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8D005F551AABBD5F00D75004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D005F661AABBD5F00D75004 /* Images.xcassets in Resources */,
+				8D005F6A1AABBD5F00D75004 /* MayDay WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D005F671AABBD5F00D75004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D005F721AABBD5F00D75004 /* Interface.storyboard in Resources */,
+				8D005F741AABBD5F00D75004 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D3019D11AA40596000C4FF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D115E531AAABDFE0034F4CE /* warning.png in Resources */,
 				8D301A191AA419B5000C4FF7 /* mobile_en.json in Resources */,
 				8D301A1D1AA419B5000C4FF7 /* mobile_pt.json in Resources */,
 				8D301A181AA419B5000C4FF7 /* mobile_de.json in Resources */,
-				8D3019E51AA40597000C4FF7 /* Main.storyboard in Resources */,
 				8D301A1C1AA419B5000C4FF7 /* mobile_ph.json in Resources */,
 				8D301A121AA419B5000C4FF7 /* help_de.json in Resources */,
 				8D3019EA1AA40597000C4FF7 /* LaunchScreen.xib in Resources */,
@@ -290,6 +456,7 @@
 				8D301A171AA419B5000C4FF7 /* help_pt.json in Resources */,
 				8D301A161AA419B5000C4FF7 /* help_ph.json in Resources */,
 				8D301A1B1AA419B5000C4FF7 /* mobile_fr.json in Resources */,
+				8D3FD4831AAD1C4A00E8A5F5 /* Main.storyboard in Resources */,
 				8D301A141AA419B5000C4FF7 /* help_es.json in Resources */,
 				8D3019E71AA40597000C4FF7 /* Images.xcassets in Resources */,
 			);
@@ -305,6 +472,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8D005F531AABBD5F00D75004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D005F611AABBD5F00D75004 /* NotificationController.m in Sources */,
+				8D005F5E1AABBD5F00D75004 /* InterfaceController.m in Sources */,
+				8D005F641AABBD5F00D75004 /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D3019CF1AA40596000C4FF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +504,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8D005F6C1AABBD5F00D75004 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D005F681AABBD5F00D75004 /* MayDay WatchKit App */;
+			targetProxy = 8D005F6B1AABBD5F00D75004 /* PBXContainerItemProxy */;
+		};
+		8D005F761AABBD5F00D75004 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D005F561AABBD5F00D75004 /* MayDay WatchKit Extension */;
+			targetProxy = 8D005F751AABBD5F00D75004 /* PBXContainerItemProxy */;
+		};
 		8D3019F11AA40597000C4FF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D3019D21AA40596000C4FF7 /* MayDay */;
@@ -335,13 +522,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8D3019E31AA40597000C4FF7 /* Main.storyboard */ = {
+		8D005F701AABBD5F00D75004 /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8D3019E41AA40597000C4FF7 /* Base */,
-				8D301A1F1AA423F2000C4FF7 /* en */,
+				8D005F711AABBD5F00D75004 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		8D3019E81AA40597000C4FF7 /* LaunchScreen.xib */ = {
@@ -352,9 +538,81 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
+		8D3FD4811AAD1C4A00E8A5F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D3FD4821AAD1C4A00E8A5F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8D005F781AABBD5F00D75004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MayDay WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8D005F791AABBD5F00D75004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = "MayDay WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8D005F7A1AABBD5F00D75004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = MayDay_WatchKit_Extension;
+				INFOPLIST_FILE = "MayDay WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		8D005F7B1AABBD5F00D75004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IBSC_MODULE = MayDay_WatchKit_Extension;
+				INFOPLIST_FILE = "MayDay WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		8D3019F71AA40598000C4FF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -490,6 +748,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8D005F7C1AABBD5F00D75004 /* Build configuration list for PBXNativeTarget "MayDay WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D005F7A1AABBD5F00D75004 /* Debug */,
+				8D005F7B1AABBD5F00D75004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D005F7D1AABBD5F00D75004 /* Build configuration list for PBXNativeTarget "MayDay WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D005F781AABBD5F00D75004 /* Debug */,
+				8D005F791AABBD5F00D75004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8D3019CE1AA40596000C4FF7 /* Build configuration list for PBXProject "MayDay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -506,6 +782,7 @@
 				8D3019FB1AA40598000C4FF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D3019FC1AA40598000C4FF7 /* Build configuration list for PBXNativeTarget "MayDayTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +791,7 @@
 				8D3019FE1AA40598000C4FF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

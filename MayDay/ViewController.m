@@ -13,10 +13,25 @@
 @end
 
 @implementation ViewController
+-(IBAction)saveMessage:(id)sender
+{
+    NSString *savestring = message.text;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:savestring forKey:@"messagestring"];
+    [defaults synchronize];
+}
+-(IBAction)loadMessage:(id)sender
+{
 
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *loadstring = [defaults objectForKey:@"messagestring"];
+    [message setText:loadstring];
+    [label setText:loadstring];
 }
 
 - (void)didReceiveMemoryWarning {

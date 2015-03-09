@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController {
+    IBOutlet UILabel *label;
+    IBOutlet UITextView *message;
+}
+-(IBAction)saveMessage:(id)sender;
+-(IBAction)loadMessage:(id)sender;
 
 @end
 

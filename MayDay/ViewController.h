@@ -11,9 +11,12 @@
 @interface ViewController : UIViewController {
     IBOutlet UILabel *label;
     IBOutlet UITextView *message;
+    IBOutlet UITextField *firstNumber;
+    IBOutlet UIPickerView *picker;
 }
 -(IBAction)saveMessage:(id)sender;
 -(IBAction)loadMessage:(id)sender;
+-(IBAction)controlTextDidChange:(id)sender;
 
 @end
 

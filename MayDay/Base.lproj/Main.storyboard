@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="moms_typewriter.ttf">
@@ -32,13 +32,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MayDay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSW-X5-H0b">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="37" text="MayDay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSW-X5-H0b">
                                 <rect key="frame" x="108" y="28" width="158" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="Vc3-RN-LVL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OR6-2w-Lkr">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OR6-2w-Lkr">
                                 <rect key="frame" x="16" y="343" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="About">
@@ -49,8 +52,41 @@
                                     <segue destination="Azq-cY-ZlW" kind="showDetail" id="psh-yo-dXR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ved-Dl-NPr">
-                                <rect key="frame" x="16" y="295" width="382" height="50"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6AP-gU-Ea7">
+                                <rect key="frame" x="16" y="80" width="343" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Py-DHf">
+                                <rect key="frame" x="16" y="118" width="343" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Qc-6a-tNd">
+                                <rect key="frame" x="16" y="341" width="343" height="1"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yic-lX-khO">
+                                <rect key="frame" x="16" y="391" width="343" height="1"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Md-xA-Hzk">
+                                <rect key="frame" x="135" y="89" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC9-uv-efW">
+                                <rect key="frame" x="16" y="159" width="343" height="91"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="c0J-LD-17O"/>
+                                </constraints>
+                                <string key="text">In an emergency press power 5 times.  But first check your MayDay Settings to ensure your alerts are delivered to the correct people.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ved-Dl-NPr">
+                                <rect key="frame" x="16" y="283" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,44 +96,21 @@
                                     <segue destination="Ic7-CG-rQ4" kind="showDetail" id="Yen-mN-ISt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="RBf-4G-WQr">
-                                <rect key="frame" x="329" y="303" width="30" height="30"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kd2-HL-iav">
-                                <rect key="frame" x="329" y="353" width="30" height="30"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6AP-gU-Ea7">
-                                <rect key="frame" x="16" y="80" width="343" height="1"/>
-                                <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Py-DHf">
-                                <rect key="frame" x="16" y="118" width="343" height="1"/>
-                                <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Qc-6a-tNd">
-                                <rect key="frame" x="16" y="341" width="343" height="1"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yic-lX-khO">
-                                <rect key="frame" x="16" y="391" width="343" height="1"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Md-xA-Hzk">
-                                <rect key="frame" x="135" y="89" width="105" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC9-uv-efW">
-                                <rect key="frame" x="16" y="159" width="343" height="91"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">In an emergency press power 5 times.  But first check your MayDay Settings to ensure your alerts are delivered to the correct people.</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="0Qc-6a-tNd" secondAttribute="centerX" id="IYb-AI-Mct"/>
+                            <constraint firstAttribute="centerX" secondItem="yic-lX-khO" secondAttribute="centerX" id="U3L-Aj-ldk"/>
+                            <constraint firstAttribute="centerX" secondItem="TSW-X5-H0b" secondAttribute="centerX" id="ZkL-AQ-M4D"/>
+                            <constraint firstAttribute="centerX" secondItem="4Md-xA-Hzk" secondAttribute="centerX" id="e4t-21-VDN"/>
+                            <constraint firstAttribute="centerX" secondItem="bC9-uv-efW" secondAttribute="centerX" id="eIl-WG-zKv"/>
+                            <constraint firstAttribute="centerX" secondItem="TSW-X5-H0b" secondAttribute="centerX" id="f69-mC-aPs"/>
+                            <constraint firstAttribute="centerX" secondItem="TSW-X5-H0b" secondAttribute="centerX" id="iEl-1O-cBG"/>
+                            <constraint firstAttribute="centerX" secondItem="6AP-gU-Ea7" secondAttribute="centerX" id="lQm-WZ-hil"/>
+                            <constraint firstAttribute="centerX" secondItem="K7D-Py-DHf" secondAttribute="centerX" id="o8D-ql-jsM"/>
+                            <constraint firstAttribute="centerX" secondItem="ved-Dl-NPr" secondAttribute="centerX" id="rck-dk-Hin"/>
+                            <constraint firstAttribute="centerX" secondItem="OR6-2w-Lkr" secondAttribute="centerX" id="vNA-2f-nyu"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -852,11 +865,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJW-TN-tJt">
                                 <rect key="frame" x="26" y="443" width="323" height="204"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Security Tips
+                                <string key="text">Security Tips
 • Think about who can practically assist you - there is no point someone knowing you are in trouble if they cannot help. 
 • Make a plan with your chosen contacts so that they are prepared to act fast. 
 • Be aware of the risks - how might your contact be put at risk?
-</mutableString>
+</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -948,11 +961,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifu-5B-3Oj">
                                 <rect key="frame" x="26" y="443" width="323" height="204"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Security Tips
+                                <string key="text">Security Tips
 • Think about who can practically assist you - there is no point someone knowing you are in trouble if they cannot help. 
 • Make a plan with your chosen contacts so that they are prepared to act fast. 
 • Be aware of the risks - how might your contact be put at risk?
-</mutableString>
+</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -977,7 +990,7 @@
         <image name="warning.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OZt-D1-eYe"/>
-        <segue reference="Z5W-Zy-zTa"/>
+        <segue reference="Yen-mN-ISt"/>
+        <segue reference="w8c-J9-047"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -29,12 +29,12 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1242x2208_iOS.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hqn-BN-3C4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="Hqn-BN-3C4">
+                                <rect key="frame" x="0.0" y="0.0" width="1242" height="2208"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="37" text="MayDay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSW-X5-H0b">
                                 <rect key="frame" x="108" y="28" width="158" height="37"/>
@@ -101,6 +101,7 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Hqn-BN-3C4" secondAttribute="centerY" id="0fj-Vb-MQ6"/>
                             <constraint firstItem="K7D-Py-DHf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="4Ur-UO-s2c"/>
                             <constraint firstItem="6AP-gU-Ea7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="8Ya-5g-EC1"/>
                             <constraint firstItem="0Qc-6a-tNd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="8zm-eD-gz9"/>
@@ -113,6 +114,7 @@
                             <constraint firstItem="OR6-2w-Lkr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="O1e-AV-fRW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TSW-X5-H0b" secondAttribute="trailing" constant="10" id="Tc4-bo-562"/>
                             <constraint firstAttribute="centerX" secondItem="yic-lX-khO" secondAttribute="centerX" id="U3L-Aj-ldk"/>
+                            <constraint firstAttribute="centerX" secondItem="Hqn-BN-3C4" secondAttribute="centerX" id="XJc-W8-hcQ"/>
                             <constraint firstItem="OR6-2w-Lkr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Xxt-9a-KGf"/>
                             <constraint firstItem="6AP-gU-Ea7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="Z5X-ca-6bF"/>
                             <constraint firstAttribute="centerX" secondItem="TSW-X5-H0b" secondAttribute="centerX" id="ZkL-AQ-M4D"/>
@@ -1053,13 +1055,14 @@
     </scenes>
     <resources>
         <image name="1242x2208_iOS.jpg" width="1242" height="2208"/>
+        <image name="Texture" width="768" height="1024"/>
         <image name="arrow_next.png" width="200" height="200"/>
         <image name="socialperson.png" width="48" height="48"/>
         <image name="state_settings_480x50.jpg" width="480" height="50"/>
         <image name="warning.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OZt-D1-eYe"/>
+        <segue reference="Yen-mN-ISt"/>
         <segue reference="w8c-J9-047"/>
     </inferredMetricsTieBreakers>
 </document>

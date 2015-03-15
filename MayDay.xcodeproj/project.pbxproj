@@ -61,6 +61,7 @@
 		8D99C6E11AB50CDD00E0ACB0 /* 1242x2208_iOS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D99C6DA1AB50CDD00E0ACB0 /* 1242x2208_iOS.jpg */; };
 		8D99C6E21AB50CDD00E0ACB0 /* 1536x2048_iOS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D99C6DB1AB50CDD00E0ACB0 /* 1536x2048_iOS.jpg */; };
 		8D99C6E41AB5144F00E0ACB0 /* state_settings_480x50.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D99C6E31AB5144F00E0ACB0 /* state_settings_480x50.jpg */; };
+		8D99C6E51AB520F700E0ACB0 /* moms_typewriter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D301A021AA40FD4000C4FF7 /* moms_typewriter.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -514,6 +515,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D99C6E51AB520F700E0ACB0 /* moms_typewriter.ttf in Resources */,
 				8D99C6DF1AB50CDD00E0ACB0 /* 750x1334_iOS.jpg in Resources */,
 				8D99C6E01AB50CDD00E0ACB0 /* 768x1024_iOS.jpg in Resources */,
 				8D3FD4951AAD3A3200E8A5F5 /* circle_drop_shadow.png in Resources */,

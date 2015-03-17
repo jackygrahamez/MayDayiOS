@@ -50,11 +50,11 @@
                                 <rect key="frame" x="16" y="118" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Qc-6a-tNd">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Qc-6a-tNd">
                                 <rect key="frame" x="16" y="341" width="288" height="1"/>
                                 <color key="backgroundColor" red="0.98099320339999996" green="1" blue="0.97473730030000005" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yic-lX-khO">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yic-lX-khO">
                                 <rect key="frame" x="16" y="392" width="288" height="1"/>
                                 <color key="backgroundColor" red="0.98099320339999996" green="1" blue="0.97473730030000005" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -71,14 +71,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC9-uv-efW">
-                                <rect key="frame" x="16" y="159" width="288" height="91"/>
-                                <string key="text">In an emergency press power 5 times.  But first check your MayDay Settings to ensure your alerts are delivered to the correct people.</string>
-                                <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ved-Dl-NPr">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ved-Dl-NPr">
                                 <rect key="frame" x="16" y="291" width="288" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
@@ -90,7 +83,7 @@
                                     <segue destination="Ic7-CG-rQ4" kind="showDetail" id="Yen-mN-ISt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-yi-51F">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-yi-51F">
                                 <rect key="frame" x="16" y="342" width="288" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
@@ -102,12 +95,12 @@
                                     <segue destination="jS4-0d-g31" kind="showDetail" id="YeA-co-IE3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYS-Sm-TvS">
-                                <rect key="frame" x="16" y="432" width="288" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H42-Jx-TZe">
+                                <rect key="frame" x="16" y="127" width="288" height="120"/>
                                 <attributedString key="attributedText">
                                     <fragment content="In an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.">
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="35.450000000000003"/>
                                             <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,7 +111,7 @@
 First check your MayDay settings to ensure your alerts are delivered to the correct people.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="35.450000000000003"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
@@ -130,10 +123,20 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="K7D-Py-DHf" secondAttribute="centerX" id="3tD-bK-3Z9"/>
+                            <constraint firstAttribute="centerX" secondItem="ved-Dl-NPr" secondAttribute="centerX" id="A8X-eq-vCs"/>
+                            <constraint firstItem="n8Y-yi-51F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Cdq-IG-WtL"/>
+                            <constraint firstAttribute="centerX" secondItem="n8Y-yi-51F" secondAttribute="centerX" id="QeB-rQ-xlb"/>
+                            <constraint firstItem="0Qc-6a-tNd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="XYu-qo-cVg"/>
                             <constraint firstAttribute="centerX" secondItem="4Md-xA-Hzk" secondAttribute="centerX" id="bLw-Ka-oay"/>
                             <constraint firstItem="TSW-X5-H0b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="bfo-f8-3EY"/>
                             <constraint firstAttribute="centerX" secondItem="6AP-gU-Ea7" secondAttribute="centerX" id="byf-BC-kxa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TSW-X5-H0b" secondAttribute="trailing" constant="10" id="cGc-QS-eXn"/>
+                            <constraint firstItem="H42-Jx-TZe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="dwx-xR-iKI"/>
+                            <constraint firstAttribute="centerX" secondItem="0Qc-6a-tNd" secondAttribute="centerX" id="ePL-nY-raa"/>
+                            <constraint firstItem="yic-lX-khO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="ief-ru-dg4"/>
+                            <constraint firstItem="H42-Jx-TZe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="mIm-Id-xzL"/>
+                            <constraint firstItem="ved-Dl-NPr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="oNU-oO-7Yx"/>
+                            <constraint firstAttribute="centerX" secondItem="yic-lX-khO" secondAttribute="centerX" id="rAu-mP-TNY"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>

@@ -357,7 +357,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="BYZ-38-t0r" kind="showDetail" id="w8c-J9-047"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="left" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-l2-vPv">
+                            <button opaque="NO" contentMode="left" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-l2-vPv">
                                 <rect key="frame" x="16" y="89" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -369,19 +369,19 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="Q3l-1A-MH6" kind="showDetail" id="KdG-GY-yki"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJz-V3-2S1">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJz-V3-2S1">
                                 <rect key="frame" x="18" y="178" width="343" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-fe-KWw">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-fe-KWw">
                                 <rect key="frame" x="18" y="134" width="343" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-Td-WVw">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-Td-WVw">
                                 <rect key="frame" x="16" y="222" width="343" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Pj-2QW">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Pj-2QW">
                                 <rect key="frame" x="16" y="136" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -393,7 +393,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="LmA-A7-Hri" kind="showDetail" id="JUZ-85-jTg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-d0-hfr">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-d0-hfr">
                                 <rect key="frame" x="16" y="187" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -408,11 +408,23 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="QJz-V3-2S1" secondAttribute="centerX" id="50s-ap-fCq"/>
+                            <constraint firstItem="Upf-fe-KWw" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="7Zh-qD-WHy"/>
                             <constraint firstItem="OKi-PD-bcJ" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" id="9Kj-vw-ZQr"/>
+                            <constraint firstItem="kVl-Pj-2QW" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="EII-qq-UWn"/>
+                            <constraint firstItem="RFL-Td-WVw" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="J7e-fi-6Tt"/>
+                            <constraint firstItem="QJz-V3-2S1" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="OUc-rI-Yuz"/>
+                            <constraint firstAttribute="centerX" secondItem="aeR-l2-vPv" secondAttribute="centerX" id="Q9C-QS-j0t"/>
                             <constraint firstAttribute="centerX" secondItem="gtd-gC-i02" secondAttribute="centerX" id="TAG-Yf-BzQ"/>
+                            <constraint firstItem="aeR-l2-vPv" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="Tzg-2E-xlp"/>
                             <constraint firstItem="XrD-cp-Gz7" firstAttribute="top" secondItem="OKi-PD-bcJ" secondAttribute="bottom" id="ZLD-qV-IFL"/>
                             <constraint firstAttribute="centerY" secondItem="OKi-PD-bcJ" secondAttribute="centerY" id="e2s-Al-6BT"/>
+                            <constraint firstAttribute="centerX" secondItem="Upf-fe-KWw" secondAttribute="centerX" id="gHE-3c-Efo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OKi-PD-bcJ" secondAttribute="trailing" id="nnB-SX-V1m"/>
+                            <constraint firstAttribute="centerX" secondItem="RFL-Td-WVw" secondAttribute="centerX" id="qAo-Fp-h24"/>
+                            <constraint firstAttribute="centerX" secondItem="kVl-Pj-2QW" secondAttribute="centerX" id="u96-3C-iZX"/>
+                            <constraint firstItem="PnM-d0-hfr" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="ury-9o-ee3"/>
+                            <constraint firstAttribute="centerX" secondItem="PnM-d0-hfr" secondAttribute="centerX" id="wMV-Bt-af4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DrJ-tP-gsg"/>
@@ -969,7 +981,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="aoK-EC-QeE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="aoK-EC-QeE">
                                 <rect key="frame" x="0.0" y="0.0" width="1242" height="2208"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="37" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR7-0Q-u6B">
@@ -1003,14 +1015,17 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="aoK-EC-QeE" secondAttribute="bottom" id="50Q-Jr-U2s"/>
                             <constraint firstAttribute="centerX" secondItem="aR7-0Q-u6B" secondAttribute="centerX" id="Bk2-DY-Ra4"/>
                             <constraint firstAttribute="centerX" secondItem="aR7-0Q-u6B" secondAttribute="centerX" id="MIj-dV-GMw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aR7-0Q-u6B" secondAttribute="trailing" constant="10" id="Pks-yu-t8Q"/>
+                            <constraint firstItem="aoK-EC-QeE" firstAttribute="leading" secondItem="qtb-Ws-4PG" secondAttribute="leadingMargin" id="Uae-rO-eS2"/>
                             <constraint firstAttribute="centerX" secondItem="aoK-EC-QeE" secondAttribute="centerX" id="V20-FV-Fwa"/>
                             <constraint firstAttribute="centerX" secondItem="Eaw-eb-yY2" secondAttribute="centerX" id="WtJ-LJ-HnE"/>
                             <constraint firstAttribute="centerY" secondItem="aoK-EC-QeE" secondAttribute="centerY" id="Ze4-gg-iHb"/>
                             <constraint firstItem="aR7-0Q-u6B" firstAttribute="leading" secondItem="qtb-Ws-4PG" secondAttribute="leadingMargin" constant="10" id="dQU-aV-har"/>
                             <constraint firstItem="Eaw-eb-yY2" firstAttribute="leading" secondItem="qtb-Ws-4PG" secondAttribute="leadingMargin" constant="10" id="ebM-cd-QM3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aoK-EC-QeE" secondAttribute="trailing" id="fUH-w2-GuJ"/>
                             <constraint firstAttribute="centerX" secondItem="aR7-0Q-u6B" secondAttribute="centerX" id="ocL-zY-tB8"/>
                             <constraint firstItem="Eaw-eb-yY2" firstAttribute="trailing" secondItem="qtb-Ws-4PG" secondAttribute="trailingMargin" constant="10" id="sw4-nC-9lc"/>
                         </constraints>
@@ -1032,6 +1047,6 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Yen-mN-ISt"/>
-        <segue reference="w8c-J9-047"/>
+        <segue reference="lGf-wV-pnb"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -338,7 +338,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="OKi-PD-bcJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="OKi-PD-bcJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-gC-i02">
@@ -408,7 +408,11 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="OKi-PD-bcJ" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" id="9Kj-vw-ZQr"/>
                             <constraint firstAttribute="centerX" secondItem="gtd-gC-i02" secondAttribute="centerX" id="TAG-Yf-BzQ"/>
+                            <constraint firstItem="XrD-cp-Gz7" firstAttribute="top" secondItem="OKi-PD-bcJ" secondAttribute="bottom" id="ZLD-qV-IFL"/>
+                            <constraint firstAttribute="centerY" secondItem="OKi-PD-bcJ" secondAttribute="centerY" id="e2s-Al-6BT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OKi-PD-bcJ" secondAttribute="trailing" id="nnB-SX-V1m"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DrJ-tP-gsg"/>

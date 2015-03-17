@@ -15,7 +15,6 @@
     IBOutlet UIPickerView *picker;
 }
 -(IBAction)saveMessage:(id)sender;
--(IBAction)loadMessage:(id)sender;
 -(IBAction)controlTextDidChange:(id)sender;
 
 @end

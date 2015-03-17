@@ -3,13 +3,13 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "MayDay_AppIcon_29x29_iOS.png",
+      "filename" : "MayDay_AppIcon_29x29_iOS-2.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "MayDay_AppIcon_58x58_iOS-1.png",
+      "filename" : "MayDay_AppIcon_58x58_iOS-3.png",
       "scale" : "2x"
     },
     {
@@ -21,7 +21,7 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "MayDay_AppIcon_80x80_iOS-1.png",
+      "filename" : "MayDay_AppIcon_80x80_iOS-3.png",
       "scale" : "2x"
     },
     {
@@ -33,19 +33,19 @@
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "MayDay_AppIcon_120x120_iOS-3.png",
+      "filename" : "MayDay_AppIcon_57x57_iOS.png",
       "scale" : "1x"
     },
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "MayDay_AppIcon_180x180_iOS-1.png",
+      "filename" : "MayDay_AppIcon_114x114_iOS.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "MayDay_AppIcon_120x120_iOS-2.png",
+      "filename" : "MayDay_AppIcon_120x120_iOS-1.png",
       "scale" : "2x"
     },
     {
@@ -57,49 +57,49 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "MayDay_AppIcon_29x29_iOS-1.png",
+      "filename" : "MayDay_AppIcon_29x29_iOS-3.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "MayDay_AppIcon_58x58_iOS.png",
+      "filename" : "MayDay_AppIcon_58x58_iOS-4.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "MayDay_AppIcon_40x40_iOS.png",
+      "filename" : "MayDay_AppIcon_40x40_iOS-1.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "MayDay_AppIcon_80x80_iOS.png",
+      "filename" : "MayDay_AppIcon_80x80_iOS-4.png",
       "scale" : "2x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "MayDay_AppIcon_120x120_iOS-4.png",
+      "filename" : "MayDay_AppIcon_50x50_iOS-1.png",
       "scale" : "1x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "MayDay_AppIcon_180x180_iOS-2.png",
+      "filename" : "MayDay_AppIcon_100x100_iOS-1.png",
       "scale" : "2x"
     },
     {
       "size" : "72x72",
       "idiom" : "ipad",
-      "filename" : "MayDay_AppIcon_120x120_iOS-1.png",
+      "filename" : "MayDay_AppIcon_72x72_iOS-1.png",
       "scale" : "1x"
     },
     {
       "size" : "72x72",
       "idiom" : "ipad",
-      "filename" : "MayDay_AppIcon_180x180_iOS-4.png",
+      "filename" : "MayDay_AppIcon_144x144_iOS-1.png",
       "scale" : "2x"
     },
     {
@@ -111,7 +111,181 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "MayDay_AppIcon_180x180_iOS-3.png",
+      "filename" : "MayDay_AppIcon_152x152_iOS-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "24x24",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "filename" : "MayDay_AppIcon_48x48_iOS.png",
+      "role" : "notificationCenter",
+      "subtype" : "38mm"
+    },
+    {
+      "size" : "27.5x27.5",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "filename" : "MayDay_AppIcon_55x55_iOS.png",
+      "role" : "notificationCenter",
+      "subtype" : "42mm"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "watch",
+      "filename" : "MayDay_AppIcon_58x58_iOS-5.png",
+      "role" : "companionSettings",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "watch",
+      "filename" : "MayDay_AppIcon_87x87_iOS-1.png",
+      "role" : "companionSettings",
+      "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "filename" : "MayDay_AppIcon_80x80_iOS-5.png",
+      "role" : "appLauncher",
+      "subtype" : "38mm"
+    },
+    {
+      "size" : "44x44",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "filename" : "MayDay_AppIcon_88x88_iOS.png",
+      "role" : "longLook",
+      "subtype" : "42mm"
+    },
+    {
+      "size" : "86x86",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "filename" : "MayDay_AppIcon_172x172_iOS.png",
+      "role" : "quickLook",
+      "subtype" : "38mm"
+    },
+    {
+      "size" : "98x98",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "filename" : "MayDay_AppIcon_196x196_iOS.png",
+      "role" : "quickLook",
+      "subtype" : "42mm"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "MayDay_AppIcon_29x29_iOS.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "MayDay_AppIcon_58x58_iOS-1.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "MayDay_AppIcon_80x80_iOS-1.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "MayDay_AppIcon_58x58_iOS-2.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "MayDay_AppIcon_120x120_iOS-3.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "MayDay_AppIcon_120x120_iOS-2.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "MayDay_AppIcon_29x29_iOS-1.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "MayDay_AppIcon_58x58_iOS.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "MayDay_AppIcon_40x40_iOS.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "MayDay_AppIcon_80x80_iOS.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "ipad",
+      "filename" : "MayDay_AppIcon_50x50_iOS.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "ipad",
+      "filename" : "MayDay_AppIcon_100x100_iOS.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "size" : "72x72",
+      "idiom" : "ipad",
+      "filename" : "MayDay_AppIcon_76x76_iOS-1.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "72x72",
+      "idiom" : "ipad",
+      "filename" : "MayDay_AppIcon_180x180_iOS-1.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "MayDay_AppIcon_80x80_iOS-2.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "MayDay_AppIcon_152x152_iOS.png",
+      "unassigned" : true,
       "scale" : "2x"
     }
   ],

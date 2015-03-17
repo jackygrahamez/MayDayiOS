@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812CA6FE1AB79CF7000DB19C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */; };
+		812CA6FF1AB79CF7000DB19C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812CA6FD1AB79CF7000DB19C /* Fabric.framework */; };
+		81F7B2531AB650060028D42E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D005F651AABBD5F00D75004 /* Images.xcassets */; };
+		81F7B25B1AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2541AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png */; };
+		81F7B25C1AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2551AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png */; };
+		81F7B25D1AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2561AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png */; };
+		81F7B25E1AB650680028D42E /* MayDay_LaunchImage_750x1334_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2571AB650680028D42E /* MayDay_LaunchImage_750x1334_iOS.png */; };
+		81F7B25F1AB650680028D42E /* MayDay_LaunchImage_768x1024_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2581AB650680028D42E /* MayDay_LaunchImage_768x1024_iOS.png */; };
+		81F7B2601AB650680028D42E /* MayDay_LaunchImage_1242x2208_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2591AB650680028D42E /* MayDay_LaunchImage_1242x2208_iOS.png */; };
+		81F7B2611AB650680028D42E /* MayDay_LaunchImage_1536x2048_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B25A1AB650680028D42E /* MayDay_LaunchImage_1536x2048_iOS.png */; };
 		8D005F5E1AABBD5F00D75004 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F5D1AABBD5F00D75004 /* InterfaceController.m */; };
 		8D005F611AABBD5F00D75004 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F601AABBD5F00D75004 /* NotificationController.m */; };
 		8D005F641AABBD5F00D75004 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F631AABBD5F00D75004 /* GlanceController.m */; };
@@ -65,19 +75,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8120504A1AB698B2005C7B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D3019CB1AA40596000C4FF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D005F561AABBD5F00D75004;
+			remoteInfo = "MayDay WatchKit Extension";
+		};
 		8D005F6B1AABBD5F00D75004 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8D3019CB1AA40596000C4FF7 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8D005F681AABBD5F00D75004;
 			remoteInfo = "MayDay WatchKit App";
-		};
-		8D005F751AABBD5F00D75004 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8D3019CB1AA40596000C4FF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D005F561AABBD5F00D75004;
-			remoteInfo = "MayDay WatchKit Extension";
 		};
 		8D3019F01AA40597000C4FF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -103,6 +113,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		812CA6FD1AB79CF7000DB19C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		81F7B2541AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_320x480_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_320x480_iOS.png"; sourceTree = "<group>"; };
+		81F7B2551AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_640x960_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_640x960_iOS.png"; sourceTree = "<group>"; };
+		81F7B2561AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_640x1136_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_640x1136_iOS.png"; sourceTree = "<group>"; };
+		81F7B2571AB650680028D42E /* MayDay_LaunchImage_750x1334_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_750x1334_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_750x1334_iOS.png"; sourceTree = "<group>"; };
+		81F7B2581AB650680028D42E /* MayDay_LaunchImage_768x1024_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_768x1024_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_768x1024_iOS.png"; sourceTree = "<group>"; };
+		81F7B2591AB650680028D42E /* MayDay_LaunchImage_1242x2208_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_1242x2208_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_1242x2208_iOS.png"; sourceTree = "<group>"; };
+		81F7B25A1AB650680028D42E /* MayDay_LaunchImage_1536x2048_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_1536x2048_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_1536x2048_iOS.png"; sourceTree = "<group>"; };
 		8D005F571AABBD5F00D75004 /* MayDay WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MayDay WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D005F5A1AABBD5F00D75004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D005F5B1AABBD5F00D75004 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -184,6 +203,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812CA6FE1AB79CF7000DB19C /* Crashlytics.framework in Frameworks */,
+				812CA6FF1AB79CF7000DB19C /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +263,8 @@
 		8D3019CA1AA40596000C4FF7 = {
 			isa = PBXGroup;
 			children = (
+				812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */,
+				812CA6FD1AB79CF7000DB19C /* Fabric.framework */,
 				8D3019D51AA40596000C4FF7 /* MayDay */,
 				8D3019F21AA40597000C4FF7 /* MayDayTests */,
 				8D005F581AABBD5F00D75004 /* MayDay WatchKit Extension */,
@@ -325,6 +348,13 @@
 		8D301A011AA40A49000C4FF7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				81F7B2541AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png */,
+				81F7B2551AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png */,
+				81F7B2561AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png */,
+				81F7B2571AB650680028D42E /* MayDay_LaunchImage_750x1334_iOS.png */,
+				81F7B2581AB650680028D42E /* MayDay_LaunchImage_768x1024_iOS.png */,
+				81F7B2591AB650680028D42E /* MayDay_LaunchImage_1242x2208_iOS.png */,
+				81F7B25A1AB650680028D42E /* MayDay_LaunchImage_1536x2048_iOS.png */,
 				8D99C6E31AB5144F00E0ACB0 /* state_settings_480x50.jpg */,
 				8D99C6D51AB50CDD00E0ACB0 /* 320x480_iOS.jpg */,
 				8D99C6D61AB50CDD00E0ACB0 /* 640x960_iOS.jpg */,
@@ -418,11 +448,12 @@
 				8D3019D01AA40596000C4FF7 /* Frameworks */,
 				8D3019D11AA40596000C4FF7 /* Resources */,
 				8D005F7E1AABBD5F00D75004 /* Embed App Extensions */,
+				812CA6FB1AB79C8A000DB19C /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8D005F761AABBD5F00D75004 /* PBXTargetDependency */,
+				8120504B1AB698B2005C7B32 /* PBXTargetDependency */,
 			);
 			name = MayDay;
 			productName = MayDay;
@@ -464,6 +495,7 @@
 					};
 					8D3019D21AA40596000C4FF7 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = YSGN98PM6X;
 					};
 					8D3019EE1AA40597000C4FF7 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -515,9 +547,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F7B2531AB650060028D42E /* Images.xcassets in Resources */,
 				8D99C6E51AB520F700E0ACB0 /* moms_typewriter.ttf in Resources */,
 				8D99C6DF1AB50CDD00E0ACB0 /* 750x1334_iOS.jpg in Resources */,
 				8D99C6E01AB50CDD00E0ACB0 /* 768x1024_iOS.jpg in Resources */,
+				81F7B25C1AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png in Resources */,
 				8D3FD4951AAD3A3200E8A5F5 /* circle_drop_shadow.png in Resources */,
 				8D115E531AAABDFE0034F4CE /* warning.png in Resources */,
 				8D3FD4A71AAD3A8600E8A5F5 /* socialperson.png in Resources */,
@@ -526,16 +560,22 @@
 				8D301A191AA419B5000C4FF7 /* mobile_en.json in Resources */,
 				8D301A1D1AA419B5000C4FF7 /* mobile_pt.json in Resources */,
 				8D301A181AA419B5000C4FF7 /* mobile_de.json in Resources */,
+				81F7B25F1AB650680028D42E /* MayDay_LaunchImage_768x1024_iOS.png in Resources */,
 				8D3FD4961AAD3A3200E8A5F5 /* circle_solid_30p.png in Resources */,
+				81F7B25B1AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png in Resources */,
 				8D301A1C1AA419B5000C4FF7 /* mobile_ph.json in Resources */,
 				8D301A121AA419B5000C4FF7 /* help_de.json in Resources */,
+				81F7B2601AB650680028D42E /* MayDay_LaunchImage_1242x2208_iOS.png in Resources */,
 				8D3019EA1AA40597000C4FF7 /* LaunchScreen.xib in Resources */,
 				8D99C6E41AB5144F00E0ACB0 /* state_settings_480x50.jpg in Resources */,
 				8D301A131AA419B5000C4FF7 /* help_en.json in Resources */,
+				81F7B25D1AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png in Resources */,
+				81F7B2611AB650680028D42E /* MayDay_LaunchImage_1536x2048_iOS.png in Resources */,
 				8D301A151AA419B5000C4FF7 /* help_fr.json in Resources */,
 				8D3FD4A81AAD3A8600E8A5F5 /* target.png in Resources */,
 				8D301A1A1AA419B5000C4FF7 /* mobile_es.json in Resources */,
 				8D99C6DD1AB50CDD00E0ACB0 /* 640x960_iOS.jpg in Resources */,
+				81F7B25E1AB650680028D42E /* MayDay_LaunchImage_750x1334_iOS.png in Resources */,
 				8D3FD4911AAD3A3200E8A5F5 /* back.png in Resources */,
 				8D301A041AA413D0000C4FF7 /* arrow_next.png in Resources */,
 				8D99C6E11AB50CDD00E0ACB0 /* 1242x2208_iOS.jpg in Resources */,
@@ -568,6 +608,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		812CA6FB1AB79C8A000DB19C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run b0b11e9239f6ebe42a15ff7737b6cb7ca3064d69 20573fcee9a73a0dda3af640bab5c776fb66c136211b5b0f7b7d6b4970b80ec7";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D005F531AABBD5F00D75004 /* Sources */ = {
@@ -602,15 +658,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8120504B1AB698B2005C7B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D005F561AABBD5F00D75004 /* MayDay WatchKit Extension */;
+			targetProxy = 8120504A1AB698B2005C7B32 /* PBXContainerItemProxy */;
+		};
 		8D005F6C1AABBD5F00D75004 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D005F681AABBD5F00D75004 /* MayDay WatchKit App */;
 			targetProxy = 8D005F6B1AABBD5F00D75004 /* PBXContainerItemProxy */;
-		};
-		8D005F761AABBD5F00D75004 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8D005F561AABBD5F00D75004 /* MayDay WatchKit Extension */;
-			targetProxy = 8D005F751AABBD5F00D75004 /* PBXContainerItemProxy */;
 		};
 		8D3019F11AA40597000C4FF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -794,10 +850,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MayDay/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -806,10 +868,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MayDay/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

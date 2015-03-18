@@ -15,19 +15,29 @@
 @implementation ViewController
 -(IBAction)saveMessage:(id)sender
 {
-    
     NSString *savestring = message.text;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"messagestring"];
     [defaults synchronize];
 }
+-(IBAction)saveContact:(id)sender
+{
+    NSLog(@"saveContact");
+    NSString *savestring1 = contact1.text;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:savestring1 forKey:@"contact1string"];
+    [defaults synchronize];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadstring = [defaults objectForKey:@"messagestring"];
     [message setText:loadstring];
-    [label setText:loadstring];
+    NSString *first = [defaults objectForKey:@"contact1string"];
+    [message setText:loadstring];
+    [contact1 setText:first];
     
      //NSArray *_pickerData = @[@"1 min", @"2 min", @"3 min", @"4 min", @"5 min", @"6 min", @"7 min"];
 }

@@ -13,8 +13,12 @@
     IBOutlet UITextView *message;
     IBOutlet UITextField *firstNumber;
     IBOutlet UIPickerView *picker;
+    IBOutlet UITextField *contact1;
+    IBOutlet UITextField *contact2;
+    IBOutlet UITextField *contact3;
 }
 -(IBAction)saveMessage:(id)sender;
+-(IBAction)saveContact:(id)sender;
 -(IBAction)controlTextDidChange:(id)sender;
 
 @end

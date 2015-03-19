@@ -93,8 +93,16 @@
     }
     */
 }
+-(IBAction)trigger:(id)sender
+{
+    NSString *message = @"Test Message";
+    NSString *number = @"2024941707";
+    //[[CTMessageCenter sharedMessageCenter]  sendSMSWithText:message serviceCenter:nil toAddress:number];
+
+}
 
 -(void)dismissKeyboard {
+    [message resignFirstResponder];
     [contact1 resignFirstResponder];
     [contact2 resignFirstResponder];
     [contact3 resignFirstResponder];

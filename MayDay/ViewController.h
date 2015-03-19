@@ -20,6 +20,7 @@
 -(IBAction)saveMessage:(id)sender;
 -(IBAction)saveContact:(id)sender;
 -(IBAction)controlTextDidChange:(id)sender;
+-(IBAction)trigger:(id)sender;
 
 @end
 

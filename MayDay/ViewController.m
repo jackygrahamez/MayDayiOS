@@ -23,9 +23,16 @@
 -(IBAction)saveContact:(id)sender
 {
     NSLog(@"saveContact");
-    NSString *savestring1 = contact1.text;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    NSString *savestring1 = contact1.text;
     [defaults setObject:savestring1 forKey:@"contact1string"];
+    NSString *savestring2 = contact2.text;
+    [defaults setObject:savestring2 forKey:@"contact2string"];
+    NSString *savestring3 = contact3.text;
+    [defaults setObject:savestring3 forKey:@"contact3string"];
+    NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
+    
     [defaults synchronize];
 }
 
@@ -35,10 +42,18 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadstring = [defaults objectForKey:@"messagestring"];
     [message setText:loadstring];
+    contact1.keyboardType = UIKeyboardTypeNumberPad;
+    contact2.keyboardType = UIKeyboardTypeNumberPad;
+    contact3.keyboardType = UIKeyboardTypeNumberPad;
     NSString *first = [defaults objectForKey:@"contact1string"];
+    NSString *second = [defaults objectForKey:@"contact2string"];
+    NSString *third = [defaults objectForKey:@"contact3string"];
+    NSLog(@"%@,%@,%@",first,second,third);
     [message setText:loadstring];
     [contact1 setText:first];
-    
+    [contact2 setText:second];
+    [contact3 setText:third];
+
      //NSArray *_pickerData = @[@"1 min", @"2 min", @"3 min", @"4 min", @"5 min", @"6 min", @"7 min"];
 }
 

@@ -624,7 +624,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveMessage:" destination="Q3l-1A-MH6" eventType="touchUpInside" id="TUt-cZ-bjK"/>
+                                    <action selector="saveContact:" destination="LmA-A7-Hri" eventType="touchUpInside" id="pPs-1b-iOs"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvM-G1-rpp">
@@ -658,6 +658,8 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="contact1" destination="m07-sU-0C7" id="wcE-2U-99C"/>
+                        <outlet property="contact2" destination="r1a-Wu-3FT" id="ous-It-oVA"/>
+                        <outlet property="contact3" destination="3ch-6d-UVR" id="8Yu-tf-2vc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2B-Nz-3AX" sceneMemberID="firstResponder"/>

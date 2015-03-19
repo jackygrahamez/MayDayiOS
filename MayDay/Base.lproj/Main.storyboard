@@ -560,64 +560,64 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlP-Dz-CFO">
-                                <rect key="frame" x="26" y="124" width="42" height="21"/>
+                                <rect key="frame" x="26" y="134" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m07-sU-0C7">
-                                <rect key="frame" x="51" y="120" width="244" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m07-sU-0C7">
+                                <rect key="frame" x="51" y="120" width="244" height="50"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvt-z3-mpn">
-                                <rect key="frame" x="26" y="163" width="42" height="21"/>
+                                <rect key="frame" x="26" y="192" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1a-Wu-3FT">
-                                <rect key="frame" x="51" y="159" width="244" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1a-Wu-3FT">
+                                <rect key="frame" x="51" y="178" width="244" height="50"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joN-lp-mXd">
-                                <rect key="frame" x="26" y="204" width="42" height="21"/>
+                                <rect key="frame" x="26" y="252" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-6d-UVR">
-                                <rect key="frame" x="51" y="200" width="244" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-6d-UVR">
+                                <rect key="frame" x="51" y="238" width="244" height="50"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCI-xK-THe">
-                                <rect key="frame" x="307" y="120" width="36" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCI-xK-THe">
+                                <rect key="frame" x="307" y="125" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="socialperson.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uW-73-uQ2">
-                                <rect key="frame" x="307" y="158" width="36" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uW-73-uQ2">
+                                <rect key="frame" x="307" y="183" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="socialperson.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kl-Ig-ygA">
-                                <rect key="frame" x="307" y="200" width="36" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kl-Ig-ygA">
+                                <rect key="frame" x="307" y="243" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="socialperson.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqz-jL-gim">
-                                <rect key="frame" x="139" y="238" width="109" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqz-jL-gim">
+                                <rect key="frame" x="139" y="296" width="109" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -628,7 +628,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvM-G1-rpp">
-                                <rect key="frame" x="26" y="284" width="323" height="204"/>
+                                <rect key="frame" x="26" y="334" width="323" height="204"/>
                                 <string key="text">Security Tips
 • Think about who can practically assist you - there is no point someone knowing you are in trouble if they cannot help. 
 • Make a plan with your chosen contacts so that they are prepared to act fast. 
@@ -649,9 +649,19 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="S3i-CH-iQF" secondAttribute="centerY" id="0lG-wJ-McD"/>
                             <constraint firstAttribute="centerX" secondItem="nwp-u4-LXv" secondAttribute="centerX" id="1Tq-ON-H7h"/>
+                            <constraint firstAttribute="centerX" secondItem="r1a-Wu-3FT" secondAttribute="centerX" id="5PK-VI-lY5"/>
+                            <constraint firstItem="m07-sU-0C7" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="30" id="B7R-iA-t68"/>
+                            <constraint firstItem="3ch-6d-UVR" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="30" id="KiS-0n-clH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S3i-CH-iQF" secondAttribute="trailing" id="NAg-7O-YKv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2uW-73-uQ2" secondAttribute="trailing" constant="10" id="XCv-Ms-s9H"/>
                             <constraint firstItem="S3i-CH-iQF" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" id="Xf9-ge-MFq"/>
+                            <constraint firstAttribute="centerX" secondItem="3ch-6d-UVR" secondAttribute="centerX" id="ZSD-6V-xrO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zCI-xK-THe" secondAttribute="trailing" constant="10" id="eD6-Za-uyA"/>
+                            <constraint firstAttribute="centerX" secondItem="m07-sU-0C7" secondAttribute="centerX" id="hS7-6D-lvI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5kl-Ig-ygA" secondAttribute="trailing" constant="10" id="k0H-oI-jN0"/>
                             <constraint firstItem="GQ2-Ur-Fd7" firstAttribute="top" secondItem="S3i-CH-iQF" secondAttribute="bottom" constant="-10" id="ldL-VJ-jF9"/>
+                            <constraint firstAttribute="centerX" secondItem="Iqz-jL-gim" secondAttribute="centerX" id="vxJ-Et-zAr"/>
+                            <constraint firstItem="r1a-Wu-3FT" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="30" id="yFw-Sd-Fww"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>

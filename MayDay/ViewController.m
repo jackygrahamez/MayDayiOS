@@ -54,6 +54,12 @@
     [contact2 setText:second];
     [contact3 setText:third];
 
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
      //NSArray *_pickerData = @[@"1 min", @"2 min", @"3 min", @"4 min", @"5 min", @"6 min", @"7 min"];
 }
 
@@ -87,4 +93,11 @@
     }
     */
 }
+
+-(void)dismissKeyboard {
+    [contact1 resignFirstResponder];
+    [contact2 resignFirstResponder];
+    [contact3 resignFirstResponder];
+}
+
 @end

@@ -12,6 +12,8 @@
 	<dict>
 		<key>9CF2528BF0768AAB1FDAC3B2426E814BDA2B8F61</key>
 		<string>github.com:jackygrahamez/MayDayiOS.git</string>
+		<key>AB4397E236B34767FAF846F066CF756DAEA02ABC</key>
+		<string>github.com:nst/iOS-Runtime-Headers.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MayDay.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>9CF2528BF0768AAB1FDAC3B2426E814BDA2B8F61</key>
 		<string>../..</string>
+		<key>AB4397E236B34767FAF846F066CF756DAEA02ABC</key>
+		<string>../../../iOS-Runtime-Headers</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:jackygrahamez/MayDayiOS.git</string>
@@ -28,6 +32,14 @@
 	<string>9CF2528BF0768AAB1FDAC3B2426E814BDA2B8F61</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AB4397E236B34767FAF846F066CF756DAEA02ABC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-Runtime-Headers</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

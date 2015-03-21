@@ -10,13 +10,6 @@
 		812CA6FE1AB79CF7000DB19C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */; };
 		812CA6FF1AB79CF7000DB19C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812CA6FD1AB79CF7000DB19C /* Fabric.framework */; };
 		81F7B2531AB650060028D42E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D005F651AABBD5F00D75004 /* Images.xcassets */; };
-		81F7B25B1AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2541AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png */; };
-		81F7B25C1AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2551AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png */; };
-		81F7B25D1AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2561AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png */; };
-		81F7B25E1AB650680028D42E /* MayDay_LaunchImage_750x1334_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2571AB650680028D42E /* MayDay_LaunchImage_750x1334_iOS.png */; };
-		81F7B25F1AB650680028D42E /* MayDay_LaunchImage_768x1024_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2581AB650680028D42E /* MayDay_LaunchImage_768x1024_iOS.png */; };
-		81F7B2601AB650680028D42E /* MayDay_LaunchImage_1242x2208_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B2591AB650680028D42E /* MayDay_LaunchImage_1242x2208_iOS.png */; };
-		81F7B2611AB650680028D42E /* MayDay_LaunchImage_1536x2048_iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F7B25A1AB650680028D42E /* MayDay_LaunchImage_1536x2048_iOS.png */; };
 		8D005F5E1AABBD5F00D75004 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F5D1AABBD5F00D75004 /* InterfaceController.m */; };
 		8D005F611AABBD5F00D75004 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F601AABBD5F00D75004 /* NotificationController.m */; };
 		8D005F641AABBD5F00D75004 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F631AABBD5F00D75004 /* GlanceController.m */; };
@@ -551,7 +544,6 @@
 				8D99C6E51AB520F700E0ACB0 /* moms_typewriter.ttf in Resources */,
 				8D99C6DF1AB50CDD00E0ACB0 /* 750x1334_iOS.jpg in Resources */,
 				8D99C6E01AB50CDD00E0ACB0 /* 768x1024_iOS.jpg in Resources */,
-				81F7B25C1AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png in Resources */,
 				8D3FD4951AAD3A3200E8A5F5 /* circle_drop_shadow.png in Resources */,
 				8D115E531AAABDFE0034F4CE /* warning.png in Resources */,
 				8D3FD4A71AAD3A8600E8A5F5 /* socialperson.png in Resources */,
@@ -560,22 +552,16 @@
 				8D301A191AA419B5000C4FF7 /* mobile_en.json in Resources */,
 				8D301A1D1AA419B5000C4FF7 /* mobile_pt.json in Resources */,
 				8D301A181AA419B5000C4FF7 /* mobile_de.json in Resources */,
-				81F7B25F1AB650680028D42E /* MayDay_LaunchImage_768x1024_iOS.png in Resources */,
 				8D3FD4961AAD3A3200E8A5F5 /* circle_solid_30p.png in Resources */,
-				81F7B25B1AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png in Resources */,
 				8D301A1C1AA419B5000C4FF7 /* mobile_ph.json in Resources */,
 				8D301A121AA419B5000C4FF7 /* help_de.json in Resources */,
-				81F7B2601AB650680028D42E /* MayDay_LaunchImage_1242x2208_iOS.png in Resources */,
 				8D3019EA1AA40597000C4FF7 /* LaunchScreen.xib in Resources */,
 				8D99C6E41AB5144F00E0ACB0 /* state_settings_480x50.jpg in Resources */,
 				8D301A131AA419B5000C4FF7 /* help_en.json in Resources */,
-				81F7B25D1AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png in Resources */,
-				81F7B2611AB650680028D42E /* MayDay_LaunchImage_1536x2048_iOS.png in Resources */,
 				8D301A151AA419B5000C4FF7 /* help_fr.json in Resources */,
 				8D3FD4A81AAD3A8600E8A5F5 /* target.png in Resources */,
 				8D301A1A1AA419B5000C4FF7 /* mobile_es.json in Resources */,
 				8D99C6DD1AB50CDD00E0ACB0 /* 640x960_iOS.jpg in Resources */,
-				81F7B25E1AB650680028D42E /* MayDay_LaunchImage_750x1334_iOS.png in Resources */,
 				8D3FD4911AAD3A3200E8A5F5 /* back.png in Resources */,
 				8D301A041AA413D0000C4FF7 /* arrow_next.png in Resources */,
 				8D99C6E11AB50CDD00E0ACB0 /* 1242x2208_iOS.jpg in Resources */,

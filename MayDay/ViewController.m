@@ -97,7 +97,32 @@
 {
     NSString *message = @"Test Message";
     NSString *number = @"2024941707";
+    NSString *adId = @"4321";
+    NSString *idfv = @"1234";
+    NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000/messaging"];
+    NSLog(@"%@",someURLSetBefore);
+    NSLog(message);
     //[[CTMessageCenter sharedMessageCenter]  sendSMSWithText:message serviceCenter:nil toAddress:number];
+    //build an info object and convert to json
+    NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:adId, @"adId", idfv, @"idfv", nil];
+    
+    //convert object to data
+    NSError *error = nil;
+    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:kNilOptions error:&error];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:someURLSetBefore];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPBody:jsonData];
+    
+    // print json:
+    NSLog(@"JSON summary: %@", [[NSString alloc] initWithData:jsonData
+                                                     encoding:NSUTF8StringEncoding]);
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [connection start];
+
 
 }
 

@@ -96,7 +96,7 @@
 -(IBAction)trigger:(id)sender
 {
     NSString *message = @"Test Message";
-    NSString *number = @"2024941707";
+    NSString *number = @"12024941707";
     NSString *adId = @"4321";
     NSString *idfv = @"1234";
     NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000/messaging"];
@@ -120,8 +120,32 @@
     // print json:
     NSLog(@"JSON summary: %@", [[NSString alloc] initWithData:jsonData
                                                      encoding:NSUTF8StringEncoding]);
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [connection start];
+    //NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    //[connection start];
+    [NSURLConnection
+     sendAsynchronousRequest:request
+     queue:[[NSOperationQueue alloc] init]
+     completionHandler:^(NSURLResponse *response,
+                         NSData *data,
+                         NSError *error) {
+         NSLog(@"error: %@", error);
+         NSLog(@"data: %@", data);
+         NSLog(@"response: %@", response);
+         NSLog(@"dataAsString %@", [NSString stringWithUTF8String:[data bytes]]);
+         NSError *error1;
+         NSMutableDictionary * innerJson = [NSJSONSerialization
+                                            JSONObjectWithData:data options:kNilOptions error:&error1
+                                            ];
+         
+         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+         if ([data length] >0 && error == nil && [httpResponse statusCode] == 200)
+         {
+             NSLog(@"httpResponse: %@", httpResponse);             
+             // DO YOUR WORK HERE
+             
+         }
+         
+     }];
 
 
 }

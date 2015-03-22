@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7525" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7516"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -815,10 +815,10 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="FSK-6P-rEm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="FSK-6P-rEm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qi3-8P-br7">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qi3-8P-br7">
                                 <rect key="frame" x="16" y="20" width="343" height="30"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -828,7 +828,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="Ic7-CG-rQ4" kind="showDetail" id="w0V-83-2tv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Alert Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0L-Ob-VVK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Alert Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0L-Ob-VVK">
                                 <rect key="frame" x="26" y="60" width="323" height="37"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -879,11 +879,28 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Z0L-Ob-VVK" secondAttribute="centerY" id="0Hr-sD-tba"/>
+                            <constraint firstAttribute="centerY" secondItem="FSK-6P-rEm" secondAttribute="centerY" id="1P7-WI-USV"/>
+                            <constraint firstItem="qi3-8P-br7" firstAttribute="leading" secondItem="n53-Yq-9zf" secondAttribute="leadingMargin" constant="16" id="Bb0-a9-498"/>
                             <constraint firstAttribute="centerX" secondItem="FSK-6P-rEm" secondAttribute="centerX" id="CRi-Le-8nl"/>
+                            <constraint firstItem="qi3-8P-br7" firstAttribute="top" secondItem="30M-ev-A9r" secondAttribute="bottom" constant="10" id="DyJ-kj-ivA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FSK-6P-rEm" secondAttribute="trailing" id="Fof-la-qet"/>
+                            <constraint firstItem="FSK-6P-rEm" firstAttribute="leading" secondItem="n53-Yq-9zf" secondAttribute="leadingMargin" id="K0r-i3-AOA"/>
+                            <constraint firstAttribute="centerX" secondItem="Z0L-Ob-VVK" secondAttribute="centerX" id="LGa-bu-f7H"/>
+                            <constraint firstItem="MLy-je-RSo" firstAttribute="top" secondItem="FSK-6P-rEm" secondAttribute="bottom" id="mE2-2a-XRN"/>
+                            <constraint firstItem="Z0L-Ob-VVK" firstAttribute="top" secondItem="qi3-8P-br7" secondAttribute="bottom" constant="10" id="wUc-PP-sdN"/>
+                            <constraint firstItem="qi3-8P-br7" firstAttribute="top" secondItem="30M-ev-A9r" secondAttribute="bottom" constant="20" id="y1p-A0-BOV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0Hr-sD-tba"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="messageIntervalPicker" destination="dgg-5h-aSG" id="UXR-dt-d7s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dls-ya-a0X" sceneMemberID="firstResponder"/>
             </objects>
@@ -1178,7 +1195,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
         <image name="warning.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="w0V-83-2tv"/>
         <segue reference="w8c-J9-047"/>
-        <segue reference="Yen-mN-ISt"/>
     </inferredMetricsTieBreakers>
 </document>

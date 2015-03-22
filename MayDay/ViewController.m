@@ -9,7 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+{
+    NSArray *_pickerData;
+}
 @end
 
 @implementation ViewController
@@ -47,6 +49,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Interval Picker
+    // Initialize Data
+    _pickerData = @[@"Item 1", @"Item 2", @"Item 3", @"Item 4", @"Item 5", @"Item 6"];
+    
+    // Connect data
+    self.messageIntervalPicker.dataSource = self;
+    self.messageIntervalPicker.delegate = self;
+    
     // Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadstring = [defaults objectForKey:@"messagestring"];
@@ -157,7 +168,7 @@
     
     NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000/messaging"];
     //NSLog(@"someURLSetBefore %@",someURLSetBefore);
-    //NSLog(@"message %@", message);
+    NSLog(@"message %@", message);
     
     
     //[[CTMessageCenter sharedMessageCenter]  sendSMSWithText:message serviceCenter:nil toAddress:number];
@@ -228,5 +239,25 @@
     [contact2 resignFirstResponder];
     [contact3 resignFirstResponder];
 }
+
+
+// The number of columns of data
+- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+// The number of rows of data
+- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return _pickerData.count;
+}
+
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return _pickerData[row];
+}
+
 
 @end

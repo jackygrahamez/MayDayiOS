@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController<CLLocationManagerDelegate> {
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate> {
     IBOutlet UILabel *label;
     IBOutlet UITextView *message;
     IBOutlet UITextField *firstNumber;
@@ -25,6 +25,8 @@
 -(IBAction)trigger:(id)sender;
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
+
+@property (weak, nonatomic) IBOutlet UIPickerView *messageIntervalPicker;
 
 @end
 

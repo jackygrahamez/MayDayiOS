@@ -87,6 +87,8 @@
         self.locationManager.delegate = self;
     }
     
+    //[self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager requestAlwaysAuthorization];
     [self.locationManager startUpdatingLocation];
     
      //NSArray *_pickerData = @[@"1 min", @"2 min", @"3 min", @"4 min", @"5 min", @"6 min", @"7 min"];

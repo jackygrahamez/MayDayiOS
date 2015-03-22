@@ -849,10 +849,6 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="SiG-sU-ynZ">
                                 <rect key="frame" x="26" y="145" width="46" height="48"/>
                             </imageView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-5h-aSG">
-                                <rect key="frame" x="26" y="212" width="323" height="162"/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-as-8xI">
                                 <rect key="frame" x="138" y="382" width="109" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -861,7 +857,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveMessage:" destination="Q3l-1A-MH6" eventType="touchUpInside" id="Pke-vS-hax"/>
+                                    <action selector="saveInterval:" destination="ogg-33-r79" eventType="touchUpInside" id="LR4-U3-hgD"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8d-jw-wrE">
@@ -875,6 +871,10 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-5h-aSG">
+                                <rect key="frame" x="26" y="212" width="323" height="162"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -892,6 +892,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="DyJ-kj-ivA"/>
                                 <exclude reference="0Hr-sD-tba"/>
                             </mask>
                         </variation>

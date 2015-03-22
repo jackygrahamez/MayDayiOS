@@ -21,6 +21,8 @@
 }
 -(IBAction)saveMessage:(id)sender;
 -(IBAction)saveContact:(id)sender;
+-(IBAction)saveInterval:(id)sender;
+
 -(IBAction)controlTextDidChange:(id)sender;
 -(IBAction)trigger:(id)sender;
 
@@ -30,3 +32,11 @@
 
 @end
 
+@interface PickerObject : NSObject
+{
+    
+}
+//@property (nonatomic, strong) int *minutes;
+//@property (nonatomic, strong) NSString *label;
+
+@end

@@ -47,12 +47,38 @@
     [defaults synchronize];
 }
 
+- (IBAction)saveInterval:(id)sender {
+    int row = [self.messageIntervalPicker selectedRowInComponent:0];
+    
+    NSLog(@"%@", [_pickerData objectAtIndex:row]);
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     //Interval Picker
     // Initialize Data
-    _pickerData = @[@"Item 1", @"Item 2", @"Item 3", @"Item 4", @"Item 5", @"Item 6"];
+    //_pickerData = @[@"Item 1", @"Item 2", @"Item 3", @"Item 4", @"Item 5", @"Item 6"];
+
+    int total = 121;
+    
+    NSMutableArray *minutes = [[NSMutableArray alloc] init];
+    NSMutableArray *label = [[NSMutableArray alloc] init];
+    for(int x = 1; x < total; x++)
+    {
+        
+        NSString* min = [NSString stringWithFormat:@"%i minutes", x];
+        
+        //PickerObject *myObject = [[PickerObject alloc] init];
+        //myObject.minutes = &(x);
+        //myObject.label = min;
+        
+        //[_pickerData addObject:[NSNumber numberWithInt:x]];
+        [minutes addObject:[NSNumber numberWithInt:x]];
+        [label addObject:[NSString stringWithString:min]];
+    }
+    _pickerData = label;
     
     // Connect data
     self.messageIntervalPicker.dataSource = self;
@@ -233,6 +259,7 @@
 
 }
 
+
 -(void)dismissKeyboard {
     [message resignFirstResponder];
     [contact1 resignFirstResponder];
@@ -257,6 +284,15 @@
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return _pickerData[row];
+}
+
+
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    //This is how you manually SET(!!) a selection!
+    [self.messageIntervalPicker selectRow:4 inComponent:0 animated:YES];
 }
 
 

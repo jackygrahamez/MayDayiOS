@@ -58,10 +58,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //Interval Picker
-    // Initialize Data
-    //_pickerData = @[@"Item 1", @"Item 2", @"Item 3", @"Item 4", @"Item 5", @"Item 6"];
 
     int total = 121;
     
@@ -69,13 +65,7 @@
     NSMutableArray *label = [[NSMutableArray alloc] init];
     for(int x = 1; x < total; x++)
     {
-        
         NSString* min = [NSString stringWithFormat:@"%i minutes", x];
-        
-        //PickerObject *myObject = [[PickerObject alloc] init];
-        //myObject.minutes = &(x);
-        //myObject.label = min;
-        
         //[_pickerData addObject:[NSNumber numberWithInt:x]];
         [minutes addObject:[NSNumber numberWithInt:x]];
         [label addObject:[NSString stringWithString:min]];
@@ -288,13 +278,16 @@
     return _pickerData[row];
 }
 
-
-
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *interval = [defaults objectForKey:@"interval"];
+    NSInteger row = [interval integerValue];
+    
     //This is how you manually SET(!!) a selection!
-    [self.messageIntervalPicker selectRow:4 inComponent:0 animated:YES];
+    [self.messageIntervalPicker selectRow:row inComponent:0 animated:YES];
 }
 
 

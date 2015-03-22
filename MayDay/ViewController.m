@@ -97,6 +97,7 @@
 {
     NSString *message = @"Test Message";
     NSString *number = @"12024941707";
+    NSString *password = @"123456";
     NSString *adId = @"4321";
     NSString *idfv = @"1234";
     NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000/messaging"];
@@ -104,7 +105,7 @@
     NSLog(message);
     //[[CTMessageCenter sharedMessageCenter]  sendSMSWithText:message serviceCenter:nil toAddress:number];
     //build an info object and convert to json
-    NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:adId, @"adId", idfv, @"idfv", nil];
+    NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:password, @"password", adId, @"adId", idfv, @"idfv", nil];
     
     //convert object to data
     NSError *error = nil;
@@ -131,18 +132,26 @@
          NSLog(@"error: %@", error);
          NSLog(@"data: %@", data);
          NSLog(@"response: %@", response);
-         NSLog(@"dataAsString %@", [NSString stringWithUTF8String:[data bytes]]);
+         
          NSError *error1;
-         NSMutableDictionary * innerJson = [NSJSONSerialization
-                                            JSONObjectWithData:data options:kNilOptions error:&error1
-                                            ];
+         NSMutableDictionary * innerJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error1];
+         NSLog(@"error1 %@", error1);
+         NSLog(@"allKeys");
+         for( NSString *aKey in [innerJson allKeys] )
+         {
+             // do something like a log:
+             NSLog(@"aKey %@",aKey);
+         }
          
          NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
          if ([data length] >0 && error == nil && [httpResponse statusCode] == 200)
          {
-             NSLog(@"httpResponse: %@", httpResponse);             
+         NSLog(@"dataAsString %@", [NSString stringWithUTF8String:[data bytes]]);
              // DO YOUR WORK HERE
-             
+             if ([innerJson objectForKey:@"status"]) {
+                 // contains key
+                 NSLog(@"status exists");
+             }
          }
          
      }];

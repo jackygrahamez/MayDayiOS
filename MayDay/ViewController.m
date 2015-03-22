@@ -49,8 +49,10 @@
 
 - (IBAction)saveInterval:(id)sender {
     int row = [self.messageIntervalPicker selectedRowInComponent:0];
-    
-    NSLog(@"%@", [_pickerData objectAtIndex:row]);
+    NSLog(@"value at index %i %@", row, [_pickerData objectAtIndex:row]);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* interval = [NSString stringWithFormat:@"%i", row];
+    [defaults setObject:interval forKey:@"interval"];
 }
 
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		812CA6FE1AB79CF7000DB19C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */; };
 		812CA6FF1AB79CF7000DB19C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812CA6FD1AB79CF7000DB19C /* Fabric.framework */; };
+		81ED61611ABF02EB00A76A62 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81ED61601ABF02EB00A76A62 /* CoreLocation.framework */; };
 		81F7B2531AB650060028D42E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D005F651AABBD5F00D75004 /* Images.xcassets */; };
 		8D005F5E1AABBD5F00D75004 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F5D1AABBD5F00D75004 /* InterfaceController.m */; };
 		8D005F611AABBD5F00D75004 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D005F601AABBD5F00D75004 /* NotificationController.m */; };
@@ -108,6 +109,8 @@
 /* Begin PBXFileReference section */
 		812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		812CA6FD1AB79CF7000DB19C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		81ED61601ABF02EB00A76A62 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		81ED61621ABF035400A76A62 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		81F7B2541AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_320x480_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_320x480_iOS.png"; sourceTree = "<group>"; };
 		81F7B2551AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_640x960_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_640x960_iOS.png"; sourceTree = "<group>"; };
 		81F7B2561AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_640x1136_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_640x1136_iOS.png"; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81ED61611ABF02EB00A76A62 /* CoreLocation.framework in Frameworks */,
 				812CA6FE1AB79CF7000DB19C /* Crashlytics.framework in Frameworks */,
 				812CA6FF1AB79CF7000DB19C /* Fabric.framework in Frameworks */,
 			);
@@ -256,6 +260,7 @@
 		8D3019CA1AA40596000C4FF7 = {
 			isa = PBXGroup;
 			children = (
+				81ED61601ABF02EB00A76A62 /* CoreLocation.framework */,
 				812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */,
 				812CA6FD1AB79CF7000DB19C /* Fabric.framework */,
 				8D3019D51AA40596000C4FF7 /* MayDay */,
@@ -290,6 +295,7 @@
 				8D3019E81AA40597000C4FF7 /* LaunchScreen.xib */,
 				8D3019DD1AA40597000C4FF7 /* MayDay.xcdatamodeld */,
 				8D3019D61AA40596000C4FF7 /* Supporting Files */,
+				81ED61621ABF035400A76A62 /* DetailViewController.h */,
 			);
 			path = MayDay;
 			sourceTree = "<group>";

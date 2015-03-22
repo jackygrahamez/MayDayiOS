@@ -95,14 +95,26 @@
 }
 -(IBAction)trigger:(id)sender
 {
-    NSString *message = @"Test Message";
-    NSString *number = @"12024941707";
+    //Grab Saved Data
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *message = [defaults objectForKey:@"messagestring"];
+    NSString *first = [defaults objectForKey:@"contact1string"];
+    NSString *second = [defaults objectForKey:@"contact2string"];
+    NSString *third = [defaults objectForKey:@"contact3string"];
+    
+    //Validation INFO
+    //May need to implement JSON Token Authentication
+    //EXAMPLE #1 http://www.sitepoint.com/using-json-web-tokens-node-js/
+    //EXAMPLE #2 https://github.com/auth0/node-jsonwebtoken
     NSString *password = @"123456";
-    NSString *adId = @"4321";
-    NSString *idfv = @"1234";
+    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
     NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000/messaging"];
-    NSLog(@"%@",someURLSetBefore);
-    NSLog(message);
+    NSLog(@"someURLSetBefore %@",someURLSetBefore);
+    NSLog(@"message %@", message);
+    
+    
     //[[CTMessageCenter sharedMessageCenter]  sendSMSWithText:message serviceCenter:nil toAddress:number];
     //build an info object and convert to json
     NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:password, @"password", adId, @"adId", idfv, @"idfv", nil];
@@ -132,25 +144,32 @@
          NSLog(@"error: %@", error);
          NSLog(@"data: %@", data);
          NSLog(@"response: %@", response);
-         
-         NSError *error1;
-         NSMutableDictionary * innerJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error1];
-         NSLog(@"error1 %@", error1);
-         NSLog(@"allKeys");
-         for( NSString *aKey in [innerJson allKeys] )
-         {
-             // do something like a log:
-             NSLog(@"aKey %@",aKey);
-         }
-         
+
          NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
          if ([data length] >0 && error == nil && [httpResponse statusCode] == 200)
          {
          NSLog(@"dataAsString %@", [NSString stringWithUTF8String:[data bytes]]);
              // DO YOUR WORK HERE
-             if ([innerJson objectForKey:@"status"]) {
+             NSError *error1;
+             NSMutableDictionary * innerJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error1];
+             NSLog(@"error1 %@", error1);
+             NSLog(@"allKeys");
+             for( NSString *aKey in [innerJson allKeys] )
+             {
+                 // do something like a log:
+                 NSLog(@"aKey %@",aKey);
+             }
+             if ([innerJson objectForKey:@"sent"]) {
                  // contains key
-                 NSLog(@"status exists");
+                 NSLog(@"Result for sent is %@", [innerJson objectForKey:@"sent"]);
+                 if ([innerJson objectForKey:@"sent"]) {
+                     NSLog(@"message sent");
+                 } else {
+                     NSLog(@"message not sent");
+                 }
+                 
+             } else {
+                 NSLog(@"Server unavailable");
              }
          }
          

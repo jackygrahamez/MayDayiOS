@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if (![CLLocationManager locationServicesEnabled]) {
+        // location services is disabled, alert user
+        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"DisabledTitle", @"DisabledTitle")
+                                                                        message:NSLocalizedString(@"DisabledMessage", @"DisabledMessage")
+                                                                       delegate:nil
+                                                              cancelButtonTitle:NSLocalizedString(@"OKButtonTitle", @"OKButtonTitle")
+                                                              otherButtonTitles:nil];
+        [servicesDisabledAlert show];
+    }
     [Fabric with:@[CrashlyticsKit]];
     return YES;
 }

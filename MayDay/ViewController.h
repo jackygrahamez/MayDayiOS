@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 
 @interface ViewController : UIViewController {
     IBOutlet UILabel *label;
@@ -18,14 +17,10 @@
     IBOutlet UITextField *contact2;
     IBOutlet UITextField *contact3;
 }
-
-@interface MasterViewController : UITableViewController<CLLocationManagerDelegate>
-
-@property (nonatomic, retain) CLLocationManager *locationManager;
-
 -(IBAction)saveMessage:(id)sender;
 -(IBAction)saveContact:(id)sender;
 -(IBAction)controlTextDidChange:(id)sender;
 -(IBAction)trigger:(id)sender;
 
 @end
+

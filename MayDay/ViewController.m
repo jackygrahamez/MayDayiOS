@@ -107,7 +107,8 @@
     //EXAMPLE #1 http://www.sitepoint.com/using-json-web-tokens-node-js/
     //EXAMPLE #2 https://github.com/auth0/node-jsonwebtoken
     NSString *password = @"123456";
-    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    //NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    NSString *adId = @"PLACEHOLDER";
     NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
     NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000/messaging"];

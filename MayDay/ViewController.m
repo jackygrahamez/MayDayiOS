@@ -13,6 +13,15 @@
 @end
 
 @implementation ViewController
+
+#pragma mark - Properties
+
+@synthesize locationManager;
+
+#pragma mark - Methods
+
+#pragma mark - View lifecycle
+
 -(IBAction)saveMessage:(id)sender
 {
     NSString *savestring = message.text;
@@ -60,6 +69,26 @@
     
     [self.view addGestureRecognizer:tap];
     
+    //Location Manager
+    
+    locationManager = [[CLLocationManager alloc] init];
+    
+    [locationManager startUpdatingLocation];
+    NSLog(@" lat: %f",locationManager.location.coordinate.latitude);
+    NSLog(@" lon: %f",locationManager.location.coordinate.longitude);
+    
+    [locationManager stopUpdatingLocation];
+    
+    if (self.locationManager == nil)
+    {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.desiredAccuracy =
+        kCLLocationAccuracyNearestTenMeters;
+        self.locationManager.delegate = self;
+    }
+    
+    [self.locationManager startUpdatingLocation];
+    
      //NSArray *_pickerData = @[@"1 min", @"2 min", @"3 min", @"4 min", @"5 min", @"6 min", @"7 min"];
 }
 
@@ -95,6 +124,19 @@
 }
 -(IBAction)trigger:(id)sender
 {
+    //Get GPS Location
+    // 1. Get the current location
+    
+    CLLocation *curPos = locationManager.location;
+    
+    NSString *latitude = [[NSNumber numberWithDouble:curPos.coordinate.latitude] stringValue];
+    
+    NSString *longitude = [[NSNumber numberWithDouble:curPos.coordinate.longitude] stringValue];
+    
+    NSLog(@"Lat: %@", latitude);
+    NSLog(@"Long: %@", longitude);
+    
+    
     //Grab Saved Data
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *message = [defaults objectForKey:@"messagestring"];
@@ -112,8 +154,8 @@
     NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
     NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000/messaging"];
-    NSLog(@"someURLSetBefore %@",someURLSetBefore);
-    NSLog(@"message %@", message);
+    //NSLog(@"someURLSetBefore %@",someURLSetBefore);
+    //NSLog(@"message %@", message);
     
     
     //[[CTMessageCenter sharedMessageCenter]  sendSMSWithText:message serviceCenter:nil toAddress:number];
@@ -132,8 +174,7 @@
     [request setHTTPBody:jsonData];
     
     // print json:
-    NSLog(@"JSON summary: %@", [[NSString alloc] initWithData:jsonData
-                                                     encoding:NSUTF8StringEncoding]);
+    //NSLog(@"JSON summary: %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
     //NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     //[connection start];
     [NSURLConnection
@@ -142,23 +183,23 @@
      completionHandler:^(NSURLResponse *response,
                          NSData *data,
                          NSError *error) {
-         NSLog(@"error: %@", error);
-         NSLog(@"data: %@", data);
-         NSLog(@"response: %@", response);
+         //NSLog(@"error: %@", error);
+         //NSLog(@"data: %@", data);
+         //NSLog(@"response: %@", response);
 
          NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
          if ([data length] >0 && error == nil && [httpResponse statusCode] == 200)
          {
-         NSLog(@"dataAsString %@", [NSString stringWithUTF8String:[data bytes]]);
+         //NSLog(@"dataAsString %@", [NSString stringWithUTF8String:[data bytes]]);
              // DO YOUR WORK HERE
              NSError *error1;
              NSMutableDictionary * innerJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error1];
-             NSLog(@"error1 %@", error1);
-             NSLog(@"allKeys");
+             //NSLog(@"error1 %@", error1);
+             //NSLog(@"allKeys");
              for( NSString *aKey in [innerJson allKeys] )
              {
                  // do something like a log:
-                 NSLog(@"aKey %@",aKey);
+                 //NSLog(@"aKey %@",aKey);
              }
              if ([innerJson objectForKey:@"sent"]) {
                  // contains key

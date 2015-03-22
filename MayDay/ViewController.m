@@ -186,7 +186,9 @@
     
     NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000/messaging"];
     //NSLog(@"someURLSetBefore %@",someURLSetBefore);
-    NSLog(@"message %@", message);
+    //NSString *messageWithGPS = @"%@ test", *message;
+    NSString *messageWithGPS = [NSString stringWithFormat:@"%@ I'm here https://maps.google.com/maps?1=%@,%@ via gps", message, latitude, longitude];
+    NSLog(@"messageWithGPS %@", messageWithGPS);
     
     
     //[[CTMessageCenter sharedMessageCenter]  sendSMSWithText:message serviceCenter:nil toAddress:number];

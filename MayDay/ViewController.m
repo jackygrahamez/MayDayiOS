@@ -187,7 +187,8 @@
     NSString *adId = @"PLACEHOLDER";
     NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
-    NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000/messaging"];
+    //Need to get a CA Certificate for the server
+    NSURL *someURLSetBefore = [NSURL URLWithString:@"http://maydaysos.net/messaging"];
     //NSLog(@"someURLSetBefore %@",someURLSetBefore);
     //NSString *messageWithGPS = @"%@ test", *message;
 

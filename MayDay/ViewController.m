@@ -174,6 +174,9 @@
     NSString *first = [defaults objectForKey:@"contact1string"];
     NSString *second = [defaults objectForKey:@"contact2string"];
     NSString *third = [defaults objectForKey:@"contact3string"];
+    //NSArray *contacts = @[first, second, third];
+    NSArray *contacts = [NSArray arrayWithObjects:first,second,third,nil];
+
     
     //Validation INFO
     //May need to implement JSON Token Authentication
@@ -187,13 +190,32 @@
     NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000/messaging"];
     //NSLog(@"someURLSetBefore %@",someURLSetBefore);
     //NSString *messageWithGPS = @"%@ test", *message;
-    NSString *messageWithGPS = [NSString stringWithFormat:@"%@ I'm here https://maps.google.com/maps?1=%@,%@ via gps", message, latitude, longitude];
-    NSLog(@"messageWithGPS %@", messageWithGPS);
+
+    NSString *messageWithGPS = @"";
+    NSString *messageWithoutGPS = @"";
     
+    //Check if GPS is working
+    if (latitude != 0 && longitude != 0) {
+        messageWithGPS = [NSString stringWithFormat:@"%@ I'm here https://maps.google.com/maps?1=%@,%@ via gps", message, latitude, longitude];
+        message = messageWithGPS;
+    } else {
+        messageWithoutGPS = [NSString stringWithFormat:@"%@", message];
+        message = messageWithoutGPS;
+    }
+    
+    NSLog(@"messageWithGPS %@", messageWithGPS);
+
+    NSArray *loc = @[longitude, latitude];
     
     //[[CTMessageCenter sharedMessageCenter]  sendSMSWithText:message serviceCenter:nil toAddress:number];
     //build an info object and convert to json
-    NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:password, @"password", adId, @"adId", idfv, @"idfv", nil];
+    NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    contacts, @"contacts",
+                                    message, @"message",
+                                    loc, @"loc",
+                                    password, @"password",
+                                    adId, @"adId",
+                                    idfv, @"idfv", nil];
     
     //convert object to data
     NSError *error = nil;
@@ -207,7 +229,7 @@
     [request setHTTPBody:jsonData];
     
     // print json:
-    //NSLog(@"JSON summary: %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
+    NSLog(@"JSON summary: %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
     //NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     //[connection start];
     [NSURLConnection
@@ -216,31 +238,37 @@
      completionHandler:^(NSURLResponse *response,
                          NSData *data,
                          NSError *error) {
-         //NSLog(@"error: %@", error);
-         //NSLog(@"data: %@", data);
-         //NSLog(@"response: %@", response);
+         NSLog(@"error: %@", error);
+         NSLog(@"data: %@", data);
+         NSLog(@"response: %@", response);
 
          NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
          if ([data length] >0 && error == nil && [httpResponse statusCode] == 200)
          {
-         //NSLog(@"dataAsString %@", [NSString stringWithUTF8String:[data bytes]]);
+         NSLog(@"dataAsString %@", [NSString stringWithUTF8String:[data bytes]]);
              // DO YOUR WORK HERE
              NSError *error1;
              NSMutableDictionary * innerJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error1];
-             //NSLog(@"error1 %@", error1);
-             //NSLog(@"allKeys");
+             NSLog(@"error1 %@", error1);
+             NSLog(@"allKeys");
              for( NSString *aKey in [innerJson allKeys] )
              {
                  // do something like a log:
-                 //NSLog(@"aKey %@",aKey);
+                 NSLog(@"aKey %@",aKey);
              }
              if ([innerJson objectForKey:@"sent"]) {
                  // contains key
-                 NSLog(@"Result for sent is %@", [innerJson objectForKey:@"sent"]);
-                 if ([innerJson objectForKey:@"sent"]) {
+                 NSString* sent = (NSString*)[innerJson objectForKey:@"sent"];
+                 NSLog(@"Result for sent is %@", sent);
+                 if ([sent isEqualToString:@"true"]) {
                      NSLog(@"message sent");
                  } else {
                      NSLog(@"message not sent");
+                     UIAlertView *alert = [[UIAlertView alloc]
+                                           initWithTitle:@"Too Many Messages"
+                                           message:@"MayDay is meant for emergencies only. If you wish to continue using, uninstall and reinstall"
+                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                     [alert show];
                  }
                  
              } else {

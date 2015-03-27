@@ -11,7 +11,27 @@
 @interface ViewController ()
 {
     NSArray *_pickerData;
+    UISwipeGestureRecognizer *swipeLeftToRightGesture;
 }
+@end
+
+@interface UINavigationController(indexPoping)
+- (void)popToViewControllerAtIndex:(NSInteger)newVCsIndex animated:(BOOL)animated;
+@end
+
+@implementation UINavigationController(indexPoping)
+- (void)popToViewControllerAtIndex:(NSInteger)newVCsIndex animated:(BOOL)useAnimation
+{
+    if (newVCsIndex < [self.viewControllers count]) {
+        [self popToViewController:[self.viewControllers objectAtIndex:newVCsIndex] animated:useAnimation];
+    }
+    
+    [self.navigationBar setBackgroundImage:[UIImage new]
+                             forBarMetrics:UIBarMetricsDefault];
+    self.navigationBar.shadowImage = [UIImage new];
+    self.navigationBar.translucent = YES;
+}
+
 @end
 
 @implementation ViewController
@@ -30,6 +50,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"messagestring"];
     [defaults synchronize];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 -(IBAction)saveContact:(id)sender
 {
@@ -45,6 +66,7 @@
     NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
     
     [defaults synchronize];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)saveInterval:(id)sender {
@@ -53,12 +75,22 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString* interval = [NSString stringWithFormat:@"%i", row];
     [defaults setObject:interval forKey:@"interval"];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer {
+    NSLog(@"Swipe received.");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+    swipeLeftToRightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(swipedScreenRight:)];
+    [swipeLeftToRightGesture setNumberOfTouchesRequired: 1];
+    [swipeLeftToRightGesture setDirection: UISwipeGestureRecognizerDirectionRight];
+    [[self view] addGestureRecognizer: swipeLeftToRightGesture];
+    
     int total = 121;
     
     NSMutableArray *minutes = [[NSMutableArray alloc] init];
@@ -119,8 +151,6 @@
     //[self.locationManager requestWhenInUseAuthorization];
     [self.locationManager requestAlwaysAuthorization];
     [self.locationManager startUpdatingLocation];
-    
-     //NSArray *_pickerData = @[@"1 min", @"2 min", @"3 min", @"4 min", @"5 min", @"6 min", @"7 min"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -128,31 +158,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-// Make sure the user has typed a valid number so far.
--(IBAction)controlTextDidChange:(id)sender
-{
-    /*
-    if (obj.object == self->firstNumber)
-    {
-        NSString *countValue = firstNumber.stringValue;
-        
-        if ([countValue length] > 0) {
-            
-            if ([[countValue substringFromIndex:[countValue length]-1] integerValue] > 0 ||
-                [[countValue substringFromIndex:[countValue length]-1] isEqualToString:@"0"])
-            {
-                self.lastNumber = firstNumber.stringValue;
-            }
-            else
-            {
-                firstNumber.stringValue = self.lastNumber;
-                NSBeep();
-            }
-        }
-
-    }
-    */
-}
 -(IBAction)trigger:(id)sender
 {
     //Get GPS Location
@@ -312,14 +317,19 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    NSInteger row = 4;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *interval = [defaults objectForKey:@"interval"];
-    NSInteger row = [interval integerValue];
-    
+    if(interval != nil){
+        row = [interval integerValue];
+    }
     //This is how you manually SET(!!) a selection!
     [self.messageIntervalPicker selectRow:row inComponent:0 animated:YES];
 }
 
-
+- (void)swipedScreenRight:(UISwipeGestureRecognizer*)swipeGesture
+{
+    NSLog(@"swipedScreenRight");
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7525" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Snn-jc-ylz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Snn-jc-ylz">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7516"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -73,7 +73,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fkL-TW-UT3" kind="custom" id="Yen-mN-ISt"/>
+                                    <segue destination="Ic7-CG-rQ4" kind="push" id="DTu-HQ-P1E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-yi-51F">
@@ -354,13 +354,13 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-gC-i02">
-                                <rect key="frame" x="108" y="28" width="158" height="37"/>
+                                <rect key="frame" x="108" y="72" width="158" height="37"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="left" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-l2-vPv">
-                                <rect key="frame" x="16" y="89" width="343" height="50"/>
+                                <rect key="frame" x="16" y="148" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Message Settings" backgroundImage="state_settings_480x50.jpg">
@@ -371,20 +371,12 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="Q3l-1A-MH6" kind="push" id="a3U-v3-OnL"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJz-V3-2S1">
-                                <rect key="frame" x="18" y="178" width="343" height="1"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-fe-KWw">
-                                <rect key="frame" x="18" y="134" width="343" height="1"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-Td-WVw">
-                                <rect key="frame" x="16" y="222" width="343" height="1"/>
+                                <rect key="frame" x="16" y="198" width="343" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Pj-2QW">
-                                <rect key="frame" x="16" y="136" width="343" height="50"/>
+                                <rect key="frame" x="16" y="199" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Contact Settings" backgroundImage="state_settings_480x50.jpg">
@@ -395,8 +387,12 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="LmA-A7-Hri" kind="push" id="Rnc-EX-0KW"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJz-V3-2S1">
+                                <rect key="frame" x="16" y="249" width="343" height="1"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-d0-hfr">
-                                <rect key="frame" x="16" y="187" width="343" height="50"/>
+                                <rect key="frame" x="16" y="250" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Alert Settings" backgroundImage="state_settings_480x50.jpg">
@@ -407,6 +403,10 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="ogg-33-r79" kind="push" id="6JW-q7-LND"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-Td-WVw">
+                                <rect key="frame" x="16" y="301" width="343" height="1"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -687,23 +687,30 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="FSK-6P-rEm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Setup the frequency" translatesAutoresizingMaskIntoConstraints="NO" id="Q5v-lp-rif">
-                                <rect key="frame" x="26" y="117" width="333" height="50"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Setup the frequency" translatesAutoresizingMaskIntoConstraints="NO" id="Q5v-lp-rif">
+                                <rect key="frame" x="26" y="117" width="333" height="30"/>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Be careful about your battery! Sending alerts too often might drain your battery." translatesAutoresizingMaskIntoConstraints="NO" id="ZiH-ZA-lPI">
-                                <rect key="frame" x="80" y="155" width="269" height="50"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Be careful about your battery! Sending alerts too often might drain your battery." translatesAutoresizingMaskIntoConstraints="NO" id="ZiH-ZA-lPI">
+                                <rect key="frame" x="80" y="155" width="220" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="zbQ-bI-qlt"/>
+                                </constraints>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="SiG-sU-ynZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="SiG-sU-ynZ">
                                 <rect key="frame" x="26" y="157" width="46" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="rxi-aH-viB"/>
+                                    <constraint firstAttribute="height" constant="48" id="vBo-1h-1gz"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-as-8xI">
-                                <rect key="frame" x="138" y="394" width="109" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-as-8xI">
+                                <rect key="frame" x="122" y="394" width="109" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -713,8 +720,25 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <action selector="saveInterval:" destination="ogg-33-r79" eventType="touchUpInside" id="LR4-U3-hgD"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8d-jw-wrE">
-                                <rect key="frame" x="26" y="455" width="323" height="204"/>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-5h-aSG">
+                                <rect key="frame" x="26" y="224" width="300" height="150"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FpN-yx-S1z"/>
+                                    <constraint firstAttribute="height" constant="150" id="sfs-dW-8i3"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Contact Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7F-Ev-q02">
+                                <rect key="frame" x="26" y="72" width="323" height="37"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8d-jw-wrE">
+                                <rect key="frame" x="26" y="432" width="300" height="204"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="wY2-yR-0VO"/>
+                                </constraints>
                                 <string key="text">Security Tips
 • Think about who can practically assist you - there is no point someone knowing you are in trouble if they cannot help. 
 • Make a plan with your chosen contacts so that they are prepared to act fast. 
@@ -724,24 +748,21 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-5h-aSG">
-                                <rect key="frame" x="26" y="224" width="323" height="162"/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7F-Ev-q02">
-                                <rect key="frame" x="26" y="72" width="323" height="37"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="FSK-6P-rEm" secondAttribute="centerY" id="1P7-WI-USV"/>
-                            <constraint firstAttribute="centerX" secondItem="FSK-6P-rEm" secondAttribute="centerX" id="CRi-Le-8nl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FSK-6P-rEm" secondAttribute="trailing" id="Fof-la-qet"/>
-                            <constraint firstItem="FSK-6P-rEm" firstAttribute="leading" secondItem="n53-Yq-9zf" secondAttribute="leadingMargin" id="K0r-i3-AOA"/>
-                            <constraint firstItem="MLy-je-RSo" firstAttribute="top" secondItem="FSK-6P-rEm" secondAttribute="bottom" id="mE2-2a-XRN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FSK-6P-rEm" secondAttribute="trailing" id="DdE-e4-Rhv"/>
+                            <constraint firstAttribute="centerY" secondItem="FSK-6P-rEm" secondAttribute="centerY" id="IgE-BD-QLs"/>
+                            <constraint firstItem="SiG-sU-ynZ" firstAttribute="top" secondItem="Q5v-lp-rif" secondAttribute="bottom" constant="10" id="WTb-OI-vkp"/>
+                            <constraint firstAttribute="centerX" secondItem="D7F-Ev-q02" secondAttribute="centerX" id="a3Y-n6-JNf"/>
+                            <constraint firstAttribute="centerX" secondItem="tKP-as-8xI" secondAttribute="centerX" id="aj7-eo-i6u"/>
+                            <constraint firstItem="ZiH-ZA-lPI" firstAttribute="leading" secondItem="SiG-sU-ynZ" secondAttribute="trailing" constant="8" id="akw-Xx-W1B"/>
+                            <constraint firstItem="ZiH-ZA-lPI" firstAttribute="top" secondItem="Q5v-lp-rif" secondAttribute="bottom" constant="-12" id="bQl-lA-2Fz"/>
+                            <constraint firstItem="tKP-as-8xI" firstAttribute="top" secondItem="dgg-5h-aSG" secondAttribute="bottom" constant="10" id="ooP-Vc-15A"/>
+                            <constraint firstItem="dgg-5h-aSG" firstAttribute="top" secondItem="ZiH-ZA-lPI" secondAttribute="bottom" constant="19" id="r6c-O3-gtP"/>
+                            <constraint firstItem="i8d-jw-wrE" firstAttribute="top" secondItem="tKP-as-8xI" secondAttribute="bottom" constant="8" id="ssZ-MV-rV7"/>
+                            <constraint firstAttribute="centerX" secondItem="dgg-5h-aSG" secondAttribute="centerX" id="z5p-6O-LnC"/>
+                            <constraint firstItem="FSK-6P-rEm" firstAttribute="leading" secondItem="n53-Yq-9zf" secondAttribute="leadingMargin" id="zKQ-E8-q9c"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I4A-uR-i9s"/>
@@ -767,7 +788,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="bt3-Ni-NNW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="bt3-Ni-NNW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Message Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrt-qn-ZOd">
@@ -776,37 +797,58 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I Need IMMEDIATE help! " translatesAutoresizingMaskIntoConstraints="NO" id="EyK-QA-Tiu">
-                                <rect key="frame" x="26" y="249" width="323" height="87"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbd-ZE-Jn4">
-                                <rect key="frame" x="80" y="173" width="269" height="50"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJ9-kf-K29">
+                                <rect key="frame" x="26" y="117" width="288" height="50"/>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="eY0-Bt-5YP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="eY0-Bt-5YP">
                                 <rect key="frame" x="26" y="175" width="46" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="aKz-Rp-Kcn"/>
+                                    <constraint firstAttribute="width" constant="46" id="dZb-LB-QUD"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emergency message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3p-o0-aJe">
-                                <rect key="frame" x="26" y="231" width="323" height="21"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbd-ZE-Jn4">
+                                <rect key="frame" x="80" y="173" width="220" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="KCT-bD-wGD"/>
+                                </constraints>
+                                <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="I Need IMMEDIATE help! " translatesAutoresizingMaskIntoConstraints="NO" id="EyK-QA-Tiu">
+                                <rect key="frame" x="26" y="269" width="300" height="87"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3p-o0-aJe">
+                                <rect key="frame" x="26" y="251" width="300" height="21"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Characters: 63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EF-d7-5qK">
-                                <rect key="frame" x="178" y="231" width="164" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Emergency message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4M-iE-hFQ">
+                                <rect key="frame" x="36" y="251" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Characters: 63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EF-d7-5qK">
+                                <rect key="frame" x="214" y="251" width="100" height="21"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="h3h-s9-Isw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktc-Gz-pQl">
-                                <rect key="frame" x="133" y="385" width="109" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktc-Gz-pQl">
+                                <rect key="frame" x="116" y="405" width="109" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -816,8 +858,11 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <action selector="saveMessage:" destination="Q3l-1A-MH6" eventType="touchUpInside" id="27I-NX-HnN"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJW-TN-tJt">
-                                <rect key="frame" x="26" y="423" width="323" height="204"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJW-TN-tJt">
+                                <rect key="frame" x="26" y="443" width="288" height="204"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="pFb-EQ-KWz"/>
+                                </constraints>
                                 <string key="text">Security Tips
 • Think about who can practically assist you - there is no point someone knowing you are in trouble if they cannot help. 
 • Make a plan with your chosen contacts so that they are prepared to act fast. 
@@ -827,23 +872,30 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I'm here http://maps.google.com/GPS-location" translatesAutoresizingMaskIntoConstraints="NO" id="Ckt-eW-PV8">
-                                <rect key="frame" x="26" y="336" width="323" height="41"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="I'm here http://maps.google.com/GPS-location" translatesAutoresizingMaskIntoConstraints="NO" id="Ckt-eW-PV8">
+                                <rect key="frame" x="26" y="356" width="300" height="41"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJ9-kf-K29">
-                                <rect key="frame" x="26" y="117" width="333" height="50"/>
-                                <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Hrt-qn-ZOd" secondAttribute="centerX" id="NdA-be-2UH"/>
+                            <constraint firstAttribute="centerY" secondItem="bt3-Ni-NNW" secondAttribute="centerY" id="9la-Mw-DJa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bt3-Ni-NNW" secondAttribute="trailing" id="B7i-2i-HdU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6EF-d7-5qK" secondAttribute="trailing" constant="10" id="G6A-1y-QPI"/>
+                            <constraint firstItem="H4M-iE-hFQ" firstAttribute="leading" secondItem="584-VA-HIU" secondAttribute="leadingMargin" constant="10" id="IFb-0Q-BAO"/>
+                            <constraint firstAttribute="centerX" secondItem="HJW-TN-tJt" secondAttribute="centerX" id="MuZ-ar-UZa"/>
+                            <constraint firstItem="bt3-Ni-NNW" firstAttribute="leading" secondItem="584-VA-HIU" secondAttribute="leadingMargin" id="SL4-Wk-i8P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rJ9-kf-K29" secondAttribute="trailing" constant="10" id="WMI-yA-UMt"/>
+                            <constraint firstAttribute="centerX" secondItem="EyK-QA-Tiu" secondAttribute="centerX" id="a8u-3e-t7e"/>
+                            <constraint firstAttribute="centerX" secondItem="Ckt-eW-PV8" secondAttribute="centerX" id="e9S-Xm-TWe"/>
+                            <constraint firstAttribute="centerX" secondItem="Hrt-qn-ZOd" secondAttribute="centerX" id="ilb-qE-M2E"/>
+                            <constraint firstItem="rJ9-kf-K29" firstAttribute="trailing" secondItem="584-VA-HIU" secondAttribute="trailingMargin" constant="10" id="jJZ-WA-PPK"/>
+                            <constraint firstAttribute="centerX" secondItem="Hrt-qn-ZOd" secondAttribute="centerX" id="nE4-xo-NCs"/>
+                            <constraint firstAttribute="centerX" secondItem="U3p-o0-aJe" secondAttribute="centerX" id="nTw-GS-88e"/>
+                            <constraint firstAttribute="centerX" secondItem="ktc-Gz-pQl" secondAttribute="centerX" id="smt-Jd-zcc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qON-Aq-ynv"/>
@@ -1017,10 +1069,10 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
             </objects>
             <point key="canvasLocation" x="809" y="960"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Bar-->
         <scene sceneID="u1i-fp-7dC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Snn-jc-ylz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Snn-jc-ylz" customClass="navigationBar" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzQ-A3-qZm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1045,9 +1097,6 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Ic7-CG-rQ4" kind="relationship" relationship="rootViewController" id="ckQ-f1-JHE"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ied-kW-dxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

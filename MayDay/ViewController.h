@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate> {
+@interface UINavigationController(indexPoping) {
+    
+}
+@property NSInteger *newVCsIndex;
+@end
+@interface ViewController : UIViewController<UIGestureRecognizerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate> {
     IBOutlet UILabel *label;
     IBOutlet UITextView *message;
     IBOutlet UITextField *firstNumber;
@@ -19,6 +24,7 @@
     IBOutlet UITextField *contact3;
     CLLocationManager *locationManager;
 }
+
 -(IBAction)saveMessage:(id)sender;
 -(IBAction)saveContact:(id)sender;
 -(IBAction)saveInterval:(id)sender;
@@ -29,6 +35,8 @@
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *messageIntervalPicker;
+
+@property (weak, nonatomic) UINavigationController *navigationBar;
 
 @end
 

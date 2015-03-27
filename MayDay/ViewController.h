@@ -23,6 +23,7 @@
     IBOutlet UITextField *contact2;
     IBOutlet UITextField *contact3;
     CLLocationManager *locationManager;
+    NSTimer *autoTimer;
 }
 
 -(IBAction)saveMessage:(id)sender;

@@ -16,6 +16,7 @@ NSDate *startDateObj = nil;
 ViewController *masterViewController;
 NSString *message, *first, *second, *third;
 NSArray *contacts;
+BOOL alerting = false;
 
 
 @interface ViewController ()
@@ -387,6 +388,7 @@ NSArray *contacts;
 - (IBAction)stopAlerting:(id)sender {
     [autoTimer invalidate];
     autoTimer = nil;
+    alerting = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:nil forKey:@"alerting"];
 }
@@ -416,31 +418,34 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 
 - (void) powerButtonTrigger
 {
-    NSDate *currentDateObj = [NSDate date];
-    
-    if (startDateObj != nil) {
-        NSTimeInterval interval = [currentDateObj timeIntervalSinceDate:startDateObj];
-        if (interval<10) {
-            triggerCount++;
-            NSLog (@"press number %i first press was %.0f seconds ago", triggerCount, interval);
-            if (triggerCount >= 5) {
-                NSLog(@"triggering MayDay Alert");
-                [masterViewController sendMessage];
-                [masterViewController startTimer];
+    if (alerting == false) {
+        NSDate *currentDateObj = [NSDate date];
+        
+        if (startDateObj != nil) {
+            NSTimeInterval interval = [currentDateObj timeIntervalSinceDate:startDateObj];
+            if (interval<10) {
+                triggerCount++;
+                NSLog (@"press number %i first press was %.0f seconds ago", triggerCount, interval);
+                if (triggerCount >= 5) {
+                    NSLog(@"triggering MayDay Alert");
+                    [masterViewController sendMessage];
+                    [masterViewController startTimer];
+                    startDateObj = nil;
+                    triggerCount = 0;
+                    alerting = true;
+                }
+                
+            } else {
+                NSLog(@"reset trigger");
                 startDateObj = nil;
                 triggerCount = 0;
             }
-            
         } else {
-            NSLog(@"reset trigger");
-            startDateObj = nil;
+            NSLog (@"first button press");
+            startDateObj = [NSDate date];
             triggerCount = 0;
         }
-    } else {
-        NSLog (@"first button press");
-        startDateObj = [NSDate date];
     }
-    
 
 }
 

@@ -127,29 +127,9 @@ BOOL alerting = false;
     masterViewController.messageIntervalPicker.delegate = self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    masterViewController = self;
-    //[masterViewController keepAlive];
-    [masterViewController swipeInit];
-    [masterViewController intervalPickerInit];
+- (void)initLocationManager
+{
     
-    // Do any additional setup after loading the view, typically from a nib.
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *loadstring = [defaults objectForKey:@"messagestring"];
-    [message setText:loadstring];
-    contact1.keyboardType = UIKeyboardTypeNumberPad;
-    contact2.keyboardType = UIKeyboardTypeNumberPad;
-    contact3.keyboardType = UIKeyboardTypeNumberPad;
-    NSString *first = [defaults objectForKey:@"contact1string"];
-    NSString *second = [defaults objectForKey:@"contact2string"];
-    NSString *third = [defaults objectForKey:@"contact3string"];
-    NSLog(@"%@,%@,%@",first,second,third);
-    [message setText:loadstring];
-    [contact1 setText:first];
-    [contact2 setText:second];
-    [contact3 setText:third];
-
     
     //Location Manager
     
@@ -179,6 +159,32 @@ BOOL alerting = false;
                                     CFSTR("com.apple.iokit.hid.displayStatus"), // event name
                                     NULL, // object
                                     CFNotificationSuspensionBehaviorDeliverImmediately);
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    masterViewController = self;
+    //[masterViewController keepAlive];
+    [masterViewController swipeInit];
+    [masterViewController intervalPickerInit];
+    
+    // Do any additional setup after loading the view, typically from a nib.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *loadstring = [defaults objectForKey:@"messagestring"];
+    [message setText:loadstring];
+    contact1.keyboardType = UIKeyboardTypeNumberPad;
+    contact2.keyboardType = UIKeyboardTypeNumberPad;
+    contact3.keyboardType = UIKeyboardTypeNumberPad;
+    NSString *first = [defaults objectForKey:@"contact1string"];
+    NSString *second = [defaults objectForKey:@"contact2string"];
+    NSString *third = [defaults objectForKey:@"contact3string"];
+    NSLog(@"%@,%@,%@",first,second,third);
+    [message setText:loadstring];
+    [contact1 setText:first];
+    [contact2 setText:second];
+    [contact3 setText:third];
+
+    [masterViewController initLocationManager];
     
 }
 

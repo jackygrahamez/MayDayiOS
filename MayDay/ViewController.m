@@ -255,7 +255,7 @@ BOOL alerting = false;
     NSLog(@"Long: %@", longitude);
     
     
-    [masterViewController populateSavedData];
+    [masterViewController initData];
     
     //Validation INFO
     //May need to implement JSON Token Authentication
@@ -360,7 +360,7 @@ BOOL alerting = false;
     
 }
 
-- (void) populateSavedData
+- (void) initData
 {
     //Grab Saved Data
     defaults = [NSUserDefaults standardUserDefaults];

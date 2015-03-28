@@ -85,7 +85,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self keepAlive];
     
     swipeLeftToRightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(swipedScreenRight:)];
     [swipeLeftToRightGesture setNumberOfTouchesRequired: 1];
@@ -152,6 +152,38 @@
     //[self.locationManager requestWhenInUseAuthorization];
     [self.locationManager requestAlwaysAuthorization];
     [self.locationManager startUpdatingLocation];
+    
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
+                                    NULL, // observer
+                                    displayStatusChanged, // callback
+                                    CFSTR("com.apple.iokit.hid.displayStatus"), // event name
+                                    NULL, // object
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
+                                    NULL, // observer
+                                    displayStatusChanged, // callback
+                                    CFSTR("com.apple.springboard.hasBlankedScreen"), // event name
+                                    NULL, // object
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
+                                    NULL, // observer
+                                    displayStatusChanged, // callback
+                                    CFSTR("com.apple.springboard.lockstate"), // event name
+                                    NULL, // object
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
+                                    NULL, // observer
+                                    displayStatusChanged, // callback
+                                    CFSTR("com.apple.springboard.lockcomplete"), // event name
+                                    NULL, // object
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
+                                    NULL, // observer
+                                    displayStatusChanged, // callback
+                                    CFSTR("com.apple.iokit.hid.displayStatus"), // event name
+                                    NULL, // object
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -341,6 +373,8 @@
 - (void) startTimer {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *interval = [defaults objectForKey:@"interval"];
+    NSString *alerting = @"true";
+    [defaults setObject:alerting forKey:@"alerting"];
     double i = ([interval doubleValue] + 1) * 60;
     NSLog(@"interval %f",i);
     autoTimer = [NSTimer scheduledTimerWithTimeInterval:i
@@ -353,13 +387,67 @@
 - (IBAction)stopAlerting:(id)sender {
     [autoTimer invalidate];
     autoTimer = nil;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:nil forKey:@"alerting"];
 }
 
 - (void) tick:(NSTimer *) timer {
     //do something here..
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *alerting = [defaults objectForKey:@"alerting"];
+    if (alerting) {
     NSLog(@"sendMessage");
     [self sendMessage];
+    }
+}
 
+static void displayStatusChanged(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+    NSLog(@"event received!");
+    // you might try inspecting the `userInfo` dictionary, to see
+    //  if it contains any useful info
+    if (userInfo != nil) {
+        CFShow(userInfo);
+    }
+}
+
+- (void) keepAlive {
+    
+    UIApplication * application = [UIApplication sharedApplication];
+    
+    if([[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)])
+    {
+        NSLog(@"Multitasking Supported");
+        
+        __block UIBackgroundTaskIdentifier background_task;
+        background_task = [application beginBackgroundTaskWithExpirationHandler:^ {
+            NSLog(@"Ending timer");
+            //Clean up code. Tell the system that we are done.
+            [application endBackgroundTask: background_task];
+            background_task = UIBackgroundTaskInvalid;
+            [self keepAlive];
+        }];
+        
+        //To make the code block asynchronous
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            //### background task starts
+            NSLog(@"Running in the background\n");
+            while(TRUE)
+            {
+                NSLog(@"Background time Remaining: %f",[[UIApplication sharedApplication] backgroundTimeRemaining]);
+                [NSThread sleepForTimeInterval:1]; //wait for 1 sec
+            }
+            //#### background task ends
+            
+            //Clean up code. Tell the system that we are done.
+            [application endBackgroundTask: background_task];
+            background_task = UIBackgroundTaskInvalid;
+        });
+    }
+    else
+    {
+        NSLog(@"Multitasking Not Supported");
+    }
 }
 
 @end

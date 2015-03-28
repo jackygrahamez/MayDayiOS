@@ -220,7 +220,6 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </state>
                                 <connections>
                                     <action selector="stopAlerting:" destination="Hke-2G-FPb" eventType="touchUpInside" id="UVL-MY-MHy"/>
-                                    <action selector="trigger:" destination="Hke-2G-FPb" eventType="touchUpInside" id="HJn-Zv-ew0"/>
                                     <segue destination="BYZ-38-t0r" kind="push" id="Wgb-Cw-mAV"/>
                                 </connections>
                             </button>

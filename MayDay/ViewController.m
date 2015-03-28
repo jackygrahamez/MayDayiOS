@@ -92,16 +92,22 @@ NSArray *contacts;
     NSLog(@"Swipe received.");
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    masterViewController = self;
-    //[masterViewController keepAlive];
-    
+-(void)swipeInit
+{
     swipeLeftToRightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(swipedScreenRight:)];
     [swipeLeftToRightGesture setNumberOfTouchesRequired: 1];
     [swipeLeftToRightGesture setDirection: UISwipeGestureRecognizerDirectionRight];
     [[masterViewController view] addGestureRecognizer: swipeLeftToRightGesture];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [masterViewController.view addGestureRecognizer:tap];
+}
+
+-(void)intervalPickerInit
+{
     int total = 121;
     
     NSMutableArray *minutes = [[NSMutableArray alloc] init];
@@ -116,8 +122,16 @@ NSArray *contacts;
     _pickerData = label;
     
     // Connect data
-    self.messageIntervalPicker.dataSource = self;
-    self.messageIntervalPicker.delegate = self;
+    masterViewController.messageIntervalPicker.dataSource = self;
+    masterViewController.messageIntervalPicker.delegate = self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    masterViewController = self;
+    //[masterViewController keepAlive];
+    [masterViewController swipeInit];
+    [masterViewController intervalPickerInit];
     
     // Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -135,11 +149,6 @@ NSArray *contacts;
     [contact2 setText:second];
     [contact3 setText:third];
 
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget:self
-                                   action:@selector(dismissKeyboard)];
-    
-    [masterViewController.view addGestureRecognizer:tap];
     
     //Location Manager
     

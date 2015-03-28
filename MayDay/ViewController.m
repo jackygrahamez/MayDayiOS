@@ -8,6 +8,12 @@
 
 #import "ViewController.h"
 
+// Your global variable definition.
+NSInteger startTimeSeconds = 0;
+NSInteger triggerCount = 0;
+NSDate *startDateObj = nil;
+ViewController *masterViewController;
+
 
 @interface ViewController ()
 {
@@ -85,7 +91,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self keepAlive];
+    masterViewController = self;
+    //[self keepAlive];
     
     swipeLeftToRightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(swipedScreenRight:)];
     [swipeLeftToRightGesture setNumberOfTouchesRequired: 1];
@@ -159,30 +166,6 @@
                                     CFSTR("com.apple.iokit.hid.displayStatus"), // event name
                                     NULL, // object
                                     CFNotificationSuspensionBehaviorDeliverImmediately);
-    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
-                                    NULL, // observer
-                                    displayStatusChanged, // callback
-                                    CFSTR("com.apple.springboard.hasBlankedScreen"), // event name
-                                    NULL, // object
-                                    CFNotificationSuspensionBehaviorDeliverImmediately);
-    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
-                                    NULL, // observer
-                                    displayStatusChanged, // callback
-                                    CFSTR("com.apple.springboard.lockstate"), // event name
-                                    NULL, // object
-                                    CFNotificationSuspensionBehaviorDeliverImmediately);
-    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
-                                    NULL, // observer
-                                    displayStatusChanged, // callback
-                                    CFSTR("com.apple.springboard.lockcomplete"), // event name
-                                    NULL, // object
-                                    CFNotificationSuspensionBehaviorDeliverImmediately);
-    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
-                                    NULL, // observer
-                                    displayStatusChanged, // callback
-                                    CFSTR("com.apple.iokit.hid.displayStatus"), // event name
-                                    NULL, // object
-                                    CFNotificationSuspensionBehaviorDeliverImmediately);
     
 }
 
@@ -190,6 +173,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 -(IBAction)trigger:(id)sender
 {
@@ -402,12 +387,40 @@
 }
 
 static void displayStatusChanged(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+    
     NSLog(@"event received!");
+    NSDate *currentDateObj = [NSDate date];
+
+    if (startDateObj != nil) {
+        NSTimeInterval interval = [currentDateObj timeIntervalSinceDate:startDateObj];
+        if (interval<10) {
+            triggerCount++;
+            NSLog (@"press number %i first press was %.0f seconds ago", triggerCount, interval);
+            if (triggerCount >= 5) {
+                NSLog(@"triggering MayDay Alert");
+                [masterViewController sendMessage];
+                [masterViewController startTimer];
+                startDateObj = nil;
+                triggerCount = 0;
+            }
+            
+        } else {
+            NSLog(@"reset trigger");
+            startDateObj = nil;
+            triggerCount = 0;
+        }
+    } else {
+         NSLog (@"first button press");
+        startDateObj = [NSDate date];
+    }
+    
+
     // you might try inspecting the `userInfo` dictionary, to see
     //  if it contains any useful info
     if (userInfo != nil) {
         CFShow(userInfo);
     }
+    
 }
 
 - (void) keepAlive {

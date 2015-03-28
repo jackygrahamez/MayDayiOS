@@ -24,6 +24,8 @@
     IBOutlet UITextField *contact3;
     CLLocationManager *locationManager;
     NSTimer *autoTimer;
+    NSInteger startTimeSeconds;
+    NSDate *startDateObj;
 }
 
 -(IBAction)saveMessage:(id)sender;

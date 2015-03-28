@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 
+NSUserDefaults *defaults;
 // Your global variable definition.
-NSInteger startTimeSeconds = 0;
-NSInteger triggerCount = 0;
+NSInteger startTimeSeconds = 0,
+        triggerCount = 0;
 NSDate *startDateObj = nil;
 ViewController *masterViewController;
+NSString *message, *first, *second, *third;
+NSArray *contacts;
 
 
 @interface ViewController ()
@@ -57,7 +60,7 @@ ViewController *masterViewController;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"messagestring"];
     [defaults synchronize];
-    [self.navigationController popViewControllerAnimated:YES];
+    [masterViewController.navigationController popViewControllerAnimated:YES];
 }
 -(IBAction)saveContact:(id)sender
 {
@@ -73,16 +76,16 @@ ViewController *masterViewController;
     NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
     
     [defaults synchronize];
-    [self.navigationController popViewControllerAnimated:YES];
+    [masterViewController.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)saveInterval:(id)sender {
-    int row = [self.messageIntervalPicker selectedRowInComponent:0];
+    int row = [masterViewController.messageIntervalPicker selectedRowInComponent:0];
     NSLog(@"value at index %i %@", row, [_pickerData objectAtIndex:row]);
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString* interval = [NSString stringWithFormat:@"%i", row];
     [defaults setObject:interval forKey:@"interval"];
-    [self.navigationController popViewControllerAnimated:YES];
+    [masterViewController.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer {
@@ -92,12 +95,12 @@ ViewController *masterViewController;
 - (void)viewDidLoad {
     [super viewDidLoad];
     masterViewController = self;
-    //[self keepAlive];
+    //[masterViewController keepAlive];
     
     swipeLeftToRightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(swipedScreenRight:)];
     [swipeLeftToRightGesture setNumberOfTouchesRequired: 1];
     [swipeLeftToRightGesture setDirection: UISwipeGestureRecognizerDirectionRight];
-    [[self view] addGestureRecognizer: swipeLeftToRightGesture];
+    [[masterViewController view] addGestureRecognizer: swipeLeftToRightGesture];
     
     int total = 121;
     
@@ -136,7 +139,7 @@ ViewController *masterViewController;
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
     
-    [self.view addGestureRecognizer:tap];
+    [masterViewController.view addGestureRecognizer:tap];
     
     //Location Manager
     
@@ -156,9 +159,9 @@ ViewController *masterViewController;
         self.locationManager.delegate = self;
     }
     
-    //[self.locationManager requestWhenInUseAuthorization];
-    [self.locationManager requestAlwaysAuthorization];
-    [self.locationManager startUpdatingLocation];
+    //[masterViewController.locationManager requestWhenInUseAuthorization];
+    [masterViewController.locationManager requestAlwaysAuthorization];
+    [masterViewController.locationManager startUpdatingLocation];
     
     CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
                                     NULL, // observer
@@ -178,8 +181,8 @@ ViewController *masterViewController;
 
 -(IBAction)trigger:(id)sender
 {
-    [self sendMessage];
-    [self startTimer];
+    [masterViewController sendMessage];
+    [masterViewController startTimer];
 }
 
 
@@ -219,13 +222,13 @@ ViewController *masterViewController;
         row = [interval integerValue];
     }
     //This is how you manually SET(!!) a selection!
-    [self.messageIntervalPicker selectRow:row inComponent:0 animated:YES];
+    [masterViewController.messageIntervalPicker selectRow:row inComponent:0 animated:YES];
 }
 
 - (void)swipedScreenRight:(UISwipeGestureRecognizer*)swipeGesture
 {
     NSLog(@"swipedScreenRight");
-    [self.navigationController popViewControllerAnimated:YES];
+    [masterViewController.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) sendMessage
@@ -242,15 +245,7 @@ ViewController *masterViewController;
     NSLog(@"Long: %@", longitude);
     
     
-    //Grab Saved Data
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *message = [defaults objectForKey:@"messagestring"];
-    NSString *first = [defaults objectForKey:@"contact1string"];
-    NSString *second = [defaults objectForKey:@"contact2string"];
-    NSString *third = [defaults objectForKey:@"contact3string"];
-    //NSArray *contacts = @[first, second, third];
-    NSArray *contacts = [NSArray arrayWithObjects:first,second,third,nil];
-    
+    [masterViewController populateSavedData];
     
     //Validation INFO
     //May need to implement JSON Token Authentication
@@ -355,6 +350,17 @@ ViewController *masterViewController;
     
 }
 
+- (void) populateSavedData
+{
+    //Grab Saved Data
+    defaults = [NSUserDefaults standardUserDefaults];
+    message = [defaults objectForKey:@"messagestring"];
+    first = [defaults objectForKey:@"contact1string"];
+    second = [defaults objectForKey:@"contact2string"];
+    third = [defaults objectForKey:@"contact3string"];
+    contacts = [NSArray arrayWithObjects:first,second,third,nil];
+}
+
 - (void) startTimer {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *interval = [defaults objectForKey:@"interval"];
@@ -382,15 +388,27 @@ ViewController *masterViewController;
     NSString *alerting = [defaults objectForKey:@"alerting"];
     if (alerting) {
     NSLog(@"sendMessage");
-    [self sendMessage];
+    [masterViewController sendMessage];
     }
 }
 
 static void displayStatusChanged(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
     
     NSLog(@"event received!");
-    NSDate *currentDateObj = [NSDate date];
+    [masterViewController powerButtonTrigger];
+    
+    // you might try inspecting the `userInfo` dictionary, to see
+    //  if it contains any useful info
+    if (userInfo != nil) {
+        CFShow(userInfo);
+    }
+    
+}
 
+- (void) powerButtonTrigger
+{
+    NSDate *currentDateObj = [NSDate date];
+    
     if (startDateObj != nil) {
         NSTimeInterval interval = [currentDateObj timeIntervalSinceDate:startDateObj];
         if (interval<10) {
@@ -410,17 +428,11 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
             triggerCount = 0;
         }
     } else {
-         NSLog (@"first button press");
+        NSLog (@"first button press");
         startDateObj = [NSDate date];
     }
     
 
-    // you might try inspecting the `userInfo` dictionary, to see
-    //  if it contains any useful info
-    if (userInfo != nil) {
-        CFShow(userInfo);
-    }
-    
 }
 
 - (void) keepAlive {
@@ -437,7 +449,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
             //Clean up code. Tell the system that we are done.
             [application endBackgroundTask: background_task];
             background_task = UIBackgroundTaskInvalid;
-            [self keepAlive];
+            [masterViewController keepAlive];
         }];
         
         //To make the code block asynchronous

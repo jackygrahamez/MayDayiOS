@@ -38,6 +38,9 @@
     __weak IBOutlet UIButton *stopAlertingButton;
 }
 @property (weak, nonatomic) IBOutlet UIButton *contactPicker1;
+@property (weak, nonatomic) IBOutlet UIButton *contactPicker2;
+@property (weak, nonatomic) IBOutlet UIButton *contactPicker3;
+
 
 -(IBAction)saveMessage:(id)sender;
 -(IBAction)saveContact:(id)sender;

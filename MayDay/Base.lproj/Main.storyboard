@@ -649,13 +649,33 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLu-JU-OAK">
-                                <rect key="frame" x="259" y="134" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLu-JU-OAK">
+                                <rect key="frame" x="259" y="141" width="22" height="22"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="contactPicker1:" destination="LmA-A7-Hri" eventType="touchUpInside" id="Hfi-5O-qUU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCa-zy-Hbl">
+                                <rect key="frame" x="259" y="184" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="contactPicker1:" destination="LmA-A7-Hri" eventType="touchUpInside" id="pfm-lB-yUl"/>
+                                    <action selector="contactPicker2:" destination="LmA-A7-Hri" eventType="touchUpInside" id="Qbc-yP-f5a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUl-y6-qff">
+                                <rect key="frame" x="259" y="230" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="contactPicker1:" destination="LmA-A7-Hri" eventType="touchUpInside" id="Fyq-v4-uQN"/>
+                                    <action selector="contactPicker3:" destination="LmA-A7-Hri" eventType="touchUpInside" id="xmJ-XB-dER"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -664,9 +684,12 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <constraint firstAttribute="centerY" secondItem="S3i-CH-iQF" secondAttribute="centerY" id="0lG-wJ-McD"/>
                             <constraint firstAttribute="centerX" secondItem="nwp-u4-LXv" secondAttribute="centerX" id="1Tq-ON-H7h"/>
                             <constraint firstAttribute="centerX" secondItem="r1a-Wu-3FT" secondAttribute="centerX" id="5PK-VI-lY5"/>
+                            <constraint firstItem="GCa-zy-Hbl" firstAttribute="leading" secondItem="r1a-Wu-3FT" secondAttribute="trailing" constant="8" id="8KH-UB-tgj"/>
+                            <constraint firstItem="UUl-y6-qff" firstAttribute="leading" secondItem="3ch-6d-UVR" secondAttribute="trailing" constant="8" id="8nr-aH-tz3"/>
                             <constraint firstItem="m07-sU-0C7" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="30" id="B7R-iA-t68"/>
                             <constraint firstItem="3ch-6d-UVR" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="30" id="KiS-0n-clH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S3i-CH-iQF" secondAttribute="trailing" id="NAg-7O-YKv"/>
+                            <constraint firstItem="uLu-JU-OAK" firstAttribute="leading" secondItem="m07-sU-0C7" secondAttribute="trailing" constant="8" id="Srr-gi-pds"/>
                             <constraint firstItem="S3i-CH-iQF" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" id="Xf9-ge-MFq"/>
                             <constraint firstAttribute="centerX" secondItem="3ch-6d-UVR" secondAttribute="centerX" id="ZSD-6V-xrO"/>
                             <constraint firstAttribute="centerX" secondItem="m07-sU-0C7" secondAttribute="centerX" id="hS7-6D-lvI"/>
@@ -683,6 +706,8 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <outlet property="contact2" destination="r1a-Wu-3FT" id="ous-It-oVA"/>
                         <outlet property="contact3" destination="3ch-6d-UVR" id="8Yu-tf-2vc"/>
                         <outlet property="contactPicker1" destination="uLu-JU-OAK" id="3Z4-Qd-s6V"/>
+                        <outlet property="contactPicker2" destination="GCa-zy-Hbl" id="AOm-0Y-K5C"/>
+                        <outlet property="contactPicker3" destination="UUl-y6-qff" id="pGt-dT-Tch"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2B-Nz-3AX" sceneMemberID="firstResponder"/>

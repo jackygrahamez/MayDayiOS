@@ -13,7 +13,8 @@
 NSUserDefaults *defaults;
 // Your global variable definition.
 NSInteger startTimeSeconds = 0,
-        triggerCount = 0;
+        triggerCount = 0,
+        contactField = 1;
 NSDate *startDateObj = nil;
 ViewController *masterViewController;
 NSString *message, *first, *second, *third;
@@ -121,9 +122,23 @@ BOOL alerting = false;
 
 - (IBAction)contactPicker1:(id)sender {
     NSLog(@"contactPicker1");
+    contactField = 1;
     ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
     picker.peoplePickerDelegate = masterViewController;
-    
+    [masterViewController presentModalViewController:picker animated:YES];
+}
+- (IBAction)contactPicker2:(id)sender {
+    NSLog(@"contactPicker2");
+    contactField = 2;
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = masterViewController;
+    [masterViewController presentModalViewController:picker animated:YES];
+}
+- (IBAction)contactPicker3:(id)sender {
+    NSLog(@"contactPicker3");
+    contactField = 3;
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = masterViewController;
     [masterViewController presentModalViewController:picker animated:YES];
 }
 
@@ -177,7 +192,17 @@ BOOL alerting = false;
     }
     //masterViewController.phoneNumber.text = phone;
     NSLog(@"phone %@",phone);
-    contact1.text = phone;
+    if (contactField == 1) {
+        contact1.text = phone;
+    }
+    if (contactField == 2) {
+        contact2.text = phone;
+    }
+    if (contactField == 3) {
+        contact3.text = phone;
+    }
+    
+    
     CFRelease(phoneNumbers);
 }
 

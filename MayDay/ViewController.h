@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <AddressBookUI/AddressBookUI.h>
 
 @interface UINavigationController(indexPoping) {
     
 }
 @property NSInteger *newVCsIndex;
 @end
-@interface ViewController : UIViewController<UIGestureRecognizerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate> {
+@interface ViewController : UIViewController<UIGestureRecognizerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate, ABPeoplePickerNavigationControllerDelegate> {
     IBOutlet UILabel *label;
     IBOutlet UITextView *message;
     IBOutlet UITextField *firstNumber;
@@ -36,6 +37,7 @@
     __weak IBOutlet UILabel *alertingText;
     __weak IBOutlet UIButton *stopAlertingButton;
 }
+@property (weak, nonatomic) IBOutlet UIButton *contactPicker1;
 
 -(IBAction)saveMessage:(id)sender;
 -(IBAction)saveContact:(id)sender;

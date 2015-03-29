@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AudioToolbox/AudioServices.h"
+#import <AddressBookUI/AddressBookUI.h>
 
 NSUserDefaults *defaults;
 // Your global variable definition.
@@ -91,6 +92,93 @@ BOOL alerting = false;
     NSString* interval = [NSString stringWithFormat:@"%i", row];
     [defaults setObject:interval forKey:@"interval"];
     [masterViewController.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)stopAlerting:(id)sender {
+    [masterViewController vibrate];
+    NSLog(@"Stop Alerting");
+    [autoTimer invalidate];
+    autoTimer = nil;
+    alerting = false;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:nil forKey:@"alerting"];
+    [masterViewController hideAlerting];
+}
+- (IBAction)settingButton:(id)sender {
+    [masterViewController vibrate];
+}
+- (IBAction)aboutButton:(id)sender {
+    [masterViewController vibrate];
+}
+- (IBAction)messageSettingsButton:(id)sender {
+    [masterViewController vibrate];
+}
+- (IBAction)contactSettingsButton:(id)sender {
+    [masterViewController vibrate];
+}
+- (IBAction)alertSettingsButton:(id)sender {
+    [masterViewController vibrate];
+}
+
+- (IBAction)contactPicker1:(id)sender {
+    NSLog(@"contactPicker1");
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = masterViewController;
+    
+    [masterViewController presentModalViewController:picker animated:YES];
+}
+
+- (void)peoplePickerNavigationControllerDidCancel:
+(ABPeoplePickerNavigationController *)peoplePicker
+{
+    [masterViewController dismissModalViewControllerAnimated:YES];
+}
+
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person
+{
+    NSLog(@"Went here 1 ...");
+    
+    [masterViewController peoplePickerNavigationController:peoplePicker shouldContinueAfterSelectingPerson:person];
+}
+
+
+- (BOOL)peoplePickerNavigationController:
+(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person {
+    
+    [masterViewController displayPerson:person];
+    [masterViewController dismissModalViewControllerAnimated:YES];
+    
+    return NO;
+}
+
+- (BOOL)peoplePickerNavigationController:
+(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person
+                                property:(ABPropertyID)property
+                              identifier:(ABMultiValueIdentifier)identifier
+{
+    return NO;
+}
+
+- (void)displayPerson:(ABRecordRef)person
+{
+    NSLog(@"displayPerson");
+    NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(person, kABPersonFirstNameProperty);
+    //masterViewController.firstName.text = name;
+    //contact1.text = name;
+    
+    NSString* phone = nil;
+    ABMultiValueRef phoneNumbers = ABRecordCopyValue(person, kABPersonPhoneProperty);
+    if (ABMultiValueGetCount(phoneNumbers) > 0) {
+        phone = (__bridge_transfer NSString*)
+        ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
+    } else {
+        phone = @"[None]";
+    }
+    //masterViewController.phoneNumber.text = phone;
+    NSLog(@"phone %@",phone);
+    contact1.text = phone;
+    CFRelease(phoneNumbers);
 }
 
 -(void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer {
@@ -196,15 +284,6 @@ BOOL alerting = false;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
--(IBAction)trigger:(id)sender
-{
-    [masterViewController sendMessage];
-    [masterViewController startTimer];
-}
-
 
 -(void)dismissKeyboard {
     [message resignFirstResponder];
@@ -397,32 +476,6 @@ BOOL alerting = false;
     
 }
 
-
-- (IBAction)stopAlerting:(id)sender {
-    [masterViewController vibrate];
-    NSLog(@"Stop Alerting");
-    [autoTimer invalidate];
-    autoTimer = nil;
-    alerting = false;
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:nil forKey:@"alerting"];
-    [masterViewController hideAlerting];
-}
-- (IBAction)settingButton:(id)sender {
-    [masterViewController vibrate];
-}
-- (IBAction)aboutButton:(id)sender {
-    [masterViewController vibrate];
-}
-- (IBAction)messageSettingsButton:(id)sender {
-    [masterViewController vibrate];
-}
-- (IBAction)contactSettingsButton:(id)sender {
-    [masterViewController vibrate];
-}
-- (IBAction)alertSettingsButton:(id)sender {
-    [masterViewController vibrate];
-}
 
 - (void) tick:(NSTimer *) timer {
     //do something here..

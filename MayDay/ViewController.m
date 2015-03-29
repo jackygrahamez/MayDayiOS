@@ -348,6 +348,7 @@ BOOL alerting = false;
                  NSLog(@"Result for sent is %@", sent);
                  if ([sent isEqualToString:@"true"]) {
                      NSLog(@"message sent");
+                     [masterViewController showAlerting];
                  } else {
                      NSLog(@"message not sent");
                      UIAlertView *alert = [[UIAlertView alloc]
@@ -391,12 +392,23 @@ BOOL alerting = false;
                                     repeats:YES];
     
 }
-- (IBAction)stopAlerting:(id)sender {
+
+    /*
     [autoTimer invalidate];
     autoTimer = nil;
     alerting = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:nil forKey:@"alerting"];
+    [masterViewController hideAlerting];
+     */
+- (IBAction)stopAlerting:(id)sender {
+    NSLog(@"Stop Alerting");
+    [autoTimer invalidate];
+    autoTimer = nil;
+    alerting = false;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:nil forKey:@"alerting"];
+    [masterViewController hideAlerting];
 }
 
 - (void) tick:(NSTimer *) timer {
@@ -430,10 +442,41 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     }
 }
 
+- (void) showAlerting
+{
+    status.text = @"Alerting!";
+    status.textColor = [UIColor colorWithRed:0.988 green:0.176 blue:0.176 alpha:1];
+    homeReadyCopy.hidden=true;
+    settingsButton.hidden=true;
+    aboutButton.hidden=true;
+    settingsButton.hidden=true;
+    settingsBorder.hidden=true;
+    aboutButton.hidden=true;
+    aboutBorder.hidden=true;
+    
+    alertingText.hidden=false;
+    stopAlertingButton.hidden=false;
+}
+
+- (void) hideAlerting
+{
+    status.text = @"Ready!";
+    status.textColor = [UIColor colorWithRed:0 green:255 blue:0 alpha:1];
+    homeReadyCopy.hidden=false;
+    settingsButton.hidden=false;
+    aboutButton.hidden=false;
+    settingsButton.hidden=false;
+    settingsBorder.hidden=false;
+    aboutButton.hidden=false;
+    aboutBorder.hidden=false;
+    
+    alertingText.hidden=true;
+    stopAlertingButton.hidden=true;
+}
+
 - (void) powerButtonTrigger
 {
     if (alerting == false) {
-        [masterViewController performSegueWithIdentifier:@"showAlerting" sender:masterViewController];
         NSDate *currentDateObj = [NSDate date];
         
         if (startDateObj != nil) {
@@ -448,6 +491,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
                     startDateObj = nil;
                     triggerCount = 0;
                     alerting = true;
+                    [masterViewController showAlerting];
                 }
                 
             } else {

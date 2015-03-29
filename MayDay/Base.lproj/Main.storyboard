@@ -114,6 +114,36 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3L-MV-7wb">
+                                <rect key="frame" x="94.5" y="266" width="130" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="t9i-xE-oWh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Stop Alerting">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAlerting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HDz-6h-Je6"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMM-T6-b5S">
+                                <rect key="frame" x="16" y="162" width="288" height="57"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Emergency alert triggered">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="35.450000000000003"/>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="K7D-Py-DHf" secondAttribute="centerX" id="3tD-bK-3Z9"/>
@@ -141,7 +171,14 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="Hke-2G-FPb" kind="push" identifier="showAlerting" id="9me-rj-WbW"/>
+                        <outlet property="aboutBorder" destination="yic-lX-khO" id="yrd-qp-z01"/>
+                        <outlet property="aboutButton" destination="n8Y-yi-51F" id="z6F-tx-Oww"/>
+                        <outlet property="alertingText" destination="zMM-T6-b5S" id="dlX-VS-KRM"/>
+                        <outlet property="homeReadyCopy" destination="H42-Jx-TZe" id="lIs-vR-7kU"/>
+                        <outlet property="settingsBorder" destination="0Qc-6a-tNd" id="fiO-tn-NDW"/>
+                        <outlet property="settingsButton" destination="ved-Dl-NPr" id="tEq-nk-bbL"/>
+                        <outlet property="status" destination="4Md-xA-Hzk" id="iRD-gm-fcP"/>
+                        <outlet property="stopAlertingButton" destination="O3L-MV-7wb" id="25T-Y5-3CE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -151,7 +188,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
         <!--View Controller-->
         <scene sceneID="Doz-9S-yX8">
             <objects>
-                <viewController id="Hke-2G-FPb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="alerting" id="Hke-2G-FPb" customClass="ViewController" customModule="alerting" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F5D-Hb-o6G"/>
                         <viewControllerLayoutGuide type="bottom" id="9vf-8w-g6D"/>

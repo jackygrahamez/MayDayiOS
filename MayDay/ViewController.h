@@ -26,11 +26,21 @@
     NSTimer *autoTimer;
     NSInteger startTimeSeconds;
     NSDate *startDateObj;
+    
+    __weak IBOutlet UILabel *status;
+    __weak IBOutlet UILabel *homeReadyCopy;
+    __weak IBOutlet UIButton *settingsButton;
+    __weak IBOutlet UIButton *aboutButton;
+    __weak IBOutlet UIView *settingsBorder;
+    __weak IBOutlet UIView *aboutBorder;
+    __weak IBOutlet UILabel *alertingText;
+    __weak IBOutlet UIButton *stopAlertingButton;
 }
 
 -(IBAction)saveMessage:(id)sender;
 -(IBAction)saveContact:(id)sender;
 -(IBAction)saveInterval:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *stopAlerting;
 
 -(IBAction)controlTextDidChange:(id)sender;
 -(IBAction)trigger:(id)sender;

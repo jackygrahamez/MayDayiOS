@@ -422,9 +422,18 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showAlerting"])
+    {
+        NSLog(@"Logging showAlerting");
+    }
+}
+
 - (void) powerButtonTrigger
 {
     if (alerting == false) {
+        [masterViewController performSegueWithIdentifier:@"showAlerting" sender:masterViewController];
         NSDate *currentDateObj = [NSDate date];
         
         if (startDateObj != nil) {

@@ -140,6 +140,9 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                     <navigationItem key="navigationItem" id="SLu-Ut-2tY"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="Hke-2G-FPb" kind="push" identifier="showAlerting" id="9me-rj-WbW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,7 +151,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
         <!--View Controller-->
         <scene sceneID="Doz-9S-yX8">
             <objects>
-                <viewController id="Hke-2G-FPb" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="Hke-2G-FPb" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F5D-Hb-o6G"/>
                         <viewControllerLayoutGuide type="bottom" id="9vf-8w-g6D"/>
@@ -208,7 +211,6 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </state>
                                 <connections>
                                     <action selector="stopAlerting:" destination="Hke-2G-FPb" eventType="touchUpInside" id="UVL-MY-MHy"/>
-                                    <segue destination="BYZ-38-t0r" kind="push" id="Wgb-Cw-mAV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -233,7 +235,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZP-TS-dPd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="967"/>
+            <point key="canvasLocation" x="520" y="967"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6SV-hY-pIU">
@@ -1190,7 +1192,4 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
         <image name="state_settings_480x50.jpg" width="480" height="50"/>
         <image name="warning.png" width="200" height="200"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Wgb-Cw-mAV"/>
-    </inferredMetricsTieBreakers>
 </document>

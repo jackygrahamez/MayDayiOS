@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AudioToolbox/AudioServices.h"
 
 NSUserDefaults *defaults;
 // Your global variable definition.
@@ -57,6 +58,7 @@ BOOL alerting = false;
 
 -(IBAction)saveMessage:(id)sender
 {
+    [masterViewController vibrate];
     NSString *savestring = message.text;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"messagestring"];
@@ -65,6 +67,7 @@ BOOL alerting = false;
 }
 -(IBAction)saveContact:(id)sender
 {
+    [masterViewController vibrate];
     NSLog(@"saveContact");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
@@ -81,6 +84,7 @@ BOOL alerting = false;
 }
 
 - (IBAction)saveInterval:(id)sender {
+    [masterViewController vibrate];
     int row = [masterViewController.messageIntervalPicker selectedRowInComponent:0];
     NSLog(@"value at index %i %@", row, [_pickerData objectAtIndex:row]);
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -393,15 +397,9 @@ BOOL alerting = false;
     
 }
 
-    /*
-    [autoTimer invalidate];
-    autoTimer = nil;
-    alerting = false;
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:nil forKey:@"alerting"];
-    [masterViewController hideAlerting];
-     */
+
 - (IBAction)stopAlerting:(id)sender {
+    [masterViewController vibrate];
     NSLog(@"Stop Alerting");
     [autoTimer invalidate];
     autoTimer = nil;
@@ -409,6 +407,21 @@ BOOL alerting = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:nil forKey:@"alerting"];
     [masterViewController hideAlerting];
+}
+- (IBAction)settingButton:(id)sender {
+    [masterViewController vibrate];
+}
+- (IBAction)aboutButton:(id)sender {
+    [masterViewController vibrate];
+}
+- (IBAction)messageSettingsButton:(id)sender {
+    [masterViewController vibrate];
+}
+- (IBAction)contactSettingsButton:(id)sender {
+    [masterViewController vibrate];
+}
+- (IBAction)alertSettingsButton:(id)sender {
+    [masterViewController vibrate];
 }
 
 - (void) tick:(NSTimer *) timer {
@@ -546,6 +559,13 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     {
         NSLog(@"Multitasking Not Supported");
     }
+}
+
+-(void)vibrate
+{
+    NSLog(@"I'm vibrating");
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound(1103);
 }
 
 @end

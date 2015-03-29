@@ -74,6 +74,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="settingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HbR-vh-cFU"/>
                                     <segue destination="Ic7-CG-rQ4" kind="push" id="DTu-HQ-P1E"/>
                                 </connections>
                             </button>
@@ -86,6 +87,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="aboutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xNp-ZG-YG8"/>
                                     <segue destination="jS4-0d-g31" kind="push" id="eFd-NR-acC"/>
                                 </connections>
                             </button>
@@ -487,6 +489,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="messageSettingsButton:" destination="Ic7-CG-rQ4" eventType="touchUpInside" id="OT2-Vt-TBU"/>
                                     <segue destination="Q3l-1A-MH6" kind="push" id="a3U-v3-OnL"/>
                                 </connections>
                             </button>
@@ -503,6 +506,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="contactSettingsButton:" destination="Ic7-CG-rQ4" eventType="touchUpInside" id="hu3-RN-qLC"/>
                                     <segue destination="LmA-A7-Hri" kind="push" id="Rnc-EX-0KW"/>
                                 </connections>
                             </button>
@@ -519,6 +523,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="alertSettingsButton:" destination="Ic7-CG-rQ4" eventType="touchUpInside" id="gym-Bv-uXG"/>
                                     <segue destination="ogg-33-r79" kind="push" id="6JW-q7-LND"/>
                                 </connections>
                             </button>

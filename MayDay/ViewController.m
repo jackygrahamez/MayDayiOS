@@ -381,7 +381,7 @@ BOOL alerting = false;
     NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
     //Need to get a CA Certificate for the server
-    NSURL *someURLSetBefore = [NSURL URLWithString:@"http://maydaysos.net/messaging"];
+    NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000  /messaging"];
     //NSLog(@"someURLSetBefore %@",someURLSetBefore);
     //NSString *messageWithGPS = @"%@ test", *message;
     

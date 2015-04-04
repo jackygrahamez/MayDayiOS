@@ -31,11 +31,12 @@
     }
     [Fabric with:@[CrashlyticsKit]];
     
+    BOOL setupCompletedBool = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *firstTime = [defaults objectForKey:@"firstTime"];
-    BOOL boolValue = [firstTime boolValue];
-    
-    if(boolValue) {
+    NSString *setupCompleted = [defaults objectForKey:@"setupcompleted"];
+    setupCompletedBool = [setupCompleted boolValue];
+
+    if(!setupCompletedBool) {
         //UIViewController *newRoot = [];
         //self.window.rootViewController = newRoot;
         /* For storyboards... */

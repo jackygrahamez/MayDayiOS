@@ -67,6 +67,16 @@ BOOL alerting = false;
     [defaults synchronize];
     [masterViewController.navigationController popViewControllerAnimated:YES];
 }
+- (IBAction)saveMessageNext:(id)sender {
+    [masterViewController vibrate];
+    NSString *savestring = message.text;
+    NSString *setupCompleted = @"true";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:savestring forKey:@"messagestring"];
+    [defaults setObject:setupCompleted forKey:@"setupcompleted"];
+    
+    [defaults synchronize];
+}
 -(IBAction)saveContact:(id)sender
 {
     [masterViewController vibrate];
@@ -83,6 +93,21 @@ BOOL alerting = false;
     
     [defaults synchronize];
     [masterViewController.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)saveContactsNext:(id)sender {
+    [masterViewController vibrate];
+    NSLog(@"saveContact");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *savestring1 = contact1.text;
+    [defaults setObject:savestring1 forKey:@"contact1string"];
+    NSString *savestring2 = contact2.text;
+    [defaults setObject:savestring2 forKey:@"contact2string"];
+    NSString *savestring3 = contact3.text;
+    [defaults setObject:savestring3 forKey:@"contact3string"];
+    NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
+    
+    [defaults synchronize];
 }
 
 - (IBAction)saveInterval:(id)sender {

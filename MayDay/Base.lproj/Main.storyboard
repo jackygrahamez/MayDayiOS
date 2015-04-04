@@ -1282,7 +1282,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
         <!--Navigation Bar-->
         <scene sceneID="u1i-fp-7dC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Snn-jc-ylz" customClass="navigationBar" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Snn-jc-ylz" customClass="navigationBar" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzQ-A3-qZm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

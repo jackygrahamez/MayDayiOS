@@ -382,10 +382,10 @@ BOOL alerting = false;
     //NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSString *adId = @"PLACEHOLDER";
     NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-    NSString *debug = @"true";
+    NSString *debug = @"false";
     
     //Need to get a CA Certificate for the server
-    NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000  /messaging"];
+    NSURL *someURLSetBefore = [NSURL URLWithString:@"http://maydaysos.net/messaging"];
     //NSLog(@"someURLSetBefore %@",someURLSetBefore);
     //NSString *messageWithGPS = @"%@ test", *message;
     
@@ -413,8 +413,7 @@ BOOL alerting = false;
                                     loc, @"loc",
                                     password, @"password",
                                     adId, @"adId",
-                                    idfv, @"idfv",
-                                    debug, @"debug", nil];
+                                    idfv, @"idfv", nil];
     
     //convert object to data
     NSError *error = nil;

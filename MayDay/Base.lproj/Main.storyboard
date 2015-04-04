@@ -1200,6 +1200,9 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <action selector="contactPicker3:" destination="qIH-vn-bv1" eventType="touchUpInside" id="bbC-wN-jT9"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle_drop_shadow_60p_stroke.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Pt-Ls-dRN">
+                                <rect key="frame" x="40" y="20" width="48" height="48"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1230,6 +1233,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <outlet property="contactPicker1" destination="8JR-iI-Zsz" id="YKm-uw-hWS"/>
                         <outlet property="contactPicker2" destination="hqj-cH-nHm" id="Pa0-a6-Lfh"/>
                         <outlet property="contactPicker3" destination="IMZ-gW-97Q" id="ldl-Bc-LuC"/>
+                        <outlet property="pickerCircle" destination="8Pt-Ls-dRN" id="vI4-Ey-yiA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJH-7w-AtD" sceneMemberID="firstResponder"/>
@@ -1548,6 +1552,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
     </scenes>
     <resources>
         <image name="Texture" width="768" height="1024"/>
+        <image name="circle_drop_shadow_60p_stroke.png" width="99" height="99"/>
         <image name="state_settings_480x50.jpg" width="480" height="50"/>
         <image name="warning.png" width="200" height="200"/>
     </resources>

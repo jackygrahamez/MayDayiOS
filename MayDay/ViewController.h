@@ -28,6 +28,7 @@
     NSInteger startTimeSeconds;
     NSDate *startDateObj;
     
+    __weak IBOutlet UIImageView *pickerCircle;
     __weak IBOutlet UILabel *status;
     __weak IBOutlet UILabel *homeReadyCopy;
     __weak IBOutlet UIButton *settingsButton;

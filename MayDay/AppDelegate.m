@@ -11,6 +11,8 @@
 #import <Crashlytics/Crashlytics.h>
 #import <CoreLocation/CoreLocation.h>
 
+
+
 @interface AppDelegate ()
 
 @end
@@ -62,6 +64,17 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    NSLog(@"applicationDidBecomeActive");
+    BOOL alertingBool = false;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *alerting = [defaults objectForKey:@"altering"];
+    alertingBool = [alerting boolValue];
+    if (alertingBool) {
+        NSLog(@"alertingBool true");
+        self.window.rootViewController =
+        (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeAlertingView"];
+    }
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

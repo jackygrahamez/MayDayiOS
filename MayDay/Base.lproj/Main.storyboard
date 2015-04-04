@@ -19,6 +19,7 @@
             <string>MomsTypewriter</string>
             <string>MomsTypewriter</string>
             <string>MomsTypewriter</string>
+            <string>MomsTypewriter</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -185,7 +186,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="246"/>
+            <point key="canvasLocation" x="837" y="260"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6SV-hY-pIU">
@@ -769,7 +770,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dls-ya-a0X" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821.5" y="1153.5"/>
+            <point key="canvasLocation" x="2633.5" y="1153.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ifc-9j-M9I">
@@ -1027,13 +1028,14 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkw-oQ-4Vt" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1019" y="967"/>
+            <point key="canvasLocation" x="1831" y="967"/>
         </scene>
-        <!--Navigation Bar-->
+        <!--Navigation Controller-->
         <scene sceneID="u1i-fp-7dC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Snn-jc-ylz" customClass="navigationBar" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Snn-jc-ylz" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="q7V-7B-n6x"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzQ-A3-qZm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1433,6 +1435,115 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZA-g6-h4q" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1915" y="-1612"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pya-kM-KS2">
+            <objects>
+                <viewController restorationIdentifier="homeAlertingView" storyboardIdentifier="homeAlertingView" id="XTZ-T7-65N" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3v5-pI-ZSm"/>
+                        <viewControllerLayoutGuide type="bottom" id="OYJ-r3-4Mq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFill" id="vnW-si-bx4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="4ne-w0-hUa">
+                                <rect key="frame" x="0.0" y="0.0" width="1242" height="2208"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="37" text="MayDay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heP-Qc-WNY">
+                                <rect key="frame" x="81" y="72" width="158" height="37"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z59-MI-7eL">
+                                <rect key="frame" x="16" y="124" width="288" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JoK-eq-TBC">
+                                <rect key="frame" x="16" y="162" width="288" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Alerting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evS-vm-KPx">
+                                <rect key="frame" x="108" y="133" width="105" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.34901960780000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsD-TM-OVq">
+                                <rect key="frame" x="94.5" y="266" width="130" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="iD7-UW-nAw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Stop Alerting">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAlerting:" destination="XTZ-T7-65N" eventType="touchUpInside" id="jQi-zL-0Xw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0H4-dj-CvZ">
+                                <rect key="frame" x="16" y="162" width="288" height="57"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Emergency alert triggered">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="35.450000000000003"/>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="JoK-eq-TBC" secondAttribute="centerX" id="6mM-2z-K8g"/>
+                            <constraint firstAttribute="centerX" secondItem="evS-vm-KPx" secondAttribute="centerX" id="8N9-8J-6Nq"/>
+                            <constraint firstItem="heP-Qc-WNY" firstAttribute="leading" secondItem="vnW-si-bx4" secondAttribute="leadingMargin" constant="10" id="Mgu-vl-Sgd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="heP-Qc-WNY" secondAttribute="trailing" constant="10" id="f9R-aV-b3f"/>
+                            <constraint firstItem="4ne-w0-hUa" firstAttribute="leading" secondItem="vnW-si-bx4" secondAttribute="leadingMargin" id="inc-SY-7Gy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4ne-w0-hUa" secondAttribute="trailing" id="iou-cb-lgW"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="4ne-w0-hUa" secondAttribute="bottom" id="oN1-Hu-hHo"/>
+                            <constraint firstAttribute="centerY" secondItem="4ne-w0-hUa" secondAttribute="centerY" id="ojq-Zv-9c5"/>
+                            <constraint firstAttribute="centerX" secondItem="Z59-MI-7eL" secondAttribute="centerX" id="pwZ-3l-P2c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2An-rs-UaE"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="alertingText" destination="0H4-dj-CvZ" id="u35-MM-GAl"/>
+                        <outlet property="status" destination="evS-vm-KPx" id="Oyj-cD-cxg"/>
+                        <outlet property="stopAlertingButton" destination="nsD-TM-OVq" id="k6m-Ip-Crf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaL-vi-SbG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="1050"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0b7-dz-SoE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ajF-9j-nnv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Cd-qu-5FU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XTZ-T7-65N" kind="relationship" relationship="rootViewController" id="rXe-Ft-CgK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJv-ui-uoe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="1142"/>
         </scene>
     </scenes>
     <resources>

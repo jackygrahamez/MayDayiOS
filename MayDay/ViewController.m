@@ -127,7 +127,11 @@ BOOL alerting = false;
     alerting = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:nil forKey:@"alerting"];
-    [masterViewController hideAlerting];
+    //[masterViewController hideAlerting];
+    self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeView"];
+    //self.window.rootViewController =
+    //(UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeView"];
+
 }
 - (IBAction)settingButton:(id)sender {
     [masterViewController vibrate];
@@ -303,6 +307,16 @@ BOOL alerting = false;
                                     CFNotificationSuspensionBehaviorDeliverImmediately);
 }
 
+
+- (void)viewDidBecomeActive {
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    NSLog(@"applicationDidBecomeActive");
+    /*
+     self.window.rootViewController =
+     (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeView"];*/
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     masterViewController = self;
@@ -438,6 +452,7 @@ BOOL alerting = false;
                                     loc, @"loc",
                                     password, @"password",
                                     adId, @"adId",
+                                    debug, @"debug",
                                     idfv, @"idfv", nil];
     
     //convert object to data
@@ -485,7 +500,9 @@ BOOL alerting = false;
                  NSLog(@"Result for sent is %@", sent);
                  if ([sent isEqualToString:@"true"]) {
                      NSLog(@"message sent");
-                     [masterViewController showAlerting];
+                     //[masterViewController showAlerting];
+                     self.view.window.rootViewController = [self.storyboard
+                                                            instantiateViewControllerWithIdentifier:@"homeAlertingView"];
                  } else {
                      NSLog(@"message not sent");
                      UIAlertView *alert = [[UIAlertView alloc]
@@ -510,8 +527,14 @@ BOOL alerting = false;
     defaults = [NSUserDefaults standardUserDefaults];
     message = [defaults objectForKey:@"messagestring"];
     first = [defaults objectForKey:@"contact1string"];
+    first = [[first componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789-+()"] invertedSet]] componentsJoinedByString:@""];
+
     second = [defaults objectForKey:@"contact2string"];
+    second = [[second componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789-+()"] invertedSet]] componentsJoinedByString:@""];
+    
     third = [defaults objectForKey:@"contact3string"];
+    third = [[third componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789-+()"] invertedSet]] componentsJoinedByString:@""];
+    
     contacts = [NSArray arrayWithObjects:first,second,third,nil];
 }
 
@@ -612,7 +635,8 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
                     startDateObj = nil;
                     triggerCount = 0;
                     alerting = true;
-                    [masterViewController showAlerting];
+                    //[masterViewController showAlerting];
+                    self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeAlertingView"];
                 }
                 
             } else {

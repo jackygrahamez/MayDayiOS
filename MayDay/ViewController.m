@@ -311,10 +311,13 @@ BOOL alerting = false;
 }
 
 -(void)dismissKeyboard {
+    [self.view endEditing:YES];
+    /*
     [message resignFirstResponder];
     [contact1 resignFirstResponder];
     [contact2 resignFirstResponder];
     [contact3 resignFirstResponder];
+     */
 }
 
 
@@ -379,6 +382,7 @@ BOOL alerting = false;
     //NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSString *adId = @"PLACEHOLDER";
     NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    NSString *debug = @"true";
     
     //Need to get a CA Certificate for the server
     NSURL *someURLSetBefore = [NSURL URLWithString:@"http://localhost:3000  /messaging"];
@@ -409,7 +413,8 @@ BOOL alerting = false;
                                     loc, @"loc",
                                     password, @"password",
                                     adId, @"adId",
-                                    idfv, @"idfv", nil];
+                                    idfv, @"idfv",
+                                    debug, @"debug", nil];
     
     //convert object to data
     NSError *error = nil;
@@ -536,6 +541,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 - (void) showAlerting
 {
     status.text = @"Alerting!";
+
     status.textColor = [UIColor colorWithRed:0.988 green:0.176 blue:0.176 alpha:1];
     homeReadyCopy.hidden=true;
     settingsButton.hidden=true;
@@ -645,5 +651,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     AudioServicesPlaySystemSound(1103);
 }
+
+
 
 @end

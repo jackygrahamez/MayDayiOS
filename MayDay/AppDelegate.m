@@ -30,6 +30,18 @@
         [servicesDisabledAlert show];
     }
     [Fabric with:@[CrashlyticsKit]];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *firstTime = [defaults objectForKey:@"firstTime"];
+    BOOL boolValue = [firstTime boolValue];
+    
+    if(boolValue) {
+        //UIViewController *newRoot = [];
+        //self.window.rootViewController = newRoot;
+        /* For storyboards... */
+        self.window.rootViewController =
+        (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"setupNavigation"];
+    }
     return YES;
 }
 

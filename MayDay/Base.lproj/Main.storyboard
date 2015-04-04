@@ -26,7 +26,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="homeView" storyboardIdentifier="homeView" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -280,7 +280,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
         <!--View Controller-->
         <scene sceneID="6SV-hY-pIU">
             <objects>
-                <viewController id="UYf-Rc-n4c" customClass="ViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="setupView" storyboardIdentifier="setupView" id="UYf-Rc-n4c" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lxj-8r-fLU"/>
                         <viewControllerLayoutGuide type="bottom" id="ECg-Pr-eWQ"/>
@@ -313,6 +313,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </state>
                                 <connections>
                                     <action selector="saveMessage:" destination="Q3l-1A-MH6" eventType="touchUpInside" id="pi6-SX-DP7"/>
+                                    <segue destination="jze-HB-NkX" kind="push" id="ZD2-pr-zqY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-yo-cGA">
@@ -323,6 +324,9 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="tOd-TV-bu6" kind="push" id="Xhz-dl-hKS"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="k7k-77-3uZ">
                                 <rect key="frame" x="329" y="242" width="30" height="30"/>
@@ -337,12 +341,13 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <constraint firstAttribute="centerX" secondItem="NWi-pa-pfe" secondAttribute="centerX" id="YL0-ds-tL2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="c3n-f2-9dC"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SbN-zG-8lS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252.5" y="-777.5"/>
+            <point key="canvasLocation" x="454.5" y="-1544.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9Vx-ax-L8F">
@@ -381,36 +386,22 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </state>
                                 <connections>
                                     <action selector="saveMessage:" destination="Q3l-1A-MH6" eventType="touchUpInside" id="CZF-uW-gxe"/>
+                                    <segue destination="bEL-mW-74l" kind="push" id="cTY-ZW-V4J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uql-7c-KfU">
-                                <rect key="frame" x="16" y="234" width="382" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="About" backgroundImage="state_settings_480x50.jpg">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="nuG-Az-q2b">
-                                <rect key="frame" x="329" y="242" width="30" height="30"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nyF-t8-yWY">
-                                <rect key="frame" x="16" y="280" width="343" height="1"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="c0W-ck-nNb" secondAttribute="centerX" id="ZQB-l1-JCS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7bj-ZD-aXL"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usi-RF-J5N" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="716.5" y="-1544.5"/>
+            <point key="canvasLocation" x="1012.5" y="-1552.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kbe-jy-rDn">
@@ -453,12 +444,13 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <constraint firstAttribute="centerX" secondItem="daS-4k-r1d" secondAttribute="centerX" id="KDr-Vb-d3f"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kT0-VU-tfQ"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6jL-hU-nDr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258.5" y="-1544.5"/>
+            <point key="canvasLocation" x="460.5" y="-734.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="z5a-HG-wWY">
@@ -806,6 +798,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </state>
                                 <connections>
                                     <action selector="saveMessage:" destination="Q3l-1A-MH6" eventType="touchUpInside" id="mTs-fX-1T1"/>
+                                    <segue destination="NAs-rk-U27" kind="push" id="ew4-kh-CWY"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0S-xu-5iK">
@@ -825,12 +818,13 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <constraint firstAttribute="centerX" secondItem="R7F-4V-cqf" secondAttribute="centerX" id="Gmo-eD-lDF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ImU-UA-Azm"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XV-et-CLS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174.5" y="-1544.5"/>
+            <point key="canvasLocation" x="1496.5" y="-1534.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="svG-JS-v9g">
@@ -1185,7 +1179,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7L-6x-aKS">
                                 <rect key="frame" x="133" y="373" width="109" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Save">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1210,6 +1204,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <constraint firstAttribute="centerX" secondItem="jLa-L7-gcc" secondAttribute="centerX" id="WBF-xh-dxm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="q2u-cE-NHz"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1218,7 +1213,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JgU-Jh-CsS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618.5" y="-1544.5"/>
+            <point key="canvasLocation" x="1972.5" y="-1522.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5Mt-gd-hgc">
@@ -1311,6 +1306,24 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ied-kW-dxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1174" y="-519"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fJT-HM-z52">
+            <objects>
+                <navigationController restorationIdentifier="setupNavigation" storyboardIdentifier="setupNavigation" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Ope-Ib-W8t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AK5-fV-sPZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UYf-Rc-n4c" kind="relationship" relationship="rootViewController" id="ehq-FQ-ZRG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLw-cF-Mfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250" y="-1545"/>
         </scene>
     </scenes>
     <resources>

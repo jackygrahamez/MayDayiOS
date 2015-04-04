@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		812CA6FE1AB79CF7000DB19C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */; };
 		812CA6FF1AB79CF7000DB19C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812CA6FD1AB79CF7000DB19C /* Fabric.framework */; };
+		814D94CB1AD0853400224C86 /* circle_drop_shadow_30p_stroke.png in Resources */ = {isa = PBXBuildFile; fileRef = 814D94C51AD0853400224C86 /* circle_drop_shadow_30p_stroke.png */; };
+		814D94CC1AD0853400224C86 /* circle_drop_shadow_30p.png in Resources */ = {isa = PBXBuildFile; fileRef = 814D94C61AD0853400224C86 /* circle_drop_shadow_30p.png */; };
+		814D94CD1AD0853400224C86 /* circle_drop_shadow_60p_stroke.png in Resources */ = {isa = PBXBuildFile; fileRef = 814D94C71AD0853400224C86 /* circle_drop_shadow_60p_stroke.png */; };
+		814D94CE1AD0853400224C86 /* circle_drop_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 814D94C81AD0853400224C86 /* circle_drop_shadow.png */; };
+		814D94CF1AD0853400224C86 /* circle_solid_30p.png in Resources */ = {isa = PBXBuildFile; fileRef = 814D94C91AD0853400224C86 /* circle_solid_30p.png */; };
+		814D94D01AD0853400224C86 /* circle_solid.png in Resources */ = {isa = PBXBuildFile; fileRef = 814D94CA1AD0853400224C86 /* circle_solid.png */; };
 		81DCA2BE1AC88E0400AFBC15 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */; };
 		81DCA2C21AC893B300AFBC15 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2C11AC893B300AFBC15 /* AddressBookUI.framework */; };
 		81ED61611ABF02EB00A76A62 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81ED61601ABF02EB00A76A62 /* CoreLocation.framework */; };
@@ -111,18 +117,17 @@
 /* Begin PBXFileReference section */
 		812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		812CA6FD1AB79CF7000DB19C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		814D94C51AD0853400224C86 /* circle_drop_shadow_30p_stroke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_drop_shadow_30p_stroke.png; path = "../../MayDaySOSAlert/app/src/main/res/drawable-hdpi/circle_drop_shadow_30p_stroke.png"; sourceTree = "<group>"; };
+		814D94C61AD0853400224C86 /* circle_drop_shadow_30p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_drop_shadow_30p.png; path = "../../MayDaySOSAlert/app/src/main/res/drawable-hdpi/circle_drop_shadow_30p.png"; sourceTree = "<group>"; };
+		814D94C71AD0853400224C86 /* circle_drop_shadow_60p_stroke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_drop_shadow_60p_stroke.png; path = "../../MayDaySOSAlert/app/src/main/res/drawable-hdpi/circle_drop_shadow_60p_stroke.png"; sourceTree = "<group>"; };
+		814D94C81AD0853400224C86 /* circle_drop_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_drop_shadow.png; path = "../../MayDaySOSAlert/app/src/main/res/drawable-hdpi/circle_drop_shadow.png"; sourceTree = "<group>"; };
+		814D94C91AD0853400224C86 /* circle_solid_30p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_solid_30p.png; path = "../../MayDaySOSAlert/app/src/main/res/drawable-hdpi/circle_solid_30p.png"; sourceTree = "<group>"; };
+		814D94CA1AD0853400224C86 /* circle_solid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_solid.png; path = "../../MayDaySOSAlert/app/src/main/res/drawable-hdpi/circle_solid.png"; sourceTree = "<group>"; };
 		81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		81DCA2BF1AC8932B00AFBC15 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		81DCA2C11AC893B300AFBC15 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		81ED61601ABF02EB00A76A62 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		81ED61621ABF035400A76A62 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		81F7B2541AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_320x480_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_320x480_iOS.png"; sourceTree = "<group>"; };
-		81F7B2551AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_640x960_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_640x960_iOS.png"; sourceTree = "<group>"; };
-		81F7B2561AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_640x1136_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_640x1136_iOS.png"; sourceTree = "<group>"; };
-		81F7B2571AB650680028D42E /* MayDay_LaunchImage_750x1334_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_750x1334_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_750x1334_iOS.png"; sourceTree = "<group>"; };
-		81F7B2581AB650680028D42E /* MayDay_LaunchImage_768x1024_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_768x1024_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_768x1024_iOS.png"; sourceTree = "<group>"; };
-		81F7B2591AB650680028D42E /* MayDay_LaunchImage_1242x2208_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_1242x2208_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_1242x2208_iOS.png"; sourceTree = "<group>"; };
-		81F7B25A1AB650680028D42E /* MayDay_LaunchImage_1536x2048_iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MayDay_LaunchImage_1536x2048_iOS.png; path = "../../../Dropbox/MayDay-Copy/iOS/LaunchImage - iOS/MayDay_LaunchImage_1536x2048_iOS.png"; sourceTree = "<group>"; };
 		8D005F571AABBD5F00D75004 /* MayDay WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MayDay WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D005F5A1AABBD5F00D75004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D005F5B1AABBD5F00D75004 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -357,13 +362,12 @@
 		8D301A011AA40A49000C4FF7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				81F7B2541AB650680028D42E /* MayDay_LaunchImage_320x480_iOS.png */,
-				81F7B2551AB650680028D42E /* MayDay_LaunchImage_640x960_iOS.png */,
-				81F7B2561AB650680028D42E /* MayDay_LaunchImage_640x1136_iOS.png */,
-				81F7B2571AB650680028D42E /* MayDay_LaunchImage_750x1334_iOS.png */,
-				81F7B2581AB650680028D42E /* MayDay_LaunchImage_768x1024_iOS.png */,
-				81F7B2591AB650680028D42E /* MayDay_LaunchImage_1242x2208_iOS.png */,
-				81F7B25A1AB650680028D42E /* MayDay_LaunchImage_1536x2048_iOS.png */,
+				814D94C51AD0853400224C86 /* circle_drop_shadow_30p_stroke.png */,
+				814D94C61AD0853400224C86 /* circle_drop_shadow_30p.png */,
+				814D94C71AD0853400224C86 /* circle_drop_shadow_60p_stroke.png */,
+				814D94C81AD0853400224C86 /* circle_drop_shadow.png */,
+				814D94C91AD0853400224C86 /* circle_solid_30p.png */,
+				814D94CA1AD0853400224C86 /* circle_solid.png */,
 				8D99C6E31AB5144F00E0ACB0 /* state_settings_480x50.jpg */,
 				8D99C6D51AB50CDD00E0ACB0 /* 320x480_iOS.jpg */,
 				8D99C6D61AB50CDD00E0ACB0 /* 640x960_iOS.jpg */,
@@ -561,6 +565,7 @@
 				8D99C6DF1AB50CDD00E0ACB0 /* 750x1334_iOS.jpg in Resources */,
 				8D99C6E01AB50CDD00E0ACB0 /* 768x1024_iOS.jpg in Resources */,
 				8D3FD4951AAD3A3200E8A5F5 /* circle_drop_shadow.png in Resources */,
+				814D94CF1AD0853400224C86 /* circle_solid_30p.png in Resources */,
 				8D115E531AAABDFE0034F4CE /* warning.png in Resources */,
 				8D3FD4A71AAD3A8600E8A5F5 /* socialperson.png in Resources */,
 				8D3FD4A91AAD3A8600E8A5F5 /* texture.jpg in Resources */,
@@ -573,9 +578,12 @@
 				8D301A121AA419B5000C4FF7 /* help_de.json in Resources */,
 				8D3019EA1AA40597000C4FF7 /* LaunchScreen.xib in Resources */,
 				8D99C6E41AB5144F00E0ACB0 /* state_settings_480x50.jpg in Resources */,
+				814D94CD1AD0853400224C86 /* circle_drop_shadow_60p_stroke.png in Resources */,
 				8D301A131AA419B5000C4FF7 /* help_en.json in Resources */,
+				814D94CE1AD0853400224C86 /* circle_drop_shadow.png in Resources */,
 				8D301A151AA419B5000C4FF7 /* help_fr.json in Resources */,
 				8D3FD4A81AAD3A8600E8A5F5 /* target.png in Resources */,
+				814D94CB1AD0853400224C86 /* circle_drop_shadow_30p_stroke.png in Resources */,
 				8D301A1A1AA419B5000C4FF7 /* mobile_es.json in Resources */,
 				8D99C6DD1AB50CDD00E0ACB0 /* 640x960_iOS.jpg in Resources */,
 				8D3FD4911AAD3A3200E8A5F5 /* back.png in Resources */,
@@ -590,6 +598,8 @@
 				8D3FD4941AAD3A3200E8A5F5 /* circle_drop_shadow_60p_stroke.png in Resources */,
 				8D3FD4A41AAD3A8600E8A5F5 /* plus.png in Resources */,
 				8D3FD4AD1AAD3A8600E8A5F5 /* wizard_inactive.png in Resources */,
+				814D94D01AD0853400224C86 /* circle_solid.png in Resources */,
+				814D94CC1AD0853400224C86 /* circle_drop_shadow_30p.png in Resources */,
 				8D99C6E21AB50CDD00E0ACB0 /* 1536x2048_iOS.jpg in Resources */,
 				8D301A1B1AA419B5000C4FF7 /* mobile_fr.json in Resources */,
 				8D3FD4831AAD1C4A00E8A5F5 /* Main.storyboard in Resources */,

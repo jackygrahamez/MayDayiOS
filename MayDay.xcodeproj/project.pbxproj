@@ -15,6 +15,8 @@
 		814D94CE1AD0853400224C86 /* circle_drop_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 814D94C81AD0853400224C86 /* circle_drop_shadow.png */; };
 		814D94CF1AD0853400224C86 /* circle_solid_30p.png in Resources */ = {isa = PBXBuildFile; fileRef = 814D94C91AD0853400224C86 /* circle_solid_30p.png */; };
 		814D94D01AD0853400224C86 /* circle_solid.png in Resources */ = {isa = PBXBuildFile; fileRef = 814D94CA1AD0853400224C86 /* circle_solid.png */; };
+		814D94D21AD0E78000224C86 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 814D94D11AD0E78000224C86 /* Settings.bundle */; };
+		814D94D51AD0F5E000224C86 /* eula.license in Resources */ = {isa = PBXBuildFile; fileRef = 814D94D41AD0F5E000224C86 /* eula.license */; };
 		81DCA2BE1AC88E0400AFBC15 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */; };
 		81DCA2C21AC893B300AFBC15 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2C11AC893B300AFBC15 /* AddressBookUI.framework */; };
 		81ED61611ABF02EB00A76A62 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81ED61601ABF02EB00A76A62 /* CoreLocation.framework */; };
@@ -123,6 +125,8 @@
 		814D94C81AD0853400224C86 /* circle_drop_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_drop_shadow.png; path = "../../MayDaySOSAlert/app/src/main/res/drawable-hdpi/circle_drop_shadow.png"; sourceTree = "<group>"; };
 		814D94C91AD0853400224C86 /* circle_solid_30p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_solid_30p.png; path = "../../MayDaySOSAlert/app/src/main/res/drawable-hdpi/circle_solid_30p.png"; sourceTree = "<group>"; };
 		814D94CA1AD0853400224C86 /* circle_solid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_solid.png; path = "../../MayDaySOSAlert/app/src/main/res/drawable-hdpi/circle_solid.png"; sourceTree = "<group>"; };
+		814D94D11AD0E78000224C86 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		814D94D41AD0F5E000224C86 /* eula.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eula.license; sourceTree = "<group>"; };
 		81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		81DCA2BF1AC8932B00AFBC15 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		81DCA2C11AC893B300AFBC15 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -227,6 +231,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		814D94D31AD0F55B00224C86 /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				814D94D41AD0F5E000224C86 /* eula.license */,
+			);
+			name = Licenses;
+			sourceTree = "<group>";
+		};
 		8D005F581AABBD5F00D75004 /* MayDay WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +318,7 @@
 				8D3019DB1AA40597000C4FF7 /* AppDelegate.m */,
 				8D3019E01AA40597000C4FF7 /* ViewController.h */,
 				8D3019E11AA40597000C4FF7 /* ViewController.m */,
+				814D94D11AD0E78000224C86 /* Settings.bundle */,
 				8D3019E61AA40597000C4FF7 /* Images.xcassets */,
 				8D3019E81AA40597000C4FF7 /* LaunchScreen.xib */,
 				8D3019DD1AA40597000C4FF7 /* MayDay.xcdatamodeld */,
@@ -344,6 +357,7 @@
 		8D3019FF1AA40A35000C4FF7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				814D94D31AD0F55B00224C86 /* Licenses */,
 				8D301A051AA41989000C4FF7 /* Locales */,
 				8D301A011AA40A49000C4FF7 /* Images */,
 				8D301A001AA40A3F000C4FF7 /* Fonts */,
@@ -564,6 +578,7 @@
 				8D99C6E51AB520F700E0ACB0 /* moms_typewriter.ttf in Resources */,
 				8D99C6DF1AB50CDD00E0ACB0 /* 750x1334_iOS.jpg in Resources */,
 				8D99C6E01AB50CDD00E0ACB0 /* 768x1024_iOS.jpg in Resources */,
+				814D94D51AD0F5E000224C86 /* eula.license in Resources */,
 				8D3FD4951AAD3A3200E8A5F5 /* circle_drop_shadow.png in Resources */,
 				814D94CF1AD0853400224C86 /* circle_solid_30p.png in Resources */,
 				8D115E531AAABDFE0034F4CE /* warning.png in Resources */,
@@ -582,6 +597,7 @@
 				8D301A131AA419B5000C4FF7 /* help_en.json in Resources */,
 				814D94CE1AD0853400224C86 /* circle_drop_shadow.png in Resources */,
 				8D301A151AA419B5000C4FF7 /* help_fr.json in Resources */,
+				814D94D21AD0E78000224C86 /* Settings.bundle in Resources */,
 				8D3FD4A81AAD3A8600E8A5F5 /* target.png in Resources */,
 				814D94CB1AD0853400224C86 /* circle_drop_shadow_30p_stroke.png in Resources */,
 				8D301A1A1AA419B5000C4FF7 /* mobile_es.json in Resources */,

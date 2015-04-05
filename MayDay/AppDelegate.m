@@ -33,12 +33,17 @@
     }
     [Fabric with:@[CrashlyticsKit]];
     
-    BOOL setupCompletedBool = false;
+    BOOL setupCompletedBool = false,
+        SettingsShowTutorialOnLaunchBool = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *setupCompleted = [defaults objectForKey:@"setupcompleted"];
+    NSString *setupCompleted = [defaults objectForKey:@"setupcompleted"],
+        *SettingsShowTutorialOnLaunch = [defaults objectForKey:@"SettingsShowTutorialOnLaunch"];
+    
+    NSLog(@"SettingsShowTutorialOnLaunch %@", SettingsShowTutorialOnLaunch);
+
     setupCompletedBool = [setupCompleted boolValue];
 
-    if(!setupCompletedBool) {
+    if(!setupCompletedBool || [[NSUserDefaults standardUserDefaults] boolForKey:@"SettingsShowTutorialOnLaunch"]) {
         //UIViewController *newRoot = [];
         //self.window.rootViewController = newRoot;
         /* For storyboards... */

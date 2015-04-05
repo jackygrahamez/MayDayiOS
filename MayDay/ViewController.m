@@ -58,6 +58,8 @@ BOOL alerting = false;
 
 #pragma mark - View lifecycle
 
+
+
 -(IBAction)saveMessage:(id)sender
 {
     [masterViewController vibrate];
@@ -74,7 +76,6 @@ BOOL alerting = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"messagestring"];
     [defaults setObject:setupCompleted forKey:@"setupcompleted"];
-    
     [defaults synchronize];
 }
 -(IBAction)saveContact:(id)sender
@@ -127,6 +128,7 @@ BOOL alerting = false;
     alerting = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:nil forKey:@"alerting"];
+    [defaults synchronize];
     //[masterViewController hideAlerting];
     self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeView"];
     //self.window.rootViewController =
@@ -344,6 +346,13 @@ BOOL alerting = false;
     
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"viewDidAppear");
+    [masterViewController animate];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -452,7 +461,6 @@ BOOL alerting = false;
                                     loc, @"loc",
                                     password, @"password",
                                     adId, @"adId",
-                                    debug, @"debug",
                                     idfv, @"idfv", nil];
     
     //convert object to data
@@ -543,6 +551,7 @@ BOOL alerting = false;
     NSString *interval = [defaults objectForKey:@"interval"];
     NSString *alerting = @"true";
     [defaults setObject:alerting forKey:@"alerting"];
+    [defaults synchronize];
     double i = ([interval doubleValue] + 1) * 60;
     NSLog(@"interval %f",i);
     autoTimer = [NSTimer scheduledTimerWithTimeInterval:i
@@ -700,6 +709,39 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     AudioServicesPlaySystemSound(1103);
 }
 
+-(void) animate
+{
+    NSLog(@"Animate");
+    [CATransaction begin];
+    [CATransaction setCompletionBlock:^{
+        /* what to do next */
+        [pickerCircle setHidden:YES];
+
+    }];
+    /* your animation code */
+    CGPoint startPoint = [pickerCircle center];
+    CGPoint endPoint = [pickerButton1 center];
+    
+    CGMutablePathRef thePath = CGPathCreateMutable();
+    CGPathMoveToPoint(thePath, NULL, startPoint.x, startPoint.y);
+    CGPathAddLineToPoint(thePath, NULL, endPoint.x, endPoint.y);
+    
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation
+                                      animationWithKeyPath:@"position"];
+    animation.duration = 3.f;
+    animation.path = thePath;
+    animation.repeatCount = 2;
+    animation.removedOnCompletion = YES;
+    
+    
+    [pickerCircle.layer addAnimation:animation forKey:@"position"];
+    pickerCircle.layer.position = endPoint;
+    [CATransaction commit];
+    
+
+
+    
+}
 
 
 @end

@@ -1233,6 +1233,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <outlet property="contactPicker1" destination="8JR-iI-Zsz" id="YKm-uw-hWS"/>
                         <outlet property="contactPicker2" destination="hqj-cH-nHm" id="Pa0-a6-Lfh"/>
                         <outlet property="contactPicker3" destination="IMZ-gW-97Q" id="ldl-Bc-LuC"/>
+                        <outlet property="pickerButton1" destination="8JR-iI-Zsz" id="qi9-QY-SvC"/>
                         <outlet property="pickerCircle" destination="8Pt-Ls-dRN" id="vI4-Ey-yiA"/>
                     </connections>
                 </viewController>

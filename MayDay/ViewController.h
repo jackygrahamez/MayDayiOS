@@ -28,6 +28,8 @@
     NSInteger startTimeSeconds;
     NSDate *startDateObj;
     
+    __weak IBOutlet UIButton *saveContactsNext;
+    __weak IBOutlet UITextField *contact1SetupField;
     __weak IBOutlet UIButton *pickerButton1;
     __weak IBOutlet UIImageView *pickerCircle;
     __weak IBOutlet UILabel *status;
@@ -48,6 +50,7 @@
 -(IBAction)saveContact:(id)sender;
 -(IBAction)saveInterval:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *stopAlerting;
+@property (weak, nonatomic) IBOutlet UIButton *saveContactsNext;
 
 -(IBAction)controlTextDidChange:(id)sender;
 -(IBAction)trigger:(id)sender;

@@ -59,6 +59,15 @@ BOOL alerting = false;
 #pragma mark - View lifecycle
 
 
+- (IBAction)contact1SetupField:(id)sender {
+    
+    if (contact1SetupField.text.length > 3) {
+        NSLog(@"length > 3");
+        saveContactsNext.alpha = 1.0;
+        saveContactsNext.enabled = YES;
+        saveContactsNext.userInteractionEnabled = YES;
+    }
+}
 
 -(IBAction)saveMessage:(id)sender
 {
@@ -330,6 +339,9 @@ BOOL alerting = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadstring = [defaults objectForKey:@"messagestring"];
     [message setText:loadstring];
+    saveContactsNext.alpha = 0.50;
+    saveContactsNext.enabled = NO;
+    saveContactsNext.userInteractionEnabled = NO;
     contact1.keyboardType = UIKeyboardTypeNumberPad;
     contact2.keyboardType = UIKeyboardTypeNumberPad;
     contact3.keyboardType = UIKeyboardTypeNumberPad;

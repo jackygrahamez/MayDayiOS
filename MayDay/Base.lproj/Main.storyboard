@@ -233,10 +233,6 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="tOd-TV-bu6" kind="push" id="Xhz-dl-hKS"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dv-jd-bTp">
-                                <rect key="frame" x="16" y="280" width="288" height="1"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyG-Xd-kDL">
                                 <rect key="frame" x="81" y="142" width="158" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -258,20 +254,16 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <constraint firstAttribute="trailingMargin" secondItem="NWi-pa-pfe" secondAttribute="trailing" constant="-71" id="2Hd-Gg-9vA"/>
                             <constraint firstItem="d8O-yo-cGA" firstAttribute="top" secondItem="OyG-Xd-kDL" secondAttribute="bottom" constant="48" id="Muh-tm-ILp"/>
                             <constraint firstItem="7od-IA-8h1" firstAttribute="top" secondItem="opG-5z-UXu" secondAttribute="bottom" constant="8" symbolic="YES" id="O0m-r4-2f4"/>
-                            <constraint firstItem="4Dv-jd-bTp" firstAttribute="leading" secondItem="d8O-yo-cGA" secondAttribute="leading" id="R4e-3E-hIg"/>
                             <constraint firstItem="7od-IA-8h1" firstAttribute="leading" secondItem="ojC-Vw-ZvY" secondAttribute="leadingMargin" id="SLZ-lE-3ez"/>
                             <constraint firstItem="opG-5z-UXu" firstAttribute="leading" secondItem="ojC-Vw-ZvY" secondAttribute="leadingMargin" constant="65" id="SfB-PN-VAu"/>
-                            <constraint firstItem="4Dv-jd-bTp" firstAttribute="top" secondItem="d8O-yo-cGA" secondAttribute="bottom" id="Yzd-2p-xpw"/>
                             <constraint firstAttribute="bottomMargin" secondItem="NWi-pa-pfe" secondAttribute="bottom" constant="-99" id="dKM-qc-nJI"/>
                             <constraint firstItem="opG-5z-UXu" firstAttribute="top" secondItem="lxj-8r-fLU" secondAttribute="bottom" constant="8" symbolic="YES" id="fdm-tc-SwV"/>
-                            <constraint firstItem="4Dv-jd-bTp" firstAttribute="trailing" secondItem="d8O-yo-cGA" secondAttribute="trailing" id="g5h-3l-23R"/>
                             <constraint firstItem="7od-IA-8h1" firstAttribute="leading" secondItem="d8O-yo-cGA" secondAttribute="leading" id="jiK-qA-15D"/>
                             <constraint firstItem="opG-5z-UXu" firstAttribute="centerX" secondItem="7od-IA-8h1" secondAttribute="centerX" id="jum-8e-nTC"/>
                             <constraint firstItem="7od-IA-8h1" firstAttribute="trailing" secondItem="d8O-yo-cGA" secondAttribute="trailing" id="oix-vb-I77"/>
                             <constraint firstItem="OyG-Xd-kDL" firstAttribute="top" secondItem="7od-IA-8h1" secondAttribute="bottom" constant="8" symbolic="YES" id="qyz-8l-4cu"/>
                             <constraint firstItem="NWi-pa-pfe" firstAttribute="leading" secondItem="ojC-Vw-ZvY" secondAttribute="leading" id="sgl-TJ-Y75"/>
                             <constraint firstItem="opG-5z-UXu" firstAttribute="trailing" secondItem="OyG-Xd-kDL" secondAttribute="trailing" id="tu1-RY-bdt"/>
-                            <constraint firstItem="ECg-Pr-eWQ" firstAttribute="top" secondItem="4Dv-jd-bTp" secondAttribute="bottom" constant="287" id="u0h-Ly-yf5"/>
                             <constraint firstItem="OyG-Xd-kDL" firstAttribute="leading" secondItem="opG-5z-UXu" secondAttribute="leading" id="uo6-J8-cWj"/>
                             <constraint firstItem="7od-IA-8h1" firstAttribute="trailing" secondItem="ojC-Vw-ZvY" secondAttribute="trailingMargin" id="x04-zm-RI4"/>
                             <constraint firstItem="NWi-pa-pfe" firstAttribute="top" secondItem="ojC-Vw-ZvY" secondAttribute="top" id="xkZ-A0-isA"/>
@@ -1196,7 +1188,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveContactsNext:" destination="qIH-vn-bv1" eventType="touchUpInside" id="1da-z1-E8b"/>
+                                    <action selector="saveContactsNext:" destination="qIH-vn-bv1" eventType="touchUpInside" id="jga-FS-t9b"/>
                                     <segue destination="d47-Dp-TkE" kind="push" id="SAE-UT-xdb"/>
                                 </connections>
                             </button>
@@ -1219,6 +1211,9 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="contact1SetupField:" destination="qIH-vn-bv1" eventType="editingDidEnd" id="Cq9-pi-BhF"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Contact Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ha-sa-PFy">
                                 <rect key="frame" x="-1" y="28" width="323" height="37"/>
@@ -1287,6 +1282,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="contact1" destination="gNr-y8-dmW" id="Vxb-Bx-BNz"/>
+                        <outlet property="contact1SetupField" destination="gNr-y8-dmW" id="FNY-CZ-71g"/>
                         <outlet property="contact2" destination="hWy-bh-c7U" id="gHP-mM-uvn"/>
                         <outlet property="contact3" destination="vdK-oM-Dhc" id="HNv-vZ-kKW"/>
                         <outlet property="contactPicker1" destination="8JR-iI-Zsz" id="YKm-uw-hWS"/>
@@ -1294,6 +1290,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <outlet property="contactPicker3" destination="IMZ-gW-97Q" id="ldl-Bc-LuC"/>
                         <outlet property="pickerButton1" destination="8JR-iI-Zsz" id="qi9-QY-SvC"/>
                         <outlet property="pickerCircle" destination="8Pt-Ls-dRN" id="vI4-Ey-yiA"/>
+                        <outlet property="saveContactsNext" destination="JOg-m0-1RQ" id="uFB-5m-YSc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJH-7w-AtD" sceneMemberID="firstResponder"/>

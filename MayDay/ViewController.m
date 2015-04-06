@@ -402,8 +402,21 @@ BOOL alerting = false;
 
 - (void)swipedScreenRight:(UISwipeGestureRecognizer*)swipeGesture
 {
-    NSLog(@"swipedScreenRight");
-    [masterViewController.navigationController popViewControllerAnimated:YES];
+    NSString *restorationId = self.restorationIdentifier;
+
+    NSLog(@"swipedScreenRight %@", restorationId);
+    if ([restorationId  isEqual: @"messageSettings"]) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    } else if ([restorationId  isEqual: @"contactSettings"]) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    } else if ([restorationId  isEqual: @"alertSettings"]) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    } else {
+        NSLog(@"%@",self.navigationController.viewControllers);
+        [masterViewController.navigationController popViewControllerAnimated:YES];
+    }
+    
+   
 }
 
 - (void) sendMessage

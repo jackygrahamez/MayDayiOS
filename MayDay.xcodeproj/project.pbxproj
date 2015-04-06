@@ -61,6 +61,7 @@
 		814D954C1AD187D700224C86 /* mobile_fr.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D95191AD187D700224C86 /* mobile_fr.json */; };
 		814D954D1AD187D700224C86 /* mobile_ph.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D951A1AD187D700224C86 /* mobile_ph.json */; };
 		814D954E1AD187D700224C86 /* mobile_pt.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D951B1AD187D700224C86 /* mobile_pt.json */; };
+		814D95511AD1893900224C86 /* license.pl in Resources */ = {isa = PBXBuildFile; fileRef = 814D95501AD1893900224C86 /* license.pl */; };
 		81DCA2BE1AC88E0400AFBC15 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */; };
 		81DCA2C21AC893B300AFBC15 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2C11AC893B300AFBC15 /* AddressBookUI.framework */; };
 		81ED61611ABF02EB00A76A62 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81ED61601ABF02EB00A76A62 /* CoreLocation.framework */; };
@@ -176,6 +177,8 @@
 		814D95191AD187D700224C86 /* mobile_fr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_fr.json; sourceTree = "<group>"; };
 		814D951A1AD187D700224C86 /* mobile_ph.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_ph.json; sourceTree = "<group>"; };
 		814D951B1AD187D700224C86 /* mobile_pt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_pt.json; sourceTree = "<group>"; };
+		814D954F1AD1891A00224C86 /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
+		814D95501AD1893900224C86 /* license.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = license.pl; sourceTree = "<group>"; };
 		81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		81DCA2BF1AC8932B00AFBC15 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		81DCA2C11AC893B300AFBC15 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -308,6 +311,8 @@
 			isa = PBXGroup;
 			children = (
 				814D950E1AD187D700224C86 /* eula.license */,
+				814D954F1AD1891A00224C86 /* Script.sh */,
+				814D95501AD1893900224C86 /* license.pl */,
 			);
 			path = Licenses;
 			sourceTree = "<group>";
@@ -604,6 +609,7 @@
 				814D952E1AD187D700224C86 /* circle_solid_30p.png in Resources */,
 				814D952F1AD187D700224C86 /* icon_alarm.png in Resources */,
 				814D95231AD187D700224C86 /* 768x1024_iOS.jpg in Resources */,
+				814D95511AD1893900224C86 /* license.pl in Resources */,
 				814D95301AD187D700224C86 /* icon_arrow.png in Resources */,
 				814D95361AD187D700224C86 /* save.png in Resources */,
 				814D95481AD187D700224C86 /* help_pt.json in Resources */,

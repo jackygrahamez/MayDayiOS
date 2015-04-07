@@ -63,9 +63,9 @@ BOOL alerting = false;
     
     if (contact1SetupField.text.length > 3) {
         NSLog(@"length > 3");
-        saveContactsNext.alpha = 1.0;
-        saveContactsNext.enabled = YES;
-        saveContactsNext.userInteractionEnabled = YES;
+        masterViewController.saveContactsNext.alpha = 1.0;
+        masterViewController.saveContactsNext.enabled = YES;
+        masterViewController.saveContactsNext.userInteractionEnabled = YES;
     }
 }
 
@@ -339,9 +339,10 @@ BOOL alerting = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadstring = [defaults objectForKey:@"messagestring"];
     [message setText:loadstring];
-    saveContactsNext.alpha = 0.50;
-    saveContactsNext.enabled = NO;
-    saveContactsNext.userInteractionEnabled = NO;
+    masterViewController.saveContactsNext.alpha = 0.50;
+    masterViewController.saveContactsNext.enabled = NO;
+    masterViewController.saveContactsNext.userInteractionEnabled = NO;
+    
     contact1.keyboardType = UIKeyboardTypeNumberPad;
     contact2.keyboardType = UIKeyboardTypeNumberPad;
     contact3.keyboardType = UIKeyboardTypeNumberPad;
@@ -753,7 +754,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     
     CAKeyframeAnimation *animation = [CAKeyframeAnimation
                                       animationWithKeyPath:@"position"];
-    animation.duration = 3.f;
+    animation.duration = 2.f;
     animation.path = thePath;
     animation.repeatCount = 2;
     animation.removedOnCompletion = YES;

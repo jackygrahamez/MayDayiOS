@@ -731,7 +731,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 -(void)vibrate
 {
     NSLog(@"I'm vibrating");
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     AudioServicesPlaySystemSound(1103);
 }
 

@@ -39,82 +39,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1242" height="2208"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="37" text="MayDay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSW-X5-H0b">
-                                <rect key="frame" x="81" y="72" width="158" height="37"/>
+                                <rect key="frame" x="81" y="28" width="158" height="37"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6AP-gU-Ea7">
-                                <rect key="frame" x="16" y="124" width="288" height="1"/>
-                                <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Py-DHf">
-                                <rect key="frame" x="16" y="162" width="288" height="1"/>
-                                <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Qc-6a-tNd">
-                                <rect key="frame" x="16" y="385" width="288" height="1"/>
-                                <color key="backgroundColor" red="0.98099320339999996" green="1" blue="0.97473730030000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yic-lX-khO">
-                                <rect key="frame" x="16" y="436" width="288" height="1"/>
-                                <color key="backgroundColor" red="0.98099320339999996" green="1" blue="0.97473730030000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Md-xA-Hzk">
-                                <rect key="frame" x="108" y="133" width="105" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ved-Dl-NPr">
-                                <rect key="frame" x="16" y="335" width="288" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                <state key="normal" title="Settings" backgroundImage="state_settings_480x50.jpg">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="settingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HbR-vh-cFU"/>
-                                    <segue destination="Ic7-CG-rQ4" kind="push" identifier="homeSettings" id="DTu-HQ-P1E"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-yi-51F">
-                                <rect key="frame" x="16" y="386" width="288" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                <state key="normal" title="About" backgroundImage="state_settings_480x50.jpg">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="aboutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xNp-ZG-YG8"/>
-                                    <segue destination="jS4-0d-g31" kind="push" id="eFd-NR-acC"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H42-Jx-TZe">
-                                <rect key="frame" x="16" y="171" width="288" height="120"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="In an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="ArialMT"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="35.450000000000003"/>
-                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> 
-First check your MayDay settings to ensure your alerts are delivered to the correct people.</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="ArialMT"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="35.450000000000003"/>
-                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3L-MV-7wb">
@@ -142,6 +69,79 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="35.450000000000003"/>
                                             <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6AP-gU-Ea7">
+                                <rect key="frame" x="16" y="73" width="288" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Py-DHf">
+                                <rect key="frame" x="16" y="111" width="288" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Qc-6a-tNd">
+                                <rect key="frame" x="16" y="334" width="288" height="1"/>
+                                <color key="backgroundColor" red="0.98099320339999996" green="1" blue="0.97473730030000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yic-lX-khO">
+                                <rect key="frame" x="16" y="385" width="288" height="1"/>
+                                <color key="backgroundColor" red="0.98099320339999996" green="1" blue="0.97473730030000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Md-xA-Hzk">
+                                <rect key="frame" x="108" y="82" width="105" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ved-Dl-NPr">
+                                <rect key="frame" x="16" y="284" width="288" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Settings" backgroundImage="state_settings_480x50.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HbR-vh-cFU"/>
+                                    <segue destination="Ic7-CG-rQ4" kind="push" identifier="homeSettings" id="DTu-HQ-P1E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-yi-51F">
+                                <rect key="frame" x="16" y="335" width="288" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="About" backgroundImage="state_settings_480x50.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="aboutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xNp-ZG-YG8"/>
+                                    <segue destination="jS4-0d-g31" kind="push" id="eFd-NR-acC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H42-Jx-TZe">
+                                <rect key="frame" x="16" y="120" width="288" height="120"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="In an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="35.450000000000003"/>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> 
+First check your MayDay settings to ensure your alerts are delivered to the correct people.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="ArialMT"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="35.450000000000003"/>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -417,16 +417,10 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="OKi-PD-bcJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="OKi-PD-bcJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-gC-i02">
-                                <rect key="frame" x="108" y="72" width="158" height="37"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="left" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-l2-vPv">
+                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-l2-vPv">
                                 <rect key="frame" x="16" y="148" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -439,11 +433,11 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="Q3l-1A-MH6" kind="push" id="a3U-v3-OnL"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-fe-KWw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-fe-KWw">
                                 <rect key="frame" x="16" y="198" width="343" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Pj-2QW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Pj-2QW">
                                 <rect key="frame" x="16" y="199" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -456,11 +450,11 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="LmA-A7-Hri" kind="push" id="Rnc-EX-0KW"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJz-V3-2S1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJz-V3-2S1">
                                 <rect key="frame" x="16" y="249" width="343" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-d0-hfr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-d0-hfr">
                                 <rect key="frame" x="16" y="250" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -473,30 +467,50 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <segue destination="ogg-33-r79" kind="push" id="6JW-q7-LND"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-Td-WVw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-Td-WVw">
                                 <rect key="frame" x="16" y="301" width="343" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-gC-i02">
+                                <rect key="frame" x="108" y="28" width="158" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="QBJ-H2-Z72"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="QJz-V3-2S1" secondAttribute="centerX" id="50s-ap-fCq"/>
-                            <constraint firstItem="Upf-fe-KWw" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="7Zh-qD-WHy"/>
-                            <constraint firstItem="OKi-PD-bcJ" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" id="9Kj-vw-ZQr"/>
-                            <constraint firstItem="kVl-Pj-2QW" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="EII-qq-UWn"/>
-                            <constraint firstItem="RFL-Td-WVw" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="J7e-fi-6Tt"/>
-                            <constraint firstItem="QJz-V3-2S1" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="OUc-rI-Yuz"/>
-                            <constraint firstAttribute="centerX" secondItem="aeR-l2-vPv" secondAttribute="centerX" id="Q9C-QS-j0t"/>
-                            <constraint firstAttribute="centerX" secondItem="gtd-gC-i02" secondAttribute="centerX" id="TAG-Yf-BzQ"/>
-                            <constraint firstItem="aeR-l2-vPv" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="Tzg-2E-xlp"/>
-                            <constraint firstItem="XrD-cp-Gz7" firstAttribute="top" secondItem="OKi-PD-bcJ" secondAttribute="bottom" id="ZLD-qV-IFL"/>
-                            <constraint firstAttribute="centerY" secondItem="OKi-PD-bcJ" secondAttribute="centerY" id="e2s-Al-6BT"/>
-                            <constraint firstAttribute="centerX" secondItem="Upf-fe-KWw" secondAttribute="centerX" id="gHE-3c-Efo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OKi-PD-bcJ" secondAttribute="trailing" id="nnB-SX-V1m"/>
-                            <constraint firstAttribute="centerX" secondItem="RFL-Td-WVw" secondAttribute="centerX" id="qAo-Fp-h24"/>
-                            <constraint firstAttribute="centerX" secondItem="kVl-Pj-2QW" secondAttribute="centerX" id="u96-3C-iZX"/>
-                            <constraint firstItem="PnM-d0-hfr" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="ury-9o-ee3"/>
-                            <constraint firstAttribute="centerX" secondItem="PnM-d0-hfr" secondAttribute="centerX" id="wMV-Bt-af4"/>
+                            <constraint firstItem="Upf-fe-KWw" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" id="28e-yX-02x"/>
+                            <constraint firstItem="RFL-Td-WVw" firstAttribute="trailing" secondItem="PnM-d0-hfr" secondAttribute="trailing" id="42n-vC-040"/>
+                            <constraint firstItem="kVl-Pj-2QW" firstAttribute="top" secondItem="Urv-dX-94b" secondAttribute="top" constant="199" id="9ps-tc-jSC"/>
+                            <constraint firstItem="Upf-fe-KWw" firstAttribute="top" secondItem="aeR-l2-vPv" secondAttribute="bottom" id="EEK-Ia-YVL"/>
+                            <constraint firstItem="Upf-fe-KWw" firstAttribute="leading" secondItem="aeR-l2-vPv" secondAttribute="leading" id="Gjd-nd-Q0u"/>
+                            <constraint firstItem="aeR-l2-vPv" firstAttribute="centerX" secondItem="gtd-gC-i02" secondAttribute="centerX" id="Ktb-OV-pR5"/>
+                            <constraint firstItem="XrD-cp-Gz7" firstAttribute="top" secondItem="RFL-Td-WVw" secondAttribute="bottom" constant="365" id="PZx-a5-bLs"/>
+                            <constraint firstItem="RFL-Td-WVw" firstAttribute="top" secondItem="PnM-d0-hfr" secondAttribute="bottom" constant="1" id="PfB-Ax-x4X"/>
+                            <constraint firstItem="QJz-V3-2S1" firstAttribute="leading" secondItem="kVl-Pj-2QW" secondAttribute="leading" id="QtQ-rd-bWK"/>
+                            <constraint firstItem="kVl-Pj-2QW" firstAttribute="top" secondItem="Upf-fe-KWw" secondAttribute="bottom" id="Wht-Gq-lp4"/>
+                            <constraint firstItem="RFL-Td-WVw" firstAttribute="leading" secondItem="PnM-d0-hfr" secondAttribute="leading" id="ZtH-oP-uNf"/>
+                            <constraint firstItem="Upf-fe-KWw" firstAttribute="trailing" secondItem="aeR-l2-vPv" secondAttribute="trailing" id="aB9-xk-0pQ"/>
+                            <constraint firstItem="kVl-Pj-2QW" firstAttribute="trailing" secondItem="Upf-fe-KWw" secondAttribute="trailing" id="aG6-dM-SZH"/>
+                            <constraint firstItem="QJz-V3-2S1" firstAttribute="trailing" secondItem="PnM-d0-hfr" secondAttribute="trailing" id="bEN-zJ-8iQ"/>
+                            <constraint firstItem="kVl-Pj-2QW" firstAttribute="leading" secondItem="Upf-fe-KWw" secondAttribute="leading" id="dEZ-fW-5Tt"/>
+                            <constraint firstItem="gtd-gC-i02" firstAttribute="top" secondItem="KCj-6j-rSI" secondAttribute="bottom" constant="8" symbolic="YES" id="daT-FK-UC6"/>
+                            <constraint firstItem="QJz-V3-2S1" firstAttribute="top" secondItem="kVl-Pj-2QW" secondAttribute="bottom" id="eXE-8h-o6f"/>
+                            <constraint firstItem="PnM-d0-hfr" firstAttribute="top" secondItem="QJz-V3-2S1" secondAttribute="bottom" id="kDV-pB-Wht"/>
+                            <constraint firstItem="PnM-d0-hfr" firstAttribute="top" secondItem="Urv-dX-94b" secondAttribute="top" constant="250" id="lNu-Tr-Ggb"/>
+                            <constraint firstAttribute="trailing" secondItem="OKi-PD-bcJ" secondAttribute="trailing" id="ncz-fa-TMM"/>
+                            <constraint firstItem="OKi-PD-bcJ" firstAttribute="top" secondItem="Urv-dX-94b" secondAttribute="top" id="o1R-Qg-hmT"/>
+                            <constraint firstItem="OKi-PD-bcJ" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leading" id="psw-6Z-hYI"/>
+                            <constraint firstItem="QJz-V3-2S1" firstAttribute="trailing" secondItem="kVl-Pj-2QW" secondAttribute="trailing" id="uny-2E-Dq6"/>
+                            <constraint firstItem="aeR-l2-vPv" firstAttribute="top" secondItem="gtd-gC-i02" secondAttribute="bottom" constant="83" id="vHt-IT-l73"/>
+                            <constraint firstItem="OKi-PD-bcJ" firstAttribute="centerX" secondItem="gtd-gC-i02" secondAttribute="centerX" id="vfR-ys-f8T"/>
+                            <constraint firstItem="OKi-PD-bcJ" firstAttribute="bottom" secondItem="XrD-cp-Gz7" secondAttribute="top" id="wNG-M9-lzN"/>
+                            <constraint firstItem="gtd-gC-i02" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="92" id="xrc-kg-UCw"/>
+                            <constraint firstItem="PnM-d0-hfr" firstAttribute="leading" secondItem="QJz-V3-2S1" secondAttribute="leading" id="yvn-GK-E25"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DrJ-tP-gsg"/>
@@ -522,54 +536,45 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="S3i-CH-iQF">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-u4-LXv">
-                                <rect key="frame" x="-1" y="20" width="323" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="60E-Y2-qWZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlP-Dz-CFO">
-                                <rect key="frame" x="26" y="79" width="42" height="21"/>
+                                <rect key="frame" x="33" y="93" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="W0i-er-D0Z"/>
-                                    <constraint firstAttribute="width" constant="42" id="fyc-X3-MLG"/>
+                                    <constraint firstAttribute="width" constant="42" id="qJG-vZ-Z2y"/>
+                                    <constraint firstAttribute="height" constant="21" id="wGm-0V-Gtc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1a-Wu-3FT">
-                                <rect key="frame" x="51" y="108" width="200" height="35"/>
+                                <rect key="frame" x="58" y="122" width="200" height="35"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvt-z3-mpn">
-                                <rect key="frame" x="26" y="125" width="42" height="21"/>
+                                <rect key="frame" x="33" y="139" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="T9l-78-ean"/>
+                                    <constraint firstAttribute="height" constant="21" id="Cem-AP-gqw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-6d-UVR">
-                                <rect key="frame" x="51" y="154" width="200" height="35"/>
+                                <rect key="frame" x="58" y="168" width="200" height="35"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joN-lp-mXd">
-                                <rect key="frame" x="26" y="168" width="42" height="21"/>
+                                <rect key="frame" x="33" y="182" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqz-jL-gim">
-                                <rect key="frame" x="106" y="197" width="109" height="30"/>
+                                <rect key="frame" x="106" y="211" width="109" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -580,7 +585,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvM-G1-rpp">
-                                <rect key="frame" x="26" y="235" width="269" height="204"/>
+                                <rect key="frame" x="26" y="249" width="269" height="204"/>
                                 <string key="text">Security Tips
 • Think about who can practically assist you - there is no point someone knowing you are in trouble if they cannot help. 
 • Make a plan with your chosen contacts so that they are prepared to act fast. 
@@ -591,13 +596,13 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m07-sU-0C7">
-                                <rect key="frame" x="51" y="65" width="200" height="35"/>
+                                <rect key="frame" x="58" y="79" width="200" height="35"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLu-JU-OAK">
-                                <rect key="frame" x="259" y="72" width="22" height="22"/>
+                                <rect key="frame" x="266" y="86" width="22" height="22"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -606,7 +611,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCa-zy-Hbl">
-                                <rect key="frame" x="259" y="115" width="22" height="22"/>
+                                <rect key="frame" x="266" y="129" width="22" height="22"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -616,7 +621,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUl-y6-qff">
-                                <rect key="frame" x="259" y="161" width="22" height="22"/>
+                                <rect key="frame" x="266" y="175" width="22" height="22"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -625,50 +630,59 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <action selector="contactPicker3:" destination="LmA-A7-Hri" eventType="touchUpInside" id="xmJ-XB-dER"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-u4-LXv">
+                                <rect key="frame" x="-3" y="34" width="323" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Iru-ND-qP0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Iqz-jL-gim" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="90" id="0Y2-ZX-ddC"/>
-                            <constraint firstItem="m07-sU-0C7" firstAttribute="leading" secondItem="r1a-Wu-3FT" secondAttribute="leading" id="11b-on-7L6"/>
-                            <constraint firstItem="EvM-G1-rpp" firstAttribute="top" secondItem="Iqz-jL-gim" secondAttribute="bottom" constant="8" symbolic="YES" id="37a-pR-HE2"/>
-                            <constraint firstItem="GCa-zy-Hbl" firstAttribute="leading" secondItem="r1a-Wu-3FT" secondAttribute="trailing" constant="8" symbolic="YES" id="4jp-Cp-dHX"/>
-                            <constraint firstItem="uLu-JU-OAK" firstAttribute="top" secondItem="nwp-u4-LXv" secondAttribute="bottom" constant="15" id="56M-po-ADV"/>
-                            <constraint firstItem="m07-sU-0C7" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="35" id="5Fw-wa-1Oi"/>
-                            <constraint firstItem="GCa-zy-Hbl" firstAttribute="top" secondItem="uLu-JU-OAK" secondAttribute="bottom" constant="21" id="5ac-MS-RO0"/>
-                            <constraint firstItem="EvM-G1-rpp" firstAttribute="top" secondItem="UUl-y6-qff" secondAttribute="bottom" constant="52" id="8EN-oc-u8p"/>
-                            <constraint firstItem="joN-lp-mXd" firstAttribute="top" secondItem="qvt-z3-mpn" secondAttribute="bottom" constant="22" id="BOg-5i-zgm"/>
-                            <constraint firstItem="GCa-zy-Hbl" firstAttribute="leading" secondItem="uLu-JU-OAK" secondAttribute="leading" id="CGG-o7-rLE"/>
-                            <constraint firstItem="3ch-6d-UVR" firstAttribute="top" secondItem="r1a-Wu-3FT" secondAttribute="bottom" constant="11" id="CZZ-r5-ez0"/>
-                            <constraint firstItem="r1a-Wu-3FT" firstAttribute="top" secondItem="m07-sU-0C7" secondAttribute="bottom" constant="8" symbolic="YES" id="ENM-dK-hkP"/>
-                            <constraint firstItem="Iqz-jL-gim" firstAttribute="centerX" secondItem="nwp-u4-LXv" secondAttribute="centerX" id="GUx-Jn-hIO"/>
-                            <constraint firstItem="GCa-zy-Hbl" firstAttribute="leading" secondItem="UUl-y6-qff" secondAttribute="leading" id="Im3-TM-PEi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uLu-JU-OAK" secondAttribute="trailing" constant="23" id="JIb-Vn-3zA"/>
-                            <constraint firstItem="qvt-z3-mpn" firstAttribute="top" secondItem="m07-sU-0C7" secondAttribute="bottom" constant="25" id="Kq4-9u-eqo"/>
-                            <constraint firstItem="joN-lp-mXd" firstAttribute="trailing" secondItem="qvt-z3-mpn" secondAttribute="trailing" id="LoM-wR-YYG"/>
-                            <constraint firstItem="qvt-z3-mpn" firstAttribute="leading" secondItem="KlP-Dz-CFO" secondAttribute="leading" id="OeD-EX-YRW"/>
-                            <constraint firstItem="m07-sU-0C7" firstAttribute="top" secondItem="nwp-u4-LXv" secondAttribute="bottom" constant="8" symbolic="YES" id="Pxu-bM-fN6"/>
-                            <constraint firstItem="UUl-y6-qff" firstAttribute="top" secondItem="GCa-zy-Hbl" secondAttribute="bottom" constant="24" id="Qhb-zG-n4L"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="S3i-CH-iQF" secondAttribute="trailing" constant="-71" id="RN3-Az-mH8"/>
-                            <constraint firstItem="3ch-6d-UVR" firstAttribute="top" secondItem="qvt-z3-mpn" secondAttribute="bottom" constant="8" symbolic="YES" id="V03-88-aNT"/>
-                            <constraint firstItem="UUl-y6-qff" firstAttribute="leading" secondItem="3ch-6d-UVR" secondAttribute="trailing" constant="8" symbolic="YES" id="VzJ-lz-MaI"/>
-                            <constraint firstItem="joN-lp-mXd" firstAttribute="leading" secondItem="qvt-z3-mpn" secondAttribute="leading" id="XRx-pf-tHb"/>
-                            <constraint firstItem="qvt-z3-mpn" firstAttribute="trailing" secondItem="KlP-Dz-CFO" secondAttribute="trailing" id="YIT-gi-DAV"/>
-                            <constraint firstItem="KlP-Dz-CFO" firstAttribute="top" secondItem="nwp-u4-LXv" secondAttribute="bottom" constant="22" id="YsY-7Z-dpY"/>
-                            <constraint firstItem="Iqz-jL-gim" firstAttribute="top" secondItem="3ch-6d-UVR" secondAttribute="bottom" constant="8" symbolic="YES" id="ZvD-wu-V4W"/>
-                            <constraint firstItem="nwp-u4-LXv" firstAttribute="top" secondItem="ErB-Ay-VnB" secondAttribute="bottom" id="afB-Oa-jrz"/>
-                            <constraint firstItem="r1a-Wu-3FT" firstAttribute="top" secondItem="KlP-Dz-CFO" secondAttribute="bottom" constant="8" symbolic="YES" id="cW2-eY-Mga"/>
-                            <constraint firstItem="joN-lp-mXd" firstAttribute="leading" secondItem="EvM-G1-rpp" secondAttribute="leading" id="f31-Ur-ol1"/>
-                            <constraint firstItem="uLu-JU-OAK" firstAttribute="leading" secondItem="m07-sU-0C7" secondAttribute="trailing" constant="8" symbolic="YES" id="fAn-Op-s1g"/>
-                            <constraint firstItem="Iqz-jL-gim" firstAttribute="centerX" secondItem="EvM-G1-rpp" secondAttribute="centerX" id="fky-F3-2gO"/>
-                            <constraint firstItem="r1a-Wu-3FT" firstAttribute="leading" secondItem="3ch-6d-UVR" secondAttribute="leading" id="gcX-jk-wMM"/>
-                            <constraint firstItem="nwp-u4-LXv" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="-17" id="jhe-ZV-7dE"/>
-                            <constraint firstItem="S3i-CH-iQF" firstAttribute="top" secondItem="1gp-Im-HGx" secondAttribute="top" id="kj6-Ca-Ujl"/>
-                            <constraint firstItem="S3i-CH-iQF" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leading" id="lf3-zb-8MS"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="S3i-CH-iQF" secondAttribute="bottom" constant="-99" id="mAm-3J-v9D"/>
-                            <constraint firstItem="KlP-Dz-CFO" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="10" id="sRF-lz-4Dh"/>
-                            <constraint firstItem="Iqz-jL-gim" firstAttribute="centerX" secondItem="1gp-Im-HGx" secondAttribute="centerX" id="udj-AC-VTE"/>
-                            <constraint firstItem="GQ2-Ur-Fd7" firstAttribute="top" secondItem="EvM-G1-rpp" secondAttribute="bottom" constant="129" id="yby-6s-xaU"/>
-                            <constraint firstItem="EvM-G1-rpp" firstAttribute="top" secondItem="joN-lp-mXd" secondAttribute="bottom" constant="46" id="zaC-YR-w90"/>
+                            <constraint firstItem="GCa-zy-Hbl" firstAttribute="leading" secondItem="r1a-Wu-3FT" secondAttribute="trailing" constant="8" symbolic="YES" id="33R-tT-aKE"/>
+                            <constraint firstItem="GCa-zy-Hbl" firstAttribute="top" secondItem="uLu-JU-OAK" secondAttribute="bottom" constant="21" id="3rj-TS-I2L"/>
+                            <constraint firstAttribute="trailing" secondItem="nwp-u4-LXv" secondAttribute="trailing" id="5U8-AV-JMe"/>
+                            <constraint firstItem="UUl-y6-qff" firstAttribute="leading" secondItem="3ch-6d-UVR" secondAttribute="trailing" constant="8" symbolic="YES" id="5xX-ab-QzH"/>
+                            <constraint firstItem="uLu-JU-OAK" firstAttribute="leading" secondItem="m07-sU-0C7" secondAttribute="trailing" constant="8" symbolic="YES" id="6h9-lq-0Du"/>
+                            <constraint firstItem="EvM-G1-rpp" firstAttribute="centerX" secondItem="Iqz-jL-gim" secondAttribute="centerX" id="7ZU-sn-vhy"/>
+                            <constraint firstItem="EvM-G1-rpp" firstAttribute="top" secondItem="Iqz-jL-gim" secondAttribute="bottom" constant="8" symbolic="YES" id="8u1-nQ-Vvd"/>
+                            <constraint firstItem="m07-sU-0C7" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="42" id="CCE-WW-oEf"/>
+                            <constraint firstItem="KlP-Dz-CFO" firstAttribute="trailing" secondItem="qvt-z3-mpn" secondAttribute="trailing" id="EJi-Zf-paj"/>
+                            <constraint firstItem="EvM-G1-rpp" firstAttribute="top" secondItem="UUl-y6-qff" secondAttribute="bottom" constant="52" id="EpL-xb-fw2"/>
+                            <constraint firstItem="3ch-6d-UVR" firstAttribute="top" secondItem="qvt-z3-mpn" secondAttribute="bottom" constant="8" symbolic="YES" id="FhW-Y9-FPb"/>
+                            <constraint firstItem="r1a-Wu-3FT" firstAttribute="leading" secondItem="3ch-6d-UVR" secondAttribute="leading" id="I86-fA-D4k"/>
+                            <constraint firstItem="m07-sU-0C7" firstAttribute="top" secondItem="nwp-u4-LXv" secondAttribute="bottom" constant="8" symbolic="YES" id="Ikl-JI-eaL"/>
+                            <constraint firstItem="r1a-Wu-3FT" firstAttribute="top" secondItem="KlP-Dz-CFO" secondAttribute="bottom" constant="8" symbolic="YES" id="KFD-Ta-2aF"/>
+                            <constraint firstItem="nwp-u4-LXv" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="-19" id="L9H-jg-as1"/>
+                            <constraint firstItem="S3i-CH-iQF" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leading" id="Ldv-AP-WVl"/>
+                            <constraint firstItem="qvt-z3-mpn" firstAttribute="trailing" secondItem="joN-lp-mXd" secondAttribute="trailing" id="Lvl-Bh-hsN"/>
+                            <constraint firstItem="qvt-z3-mpn" firstAttribute="top" secondItem="m07-sU-0C7" secondAttribute="bottom" constant="25" id="N1o-qz-bRM"/>
+                            <constraint firstItem="KlP-Dz-CFO" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="17" id="O9T-Pg-NyX"/>
+                            <constraint firstItem="m07-sU-0C7" firstAttribute="centerX" secondItem="nwp-u4-LXv" secondAttribute="centerX" id="ObX-sp-iy9"/>
+                            <constraint firstItem="r1a-Wu-3FT" firstAttribute="top" secondItem="m07-sU-0C7" secondAttribute="bottom" constant="8" symbolic="YES" id="QlJ-f9-fae"/>
+                            <constraint firstItem="GCa-zy-Hbl" firstAttribute="leading" secondItem="uLu-JU-OAK" secondAttribute="leading" id="RCr-eu-wdd"/>
+                            <constraint firstItem="Iqz-jL-gim" firstAttribute="top" secondItem="3ch-6d-UVR" secondAttribute="bottom" constant="8" symbolic="YES" id="UAt-Gp-TpQ"/>
+                            <constraint firstItem="joN-lp-mXd" firstAttribute="top" secondItem="qvt-z3-mpn" secondAttribute="bottom" constant="22" id="W4I-qR-V2e"/>
+                            <constraint firstItem="3ch-6d-UVR" firstAttribute="top" secondItem="r1a-Wu-3FT" secondAttribute="bottom" constant="11" id="deX-2e-QIa"/>
+                            <constraint firstItem="EvM-G1-rpp" firstAttribute="centerX" secondItem="1gp-Im-HGx" secondAttribute="centerX" id="f6x-As-pPk"/>
+                            <constraint firstItem="r1a-Wu-3FT" firstAttribute="leading" secondItem="m07-sU-0C7" secondAttribute="leading" id="gif-wz-v0J"/>
+                            <constraint firstItem="KlP-Dz-CFO" firstAttribute="top" secondItem="nwp-u4-LXv" secondAttribute="bottom" constant="22" id="gl4-lI-5yu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="S3i-CH-iQF" secondAttribute="bottom" constant="-99" id="gxv-Pd-5zO"/>
+                            <constraint firstItem="UUl-y6-qff" firstAttribute="top" secondItem="GCa-zy-Hbl" secondAttribute="bottom" constant="24" id="j2l-qO-ChI"/>
+                            <constraint firstItem="GQ2-Ur-Fd7" firstAttribute="top" secondItem="EvM-G1-rpp" secondAttribute="bottom" constant="115" id="j4W-fx-IyH"/>
+                            <constraint firstItem="EvM-G1-rpp" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="10" id="jqf-ny-6n7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S3i-CH-iQF" secondAttribute="trailing" constant="-71" id="jxl-fv-vpE"/>
+                            <constraint firstItem="qvt-z3-mpn" firstAttribute="leading" secondItem="joN-lp-mXd" secondAttribute="leading" id="ljz-U4-oxq"/>
+                            <constraint firstItem="KlP-Dz-CFO" firstAttribute="leading" secondItem="qvt-z3-mpn" secondAttribute="leading" id="mTo-zX-vXF"/>
+                            <constraint firstItem="EvM-G1-rpp" firstAttribute="top" secondItem="joN-lp-mXd" secondAttribute="bottom" constant="46" id="rmS-N4-Xjx"/>
+                            <constraint firstItem="S3i-CH-iQF" firstAttribute="top" secondItem="1gp-Im-HGx" secondAttribute="top" id="rtG-Pa-5Qc"/>
+                            <constraint firstItem="UUl-y6-qff" firstAttribute="leading" secondItem="GCa-zy-Hbl" secondAttribute="leading" id="tin-PA-Hue"/>
+                            <constraint firstItem="Iqz-jL-gim" firstAttribute="leading" secondItem="1gp-Im-HGx" secondAttribute="leadingMargin" constant="90" id="vBR-9b-Fzj"/>
+                            <constraint firstItem="nwp-u4-LXv" firstAttribute="top" secondItem="ErB-Ay-VnB" secondAttribute="bottom" constant="14" id="vJ9-PP-64X"/>
+                            <constraint firstItem="uLu-JU-OAK" firstAttribute="top" secondItem="nwp-u4-LXv" secondAttribute="bottom" constant="15" id="wdj-qo-NSm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3FS-RN-VdY"/>
@@ -878,15 +892,6 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hrt-qn-ZOd">
-                                        <rect key="frame" x="30" y="10" width="268" height="37"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="y9G-8e-5ew"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJ9-kf-K29">
                                         <rect key="frame" x="41" y="56" width="233" height="50"/>
                                         <constraints>
@@ -957,6 +962,15 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                             </mask>
                                         </variation>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hrt-qn-ZOd">
+                                        <rect key="frame" x="30" y="20" width="268" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="y9G-8e-5ew"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="H4M-iE-hFQ" firstAttribute="baseline" secondItem="U3p-o0-aJe" secondAttribute="baseline" id="223-pD-HkH"/>

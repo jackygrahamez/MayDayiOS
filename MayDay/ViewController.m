@@ -71,12 +71,14 @@ BOOL alerting = false;
 
 -(IBAction)saveMessage:(id)sender
 {
-    [masterViewController vibrate];
+    //[masterViewController vibrate];
     NSString *savestring = message.text;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"messagestring"];
     [defaults synchronize];
-    [masterViewController.navigationController popViewControllerAnimated:YES];
+    //[masterViewController.navigationController popViewControllerAnimated:YES];
+    UINavigationController *navigationController = self.navigationController;
+    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
 }
 - (IBAction)saveMessageNext:(id)sender {
     [masterViewController vibrate];
@@ -102,7 +104,9 @@ BOOL alerting = false;
     NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
     
     [defaults synchronize];
-    [masterViewController.navigationController popViewControllerAnimated:YES];
+    //[masterViewController.navigationController popViewControllerAnimated:YES];
+    UINavigationController *navigationController = self.navigationController;
+    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
 }
 - (IBAction)saveContactsNext:(id)sender {
     [masterViewController vibrate];
@@ -127,7 +131,9 @@ BOOL alerting = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString* interval = [NSString stringWithFormat:@"%i", row];
     [defaults setObject:interval forKey:@"interval"];
-    [masterViewController.navigationController popViewControllerAnimated:YES];
+    //[masterViewController.navigationController popViewControllerAnimated:YES];
+    UINavigationController *navigationController = self.navigationController;
+    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
 }
 - (IBAction)stopAlerting:(id)sender {
     [masterViewController vibrate];
@@ -227,6 +233,9 @@ BOOL alerting = false;
     if (ABMultiValueGetCount(phoneNumbers) > 0) {
         phone = (__bridge_transfer NSString*)
         ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
+        masterViewController.saveContactsNext.alpha = 1.0;
+        masterViewController.saveContactsNext.enabled = YES;
+        masterViewController.saveContactsNext.userInteractionEnabled = YES;
     } else {
         phone = @"[None]";
     }
@@ -354,6 +363,13 @@ BOOL alerting = false;
     [contact1 setText:first];
     [contact2 setText:second];
     [contact3 setText:third];
+    if (contact1.text.length > 0 ||
+        contact2.text.length > 0 |
+        contact3.text.length > 0) {
+        masterViewController.saveContactsNext.alpha = 1.0;
+        masterViewController.saveContactsNext.enabled = YES;
+        masterViewController.saveContactsNext.userInteractionEnabled = YES;
+    }
 
     [masterViewController initLocationManager];
     
@@ -363,6 +379,11 @@ BOOL alerting = false;
 {
     [super viewDidAppear:animated];
     NSLog(@"viewDidAppear");
+    NSString *restorationId = self.restorationIdentifier;
+    if ([restorationId  isEqual: @"homeView"]) {
+        NSLog(@"homeView");
+    }
+    
     [masterViewController animate];
 }
 
@@ -419,11 +440,17 @@ BOOL alerting = false;
 
     NSLog(@"swipedScreenRight %@", restorationId);
     if ([restorationId  isEqual: @"messageSettings"]) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        UINavigationController *navigationController = self.navigationController;
+        [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
+        //[self.navigationController popToRootViewControllerAnimated:YES];
     } else if ([restorationId  isEqual: @"contactSettings"]) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        UINavigationController *navigationController = self.navigationController;
+        [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
+        //[self.navigationController popToRootViewControllerAnimated:YES];
     } else if ([restorationId  isEqual: @"alertSettings"]) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        UINavigationController *navigationController = self.navigationController;
+        [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
+        //[self.navigationController popToRootViewControllerAnimated:YES];
     } else {
         NSLog(@"%@",self.navigationController.viewControllers);
         [masterViewController.navigationController popViewControllerAnimated:YES];
@@ -663,7 +690,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
             if (interval<10) {
                 triggerCount++;
                 NSLog (@"press number %i first press was %.0f seconds ago", triggerCount, interval);
-                if (triggerCount >= 5) {
+                if (triggerCount >= 8 ) {
                     NSLog(@"triggering MayDay Alert");
                     [masterViewController sendMessage];
                     [masterViewController startTimer];
@@ -732,7 +759,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 {
     NSLog(@"I'm vibrating");
     //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    AudioServicesPlaySystemSound(1103);
+    //AudioServicesPlaySystemSound(1103);
 }
 
 -(void) animate

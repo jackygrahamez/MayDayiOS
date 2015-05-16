@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "MayDay_LaunchImage_640x1136_iOS.png"
+      "filename" : "Text_SOS_Alert_LaunchImage_640x1136_iOS.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "MayDay_LaunchImage_768x1024_iOS.png"
+      "filename" : "Text_SOS_Alert_LaunchImage_768x1024_iOS.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "MayDay_LaunchImage_1536x2048_iOS.png"
+      "filename" : "Text_SOS_Alert_LaunchImage_1536x2048_iOS.png"
     }
   ],
   "info" : {

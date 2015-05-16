@@ -629,6 +629,7 @@ BOOL alerting = false;
 static void displayStatusChanged(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
     
     NSLog(@"event received!");
+    
     [masterViewController powerButtonTrigger];
     
     // you might try inspecting the `userInfo` dictionary, to see
@@ -687,7 +688,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
         
         if (startDateObj != nil) {
             NSTimeInterval interval = [currentDateObj timeIntervalSinceDate:startDateObj];
-            if (interval<10) {
+            if (interval<10 && interval > 2) {
                 triggerCount++;
                 NSLog (@"press number %i first press was %.0f seconds ago", triggerCount, interval);
                 if (triggerCount >= 8 ) {

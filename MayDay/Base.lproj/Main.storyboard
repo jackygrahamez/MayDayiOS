@@ -940,6 +940,11 @@ Make bullets larger and look like they do in this application. </string>
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="dMl-bf-ldG"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="saveInterval:" destination="ogg-33-r79" eventType="touchUpInside" id="LR4-U3-hgD"/>
                                         </connections>

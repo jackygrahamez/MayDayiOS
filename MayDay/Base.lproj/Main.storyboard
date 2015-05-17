@@ -794,7 +794,7 @@ Make bullets larger and look like they do in this application. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
                                         <rect key="frame" x="32" y="65" width="233" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="I2d-P1-SdE"/>
@@ -1272,7 +1272,7 @@ Make bullets larger and look like they do in this application. </string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ikv-VP-pOr">
                                 <rect key="frame" x="0.0" y="0.0" width="322" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="7IW-X4-KgL">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="7IW-X4-KgL">
                                         <rect key="frame" x="-68" y="-49" width="390" height="667"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ha-sa-PFy">
@@ -1311,8 +1311,10 @@ Make bullets larger and look like they do in this application. </string>
                                         <rect key="frame" x="52" y="274" width="200" height="35"/>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="35" id="GDc-TK-h6g"/>
                                             <constraint firstAttribute="height" constant="35" id="GQw-Rv-tDI"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="Xks-IC-ptM"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="abx-pE-jbX"/>
                                             <constraint firstAttribute="width" constant="200" id="clR-Xk-BEA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1330,6 +1332,8 @@ Make bullets larger and look like they do in this application. </string>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="DPV-Zk-hBo"/>
                                             <constraint firstAttribute="height" constant="35" id="Gnh-cO-yMy"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="Pdu-oo-uzH"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="mtK-oK-0Jl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1344,8 +1348,10 @@ Make bullets larger and look like they do in this application. </string>
                                         <rect key="frame" x="52" y="172" width="200" height="35"/>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="G5z-12-GxM"/>
                                             <constraint firstAttribute="height" constant="35" id="MaJ-P1-z9e"/>
                                             <constraint firstAttribute="width" constant="200" id="QGj-Zy-wVc"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gy5-sS-2Uq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1355,6 +1361,10 @@ Make bullets larger and look like they do in this application. </string>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JR-iI-Zsz">
                                         <rect key="frame" x="260" y="179" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="BtP-Zd-qYJ"/>
+                                            <constraint firstAttribute="height" constant="22" id="acT-na-kSD"/>
+                                        </constraints>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1362,8 +1372,12 @@ Make bullets larger and look like they do in this application. </string>
                                             <action selector="contactPicker1:" destination="qIH-vn-bv1" eventType="touchUpInside" id="8la-CF-BTo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMZ-gW-97Q">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMZ-gW-97Q">
                                         <rect key="frame" x="260" y="230" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="9HA-yr-dz2"/>
+                                            <constraint firstAttribute="height" constant="22" id="NaV-RA-2Qb"/>
+                                        </constraints>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1382,6 +1396,8 @@ Make bullets larger and look like they do in this application. </string>
                                         <rect key="frame" x="98" y="334" width="109" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="IHd-x6-9Hs"/>
+                                            <constraint firstAttribute="width" constant="109" id="RU1-1r-Ogb"/>
                                             <constraint firstAttribute="height" constant="50" id="jbz-nT-PHa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -1404,7 +1420,7 @@ Make bullets larger and look like they do in this application. </string>
                                             <segue destination="d47-Dp-TkE" kind="push" id="SAE-UT-xdb"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-k3-zME">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-k3-zME">
                                         <rect key="frame" x="27" y="392" width="269" height="202"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="202" id="bND-h5-vll"/>
@@ -1434,8 +1450,12 @@ Make bullets larger and look like they do in this application. </string>
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqj-cH-nHm">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqj-cH-nHm">
                                         <rect key="frame" x="260" y="281" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="aco-69-9UA"/>
+                                            <constraint firstAttribute="width" constant="22" id="u3p-vf-aMN"/>
+                                        </constraints>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>

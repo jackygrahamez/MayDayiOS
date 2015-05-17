@@ -333,7 +333,7 @@
 			path = Locales;
 			sourceTree = "<group>";
 		};
-		8D005F581AABBD5F00D75004 /* MayDay WatchKit Extension */ = {
+		8D005F581AABBD5F00D75004 /* TextSOSAlert WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
 				8D005F5C1AABBD5F00D75004 /* InterfaceController.h */,
@@ -345,6 +345,7 @@
 				8D005F651AABBD5F00D75004 /* Images.xcassets */,
 				8D005F591AABBD5F00D75004 /* Supporting Files */,
 			);
+			name = "TextSOSAlert WatchKit Extension";
 			path = "MayDay WatchKit Extension";
 			sourceTree = "<group>";
 		};
@@ -357,13 +358,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8D005F6D1AABBD5F00D75004 /* MayDay WatchKit App */ = {
+		8D005F6D1AABBD5F00D75004 /* TextSOSAlert WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
 				8D005F701AABBD5F00D75004 /* Interface.storyboard */,
 				8D005F731AABBD5F00D75004 /* Images.xcassets */,
 				8D005F6E1AABBD5F00D75004 /* Supporting Files */,
 			);
+			name = "TextSOSAlert WatchKit App";
 			path = "MayDay WatchKit App";
 			sourceTree = "<group>";
 		};
@@ -384,10 +386,10 @@
 				81ED61601ABF02EB00A76A62 /* CoreLocation.framework */,
 				812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */,
 				812CA6FD1AB79CF7000DB19C /* Fabric.framework */,
-				8D3019D51AA40596000C4FF7 /* MayDay */,
-				8D3019F21AA40597000C4FF7 /* MayDayTests */,
-				8D005F581AABBD5F00D75004 /* MayDay WatchKit Extension */,
-				8D005F6D1AABBD5F00D75004 /* MayDay WatchKit App */,
+				8D3019D51AA40596000C4FF7 /* TextSOSAlert */,
+				8D3019F21AA40597000C4FF7 /* TextSOSAlertTests */,
+				8D005F581AABBD5F00D75004 /* TextSOSAlert WatchKit Extension */,
+				8D005F6D1AABBD5F00D75004 /* TextSOSAlert WatchKit App */,
 				8D3019D41AA40596000C4FF7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -403,7 +405,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8D3019D51AA40596000C4FF7 /* MayDay */ = {
+		8D3019D51AA40596000C4FF7 /* TextSOSAlert */ = {
 			isa = PBXGroup;
 			children = (
 				814D94E41AD187D700224C86 /* Resources */,
@@ -419,6 +421,7 @@
 				8D3019D61AA40596000C4FF7 /* Supporting Files */,
 				81ED61621ABF035400A76A62 /* DetailViewController.h */,
 			);
+			name = TextSOSAlert;
 			path = MayDay;
 			sourceTree = "<group>";
 		};
@@ -431,12 +434,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8D3019F21AA40597000C4FF7 /* MayDayTests */ = {
+		8D3019F21AA40597000C4FF7 /* TextSOSAlertTests */ = {
 			isa = PBXGroup;
 			children = (
 				8D3019F51AA40598000C4FF7 /* MayDayTests.m */,
 				8D3019F31AA40598000C4FF7 /* Supporting Files */,
 			);
+			name = TextSOSAlertTests;
 			path = MayDayTests;
 			sourceTree = "<group>";
 		};

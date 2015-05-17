@@ -116,11 +116,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ved-Dl-NPr">
                                 <rect key="frame" x="16" y="284" width="288" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="FtA-WN-yjZ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="h3m-ym-tYz"/>
-                                    <constraint firstAttribute="height" constant="50" id="qfY-Fs-vh6"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal" title="Settings" backgroundImage="state_settings_480x50.jpg">
@@ -230,19 +225,23 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstItem="urp-It-FY4" firstAttribute="top" secondItem="WAb-Go-Fxb" secondAttribute="bottom" constant="22" id="0jk-74-a8h"/>
                             <constraint firstItem="yic-lX-khO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="385" id="0kA-1y-QLS"/>
                             <constraint firstItem="4Md-xA-Hzk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92" id="3c6-q8-yyt"/>
+                            <constraint firstItem="n8Y-yi-51F" firstAttribute="top" secondItem="ved-Dl-NPr" secondAttribute="bottom" constant="2" id="4Nq-Gb-0gA"/>
                             <constraint firstItem="0Kj-Nl-4gc" firstAttribute="top" secondItem="n8Y-yi-51F" secondAttribute="bottom" constant="2" id="66I-5y-anm"/>
+                            <constraint firstItem="0Kj-Nl-4gc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="6LC-2K-xu6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TSW-X5-H0b" secondAttribute="trailing" constant="19" id="7hC-aR-CQB"/>
                             <constraint firstItem="4Md-xA-Hzk" firstAttribute="centerX" secondItem="6AP-gU-Ea7" secondAttribute="centerX" id="7mx-Qd-Kud"/>
-                            <constraint firstItem="ved-Dl-NPr" firstAttribute="trailing" secondItem="0Qc-6a-tNd" secondAttribute="trailing" id="8EG-Qn-7gY"/>
                             <constraint firstItem="0Kj-Nl-4gc" firstAttribute="centerY" secondItem="urp-It-FY4" secondAttribute="centerY" id="8Q1-IY-nmR"/>
                             <constraint firstItem="0Qc-6a-tNd" firstAttribute="top" secondItem="O3L-MV-7wb" secondAttribute="bottom" constant="31" id="8o2-8W-ZJs"/>
                             <constraint firstItem="H42-Jx-TZe" firstAttribute="leading" secondItem="yic-lX-khO" secondAttribute="trailing" constant="-288" id="A5t-yH-Exa"/>
+                            <constraint firstItem="urp-It-FY4" firstAttribute="leading" secondItem="0Kj-Nl-4gc" secondAttribute="trailing" constant="-49" id="AHC-y7-2LQ"/>
+                            <constraint firstItem="0Kj-Nl-4gc" firstAttribute="top" secondItem="n8Y-yi-51F" secondAttribute="bottom" constant="2" id="AiH-4M-LFy"/>
                             <constraint firstItem="TSW-X5-H0b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="DpP-3q-gCD"/>
+                            <constraint firstItem="0Kj-Nl-4gc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-48" id="F4W-my-Wv9"/>
                             <constraint firstItem="Orf-Gy-GCP" firstAttribute="trailing" secondItem="WAb-Go-Fxb" secondAttribute="trailing" id="F6e-O9-8ak"/>
                             <constraint firstItem="H42-Jx-TZe" firstAttribute="top" secondItem="K7D-Py-DHf" secondAttribute="bottom" constant="8" symbolic="YES" id="FJ1-ML-pSK"/>
                             <constraint firstItem="Orf-Gy-GCP" firstAttribute="leading" secondItem="O3L-MV-7wb" secondAttribute="trailing" constant="30" id="Fyv-Er-sMK"/>
-                            <constraint firstItem="ved-Dl-NPr" firstAttribute="top" secondItem="H42-Jx-TZe" secondAttribute="bottom" constant="44" id="HbT-h5-NfW"/>
-                            <constraint firstItem="n8Y-yi-51F" firstAttribute="top" secondItem="ved-Dl-NPr" secondAttribute="bottom" constant="1" id="INY-by-Hbe"/>
+                            <constraint firstItem="ved-Dl-NPr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-48" id="G7b-Tb-TgO"/>
+                            <constraint firstAttribute="centerX" secondItem="0Kj-Nl-4gc" secondAttribute="centerX" id="HKP-7u-K4F"/>
                             <constraint firstItem="urp-It-FY4" firstAttribute="leading" secondItem="H42-Jx-TZe" secondAttribute="trailing" constant="-49" id="IfV-sM-O8a"/>
                             <constraint firstItem="zMM-T6-b5S" firstAttribute="leading" secondItem="K7D-Py-DHf" secondAttribute="leading" id="Ik7-SY-pU6"/>
                             <constraint firstItem="K7D-Py-DHf" firstAttribute="trailing" secondItem="6AP-gU-Ea7" secondAttribute="trailing" id="JdY-4k-eqk"/>
@@ -250,38 +249,42 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstItem="yic-lX-khO" firstAttribute="top" secondItem="WAb-Go-Fxb" secondAttribute="bottom" constant="10" id="KJ9-Fo-aHv"/>
                             <constraint firstItem="O3L-MV-7wb" firstAttribute="top" secondItem="zMM-T6-b5S" secondAttribute="bottom" constant="47" id="KbF-QY-BYt"/>
                             <constraint firstItem="4Md-xA-Hzk" firstAttribute="top" secondItem="6AP-gU-Ea7" secondAttribute="bottom" constant="8" symbolic="YES" id="LE7-KY-ax1"/>
+                            <constraint firstItem="n8Y-yi-51F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Lh4-Rh-XhU"/>
                             <constraint firstItem="zMM-T6-b5S" firstAttribute="top" secondItem="K7D-Py-DHf" secondAttribute="bottom" constant="50" id="MXV-th-0bp"/>
-                            <constraint firstItem="Orf-Gy-GCP" firstAttribute="leading" secondItem="ved-Dl-NPr" secondAttribute="trailing" constant="-49" id="Ncc-oT-wm9"/>
+                            <constraint firstItem="urp-It-FY4" firstAttribute="leading" secondItem="0Kj-Nl-4gc" secondAttribute="trailing" constant="-49" id="MbX-eA-ENf"/>
                             <constraint firstItem="TSW-X5-H0b" firstAttribute="trailing" secondItem="Orf-Gy-GCP" secondAttribute="trailing" id="Nem-Sv-QYY"/>
-                            <constraint firstItem="n8Y-yi-51F" firstAttribute="top" secondItem="ved-Dl-NPr" secondAttribute="bottom" constant="2" id="NsG-DW-1AI"/>
                             <constraint firstItem="yic-lX-khO" firstAttribute="leading" secondItem="n8Y-yi-51F" secondAttribute="leading" id="O18-9S-eDu"/>
+                            <constraint firstItem="urp-It-FY4" firstAttribute="leading" secondItem="0Kj-Nl-4gc" secondAttribute="trailing" constant="-49" id="OJC-a4-fQX"/>
                             <constraint firstItem="O3L-MV-7wb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QLY-GM-jVS"/>
+                            <constraint firstItem="ved-Dl-NPr" firstAttribute="top" secondItem="H42-Jx-TZe" secondAttribute="bottom" constant="44" id="QtY-3n-g8g"/>
                             <constraint firstItem="yic-lX-khO" firstAttribute="trailing" secondItem="n8Y-yi-51F" secondAttribute="trailing" id="R26-OF-qBa"/>
                             <constraint firstItem="O3L-MV-7wb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="T8f-6N-vim"/>
+                            <constraint firstItem="Orf-Gy-GCP" firstAttribute="leading" secondItem="ved-Dl-NPr" secondAttribute="trailing" constant="-49" id="V0L-cI-DNe"/>
                             <constraint firstItem="n8Y-yi-51F" firstAttribute="trailing" secondItem="0Qc-6a-tNd" secondAttribute="trailing" id="VpA-dJ-CZM"/>
-                            <constraint firstItem="zMM-T6-b5S" firstAttribute="leading" secondItem="ved-Dl-NPr" secondAttribute="leading" id="Vqn-ff-MV7"/>
                             <constraint firstItem="0Qc-6a-tNd" firstAttribute="top" secondItem="H42-Jx-TZe" secondAttribute="bottom" constant="94" id="XVi-9m-5WN"/>
                             <constraint firstItem="H42-Jx-TZe" firstAttribute="trailing" secondItem="zMM-T6-b5S" secondAttribute="trailing" id="ZDO-mk-haS"/>
-                            <constraint firstItem="0Qc-6a-tNd" firstAttribute="leading" secondItem="ved-Dl-NPr" secondAttribute="leading" id="ahA-UR-0Ay"/>
                             <constraint firstItem="0Kj-Nl-4gc" firstAttribute="trailing" secondItem="yic-lX-khO" secondAttribute="trailing" id="bLD-gu-xXR"/>
                             <constraint firstAttribute="centerX" secondItem="Hqn-BN-3C4" secondAttribute="centerX" id="bTo-h6-H8x"/>
                             <constraint firstItem="4Md-xA-Hzk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="82" id="bfp-Zt-YtS"/>
                             <constraint firstItem="O3L-MV-7wb" firstAttribute="top" secondItem="H42-Jx-TZe" secondAttribute="bottom" constant="26" id="dWw-ol-sXU"/>
+                            <constraint firstItem="urp-It-FY4" firstAttribute="top" secondItem="WAb-Go-Fxb" secondAttribute="bottom" constant="22" id="emY-1a-cGI"/>
                             <constraint firstItem="zMM-T6-b5S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fCx-Oa-yve"/>
                             <constraint firstItem="n8Y-yi-51F" firstAttribute="leading" secondItem="0Qc-6a-tNd" secondAttribute="leading" id="frX-G8-CCB"/>
                             <constraint firstItem="Hqn-BN-3C4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fuu-P6-ksg"/>
-                            <constraint firstItem="ved-Dl-NPr" firstAttribute="centerY" secondItem="Orf-Gy-GCP" secondAttribute="centerY" id="giA-OK-Pe5"/>
                             <constraint firstItem="0Kj-Nl-4gc" firstAttribute="top" secondItem="n8Y-yi-51F" secondAttribute="bottom" constant="2" id="hDu-Hy-C5G"/>
                             <constraint firstItem="yic-lX-khO" firstAttribute="top" secondItem="H42-Jx-TZe" secondAttribute="bottom" constant="146" id="hrB-nE-oRQ"/>
-                            <constraint firstItem="ved-Dl-NPr" firstAttribute="centerX" secondItem="O3L-MV-7wb" secondAttribute="centerX" id="jcW-B8-zYQ"/>
+                            <constraint firstAttribute="centerX" secondItem="n8Y-yi-51F" secondAttribute="centerX" id="idT-46-jcJ"/>
+                            <constraint firstItem="ved-Dl-NPr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="jOe-LC-T9l"/>
                             <constraint firstItem="urp-It-FY4" firstAttribute="top" secondItem="WAb-Go-Fxb" secondAttribute="bottom" constant="22" id="k05-Gv-h45"/>
                             <constraint firstItem="K7D-Py-DHf" firstAttribute="leading" secondItem="6AP-gU-Ea7" secondAttribute="leading" id="k1M-xG-J6j"/>
+                            <constraint firstAttribute="centerX" secondItem="ved-Dl-NPr" secondAttribute="centerX" constant="10" id="kaw-ua-3DK"/>
                             <constraint firstItem="zMM-T6-b5S" firstAttribute="leading" secondItem="H42-Jx-TZe" secondAttribute="leading" id="l4w-fA-MOC"/>
                             <constraint firstItem="n8Y-yi-51F" firstAttribute="centerY" secondItem="WAb-Go-Fxb" secondAttribute="centerY" id="l5h-Cc-YA2"/>
+                            <constraint firstAttribute="centerX" secondItem="ved-Dl-NPr" secondAttribute="centerX" id="loK-3N-0GD"/>
                             <constraint firstItem="6AP-gU-Ea7" firstAttribute="leading" secondItem="TSW-X5-H0b" secondAttribute="leading" id="mhL-KK-Pav"/>
                             <constraint firstItem="6AP-gU-Ea7" firstAttribute="top" secondItem="TSW-X5-H0b" secondAttribute="bottom" constant="8" symbolic="YES" id="o57-X0-MZP"/>
                             <constraint firstItem="WAb-Go-Fxb" firstAttribute="leading" secondItem="n8Y-yi-51F" secondAttribute="trailing" constant="-49" id="oRe-mX-Feb"/>
-                            <constraint firstItem="ved-Dl-NPr" firstAttribute="top" secondItem="H42-Jx-TZe" secondAttribute="bottom" constant="44" id="on3-ou-izG"/>
+                            <constraint firstItem="n8Y-yi-51F" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-48" id="pMm-ib-rhB"/>
                             <constraint firstAttribute="centerY" secondItem="Hqn-BN-3C4" secondAttribute="centerY" id="qlw-gH-Od5"/>
                             <constraint firstItem="0Kj-Nl-4gc" firstAttribute="leading" secondItem="yic-lX-khO" secondAttribute="leading" id="ryu-mZ-7OR"/>
                             <constraint firstItem="Hqn-BN-3C4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s4d-nu-h9q"/>
@@ -289,18 +292,22 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstItem="WAb-Go-Fxb" firstAttribute="leading" secondItem="Orf-Gy-GCP" secondAttribute="leading" id="uXX-gC-i70"/>
                             <constraint firstItem="zMM-T6-b5S" firstAttribute="trailing" secondItem="K7D-Py-DHf" secondAttribute="trailing" id="vnq-CT-jmK"/>
                             <constraint firstItem="0Qc-6a-tNd" firstAttribute="leading" secondItem="H42-Jx-TZe" secondAttribute="trailing" constant="-288" id="vo9-XS-dWW"/>
-                            <constraint firstItem="ved-Dl-NPr" firstAttribute="trailing" secondItem="zMM-T6-b5S" secondAttribute="trailing" id="xRs-OQ-MCt"/>
                             <constraint firstItem="0Qc-6a-tNd" firstAttribute="top" secondItem="Orf-Gy-GCP" secondAttribute="bottom" constant="10" id="zDD-BV-sYt"/>
                             <constraint firstItem="K7D-Py-DHf" firstAttribute="top" secondItem="4Md-xA-Hzk" secondAttribute="bottom" constant="8" symbolic="YES" id="zv2-zU-mBe"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Nem-Sv-QYY"/>
+                                <exclude reference="kaw-ua-3DK"/>
                                 <exclude reference="8Q1-IY-nmR"/>
                                 <exclude reference="F6e-O9-8ak"/>
                                 <exclude reference="Fyv-Er-sMK"/>
                                 <exclude reference="uXX-gC-i70"/>
+                                <exclude reference="0jk-74-a8h"/>
+                                <exclude reference="AHC-y7-2LQ"/>
                                 <exclude reference="IfV-sM-O8a"/>
+                                <exclude reference="JlS-mv-ttw"/>
+                                <exclude reference="MbX-eA-ENf"/>
                                 <exclude reference="k05-Gv-h45"/>
                                 <exclude reference="scs-YO-QWF"/>
                             </mask>
@@ -835,7 +842,7 @@ Make bullets larger and look like they do in this application. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
                                         <rect key="frame" x="32" y="65" width="233" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="I2d-P1-SdE"/>

@@ -786,7 +786,7 @@ Make bullets larger and look like they do in this application. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
                                         <rect key="frame" x="32" y="65" width="233" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="I2d-P1-SdE"/>

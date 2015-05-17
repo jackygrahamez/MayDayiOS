@@ -533,6 +533,7 @@
 					};
 					8D005F681AABBD5F00D75004 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = YSGN98PM6X;
 					};
 					8D3019D21AA40596000C4FF7 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -782,6 +783,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -801,6 +803,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				IBSC_MODULE = MayDay_WatchKit_Extension;

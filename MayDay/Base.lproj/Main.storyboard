@@ -309,6 +309,9 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-yo-cGA">
                                 <rect key="frame" x="16" y="230" width="288" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7gK-XX-Kpf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="About" backgroundImage="state_settings_480x50.jpg">
@@ -357,6 +360,9 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNS-mp-JQO">
                                 <rect key="frame" x="16" y="281" width="288" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SO7-02-yjW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Privacy" backgroundImage="state_settings_480x50.jpg">
@@ -373,7 +379,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstAttribute="height" constant="30" id="ppE-7L-kCB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text SOS Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opG-5z-UXu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Text SOS Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opG-5z-UXu">
                                 <rect key="frame" x="16" y="28" width="288" height="37"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -382,6 +388,9 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRU-AK-Hee">
                                 <rect key="frame" x="16" y="280" width="288" height="1"/>
                                 <color key="backgroundColor" red="0.98099320339999996" green="1" blue="0.97473730030000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="PA5-sU-Uzb"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -404,6 +413,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstItem="opG-5z-UXu" firstAttribute="trailing" secondItem="7od-IA-8h1" secondAttribute="trailing" id="MFD-dS-00d"/>
                             <constraint firstItem="7od-IA-8h1" firstAttribute="leading" secondItem="d8O-yo-cGA" secondAttribute="leading" id="OMB-ka-abX"/>
                             <constraint firstItem="d8O-yo-cGA" firstAttribute="top" secondItem="OyG-Xd-kDL" secondAttribute="bottom" constant="38" id="Sxt-g7-u3s"/>
+                            <constraint firstItem="opG-5z-UXu" firstAttribute="top" secondItem="lxj-8r-fLU" secondAttribute="bottom" constant="20" id="TjC-yi-xUf"/>
                             <constraint firstItem="aRU-AK-Hee" firstAttribute="leading" secondItem="YNS-mp-JQO" secondAttribute="leading" id="UCl-bc-FiI"/>
                             <constraint firstItem="7od-IA-8h1" firstAttribute="top" secondItem="opG-5z-UXu" secondAttribute="bottom" constant="8" symbolic="YES" id="YhS-gX-NPf"/>
                             <constraint firstItem="NWi-pa-pfe" firstAttribute="leading" secondItem="ojC-Vw-ZvY" secondAttribute="leading" id="Z18-7a-0gO"/>
@@ -471,6 +481,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 <rect key="frame" x="81" y="204" width="158" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ZZ9-2a-Q6g"/>
                                     <constraint firstAttribute="height" constant="50" id="cw1-Lc-yiA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -495,6 +506,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstItem="g9Y-LP-mvY" firstAttribute="top" secondItem="xel-ln-0qX" secondAttribute="bottom" constant="8" symbolic="YES" id="ArV-s3-umk"/>
                             <constraint firstItem="c0W-ck-nNb" firstAttribute="top" secondItem="Lwx-OX-mcm" secondAttribute="top" id="IDU-94-mrK"/>
                             <constraint firstItem="g9Y-LP-mvY" firstAttribute="trailing" secondItem="qJx-NV-9vu" secondAttribute="trailing" id="IGJ-Fw-9yb"/>
+                            <constraint firstItem="g9Y-LP-mvY" firstAttribute="top" secondItem="xel-ln-0qX" secondAttribute="bottom" constant="8" id="NkS-iS-M96"/>
                             <constraint firstItem="xel-ln-0qX" firstAttribute="leading" secondItem="Lwx-OX-mcm" secondAttribute="leadingMargin" constant="9" id="OGW-zv-xEC"/>
                             <constraint firstItem="qJx-NV-9vu" firstAttribute="top" secondItem="MRM-a3-nMf" secondAttribute="bottom" constant="8" symbolic="YES" id="Pl0-F7-mYE"/>
                             <constraint firstItem="xel-ln-0qX" firstAttribute="top" secondItem="qJx-NV-9vu" secondAttribute="bottom" constant="8" symbolic="YES" id="ST2-ZJ-DKw"/>

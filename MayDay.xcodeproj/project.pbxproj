@@ -60,6 +60,7 @@
 		814D954D1AD187D700224C86 /* mobile_ph.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D951A1AD187D700224C86 /* mobile_ph.json */; };
 		814D954E1AD187D700224C86 /* mobile_pt.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D951B1AD187D700224C86 /* mobile_pt.json */; };
 		814D95511AD1893900224C86 /* license.pl in Resources */ = {isa = PBXBuildFile; fileRef = 814D95501AD1893900224C86 /* license.pl */; };
+		818C18CD1B08FBEA0097E51A /* AppNameAndTagLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 818C18CC1B08FBEA0097E51A /* AppNameAndTagLine.png */; };
 		81DCA2BE1AC88E0400AFBC15 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */; };
 		81DCA2C21AC893B300AFBC15 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2C11AC893B300AFBC15 /* AddressBookUI.framework */; };
 		81ED61611ABF02EB00A76A62 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81ED61601ABF02EB00A76A62 /* CoreLocation.framework */; };
@@ -175,6 +176,7 @@
 		814D951B1AD187D700224C86 /* mobile_pt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_pt.json; sourceTree = "<group>"; };
 		814D954F1AD1891A00224C86 /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
 		814D95501AD1893900224C86 /* license.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = license.pl; sourceTree = "<group>"; };
+		818C18CC1B08FBEA0097E51A /* AppNameAndTagLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppNameAndTagLine.png; sourceTree = "<group>"; };
 		81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		81DCA2BF1AC8932B00AFBC15 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		81DCA2C11AC893B300AFBC15 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -262,6 +264,7 @@
 		814D94E71AD187D700224C86 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				818C18CC1B08FBEA0097E51A /* AppNameAndTagLine.png */,
 				814D94E81AD187D700224C86 /* 1242x2208_iOS.jpg */,
 				814D94E91AD187D700224C86 /* 1536x2048_iOS.jpg */,
 				814D94EA1AD187D700224C86 /* 320x480_iOS.jpg */,
@@ -638,6 +641,7 @@
 				814D951C1AD187D700224C86 /* moms_typewriter.ttf in Resources */,
 				814D953A1AD187D700224C86 /* state_settings_480x50.jpg in Resources */,
 				814D95341AD187D700224C86 /* next.png in Resources */,
+				818C18CD1B08FBEA0097E51A /* AppNameAndTagLine.png in Resources */,
 				814D953D1AD187D700224C86 /* tick_green.png in Resources */,
 				814D95251AD187D700224C86 /* activate2.jpg in Resources */,
 				814D95351AD187D700224C86 /* plus.png in Resources */,

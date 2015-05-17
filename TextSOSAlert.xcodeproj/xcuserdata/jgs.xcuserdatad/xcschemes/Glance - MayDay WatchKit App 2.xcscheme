@@ -17,7 +17,7 @@
                BlueprintIdentifier = "8D005F681AABBD5F00D75004"
                BuildableName = "MayDay WatchKit App.app"
                BlueprintName = "MayDay WatchKit App"
-               ReferencedContainer = "container:MayDay.xcodeproj">
+               ReferencedContainer = "container:TextSOSAlert.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "8D005F561AABBD5F00D75004"
                BuildableName = "MayDay WatchKit Extension.appex"
                BlueprintName = "MayDay WatchKit Extension"
-               ReferencedContainer = "container:MayDay.xcodeproj">
+               ReferencedContainer = "container:TextSOSAlert.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "8D3019D21AA40596000C4FF7"
                BuildableName = "MayDay.app"
                BlueprintName = "MayDay"
-               ReferencedContainer = "container:MayDay.xcodeproj">
+               ReferencedContainer = "container:TextSOSAlert.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -63,7 +63,7 @@
             BlueprintIdentifier = "8D005F681AABBD5F00D75004"
             BuildableName = "MayDay WatchKit App.app"
             BlueprintName = "MayDay WatchKit App"
-            ReferencedContainer = "container:MayDay.xcodeproj">
+            ReferencedContainer = "container:TextSOSAlert.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,29 +76,18 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "8"
+      launchAutomaticallySubstyle = "4"
       notificationPayloadFile = "MayDay WatchKit Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.springboard"
-         RemotePath = "/MayDay">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D005F681AABBD5F00D75004"
             BuildableName = "MayDay WatchKit App.app"
             BlueprintName = "MayDay WatchKit App"
-            ReferencedContainer = "container:MayDay.xcodeproj">
+            ReferencedContainer = "container:TextSOSAlert.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D005F681AABBD5F00D75004"
-            BuildableName = "MayDay WatchKit App.app"
-            BlueprintName = "MayDay WatchKit App"
-            ReferencedContainer = "container:MayDay.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -108,29 +97,18 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES"
-      launchAutomaticallySubstyle = "8"
+      launchAutomaticallySubstyle = "4"
       notificationPayloadFile = "MayDay WatchKit Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.springboard"
-         RemotePath = "/MayDay">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D005F681AABBD5F00D75004"
             BuildableName = "MayDay WatchKit App.app"
             BlueprintName = "MayDay WatchKit App"
-            ReferencedContainer = "container:MayDay.xcodeproj">
+            ReferencedContainer = "container:TextSOSAlert.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D005F681AABBD5F00D75004"
-            BuildableName = "MayDay WatchKit App.app"
-            BlueprintName = "MayDay WatchKit App"
-            ReferencedContainer = "container:MayDay.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -548,7 +548,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8D3019CE1AA40596000C4FF7 /* Build configuration list for PBXProject "MayDay" */;
+			buildConfigurationList = 8D3019CE1AA40596000C4FF7 /* Build configuration list for PBXProject "TextSOSAlert" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -989,7 +989,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D3019CE1AA40596000C4FF7 /* Build configuration list for PBXProject "MayDay" */ = {
+		8D3019CE1AA40596000C4FF7 /* Build configuration list for PBXProject "TextSOSAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D3019F71AA40598000C4FF7 /* Debug */,

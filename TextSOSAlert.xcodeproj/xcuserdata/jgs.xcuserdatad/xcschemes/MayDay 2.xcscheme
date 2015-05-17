@@ -17,7 +17,7 @@
                BlueprintIdentifier = "8D3019D21AA40596000C4FF7"
                BuildableName = "MayDay.app"
                BlueprintName = "MayDay"
-               ReferencedContainer = "container:MayDay.xcodeproj">
+               ReferencedContainer = "container:TextSOSAlert.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "8D3019EE1AA40597000C4FF7"
                BuildableName = "MayDayTests.xctest"
                BlueprintName = "MayDayTests"
-               ReferencedContainer = "container:MayDay.xcodeproj">
+               ReferencedContainer = "container:TextSOSAlert.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "8D3019EE1AA40597000C4FF7"
                BuildableName = "MayDayTests.xctest"
                BlueprintName = "MayDayTests"
-               ReferencedContainer = "container:MayDay.xcodeproj">
+               ReferencedContainer = "container:TextSOSAlert.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "8D3019D21AA40596000C4FF7"
             BuildableName = "MayDay.app"
             BlueprintName = "MayDay"
-            ReferencedContainer = "container:MayDay.xcodeproj">
+            ReferencedContainer = "container:TextSOSAlert.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -79,7 +79,7 @@
             BlueprintIdentifier = "8D3019D21AA40596000C4FF7"
             BuildableName = "MayDay.app"
             BlueprintName = "MayDay"
-            ReferencedContainer = "container:MayDay.xcodeproj">
+            ReferencedContainer = "container:TextSOSAlert.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -98,7 +98,7 @@
             BlueprintIdentifier = "8D3019D21AA40596000C4FF7"
             BuildableName = "MayDay.app"
             BlueprintName = "MayDay"
-            ReferencedContainer = "container:MayDay.xcodeproj">
+            ReferencedContainer = "container:TextSOSAlert.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

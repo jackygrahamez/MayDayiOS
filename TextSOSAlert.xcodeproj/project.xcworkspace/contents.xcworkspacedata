@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MayDay.xcodeproj">
+      location = "self:TextSOSAlert.xcodeproj">
    </FileRef>
 </Workspace>

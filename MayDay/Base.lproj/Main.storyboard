@@ -251,6 +251,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstItem="O3L-MV-7wb" firstAttribute="top" secondItem="zMM-T6-b5S" secondAttribute="bottom" constant="47" id="KbF-QY-BYt"/>
                             <constraint firstItem="4Md-xA-Hzk" firstAttribute="top" secondItem="6AP-gU-Ea7" secondAttribute="bottom" constant="8" symbolic="YES" id="LE7-KY-ax1"/>
                             <constraint firstItem="zMM-T6-b5S" firstAttribute="top" secondItem="K7D-Py-DHf" secondAttribute="bottom" constant="50" id="MXV-th-0bp"/>
+                            <constraint firstItem="Orf-Gy-GCP" firstAttribute="leading" secondItem="ved-Dl-NPr" secondAttribute="trailing" constant="-49" id="Ncc-oT-wm9"/>
                             <constraint firstItem="TSW-X5-H0b" firstAttribute="trailing" secondItem="Orf-Gy-GCP" secondAttribute="trailing" id="Nem-Sv-QYY"/>
                             <constraint firstItem="n8Y-yi-51F" firstAttribute="top" secondItem="ved-Dl-NPr" secondAttribute="bottom" constant="2" id="NsG-DW-1AI"/>
                             <constraint firstItem="yic-lX-khO" firstAttribute="leading" secondItem="n8Y-yi-51F" secondAttribute="leading" id="O18-9S-eDu"/>
@@ -279,6 +280,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstItem="n8Y-yi-51F" firstAttribute="centerY" secondItem="WAb-Go-Fxb" secondAttribute="centerY" id="l5h-Cc-YA2"/>
                             <constraint firstItem="6AP-gU-Ea7" firstAttribute="leading" secondItem="TSW-X5-H0b" secondAttribute="leading" id="mhL-KK-Pav"/>
                             <constraint firstItem="6AP-gU-Ea7" firstAttribute="top" secondItem="TSW-X5-H0b" secondAttribute="bottom" constant="8" symbolic="YES" id="o57-X0-MZP"/>
+                            <constraint firstItem="WAb-Go-Fxb" firstAttribute="leading" secondItem="n8Y-yi-51F" secondAttribute="trailing" constant="-49" id="oRe-mX-Feb"/>
                             <constraint firstItem="ved-Dl-NPr" firstAttribute="top" secondItem="H42-Jx-TZe" secondAttribute="bottom" constant="44" id="on3-ou-izG"/>
                             <constraint firstAttribute="centerY" secondItem="Hqn-BN-3C4" secondAttribute="centerY" id="qlw-gH-Od5"/>
                             <constraint firstItem="0Kj-Nl-4gc" firstAttribute="leading" secondItem="yic-lX-khO" secondAttribute="leading" id="ryu-mZ-7OR"/>
@@ -293,7 +295,11 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Nem-Sv-QYY"/>
                                 <exclude reference="8Q1-IY-nmR"/>
+                                <exclude reference="F6e-O9-8ak"/>
+                                <exclude reference="Fyv-Er-sMK"/>
+                                <exclude reference="uXX-gC-i70"/>
                                 <exclude reference="IfV-sM-O8a"/>
                                 <exclude reference="k05-Gv-h45"/>
                                 <exclude reference="scs-YO-QWF"/>
@@ -829,7 +835,7 @@ Make bullets larger and look like they do in this application. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
                                         <rect key="frame" x="32" y="65" width="233" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="I2d-P1-SdE"/>

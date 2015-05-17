@@ -300,9 +300,6 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" text="Text SOS is a utility that discreetly alerts up to 3 contacts when you’re in trouble." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7od-IA-8h1">
                                 <rect key="frame" x="16" y="73" width="288" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="xjs-CQ-RSD"/>
-                                </constraints>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -379,7 +376,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstAttribute="height" constant="30" id="ppE-7L-kCB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Text SOS Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opG-5z-UXu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text SOS Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opG-5z-UXu">
                                 <rect key="frame" x="16" y="28" width="288" height="37"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -395,33 +392,32 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="7od-IA-8h1" firstAttribute="trailing" secondItem="d8O-yo-cGA" secondAttribute="trailing" id="1pF-CM-Ibn"/>
+                            <constraint firstItem="opG-5z-UXu" firstAttribute="leading" secondItem="ojC-Vw-ZvY" secondAttribute="leadingMargin" id="432-3T-qZq"/>
                             <constraint firstAttribute="bottomMargin" secondItem="NWi-pa-pfe" secondAttribute="bottom" constant="-99" id="4iF-63-hxX"/>
+                            <constraint firstItem="OyG-Xd-kDL" firstAttribute="top" secondItem="7od-IA-8h1" secondAttribute="bottom" constant="8" symbolic="YES" id="7Gq-gI-RWD"/>
                             <constraint firstItem="Izg-rn-QAs" firstAttribute="leading" secondItem="292-FH-4s4" secondAttribute="leading" id="8mx-PO-QX7"/>
                             <constraint firstItem="aRU-AK-Hee" firstAttribute="trailing" secondItem="d8O-yo-cGA" secondAttribute="trailing" id="AWH-mR-iL6"/>
-                            <constraint firstItem="opG-5z-UXu" firstAttribute="leading" secondItem="7od-IA-8h1" secondAttribute="leading" id="BcJ-Vt-UmR"/>
                             <constraint firstItem="aRU-AK-Hee" firstAttribute="leading" secondItem="d8O-yo-cGA" secondAttribute="leading" id="CKR-To-BWA"/>
+                            <constraint firstItem="7od-IA-8h1" firstAttribute="top" secondItem="opG-5z-UXu" secondAttribute="bottom" constant="8" symbolic="YES" id="CV6-7o-uUD"/>
                             <constraint firstItem="d8O-yo-cGA" firstAttribute="centerY" secondItem="292-FH-4s4" secondAttribute="centerY" id="Dqu-Il-amB"/>
-                            <constraint firstItem="OyG-Xd-kDL" firstAttribute="top" secondItem="7od-IA-8h1" secondAttribute="bottom" constant="8" symbolic="YES" id="GEO-qm-eYx"/>
                             <constraint firstItem="ECg-Pr-eWQ" firstAttribute="top" secondItem="Izg-rn-QAs" secondAttribute="bottom" constant="245" id="HWW-oN-8ex"/>
                             <constraint firstAttribute="trailingMargin" secondItem="292-FH-4s4" secondAttribute="trailing" constant="17" id="Hgb-cG-aTb"/>
-                            <constraint firstItem="OyG-Xd-kDL" firstAttribute="centerX" secondItem="7od-IA-8h1" secondAttribute="centerX" id="Ifh-xq-cDl"/>
-                            <constraint firstItem="opG-5z-UXu" firstAttribute="top" secondItem="lxj-8r-fLU" secondAttribute="bottom" constant="8" symbolic="YES" id="Ihg-xB-DtG"/>
                             <constraint firstItem="292-FH-4s4" firstAttribute="leading" secondItem="d8O-yo-cGA" secondAttribute="trailing" constant="-47" id="JNB-9S-Uex"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NWi-pa-pfe" secondAttribute="trailing" constant="-71" id="Jh9-ml-So5"/>
                             <constraint firstItem="Izg-rn-QAs" firstAttribute="top" secondItem="aRU-AK-Hee" secondAttribute="bottom" constant="12" id="LNl-K0-aNJ"/>
-                            <constraint firstItem="opG-5z-UXu" firstAttribute="trailing" secondItem="7od-IA-8h1" secondAttribute="trailing" id="MFD-dS-00d"/>
-                            <constraint firstItem="7od-IA-8h1" firstAttribute="leading" secondItem="d8O-yo-cGA" secondAttribute="leading" id="OMB-ka-abX"/>
+                            <constraint firstItem="7od-IA-8h1" firstAttribute="centerX" secondItem="OyG-Xd-kDL" secondAttribute="centerX" id="O8c-Q6-Tdn"/>
                             <constraint firstItem="d8O-yo-cGA" firstAttribute="top" secondItem="OyG-Xd-kDL" secondAttribute="bottom" constant="38" id="Sxt-g7-u3s"/>
-                            <constraint firstItem="opG-5z-UXu" firstAttribute="top" secondItem="lxj-8r-fLU" secondAttribute="bottom" constant="20" id="TjC-yi-xUf"/>
+                            <constraint firstItem="7od-IA-8h1" firstAttribute="leading" secondItem="d8O-yo-cGA" secondAttribute="leading" id="Tsk-1q-eMW"/>
                             <constraint firstItem="aRU-AK-Hee" firstAttribute="leading" secondItem="YNS-mp-JQO" secondAttribute="leading" id="UCl-bc-FiI"/>
-                            <constraint firstItem="7od-IA-8h1" firstAttribute="top" secondItem="opG-5z-UXu" secondAttribute="bottom" constant="8" symbolic="YES" id="YhS-gX-NPf"/>
                             <constraint firstItem="NWi-pa-pfe" firstAttribute="leading" secondItem="ojC-Vw-ZvY" secondAttribute="leading" id="Z18-7a-0gO"/>
                             <constraint firstItem="ECg-Pr-eWQ" firstAttribute="top" secondItem="YNS-mp-JQO" secondAttribute="bottom" constant="237" id="Zjr-8R-ERf"/>
                             <constraint firstItem="NWi-pa-pfe" firstAttribute="top" secondItem="ojC-Vw-ZvY" secondAttribute="top" id="Zzw-QM-U2Y"/>
+                            <constraint firstItem="7od-IA-8h1" firstAttribute="leading" secondItem="opG-5z-UXu" secondAttribute="leading" id="bCf-0t-WpE"/>
+                            <constraint firstItem="opG-5z-UXu" firstAttribute="top" secondItem="lxj-8r-fLU" secondAttribute="bottom" constant="8" symbolic="YES" id="bGk-gF-nyJ"/>
+                            <constraint firstItem="7od-IA-8h1" firstAttribute="trailing" secondItem="opG-5z-UXu" secondAttribute="trailing" id="dDg-Lc-46L"/>
                             <constraint firstItem="OyG-Xd-kDL" firstAttribute="leading" secondItem="ojC-Vw-ZvY" secondAttribute="leadingMargin" constant="65" id="er9-bK-8u7"/>
+                            <constraint firstItem="7od-IA-8h1" firstAttribute="trailing" secondItem="d8O-yo-cGA" secondAttribute="trailing" id="fJd-DI-pYC"/>
                             <constraint firstItem="aRU-AK-Hee" firstAttribute="trailing" secondItem="YNS-mp-JQO" secondAttribute="trailing" id="hkm-jr-H0E"/>
-                            <constraint firstItem="opG-5z-UXu" firstAttribute="leading" secondItem="ojC-Vw-ZvY" secondAttribute="leadingMargin" id="hv1-0F-HMZ"/>
                             <constraint firstItem="aRU-AK-Hee" firstAttribute="top" secondItem="292-FH-4s4" secondAttribute="bottom" constant="10" id="jc4-cG-Iwb"/>
                             <constraint firstItem="292-FH-4s4" firstAttribute="trailing" secondItem="Izg-rn-QAs" secondAttribute="trailing" id="p95-d2-xML"/>
                             <constraint firstItem="d8O-yo-cGA" firstAttribute="trailing" secondItem="ojC-Vw-ZvY" secondAttribute="trailingMargin" id="v5e-UR-sXx"/>
@@ -798,7 +794,7 @@ Make bullets larger and look like they do in this application. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
                                         <rect key="frame" x="32" y="65" width="233" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="I2d-P1-SdE"/>

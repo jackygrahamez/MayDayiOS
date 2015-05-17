@@ -37,6 +37,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="Hqn-BN-3C4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2208" id="HDV-7w-8L7"/>
+                                    <constraint firstAttribute="width" constant="1242" id="PJf-I8-mae"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="37" text="Text SOS Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSW-X5-H0b">
                                 <rect key="frame" x="16" y="28" width="269" height="37"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="29"/>
@@ -76,10 +83,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AP-gU-Ea7">
                                 <rect key="frame" x="16" y="73" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="3Ph-dG-TrV"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Py-DHf">
                                 <rect key="frame" x="16" y="111" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="tTj-uB-UPP"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qc-6a-tNd">
                                 <rect key="frame" x="16" y="334" width="288" height="1"/>
@@ -126,7 +139,7 @@
                                 </state>
                                 <connections>
                                     <action selector="aboutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xNp-ZG-YG8"/>
-                                    <segue destination="jS4-0d-g31" kind="push" id="eFd-NR-acC"/>
+                                    <segue destination="QXS-Qf-zOa" kind="push" id="PhP-xR-4K2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCc-MB-g7N">
@@ -192,13 +205,6 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstAttribute="height" constant="30" id="idJ-7a-ZZa"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="lMc-3P-h5I"/>
                                     <constraint firstAttribute="width" constant="30" id="z6a-Bs-eZS"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="Hqn-BN-3C4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2208" id="HDV-7w-8L7"/>
-                                    <constraint firstAttribute="width" constant="1242" id="PJf-I8-mae"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -536,7 +542,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-2H-g62">
                                 <rect key="frame" x="16" y="65" width="288" height="574"/>
-                                <mutableString key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
+                                <string key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
                
  How Does Text SOS Work?
                 
@@ -547,7 +553,7 @@ In the event of an emergency, repeatedly press the power button on your phone 5x
 To stop an emergency alert, open Text SOS and press the green "Stop Alerting" button on screen.
                 
 We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™ and LG G Watch R™. It has not been tested but it may work with LG G Watch™, Samsung Gear Live™, Asus ZenWatch™ and Sony SmartWatch 3™.
-Make bullets larger and look like they do in this application. </mutableString>
+Make bullets larger and look like they do in this application. </string>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -716,7 +722,13 @@ Make bullets larger and look like they do in this application. </mutableString>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkn-Q4-dWj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="567"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Setup Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-u4-LXv">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="S3i-CH-iQF">
+                                        <rect key="frame" x="-55" y="-10" width="375" height="677"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="836" id="fBs-PO-YNQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-u4-LXv">
                                         <rect key="frame" x="0.0" y="20" width="323" height="37"/>
                                         <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -774,13 +786,13 @@ Make bullets larger and look like they do in this application. </mutableString>
                                             <action selector="saveContact:" destination="LmA-A7-Hri" eventType="touchUpInside" id="pPs-1b-iOs"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m07-sU-0C7">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m07-sU-0C7">
                                         <rect key="frame" x="48" y="165" width="200" height="35"/>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLu-JU-OAK">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLu-JU-OAK">
                                         <rect key="frame" x="265" y="172" width="22" height="22"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -799,7 +811,7 @@ Make bullets larger and look like they do in this application. </mutableString>
                                             <action selector="contactPicker3:" destination="LmA-A7-Hri" eventType="touchUpInside" id="xmJ-XB-dER"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Cp-Rhn">
                                         <rect key="frame" x="32" y="65" width="233" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="I2d-P1-SdE"/>
@@ -827,7 +839,7 @@ Make bullets larger and look like they do in this application. </mutableString>
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="They should know you personally and be able to respond fast. They should know you personally and be able to respond fast." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBw-bB-fYg">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="They should know you personally and be able to respond fast. They should know you personally and be able to respond fast." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBw-bB-fYg">
                                         <rect key="frame" x="86" y="98" width="185" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="185" id="oWc-kl-LoY"/>
@@ -859,12 +871,6 @@ Make bullets larger and look like they do in this application. </mutableString>
                                             <action selector="contactPicker2:" destination="LmA-A7-Hri" eventType="touchUpInside" id="Qbc-yP-f5a"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="S3i-CH-iQF">
-                                        <rect key="frame" x="-55" y="-10" width="375" height="677"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="836" id="fBs-PO-YNQ"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="EvM-G1-rpp" firstAttribute="top" secondItem="GCa-zy-Hbl" secondAttribute="bottom" constant="89" id="12N-gR-g1v"/>
@@ -1284,86 +1290,6 @@ Make bullets larger and look like they do in this application. </mutableString>
             </objects>
             <point key="canvasLocation" x="1812" y="-448"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="5Mt-gd-hgc">
-            <objects>
-                <viewController id="jS4-0d-g31" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GKZ-d1-U4L"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gpy-vD-cjQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleAspectFill" id="qtb-Ws-4PG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dpw-p2-pc9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="aoK-EC-QeE">
-                                        <rect key="frame" x="0.0" y="-10" width="375" height="677"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="2208" id="ewN-sQ-dUr"/>
-                                            <constraint firstAttribute="width" constant="1242" id="g0u-3i-3EV"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eaw-eb-yY2">
-                                        <rect key="frame" x="16" y="25" width="288" height="518"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="288" id="7lp-vO-Zha"/>
-                                        </constraints>
-                                        <mutableString key="text">
-Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
-               
- How Does Text SOS Work?
-                
-Text SOS Alert can be installed on either smartphones or smartwatches which pair with each other. 
-You provide 3 emergency contacts. 
-In the event of an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.
-3 emergency contacts will continually receive texts along with your GPS location.
-To stop an emergency alert, open Text SOS and press the green "Stop Alerting" button on screen.
-                
-We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™ and LG G Watch R™. It has not been tested but it may work with LG G Watch™, Samsung Gear Live™, Asus ZenWatch™ and Sony SmartWatch 3™.
-Make bullets larger and look like they do in this application. </mutableString>
-                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="37" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR7-0Q-u6B">
-                                        <rect key="frame" x="81" y="8" width="158" height="37"/>
-                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Eaw-eb-yY2" firstAttribute="top" secondItem="Dpw-p2-pc9" secondAttribute="top" constant="25" id="1Zx-Pw-rlb"/>
-                                    <constraint firstItem="aoK-EC-QeE" firstAttribute="centerX" secondItem="Eaw-eb-yY2" secondAttribute="centerX" id="4RN-G5-I01"/>
-                                    <constraint firstItem="aR7-0Q-u6B" firstAttribute="top" secondItem="Dpw-p2-pc9" secondAttribute="topMargin" id="70l-Ri-49n"/>
-                                    <constraint firstAttribute="bottom" secondItem="Eaw-eb-yY2" secondAttribute="bottom" constant="30" id="97N-9s-Ikl"/>
-                                    <constraint firstAttribute="trailing" secondItem="Eaw-eb-yY2" secondAttribute="trailing" constant="16" id="LSq-ui-PTd"/>
-                                    <constraint firstItem="aoK-EC-QeE" firstAttribute="centerY" secondItem="Eaw-eb-yY2" secondAttribute="centerY" id="Meh-AE-Zmp"/>
-                                    <constraint firstItem="Eaw-eb-yY2" firstAttribute="centerX" secondItem="Dpw-p2-pc9" secondAttribute="centerX" id="Si0-EW-uDl"/>
-                                    <constraint firstAttribute="centerY" secondItem="aoK-EC-QeE" secondAttribute="centerY" id="ekh-oR-YLd"/>
-                                    <constraint firstAttribute="centerX" secondItem="aoK-EC-QeE" secondAttribute="centerX" id="lMs-Hp-bKz"/>
-                                    <constraint firstItem="Eaw-eb-yY2" firstAttribute="centerX" secondItem="aR7-0Q-u6B" secondAttribute="centerX" id="shm-BY-RiB"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="Dpw-p2-pc9" firstAttribute="top" secondItem="qtb-Ws-4PG" secondAttribute="top" id="9G7-fj-3ad"/>
-                            <constraint firstItem="Dpw-p2-pc9" firstAttribute="leading" secondItem="qtb-Ws-4PG" secondAttribute="leading" id="bLp-cB-Xom"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Dpw-p2-pc9" secondAttribute="bottom" constant="-5" id="hQs-Id-bVt"/>
-                            <constraint firstAttribute="trailing" secondItem="Dpw-p2-pc9" secondAttribute="trailing" id="paX-by-yhW"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="4o4-Hi-aOR"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wkw-oQ-4Vt" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1584" y="1111"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="u1i-fp-7dC">
             <objects>
@@ -1506,7 +1432,7 @@ Make bullets larger and look like they do in this application. </mutableString>
                                             <action selector="contactPicker1:" destination="qIH-vn-bv1" eventType="touchUpInside" id="8la-CF-BTo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMZ-gW-97Q">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMZ-gW-97Q">
                                         <rect key="frame" x="260" y="230" width="22" height="22"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1548,8 +1474,11 @@ Make bullets larger and look like they do in this application. </mutableString>
                                             <segue destination="d47-Dp-TkE" kind="push" id="SAE-UT-xdb"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-k3-zME">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-k3-zME">
                                         <rect key="frame" x="27" y="392" width="269" height="202"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="202" id="bND-h5-vll"/>
+                                        </constraints>
                                         <string key="text">Security Tips
 • Choose 3 emergency contacts that are reliable, dependable and will be able to assist you in an emergency. e if they cannot help. 
 • Make necessary plans with these contacts so they are prepared to act fast. Having a predetermined course of action could save your life.
@@ -1575,7 +1504,7 @@ Make bullets larger and look like they do in this application. </mutableString>
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqj-cH-nHm">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqj-cH-nHm">
                                         <rect key="frame" x="260" y="281" width="22" height="22"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1784,28 +1713,6 @@ Make bullets larger and look like they do in this application. </mutableString>
                                             <constraint firstAttribute="width" constant="46" id="wSt-Z5-k0d"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-r5-4Po">
-                                        <rect key="frame" x="30" y="403" width="268" height="300"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="R6n-my-cJF"/>
-                                            <constraint firstAttribute="width" constant="268" id="UGA-B8-vF7"/>
-                                            <constraint firstAttribute="height" constant="300" id="YW9-9I-Wu7"/>
-                                            <constraint firstAttribute="height" constant="204" id="fcQ-FA-cSE"/>
-                                        </constraints>
-                                        <string key="text">Security Tips
-• Consider creating code words or phrases in your message that only your contacts will understand.
-• You won’t have time to change a message in an emergency, so create something that will work in all scenarios. 
-• Enable GPS tracking from your phone settings if you want your location to be included with your message.
-</string>
-                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="fcQ-FA-cSE"/>
-                                            </mask>
-                                        </variation>
-                                    </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gs-o0-35e">
                                         <rect key="frame" x="103" y="117" width="185" height="66"/>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1833,6 +1740,29 @@ Make bullets larger and look like they do in this application. </mutableString>
                                             <segue destination="BYZ-38-t0r" kind="push" id="luT-kI-Gpd"/>
                                         </connections>
                                     </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-r5-4Po">
+                                        <rect key="frame" x="30" y="403" width="268" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="Jfg-pf-05R"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="R6n-my-cJF"/>
+                                            <constraint firstAttribute="width" constant="268" id="UGA-B8-vF7"/>
+                                            <constraint firstAttribute="height" constant="300" id="YW9-9I-Wu7"/>
+                                            <constraint firstAttribute="height" constant="204" id="fcQ-FA-cSE"/>
+                                        </constraints>
+                                        <string key="text">Security Tips
+• Consider creating code words or phrases in your message that only your contacts will understand.
+• You won’t have time to change a message in an emergency, so create something that will work in all scenarios. 
+• Enable GPS tracking from your phone settings if you want your location to be included with your message.
+</string>
+                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fcQ-FA-cSE"/>
+                                            </mask>
+                                        </variation>
+                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="aR2-6J-Kn2" firstAttribute="top" secondItem="lds-Hr-N6T" secondAttribute="bottom" id="0Hx-MQ-Tij"/>
@@ -2045,7 +1975,7 @@ Make bullets larger and look like they do in this application. </mutableString>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjf-Lv-XgJ">
                                 <rect key="frame" x="16" y="65" width="288" height="574"/>
-                                <mutableString key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
+                                <string key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
 
 Text SOS Alert is committed to ensuring the privacy of all our users. This Privacy Policy governs all pages on the Text SOS Alert app. It does not apply to pages hosted by other organizations.
 
@@ -2053,7 +1983,7 @@ By using Text SOS Alert, you consent to the terms of this Privacy Policy. Text S
 
 Personal information which you choose to provide will be retained by Text SOS Alert on your device only. Messages transmitted by Text SOS Alert will exist on other services and will be outside the control of Text SOS Alert.
 
-Text SOS Alert makes no guarantees regarding your information security.</mutableString>
+Text SOS Alert makes no guarantees regarding your information security.</string>
                                 <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2109,7 +2039,7 @@ Text SOS Alert makes no guarantees regarding your information security.</mutable
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lD-Fd-BAO">
                                 <rect key="frame" x="16" y="65" width="288" height="574"/>
-                                <mutableString key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
+                                <string key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
 
 Text SOS Alert is committed to ensuring the privacy of all our users. This Privacy Policy governs all pages on the Text SOS Alert app. It does not apply to pages hosted by other organizations.
 
@@ -2117,7 +2047,7 @@ By using Text SOS Alert, you consent to the terms of this Privacy Policy. Text S
 
 Personal information which you choose to provide will be retained by Text SOS Alert on your device only. Messages transmitted by Text SOS Alert will exist on other services and will be outside the control of Text SOS Alert.
 
-Text SOS Alert makes no guarantees regarding your information security.</mutableString>
+Text SOS Alert makes no guarantees regarding your information security.</string>
                                 <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2146,6 +2076,73 @@ Text SOS Alert makes no guarantees regarding your information security.</mutable
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIn-Ns-QEL" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1329" y="1766"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WNY-V1-fSG">
+            <objects>
+                <viewController id="QXS-Qf-zOa" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F9F-Pj-BK6"/>
+                        <viewControllerLayoutGuide type="bottom" id="vp3-XV-gEx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yDz-xj-UN6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="ml7-R8-FFN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XM-i5-n7A">
+                                <rect key="frame" x="81" y="20" width="158" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="fwT-vI-wXJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdT-Ao-xFz">
+                                <rect key="frame" x="16" y="65" width="288" height="574"/>
+                                <string key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
+               
+ How Does Text SOS Work?
+                
+Text SOS Alert can be installed on either smartphones or smartwatches which pair with each other. 
+You provide 3 emergency contacts. 
+In the event of an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.
+3 emergency contacts will continually receive texts along with your GPS location.
+To stop an emergency alert, open Text SOS and press the green "Stop Alerting" button on screen.
+                
+We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™ and LG G Watch R™. It has not been tested but it may work with LG G Watch™, Samsung Gear Live™, Asus ZenWatch™ and Sony SmartWatch 3™.
+Make bullets larger and look like they do in this application. </string>
+                                <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5XM-i5-n7A" firstAttribute="leading" secondItem="yDz-xj-UN6" secondAttribute="leadingMargin" constant="65" id="B3P-dt-L4b"/>
+                            <constraint firstItem="SdT-Ao-xFz" firstAttribute="top" secondItem="5XM-i5-n7A" secondAttribute="bottom" constant="8" symbolic="YES" id="DWP-Fw-Rzl"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ml7-R8-FFN" secondAttribute="bottom" constant="-99" id="Kf9-yJ-bNh"/>
+                            <constraint firstItem="SdT-Ao-xFz" firstAttribute="leading" secondItem="yDz-xj-UN6" secondAttribute="leadingMargin" id="QsC-0T-kca"/>
+                            <constraint firstItem="SdT-Ao-xFz" firstAttribute="trailing" secondItem="yDz-xj-UN6" secondAttribute="trailingMargin" id="VqY-cS-Jyy"/>
+                            <constraint firstItem="ml7-R8-FFN" firstAttribute="top" secondItem="yDz-xj-UN6" secondAttribute="top" id="XoW-ba-MOl"/>
+                            <constraint firstItem="5XM-i5-n7A" firstAttribute="top" secondItem="F9F-Pj-BK6" secondAttribute="bottom" constant="8" id="ZFD-z3-EHY"/>
+                            <constraint firstItem="5XM-i5-n7A" firstAttribute="centerX" secondItem="SdT-Ao-xFz" secondAttribute="centerX" id="dW6-jL-d03"/>
+                            <constraint firstItem="5XM-i5-n7A" firstAttribute="top" secondItem="F9F-Pj-BK6" secondAttribute="bottom" id="eeX-pk-HTM"/>
+                            <constraint firstItem="ml7-R8-FFN" firstAttribute="leading" secondItem="yDz-xj-UN6" secondAttribute="leading" id="gra-DU-Wcu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SdT-Ao-xFz" secondAttribute="bottom" constant="-71" id="jkx-QP-io2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ml7-R8-FFN" secondAttribute="trailing" constant="-71" id="vdT-Dr-ep2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lh4-Zs-VX9"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fg0-rW-xF8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392" y="1058"/>
         </scene>
     </scenes>
     <resources>

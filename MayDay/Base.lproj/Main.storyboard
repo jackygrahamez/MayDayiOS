@@ -20,6 +20,7 @@
             <string>MomsTypewriter</string>
             <string>MomsTypewriter</string>
             <string>MomsTypewriter</string>
+            <string>MomsTypewriter</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -209,7 +210,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="NWi-pa-pfe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MayDay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opG-5z-UXu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text SOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opG-5z-UXu">
                                 <rect key="frame" x="81" y="28" width="158" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="JgE-Jo-Y8J"/>
@@ -218,7 +219,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" text="MayDay is a mobile app that secretly alerts up to 3 contacts when you are in trouble." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7od-IA-8h1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" text="Text SOS is a utility that discreetly alerts up to 3 contacts when you’re in trouble." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7od-IA-8h1">
                                 <rect key="frame" x="16" y="73" width="288" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="9ci-mp-MkB"/>
@@ -276,15 +277,41 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <constraint firstAttribute="width" constant="30" id="tfH-pO-HgM"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNS-mp-JQO">
+                                <rect key="frame" x="16" y="283" width="288" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="Hw6-m9-iLq"/>
+                                    <constraint firstAttribute="height" constant="50" id="L6V-1o-E8U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Privacy" backgroundImage="state_settings_480x50.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="B85-vV-Hak" kind="push" id="qFL-aF-snM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="Izg-rn-QAs">
+                                <rect key="frame" x="257" y="293" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Flv-xA-0BZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="zaR-cP-hkY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="NWi-pa-pfe" secondAttribute="trailing" constant="-71" id="2Hd-Gg-9vA"/>
+                            <constraint firstItem="Izg-rn-QAs" firstAttribute="leading" secondItem="YNS-mp-JQO" secondAttribute="trailing" constant="-47" id="6TL-Fx-Aya"/>
                             <constraint firstItem="292-FH-4s4" firstAttribute="top" secondItem="d8O-yo-cGA" secondAttribute="bottom" constant="-40" id="9G4-YY-3sQ"/>
                             <constraint firstItem="292-FH-4s4" firstAttribute="leading" secondItem="d8O-yo-cGA" secondAttribute="trailing" constant="-47" id="C85-ky-5DC"/>
                             <constraint firstItem="292-FH-4s4" firstAttribute="leading" secondItem="d8O-yo-cGA" secondAttribute="trailing" constant="-47" id="JNB-9S-Uex"/>
+                            <constraint firstItem="YNS-mp-JQO" firstAttribute="top" secondItem="d8O-yo-cGA" secondAttribute="bottom" constant="3" id="Jvf-tw-Hsf"/>
                             <constraint firstItem="d8O-yo-cGA" firstAttribute="top" secondItem="OyG-Xd-kDL" secondAttribute="bottom" constant="48" id="Muh-tm-ILp"/>
                             <constraint firstItem="7od-IA-8h1" firstAttribute="top" secondItem="opG-5z-UXu" secondAttribute="bottom" constant="8" symbolic="YES" id="O0m-r4-2f4"/>
+                            <constraint firstItem="Izg-rn-QAs" firstAttribute="top" secondItem="YNS-mp-JQO" secondAttribute="bottom" constant="-40" id="RUj-qj-MIK"/>
                             <constraint firstItem="7od-IA-8h1" firstAttribute="leading" secondItem="ojC-Vw-ZvY" secondAttribute="leadingMargin" id="SLZ-lE-3ez"/>
                             <constraint firstItem="opG-5z-UXu" firstAttribute="leading" secondItem="ojC-Vw-ZvY" secondAttribute="leadingMargin" constant="65" id="SfB-PN-VAu"/>
                             <constraint firstAttribute="bottomMargin" secondItem="NWi-pa-pfe" secondAttribute="bottom" constant="-99" id="dKM-qc-nJI"/>
@@ -298,6 +325,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <constraint firstItem="OyG-Xd-kDL" firstAttribute="leading" secondItem="opG-5z-UXu" secondAttribute="leading" id="uo6-J8-cWj"/>
                             <constraint firstItem="7od-IA-8h1" firstAttribute="trailing" secondItem="ojC-Vw-ZvY" secondAttribute="trailingMargin" id="x04-zm-RI4"/>
                             <constraint firstItem="NWi-pa-pfe" firstAttribute="top" secondItem="ojC-Vw-ZvY" secondAttribute="top" id="xkZ-A0-isA"/>
+                            <constraint firstAttribute="centerX" secondItem="YNS-mp-JQO" secondAttribute="centerX" id="zCy-wJ-idS"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -342,15 +370,16 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xel-ln-0qX">
-                                <rect key="frame" x="25" y="73" width="279" height="81"/>
-                                <string key="text">MayDay is a useful tool to alert your network quickly when you need help. It can't guarantee your security! Make a plan with your contacts so they are prepared to act fast.</string>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xel-ln-0qX">
+                                <rect key="frame" x="25" y="73" width="279" height="123"/>
+                                <string key="text">Text SOS is a tool to alert your loved ones when you need them most. It can’t guarantee your security, but can give you piece of mind. Make plans with your emergency contacts so they’re prepared to act fast.
+</string>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9Y-LP-mvY">
-                                <rect key="frame" x="81" y="162" width="158" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9Y-LP-mvY">
+                                <rect key="frame" x="81" y="204" width="158" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cw1-Lc-yiA"/>
@@ -382,6 +411,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <constraint firstItem="xel-ln-0qX" firstAttribute="top" secondItem="qJx-NV-9vu" secondAttribute="bottom" constant="8" symbolic="YES" id="ST2-ZJ-DKw"/>
                             <constraint firstItem="xel-ln-0qX" firstAttribute="trailing" secondItem="Lwx-OX-mcm" secondAttribute="trailingMargin" id="T0p-mS-8jY"/>
                             <constraint firstItem="qJx-NV-9vu" firstAttribute="leading" secondItem="Lwx-OX-mcm" secondAttribute="leadingMargin" constant="65" id="VTw-hT-64f"/>
+                            <constraint firstItem="g9Y-LP-mvY" firstAttribute="top" secondItem="xel-ln-0qX" secondAttribute="bottom" constant="8" id="bBw-lh-KPO"/>
                             <constraint firstItem="qJx-NV-9vu" firstAttribute="centerX" secondItem="Lwx-OX-mcm" secondAttribute="centerX" id="fWP-ZK-Liq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c0W-ck-nNb" secondAttribute="trailing" constant="-71" id="hmo-dE-9z5"/>
                             <constraint firstItem="bga-3u-0Hq" firstAttribute="top" secondItem="g9Y-LP-mvY" secondAttribute="bottom" constant="356" id="igW-sT-t65"/>
@@ -423,9 +453,23 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-2H-g62">
                                 <rect key="frame" x="16" y="65" width="288" height="574"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">VIEW: About
+
+CONTENT:
+Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
+               
+ How Does Text SOS Work?
+                
+Text SOS Alert can be installed on either smartphones or smartwatches which pair with each other. 
+You provide 3 emergency contacts. 
+In the event of an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.
+3 emergency contacts will continually receive texts along with your GPS location.
+To stop an emergency alert, open Text SOS and press the green "Stop Alerting" button on screen.
+                
+We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™ and LG G Watch R™. It has not been tested but it may work with LG G Watch™, Samsung Gear Live™, Asus ZenWatch™ and Sony SmartWatch 3™.
+Make bullets larger and look like they do in this application. </mutableString>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -451,7 +495,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6jL-hU-nDr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="-735"/>
+            <point key="canvasLocation" x="233" y="-760"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="z5a-HG-wWY">
@@ -1433,9 +1477,8 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-k3-zME">
                                         <rect key="frame" x="27" y="392" width="269" height="202"/>
                                         <string key="text">Security Tips
-• Think about who can practically assist you - there is no point someone knowing you are in trouble if they cannot help. 
-• Make a plan with your chosen contacts so that they are prepared to act fast. 
-• Be aware of the risks - how might your contact be put at risk?
+• Choose 3 emergency contacts that are reliable, dependable and will be able to assist you in an emergency. e if they cannot help. 
+• Make necessary plans with these contacts so they are prepared to act fast. Having a predetermined course of action could save your life.
 </string>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1444,8 +1487,10 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="p3A-IM-Sj8">
                                         <rect key="frame" x="27" y="108" width="46" height="48"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="1ri-0c-4Qv"/>
                                             <constraint firstAttribute="width" constant="46" id="7bk-i9-nVh"/>
                                             <constraint firstAttribute="height" constant="48" id="HTu-zc-mhg"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="a98-pL-fbH"/>
                                             <constraint firstAttribute="height" constant="48" id="ivM-Fu-Oob"/>
                                             <constraint firstAttribute="width" constant="46" id="qQe-fl-2Dt"/>
                                         </constraints>
@@ -1599,18 +1644,18 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-LU-aVm">
                                 <rect key="frame" x="0.0" y="-1" width="328" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="LAk-IX-vNh">
-                                        <rect key="frame" x="-68" y="-48" width="388" height="753"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="LAk-IX-vNh">
+                                        <rect key="frame" x="-68" y="-48" width="388" height="786"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YF-9Q-aRb">
-                                        <rect key="frame" x="41" y="184" width="245" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YF-9Q-aRb">
+                                        <rect key="frame" x="42" y="199" width="245" height="21"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPf-lP-GXC">
-                                        <rect key="frame" x="47" y="184" width="75" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Emergency message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPf-lP-GXC">
+                                        <rect key="frame" x="47" y="199" width="75" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="2HS-3x-wH9"/>
                                             <constraint firstAttribute="width" constant="75" id="O2q-hc-tHt"/>
@@ -1618,8 +1663,8 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="I'm here http://maps.google.com/GPS-location" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-6J-Kn2">
-                                        <rect key="frame" x="41" y="289" width="245" height="41"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="I'm here http://maps.google.com/GPS-location" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-6J-Kn2">
+                                        <rect key="frame" x="42" y="304" width="245" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="bli-CX-VzL"/>
@@ -1637,37 +1682,39 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhN-cv-EGE">
-                                        <rect key="frame" x="41" y="46" width="233" height="50"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhN-cv-EGE">
+                                        <rect key="frame" x="41" y="46" width="233" height="83"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AsI-2U-XNq"/>
                                         </constraints>
+                                        <string key="text">Below is the default message that will be sent with your location or you may enter your own text.
+</string>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters: 63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-xb-Hln">
-                                        <rect key="frame" x="180" y="184" width="100" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Characters: 63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-xb-Hln">
+                                        <rect key="frame" x="180" y="199" width="100" height="21"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I Need IMMEDIATE help! " translatesAutoresizingMaskIntoConstraints="NO" id="lds-Hr-N6T">
-                                        <rect key="frame" x="41" y="202" width="245" height="87"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="I Need IMMEDIATE help! " translatesAutoresizingMaskIntoConstraints="NO" id="lds-Hr-N6T">
+                                        <rect key="frame" x="42" y="218" width="245" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXA-SW-dnP">
-                                        <rect key="frame" x="41" y="100" width="46" height="48"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXA-SW-dnP">
+                                        <rect key="frame" x="41" y="117" width="46" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="A74-P2-E2E"/>
                                             <constraint firstAttribute="width" constant="46" id="pQC-bF-ghm"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-r5-4Po">
-                                        <rect key="frame" x="30" y="418" width="268" height="300"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-r5-4Po">
+                                        <rect key="frame" x="30" y="403" width="268" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="Rrn-TW-Xrt"/>
                                             <constraint firstAttribute="height" constant="204" id="fcQ-FA-cSE"/>
@@ -1686,8 +1733,14 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                             </mask>
                                         </variation>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-bs-u5M">
-                                        <rect key="frame" x="103" y="360" width="109" height="50"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gs-o0-35e">
+                                        <rect key="frame" x="103" y="117" width="185" height="66"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-bs-u5M">
+                                        <rect key="frame" x="103" y="353" width="109" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="109" id="tWk-yw-fBE"/>
@@ -1708,12 +1761,6 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                             <segue destination="BYZ-38-t0r" kind="push" id="luT-kI-Gpd"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gs-o0-35e">
-                                        <rect key="frame" x="95" y="90" width="185" height="65"/>
-                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="3b3-O6-Bld" firstAttribute="top" secondItem="jgE-LU-aVm" secondAttribute="topMargin" id="0DY-oo-FtT"/>
@@ -1727,6 +1774,7 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <constraint firstItem="qPf-lP-GXC" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="47" id="6V2-tl-qM4"/>
                                     <constraint firstItem="qPf-lP-GXC" firstAttribute="baseline" secondItem="ne3-xb-Hln" secondAttribute="baseline" id="6b0-Od-rD1"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="baseline" secondItem="ne3-xb-Hln" secondAttribute="baseline" id="7yk-F2-LIK"/>
+                                    <constraint firstItem="5gs-o0-35e" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-18" id="Bpc-sO-r9O"/>
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="firstBaseline" secondItem="qPf-lP-GXC" secondAttribute="firstBaseline" id="DUw-wh-reK"/>
                                     <constraint firstItem="qPf-lP-GXC" firstAttribute="top" secondItem="5gs-o0-35e" secondAttribute="bottom" constant="29" id="KWK-YC-eR1"/>
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="leading" secondItem="qPf-lP-GXC" secondAttribute="trailing" constant="58" id="Kka-WB-qUy"/>
@@ -1740,7 +1788,10 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <constraint firstItem="aR2-6J-Kn2" firstAttribute="trailing" secondItem="lds-Hr-N6T" secondAttribute="trailing" id="P4N-U8-XHA"/>
                                     <constraint firstItem="3b3-O6-Bld" firstAttribute="leading" secondItem="EuZ-r5-4Po" secondAttribute="leading" id="QkP-PO-h4A"/>
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="trailing" secondItem="aR2-6J-Kn2" secondAttribute="trailing" id="STR-r4-6fO"/>
+                                    <constraint firstItem="5gs-o0-35e" firstAttribute="leading" secondItem="hXA-SW-dnP" secondAttribute="trailing" constant="16" id="SXK-Z5-sqs"/>
                                     <constraint firstItem="5gs-o0-35e" firstAttribute="leading" secondItem="hXA-SW-dnP" secondAttribute="trailing" constant="8" symbolic="YES" id="Sjc-OS-VG0"/>
+                                    <constraint firstItem="5gs-o0-35e" firstAttribute="leading" secondItem="hXA-SW-dnP" secondAttribute="trailing" constant="14" id="T9o-uH-OnC"/>
+                                    <constraint firstItem="5gs-o0-35e" firstAttribute="leading" secondItem="hXA-SW-dnP" secondAttribute="trailing" constant="14" id="U6L-X6-OaS"/>
                                     <constraint firstItem="aR2-6J-Kn2" firstAttribute="top" secondItem="lds-Hr-N6T" secondAttribute="bottom" id="WJs-p1-EVk"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="leading" secondItem="hXA-SW-dnP" secondAttribute="leading" id="X32-42-sST"/>
                                     <constraint firstItem="5gs-o0-35e" firstAttribute="top" secondItem="3b3-O6-Bld" secondAttribute="bottom" constant="45" id="XRc-mT-hQH"/>
@@ -1748,16 +1799,20 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                     <constraint firstItem="qPf-lP-GXC" firstAttribute="top" secondItem="hXA-SW-dnP" secondAttribute="bottom" constant="36" id="Zgw-Wm-nkf"/>
                                     <constraint firstItem="LAk-IX-vNh" firstAttribute="top" secondItem="jgE-LU-aVm" secondAttribute="top" constant="-48" id="aHy-Za-ZoL"/>
                                     <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="4" id="bne-rg-7pD"/>
+                                    <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-18" id="cht-MG-arS"/>
                                     <constraint firstAttribute="bottom" secondItem="EuZ-r5-4Po" secondAttribute="bottom" constant="29" id="d19-9h-5jT"/>
+                                    <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-12" id="f8t-xn-bfX"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="trailing" secondItem="lds-Hr-N6T" secondAttribute="trailing" id="fZI-hs-yzl"/>
                                     <constraint firstItem="3b3-O6-Bld" firstAttribute="top" secondItem="jgE-LU-aVm" secondAttribute="top" constant="28" id="ip1-lX-8Pn"/>
                                     <constraint firstAttribute="trailing" secondItem="0YF-9Q-aRb" secondAttribute="trailing" constant="42" id="jEC-u6-T7O"/>
                                     <constraint firstAttribute="trailing" secondItem="EhN-cv-EGE" secondAttribute="trailing" constant="54" id="jiM-f8-lNG"/>
+                                    <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-12" id="mBU-LB-akH"/>
                                     <constraint firstItem="3b3-O6-Bld" firstAttribute="centerX" secondItem="jgE-LU-aVm" secondAttribute="centerX" id="q0A-xq-cNO"/>
                                     <constraint firstItem="EhN-cv-EGE" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="41" id="sst-S7-dQH"/>
                                     <constraint firstItem="lds-Hr-N6T" firstAttribute="top" secondItem="5gs-o0-35e" secondAttribute="bottom" constant="47" id="td7-fq-Fky"/>
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="firstBaseline" secondItem="0YF-9Q-aRb" secondAttribute="firstBaseline" id="tnx-Dv-kxh"/>
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="53" id="u3H-4E-QXi"/>
+                                    <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-12" id="uc1-uY-HBb"/>
                                     <constraint firstItem="5gs-o0-35e" firstAttribute="trailing" secondItem="ne3-xb-Hln" secondAttribute="trailing" id="xMd-5w-JHY"/>
                                     <constraint firstItem="EhN-cv-EGE" firstAttribute="top" secondItem="3b3-O6-Bld" secondAttribute="bottom" constant="1" id="xYR-RK-PhR"/>
                                     <constraint firstItem="aR2-6J-Kn2" firstAttribute="top" secondItem="qPf-lP-GXC" secondAttribute="bottom" constant="84" id="zRD-LH-aKG"/>
@@ -1765,6 +1820,10 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="ip1-lX-8Pn"/>
+                                        <exclude reference="bne-rg-7pD"/>
+                                        <exclude reference="cht-MG-arS"/>
+                                        <exclude reference="f8t-xn-bfX"/>
+                                        <exclude reference="mBU-LB-akH"/>
                                         <exclude reference="Ots-RB-Xbt"/>
                                         <exclude reference="STR-r4-6fO"/>
                                         <exclude reference="d19-9h-5jT"/>
@@ -1900,6 +1959,70 @@ First check your MayDay settings to ensure your alerts are delivered to the corr
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJv-ui-uoe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="355" y="1142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OMU-Ws-W0k">
+            <objects>
+                <viewController id="B85-vV-Hak" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MCG-ku-Fkc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vhl-l1-KLO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pZ1-dr-fMb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="UMa-yb-pMa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tu-wn-SGf">
+                                <rect key="frame" x="81" y="20" width="158" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="gi4-cz-mxG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjf-Lv-XgJ">
+                                <rect key="frame" x="16" y="65" width="288" height="574"/>
+                                <mutableString key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
+
+Text SOS Alert is committed to ensuring the privacy of all our users. This Privacy Policy governs all pages on the Text SOS Alert app. It does not apply to pages hosted by other organizations.
+
+By using Text SOS Alert, you consent to the terms of this Privacy Policy. Text SOS Alert may change its terms from time to time and, if such changes are made, we may place notices so that you will be aware of them. Your continued use of Text SOS Alert will be on the terms of this Privacy Policy as amended from time to time.
+
+Personal information which you choose to provide will be retained by Text SOS Alert on your device only. Messages transmitted by Text SOS Alert will exist on other services and will be outside the control of Text SOS Alert.
+
+Text SOS Alert makes no guarantees regarding your information security.</mutableString>
+                                <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Tu-wn-SGf" firstAttribute="leading" secondItem="pZ1-dr-fMb" secondAttribute="leadingMargin" constant="65" id="Ess-1a-8dc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="UMa-yb-pMa" secondAttribute="bottom" constant="-99" id="GSD-JI-aX0"/>
+                            <constraint firstItem="UMa-yb-pMa" firstAttribute="leading" secondItem="pZ1-dr-fMb" secondAttribute="leading" id="Js6-m0-Hwe"/>
+                            <constraint firstItem="2Tu-wn-SGf" firstAttribute="centerX" secondItem="Rjf-Lv-XgJ" secondAttribute="centerX" id="Kys-eT-dBX"/>
+                            <constraint firstItem="Rjf-Lv-XgJ" firstAttribute="trailing" secondItem="pZ1-dr-fMb" secondAttribute="trailingMargin" id="QxU-7P-gzf"/>
+                            <constraint firstItem="Rjf-Lv-XgJ" firstAttribute="top" secondItem="2Tu-wn-SGf" secondAttribute="bottom" constant="8" symbolic="YES" id="VhX-en-lLb"/>
+                            <constraint firstItem="2Tu-wn-SGf" firstAttribute="top" secondItem="MCG-ku-Fkc" secondAttribute="bottom" constant="8" id="WyF-MH-Eb8"/>
+                            <constraint firstItem="Rjf-Lv-XgJ" firstAttribute="leading" secondItem="pZ1-dr-fMb" secondAttribute="leadingMargin" id="XRr-rQ-9FG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Rjf-Lv-XgJ" secondAttribute="bottom" constant="-71" id="bPZ-ud-Gw0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UMa-yb-pMa" secondAttribute="trailing" constant="-71" id="bsm-hd-gMo"/>
+                            <constraint firstItem="2Tu-wn-SGf" firstAttribute="top" secondItem="MCG-ku-Fkc" secondAttribute="bottom" id="c2c-Rr-pcy"/>
+                            <constraint firstItem="UMa-yb-pMa" firstAttribute="top" secondItem="pZ1-dr-fMb" secondAttribute="top" id="x6O-Yc-2jq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bHI-gI-DQR"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kGI-a0-yST" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601" y="-760"/>
         </scene>
     </scenes>
     <resources>

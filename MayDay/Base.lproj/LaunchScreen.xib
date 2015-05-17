@@ -15,21 +15,21 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppNameAndTagLine.png" translatesAutoresizingMaskIntoConstraints="NO" id="yXY-yY-b3D">
-                    <rect key="frame" x="40" y="176" width="240" height="128"/>
+                    <rect key="frame" x="-5" y="152" width="330" height="175"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="EN8-IC-NfF"/>
+                        <constraint firstAttribute="height" constant="175" id="5fV-Aq-zYR"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="yXY-yY-b3D" firstAttribute="centerX" secondItem="Usy-6W-zgB" secondAttribute="centerX" id="8Hd-Dk-5sg"/>
+                <constraint firstItem="yXY-yY-b3D" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-5" id="G8J-yD-6uf"/>
                 <constraint firstAttribute="bottom" secondItem="Usy-6W-zgB" secondAttribute="bottom" id="HU6-4D-JpN"/>
-                <constraint firstItem="yXY-yY-b3D" firstAttribute="centerY" secondItem="Usy-6W-zgB" secondAttribute="centerY" id="HXw-FX-KDT"/>
                 <constraint firstItem="Usy-6W-zgB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OvY-o9-0Py"/>
-                <constraint firstItem="yXY-yY-b3D" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="cYl-kk-tSe"/>
+                <constraint firstItem="yXY-yY-b3D" firstAttribute="centerX" secondItem="Usy-6W-zgB" secondAttribute="centerX" id="UFT-Wa-ic3"/>
                 <constraint firstAttribute="trailing" secondItem="Usy-6W-zgB" secondAttribute="trailing" id="mrE-vO-juf"/>
                 <constraint firstItem="Usy-6W-zgB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qvu-SW-agL"/>
+                <constraint firstItem="yXY-yY-b3D" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="152" id="swb-xg-qtY"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

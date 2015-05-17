@@ -778,10 +778,10 @@ Make bullets larger and look like they do in this application. </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkn-Q4-dWj">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="567"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="800"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="S3i-CH-iQF">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="677"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="S3i-CH-iQF">
+                                        <rect key="frame" x="-20" y="-20" width="480" height="800"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="xmh-8T-h8j">
                                         <rect key="frame" x="32" y="108" width="46" height="48"/>
@@ -864,16 +864,6 @@ Make bullets larger and look like they do in this application. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvM-G1-rpp">
-                                        <rect key="frame" x="32" y="377" width="255" height="182"/>
-                                        <string key="text">Security Tips
-• Choose 3 emergency contacts that are reliable, dependable and will be able to assist you in an emergency.
-• Make necessary plans with these contacts so they are prepared to act fast. Having a predetermined course of action could save your life.
-</string>
-                                        <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLu-JU-OAK">
                                         <rect key="frame" x="256" y="201" width="22" height="22"/>
                                         <state key="normal">
@@ -903,6 +893,16 @@ Make bullets larger and look like they do in this application. </string>
                                             <action selector="contactPicker2:" destination="LmA-A7-Hri" eventType="touchUpInside" id="Qbc-yP-f5a"/>
                                         </connections>
                                     </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvM-G1-rpp">
+                                        <rect key="frame" x="32" y="377" width="255" height="182"/>
+                                        <string key="text">Security Tips
+• Choose 3 emergency contacts that are reliable, dependable and will be able to assist you in an emergency.
+• Make necessary plans with these contacts so they are prepared to act fast. Having a predetermined course of action could save your life.
+</string>
+                                        <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -937,22 +937,30 @@ Make bullets larger and look like they do in this application. </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zEF-E7-Yhj">
-                                <rect key="frame" x="0.0" y="0.0" width="323" height="573"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="800"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="FSK-6P-rEm">
-                                        <rect key="frame" x="-26" y="-66" width="375" height="683"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="FSK-6P-rEm">
+                                        <rect key="frame" x="-26" y="-66" width="480" height="800"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="800" id="W5t-JQ-ML1"/>
+                                            <constraint firstAttribute="width" constant="480" id="Z1G-tK-fDc"/>
+                                        </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Setup the frequency" translatesAutoresizingMaskIntoConstraints="NO" id="Q5v-lp-rif">
                                         <rect key="frame" x="39" y="45" width="333" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="6hP-6s-bpZ"/>
+                                            <constraint firstAttribute="height" constant="30" id="8jO-Aj-z7v"/>
+                                            <constraint firstAttribute="width" constant="333" id="fAg-Ua-V0X"/>
                                         </constraints>
                                         <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Be aware of your battery! Frequent alerts may drain your battery." translatesAutoresizingMaskIntoConstraints="NO" id="ZiH-ZA-lPI">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Be aware of your battery! Frequent alerts may drain your battery." translatesAutoresizingMaskIntoConstraints="NO" id="ZiH-ZA-lPI">
                                         <rect key="frame" x="93" y="76" width="191" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="191" id="qhJ-gd-kPc"/>
+                                        </constraints>
                                         <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -960,36 +968,27 @@ Make bullets larger and look like they do in this application. </string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="SiG-sU-ynZ">
                                         <rect key="frame" x="39" y="83" width="46" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="Ab5-3S-wlg"/>
-                                            <constraint firstAttribute="height" constant="48" id="Ghc-3U-e0J"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="Snl-Ho-Ho7"/>
-                                            <constraint firstAttribute="width" constant="46" id="zvI-zB-7ee"/>
+                                            <constraint firstAttribute="height" constant="48" id="OXb-hg-gd0"/>
+                                            <constraint firstAttribute="width" constant="46" id="Xz9-9v-zI2"/>
                                         </constraints>
                                     </imageView>
-                                    <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-5h-aSG">
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-5h-aSG">
                                         <rect key="frame" x="39" y="161" width="245" height="162"/>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="162" id="KZl-4R-ACz"/>
-                                        </constraints>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="D7F-Ev-q02">
                                         <rect key="frame" x="0.0" y="8" width="323" height="37"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="ecu-J6-oMo"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-as-8xI">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-as-8xI">
                                         <rect key="frame" x="107" y="337" width="109" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Fwh-Mv-lWw"/>
+                                            <constraint firstAttribute="height" constant="50" id="6c8-JZ-b0M"/>
                                             <constraint firstAttribute="height" constant="30" id="dMl-bf-ldG"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="nu6-dx-W9Q"/>
-                                            <constraint firstAttribute="width" constant="109" id="tEQ-mm-qJD"/>
+                                            <constraint firstAttribute="width" constant="109" id="rEP-oB-exm"/>
                                         </constraints>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1011,35 +1010,36 @@ Make bullets larger and look like they do in this application. </string>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ZiH-ZA-lPI" firstAttribute="leading" secondItem="SiG-sU-ynZ" secondAttribute="trailing" constant="8" symbolic="YES" id="4JS-tf-Prd"/>
-                                    <constraint firstItem="Q5v-lp-rif" firstAttribute="leading" secondItem="zEF-E7-Yhj" secondAttribute="leading" constant="39" id="5T0-z5-SmR"/>
-                                    <constraint firstItem="Q5v-lp-rif" firstAttribute="top" secondItem="D7F-Ev-q02" secondAttribute="bottom" id="5fT-Cj-xMb"/>
-                                    <constraint firstItem="D7F-Ev-q02" firstAttribute="top" secondItem="zEF-E7-Yhj" secondAttribute="topMargin" id="5wZ-7i-jWG"/>
-                                    <constraint firstItem="dgg-5h-aSG" firstAttribute="centerX" secondItem="tKP-as-8xI" secondAttribute="centerX" id="80b-zs-ln9"/>
+                                    <constraint firstItem="Q5v-lp-rif" firstAttribute="leading" secondItem="zEF-E7-Yhj" secondAttribute="leading" constant="39" id="0GQ-U9-PPl"/>
+                                    <constraint firstItem="dgg-5h-aSG" firstAttribute="top" secondItem="SiG-sU-ynZ" secondAttribute="bottom" constant="30" id="0u5-UU-E6s"/>
+                                    <constraint firstItem="ZiH-ZA-lPI" firstAttribute="leading" secondItem="SiG-sU-ynZ" secondAttribute="trailing" constant="8" symbolic="YES" id="23M-xD-Nnd"/>
+                                    <constraint firstItem="Q5v-lp-rif" firstAttribute="top" secondItem="D7F-Ev-q02" secondAttribute="bottom" id="3Ni-7H-aoB"/>
+                                    <constraint firstAttribute="trailing" secondItem="FSK-6P-rEm" secondAttribute="trailing" constant="26" id="3Rw-Iw-2Dh"/>
+                                    <constraint firstItem="dgg-5h-aSG" firstAttribute="centerX" secondItem="tKP-as-8xI" secondAttribute="centerX" id="5zc-Vj-FT3"/>
                                     <constraint firstItem="FSK-6P-rEm" firstAttribute="top" secondItem="zEF-E7-Yhj" secondAttribute="top" constant="-66" id="8E6-uX-6fc"/>
-                                    <constraint firstItem="D7F-Ev-q02" firstAttribute="centerX" secondItem="dgg-5h-aSG" secondAttribute="centerX" id="8Rd-Aw-F9p"/>
+                                    <constraint firstItem="D7F-Ev-q02" firstAttribute="top" secondItem="zEF-E7-Yhj" secondAttribute="topMargin" id="Ad5-HU-1Z7"/>
                                     <constraint firstAttribute="bottom" secondItem="FSK-6P-rEm" secondAttribute="bottom" constant="-28" id="AzQ-jJ-E1n"/>
-                                    <constraint firstItem="dgg-5h-aSG" firstAttribute="top" secondItem="ZiH-ZA-lPI" secondAttribute="bottom" constant="18" id="CjC-LU-wCy"/>
-                                    <constraint firstItem="dgg-5h-aSG" firstAttribute="top" secondItem="SiG-sU-ynZ" secondAttribute="bottom" constant="24" id="Com-vr-qrg"/>
-                                    <constraint firstAttribute="trailing" secondItem="Q5v-lp-rif" secondAttribute="trailing" constant="-49" id="DEf-cD-f3e"/>
-                                    <constraint firstItem="dgg-5h-aSG" firstAttribute="centerX" secondItem="FSK-6P-rEm" secondAttribute="centerX" id="FBj-wE-ZX0"/>
-                                    <constraint firstItem="dgg-5h-aSG" firstAttribute="leading" secondItem="SiG-sU-ynZ" secondAttribute="leading" id="LlP-G6-GRt"/>
+                                    <constraint firstItem="SiG-sU-ynZ" firstAttribute="leading" secondItem="Q5v-lp-rif" secondAttribute="leading" id="G9U-gB-6MF"/>
+                                    <constraint firstItem="dgg-5h-aSG" firstAttribute="centerX" secondItem="D7F-Ev-q02" secondAttribute="centerX" id="JtV-QM-i8M"/>
                                     <constraint firstAttribute="bottom" secondItem="FSK-6P-rEm" secondAttribute="bottom" constant="-54" id="Lpj-wY-sZi"/>
-                                    <constraint firstItem="D7F-Ev-q02" firstAttribute="centerX" secondItem="zEF-E7-Yhj" secondAttribute="centerX" id="RG2-IF-Ckk"/>
-                                    <constraint firstItem="ZiH-ZA-lPI" firstAttribute="trailing" secondItem="dgg-5h-aSG" secondAttribute="trailing" id="ba4-Fb-rtt"/>
+                                    <constraint firstItem="FSK-6P-rEm" firstAttribute="leading" secondItem="zEF-E7-Yhj" secondAttribute="leading" constant="-26" id="RZv-Cv-YR5"/>
+                                    <constraint firstAttribute="bottom" secondItem="FSK-6P-rEm" secondAttribute="bottom" constant="66" id="Z8e-c4-hKU"/>
+                                    <constraint firstItem="D7F-Ev-q02" firstAttribute="leading" secondItem="zEF-E7-Yhj" secondAttribute="leading" id="aUV-qA-9So"/>
                                     <constraint firstItem="FSK-6P-rEm" firstAttribute="top" secondItem="zEF-E7-Yhj" secondAttribute="top" constant="-77" id="dU4-oa-9jn"/>
+                                    <constraint firstItem="dgg-5h-aSG" firstAttribute="top" secondItem="ZiH-ZA-lPI" secondAttribute="bottom" constant="18" id="dw3-IF-uYU"/>
+                                    <constraint firstItem="dgg-5h-aSG" firstAttribute="leading" secondItem="SiG-sU-ynZ" secondAttribute="leading" id="ed8-iC-HaV"/>
                                     <constraint firstItem="FSK-6P-rEm" firstAttribute="leading" secondItem="zEF-E7-Yhj" secondAttribute="leading" constant="-26" id="egY-2o-nZ4"/>
-                                    <constraint firstItem="FSK-6P-rEm" firstAttribute="leading" secondItem="zEF-E7-Yhj" secondAttribute="leading" constant="-26" id="hkN-ch-FoG"/>
-                                    <constraint firstAttribute="trailing" secondItem="D7F-Ev-q02" secondAttribute="trailing" id="hpb-Xw-sHH"/>
-                                    <constraint firstItem="SiG-sU-ynZ" firstAttribute="top" secondItem="Q5v-lp-rif" secondAttribute="bottom" constant="8" symbolic="YES" id="hrj-Gr-2KM"/>
-                                    <constraint firstItem="D7F-Ev-q02" firstAttribute="leading" secondItem="zEF-E7-Yhj" secondAttribute="leading" id="hwP-Sf-08w"/>
+                                    <constraint firstItem="FSK-6P-rEm" firstAttribute="top" secondItem="zEF-E7-Yhj" secondAttribute="top" constant="-66" id="hkM-DV-W0q"/>
+                                    <constraint firstItem="ZiH-ZA-lPI" firstAttribute="trailing" secondItem="dgg-5h-aSG" secondAttribute="trailing" id="hud-JJ-RaH"/>
+                                    <constraint firstItem="ZiH-ZA-lPI" firstAttribute="top" secondItem="Q5v-lp-rif" secondAttribute="bottom" constant="1" id="mXl-Rg-LmM"/>
                                     <constraint firstItem="FSK-6P-rEm" firstAttribute="centerX" secondItem="D7F-Ev-q02" secondAttribute="centerX" id="qgy-Dr-4xo"/>
-                                    <constraint firstItem="tKP-as-8xI" firstAttribute="top" secondItem="dgg-5h-aSG" secondAttribute="bottom" constant="30" id="uN2-ny-eHv"/>
-                                    <constraint firstItem="ZiH-ZA-lPI" firstAttribute="top" secondItem="Q5v-lp-rif" secondAttribute="bottom" constant="1" id="vJE-ez-FvC"/>
-                                    <constraint firstItem="SiG-sU-ynZ" firstAttribute="leading" secondItem="Q5v-lp-rif" secondAttribute="leading" id="wZB-mU-u2d"/>
+                                    <constraint firstItem="SiG-sU-ynZ" firstAttribute="top" secondItem="Q5v-lp-rif" secondAttribute="bottom" constant="8" symbolic="YES" id="tAe-Sv-iHm"/>
+                                    <constraint firstItem="tKP-as-8xI" firstAttribute="top" secondItem="dgg-5h-aSG" secondAttribute="bottom" constant="14" id="yVF-i8-bYh"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="8E6-uX-6fc"/>
+                                        <exclude reference="AzQ-jJ-E1n"/>
                                         <exclude reference="Lpj-wY-sZi"/>
                                         <exclude reference="dU4-oa-9jn"/>
                                         <exclude reference="egY-2o-nZ4"/>
@@ -1050,10 +1050,10 @@ Make bullets larger and look like they do in this application. </string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zEF-E7-Yhj" firstAttribute="leading" secondItem="n53-Yq-9zf" secondAttribute="leading" id="b22-O4-DS7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zEF-E7-Yhj" secondAttribute="trailing" constant="-19" id="cm1-3I-PbY"/>
-                            <constraint firstItem="zEF-E7-Yhj" firstAttribute="top" secondItem="n53-Yq-9zf" secondAttribute="top" id="rkb-2E-7nY"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="zEF-E7-Yhj" secondAttribute="bottom" constant="-5" id="rog-qu-w5K"/>
+                            <constraint firstItem="zEF-E7-Yhj" firstAttribute="top" secondItem="n53-Yq-9zf" secondAttribute="top" id="4QO-eL-6VX"/>
+                            <constraint firstAttribute="bottom" secondItem="zEF-E7-Yhj" secondAttribute="bottom" constant="-232" id="4bg-u1-P2i"/>
+                            <constraint firstAttribute="trailing" secondItem="zEF-E7-Yhj" secondAttribute="trailing" constant="-160" id="Htx-tY-4Cm"/>
+                            <constraint firstItem="zEF-E7-Yhj" firstAttribute="leading" secondItem="n53-Yq-9zf" secondAttribute="leading" id="KDQ-dd-D8U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I4A-uR-i9s"/>

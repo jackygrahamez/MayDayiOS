@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D3019D21AA40596000C4FF7"
-               BuildableName = "MayDay.app"
+               BuildableName = "TextSOSAlert.app"
                BlueprintName = "MayDay"
                ReferencedContainer = "container:TextSOSAlert.xcodeproj">
             </BuildableReference>

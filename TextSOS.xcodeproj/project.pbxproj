@@ -548,7 +548,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8D3019CE1AA40596000C4FF7 /* Build configuration list for PBXProject "MayDay" */;
+			buildConfigurationList = 8D3019CE1AA40596000C4FF7 /* Build configuration list for PBXProject "TextSOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -901,6 +901,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "c48341ac-1b99-40c5-aa99-81f1c1cac9a9";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1005,7 +1006,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D3019CE1AA40596000C4FF7 /* Build configuration list for PBXProject "MayDay" */ = {
+		8D3019CE1AA40596000C4FF7 /* Build configuration list for PBXProject "TextSOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D3019F71AA40598000C4FF7 /* Debug */,

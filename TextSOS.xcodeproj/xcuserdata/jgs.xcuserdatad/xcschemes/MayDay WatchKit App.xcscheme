@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8D005F681AABBD5F00D75004"
+               BuildableName = "MayDay WatchKit App.app"
+               BlueprintName = "MayDay WatchKit App"
+               ReferencedContainer = "container:TextSOS.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D3019D21AA40596000C4FF7"
                BuildableName = "MayDay.app"
                BlueprintName = "MayDay"
@@ -23,14 +37,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D3019EE1AA40597000C4FF7"
-               BuildableName = "MayDayTests.xctest"
-               BlueprintName = "MayDayTests"
+               BlueprintIdentifier = "8D005F561AABBD5F00D75004"
+               BuildableName = "MayDay WatchKit Extension.appex"
+               BlueprintName = "MayDay WatchKit Extension"
                ReferencedContainer = "container:TextSOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,23 +56,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D3019EE1AA40597000C4FF7"
-               BuildableName = "MayDayTests.xctest"
-               BlueprintName = "MayDayTests"
-               ReferencedContainer = "container:TextSOS.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D3019D21AA40596000C4FF7"
-            BuildableName = "MayDay.app"
-            BlueprintName = "MayDay"
+            BlueprintIdentifier = "8D005F681AABBD5F00D75004"
+            BuildableName = "MayDay WatchKit App.app"
+            BlueprintName = "MayDay WatchKit App"
             ReferencedContainer = "container:TextSOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,16 +76,27 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/Text SOS Alert">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D3019D21AA40596000C4FF7"
-            BuildableName = "MayDay.app"
-            BlueprintName = "MayDay"
+            BlueprintIdentifier = "8D005F681AABBD5F00D75004"
+            BuildableName = "MayDay WatchKit App.app"
+            BlueprintName = "MayDay WatchKit App"
             ReferencedContainer = "container:TextSOS.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8D005F681AABBD5F00D75004"
+            BuildableName = "MayDay WatchKit App.app"
+            BlueprintName = "MayDay WatchKit App"
+            ReferencedContainer = "container:TextSOS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -91,16 +106,27 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/Text SOS Alert">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D3019D21AA40596000C4FF7"
-            BuildableName = "MayDay.app"
-            BlueprintName = "MayDay"
+            BlueprintIdentifier = "8D005F681AABBD5F00D75004"
+            BuildableName = "MayDay WatchKit App.app"
+            BlueprintName = "MayDay WatchKit App"
             ReferencedContainer = "container:TextSOS.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8D005F681AABBD5F00D75004"
+            BuildableName = "MayDay WatchKit App.app"
+            BlueprintName = "MayDay WatchKit App"
+            ReferencedContainer = "container:TextSOS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

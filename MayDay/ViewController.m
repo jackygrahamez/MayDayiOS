@@ -688,20 +688,21 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
         
         if (startDateObj != nil) {
             NSTimeInterval interval = [currentDateObj timeIntervalSinceDate:startDateObj];
-            if (interval<10 && interval > 2) {
-                triggerCount++;
-                NSLog (@"press number %i first press was %.0f seconds ago", triggerCount, interval);
-                if (triggerCount >= 8 ) {
-                    NSLog(@"triggering MayDay Alert");
-                    [masterViewController sendMessage];
-                    [masterViewController startTimer];
-                    startDateObj = nil;
-                    triggerCount = 0;
-                    alerting = true;
-                    //[masterViewController showAlerting];
-                    self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeAlertingView"];
+            if (interval<10) {
+                if (interval > 2) {
+                    triggerCount++;
+                    NSLog (@"press number %i first press was %.0f seconds ago", triggerCount, interval);
+                    if (triggerCount >= 5 ) {
+                        NSLog(@"triggering MayDay Alert");
+                        [masterViewController sendMessage];
+                        [masterViewController startTimer];
+                        startDateObj = nil;
+                        triggerCount = 0;
+                        alerting = true;
+                        //[masterViewController showAlerting];
+                        self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeAlertingView"];
+                    }
                 }
-                
             } else {
                 NSLog(@"reset trigger");
                 startDateObj = nil;
@@ -792,10 +793,10 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     pickerCircle.layer.position = endPoint;
     [CATransaction commit];
     
-
-
-    
 }
 
+- (IBAction)triggerButton:(id)sender {
+    [masterViewController powerButtonTrigger];    
+}
 
 @end

@@ -168,6 +168,28 @@
     }
 }
 
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
+    
+    if ([[userInfo objectForKey:@"request"] isEqualToString:@"Hello"]) {
+        
+        NSLog(@"containing app received message from watch");
+        NSLog(@"applicationDidBecomeActive");
+        BOOL alertingBool = false;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *alerting = [defaults objectForKey:@"altering"];
+        alertingBool = [alerting boolValue];
+        if (alertingBool) {
+            NSLog(@"alertingBool true");
+            self.window.rootViewController =
+            (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeAlertingView"];
+        }
+
+        
+        NSDictionary *response = @{@"response" : @"Watchkit"};
+        reply(response);
+    }
+    
+}
 
 
 @end

@@ -333,7 +333,7 @@
 			path = Locales;
 			sourceTree = "<group>";
 		};
-		8D005F581AABBD5F00D75004 /* MayDay WatchKit Extension */ = {
+		8D005F581AABBD5F00D75004 /* TextSOS WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
 				8D005F5C1AABBD5F00D75004 /* InterfaceController.h */,
@@ -345,6 +345,7 @@
 				8D005F651AABBD5F00D75004 /* Images.xcassets */,
 				8D005F591AABBD5F00D75004 /* Supporting Files */,
 			);
+			name = "TextSOS WatchKit Extension";
 			path = "MayDay WatchKit Extension";
 			sourceTree = "<group>";
 		};
@@ -357,13 +358,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8D005F6D1AABBD5F00D75004 /* MayDay WatchKit App */ = {
+		8D005F6D1AABBD5F00D75004 /* TextSOS WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
 				8D005F701AABBD5F00D75004 /* Interface.storyboard */,
 				8D005F731AABBD5F00D75004 /* Images.xcassets */,
 				8D005F6E1AABBD5F00D75004 /* Supporting Files */,
 			);
+			name = "TextSOS WatchKit App";
 			path = "MayDay WatchKit App";
 			sourceTree = "<group>";
 		};
@@ -384,10 +386,10 @@
 				81ED61601ABF02EB00A76A62 /* CoreLocation.framework */,
 				812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */,
 				812CA6FD1AB79CF7000DB19C /* Fabric.framework */,
-				8D3019D51AA40596000C4FF7 /* MayDay */,
-				8D3019F21AA40597000C4FF7 /* MayDayTests */,
-				8D005F581AABBD5F00D75004 /* MayDay WatchKit Extension */,
-				8D005F6D1AABBD5F00D75004 /* MayDay WatchKit App */,
+				8D3019D51AA40596000C4FF7 /* TextSOS */,
+				8D3019F21AA40597000C4FF7 /* TextSOSTests */,
+				8D005F581AABBD5F00D75004 /* TextSOS WatchKit Extension */,
+				8D005F6D1AABBD5F00D75004 /* TextSOS WatchKit App */,
 				8D3019D41AA40596000C4FF7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -403,7 +405,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8D3019D51AA40596000C4FF7 /* MayDay */ = {
+		8D3019D51AA40596000C4FF7 /* TextSOS */ = {
 			isa = PBXGroup;
 			children = (
 				814D94E41AD187D700224C86 /* Resources */,
@@ -419,6 +421,7 @@
 				8D3019D61AA40596000C4FF7 /* Supporting Files */,
 				81ED61621ABF035400A76A62 /* DetailViewController.h */,
 			);
+			name = TextSOS;
 			path = MayDay;
 			sourceTree = "<group>";
 		};
@@ -431,12 +434,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8D3019F21AA40597000C4FF7 /* MayDayTests */ = {
+		8D3019F21AA40597000C4FF7 /* TextSOSTests */ = {
 			isa = PBXGroup;
 			children = (
 				8D3019F51AA40598000C4FF7 /* MayDayTests.m */,
 				8D3019F31AA40598000C4FF7 /* Supporting Files */,
 			);
+			name = TextSOSTests;
 			path = MayDayTests;
 			sourceTree = "<group>";
 		};
@@ -757,7 +761,7 @@
 		8D005F781AABBD5F00D75004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -767,7 +771,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "c48341ac-1b99-40c5-aa99-81f1c1cac9a9";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -782,7 +786,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "c48341ac-1b99-40c5-aa99-81f1c1cac9a9";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -791,7 +795,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -801,7 +806,7 @@
 				INFOPLIST_FILE = "MayDay WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c48341ac-1b99-40c5-aa99-81f1c1cac9a9";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -819,7 +824,7 @@
 				INFOPLIST_FILE = "MayDay WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c48341ac-1b99-40c5-aa99-81f1c1cac9a9";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -914,7 +919,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -923,7 +928,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c48341ac-1b99-40c5-aa99-81f1c1cac9a9";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -942,7 +947,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c48341ac-1b99-40c5-aa99-81f1c1cac9a9";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -951,7 +956,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -963,7 +968,7 @@
 				INFOPLIST_FILE = MayDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c48341ac-1b99-40c5-aa99-81f1c1cac9a9";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MayDay.app/MayDay";
 			};
 			name = Debug;
@@ -972,7 +977,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -980,7 +985,7 @@
 				INFOPLIST_FILE = MayDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c48341ac-1b99-40c5-aa99-81f1c1cac9a9";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MayDay.app/MayDay";
 			};
 			name = Release;

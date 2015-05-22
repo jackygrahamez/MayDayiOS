@@ -10,7 +10,8 @@
 
 
 @interface InterfaceController()
-
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *label;
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *btn;
 @end
 
 
@@ -36,7 +37,19 @@
 
 - (IBAction)alarmPressed:(id)sender
 {
-     NSLog(@"alarmPressed!");
+    NSLog(@"alarmPressed!");
+    NSDictionary *requst = @{@"request":@"Hello"};
+    
+    [InterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            
+            [self.label setText:[replyInfo objectForKey:@"response"]];
+        }
+        
+    }];
 }
 
 @end

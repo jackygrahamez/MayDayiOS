@@ -14,10 +14,11 @@ NSUserDefaults *defaults;
 // Your global variable definition.
 NSInteger startTimeSeconds = 0,
         triggerCount = 0,
-        contactField = 1;
+        contactField = 1,
+        balanceInt = 10;
 NSDate *startDateObj = nil;
 ViewController *masterViewController;
-NSString *message, *first, *second, *third;
+NSString *message, *first, *second, *third, *balanceString;
 NSArray *contacts;
 BOOL alerting = false;
 
@@ -347,7 +348,17 @@ BOOL alerting = false;
     // Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadstring = [defaults objectForKey:@"messagestring"];
+    balanceString = [defaults objectForKey:@"balance"];
+    
+    if (balanceString) {
+        NSLog(@"balanceString %@", balanceString);
+        balanceInt = [balanceString intValue];
+        balanceString = [NSString stringWithFormat: @"Balance: %@", balanceString];
+        [balance setText:balanceString];
+    }
+    
     [message setText:loadstring];
+    
     masterViewController.saveContactsNext.alpha = 0.50;
     masterViewController.saveContactsNext.enabled = NO;
     masterViewController.saveContactsNext.userInteractionEnabled = NO;
@@ -486,7 +497,7 @@ BOOL alerting = false;
     NSString *debug = @"false";
     
     //Need to get a CA Certificate for the server
-    NSURL *someURLSetBefore = [NSURL URLWithString:@"http://maydaysos.net/messaging"];
+    NSURL *someURLSetBefore = [NSURL URLWithString:@"https://textsosalert.com/messaging"];
     //NSLog(@"someURLSetBefore %@",someURLSetBefore);
     //NSString *messageWithGPS = @"%@ test", *message;
     
@@ -561,6 +572,12 @@ BOOL alerting = false;
                  NSLog(@"Result for sent is %@", sent);
                  if ([sent isEqualToString:@"true"]) {
                      NSLog(@"message sent");
+                     balanceInt--;
+                     NSString *balanceUpdate = [@(balanceInt) stringValue];
+                     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                     [defaults setObject:balanceUpdate forKey:@"balance"];
+                     [defaults synchronize];
+                     
                      //[masterViewController showAlerting];
                      self.view.window.rootViewController = [self.storyboard
                                                             instantiateViewControllerWithIdentifier:@"homeAlertingView"];

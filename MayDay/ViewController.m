@@ -70,8 +70,46 @@ BOOL alerting = false;
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"Confirm Your In-App Purchase"
                           message:purchaseDialogMessage
-                          delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK",nil];
+                          delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Buy",nil];
+    alert.tag = 100;
     [alert show];
+    
+}
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    
+    // Is this my Alert View?
+    if (alertView.tag == 100) {
+        //Yes
+        
+        
+        // You need to compare 'buttonIndex' & 0 to other value(1,2,3) if u have more buttons.
+        // Then u can check which button was pressed.
+        if (buttonIndex == 0) {// 1st Other Button
+            
+            NSLog(@"buttonIndex 0");
+            
+        }
+        else if (buttonIndex == 1) {// 2nd Other Button
+            
+            NSLog(@"buttonIndex 1");
+            balanceInt = balanceInt + 50;
+            balanceInt--;
+            NSString *balanceUpdate = [@(balanceInt) stringValue];
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:balanceUpdate forKey:@"balance"];
+            [defaults synchronize];
+            UINavigationController *navigationController = self.navigationController;            
+            [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
+        }
+        
+    }
+    else {
+        //No
+        // Other Alert View
+        
+    }
     
 }
 

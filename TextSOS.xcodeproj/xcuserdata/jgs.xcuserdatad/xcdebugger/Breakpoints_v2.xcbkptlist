@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MayDay/ViewController.m"
-            timestampString = "454469042.509371"
+            timestampString = "454472539.940526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "477"
-            endingLineNumber = "477"
+            startingLineNumber = "515"
+            endingLineNumber = "515"
             landmarkName = "-swipedScreenRight:"
             landmarkType = "5">
          </BreakpointContent>

@@ -22,6 +22,7 @@
             <string>MomsTypewriter</string>
             <string>MomsTypewriter</string>
             <string>MomsTypewriter</string>
+            <string>MomsTypewriter</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -747,9 +748,33 @@ Make bullets larger and look like they do in this application. </string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-Td-WVw">
-                                <rect key="frame" x="16" y="301" width="288" height="1"/>
+                                <rect key="frame" x="16" y="300" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fQ-zV-QXV">
+                                <rect key="frame" x="16" y="301" width="288" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="In-App Purchases" backgroundImage="state_settings_480x50.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertSettingsButton:" destination="Ic7-CG-rQ4" eventType="touchUpInside" id="9Hl-z7-2nV"/>
+                                    <segue destination="d1f-uj-U6v" kind="push" id="Fp4-L9-5j5"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2a-m6-Svz">
+                                <rect key="frame" x="16" y="351" width="288" height="1"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="OzK-sL-bNn">
+                                <rect key="frame" x="255" y="158" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Itv-6y-BW6"/>
+                                    <constraint firstAttribute="height" constant="30" id="OKe-TG-pof"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="dPK-ua-Bbi">
                                 <rect key="frame" x="255" y="209" width="30" height="30"/>
                                 <constraints>
@@ -764,11 +789,11 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstAttribute="height" constant="30" id="sty-vt-Dtt"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="OzK-sL-bNn">
-                                <rect key="frame" x="255" y="158" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="3wk-Jm-CoM">
+                                <rect key="frame" x="255" y="311" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="Itv-6y-BW6"/>
-                                    <constraint firstAttribute="height" constant="30" id="OKe-TG-pof"/>
+                                    <constraint firstAttribute="width" constant="30" id="ldT-EI-jJn"/>
+                                    <constraint firstAttribute="height" constant="30" id="qO4-M3-ERg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-gC-i02">
@@ -780,6 +805,7 @@ Make bullets larger and look like they do in this application. </string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9fQ-zV-QXV" secondAttribute="centerX" id="BSd-ld-EpI"/>
                             <constraint firstAttribute="centerX" secondItem="QJz-V3-2S1" secondAttribute="centerX" id="GR8-zK-RdD"/>
                             <constraint firstAttribute="centerX" secondItem="kVl-Pj-2QW" secondAttribute="centerX" id="KHn-DB-yKe"/>
                             <constraint firstAttribute="centerX" secondItem="gtd-gC-i02" secondAttribute="centerX" id="MtA-DG-lrz"/>
@@ -788,6 +814,7 @@ Make bullets larger and look like they do in this application. </string>
                             <constraint firstItem="PnM-d0-hfr" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="QYJ-sH-8BP"/>
                             <constraint firstAttribute="centerX" secondItem="RFL-Td-WVw" secondAttribute="centerX" id="QdJ-g9-kLv"/>
                             <constraint firstItem="gtd-gC-i02" firstAttribute="top" secondItem="KCj-6j-rSI" secondAttribute="bottom" constant="8" id="Ujj-kL-qd7"/>
+                            <constraint firstItem="3wk-Jm-CoM" firstAttribute="leading" secondItem="9fQ-zV-QXV" secondAttribute="trailing" constant="-48" id="VH6-Hn-nyc"/>
                             <constraint firstAttribute="centerX" secondItem="aeR-l2-vPv" secondAttribute="centerX" id="WOi-Et-JXa"/>
                             <constraint firstAttribute="centerY" secondItem="OKi-PD-bcJ" secondAttribute="centerY" id="WTV-g4-TZf"/>
                             <constraint firstAttribute="centerX" secondItem="PnM-d0-hfr" secondAttribute="centerX" id="Xph-xs-D7f"/>
@@ -796,7 +823,10 @@ Make bullets larger and look like they do in this application. </string>
                             <constraint firstItem="dPK-ua-Bbi" firstAttribute="leading" secondItem="kVl-Pj-2QW" secondAttribute="trailing" constant="-48" id="dtZ-mQ-ukT"/>
                             <constraint firstItem="QJz-V3-2S1" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="hDq-xc-Zi0"/>
                             <constraint firstItem="RFL-Td-WVw" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="kUY-H3-3C3"/>
+                            <constraint firstAttribute="centerX" secondItem="f2a-m6-Svz" secondAttribute="centerX" id="ndN-gH-S6F"/>
+                            <constraint firstItem="f2a-m6-Svz" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="s3b-Il-g1l"/>
                             <constraint firstItem="OzK-sL-bNn" firstAttribute="leading" secondItem="aeR-l2-vPv" secondAttribute="trailing" constant="-48" id="tdG-1q-q3X"/>
+                            <constraint firstItem="9fQ-zV-QXV" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="uoZ-lW-wGd"/>
                             <constraint firstAttribute="centerX" secondItem="Upf-fe-KWw" secondAttribute="centerX" id="vJj-lB-YS1"/>
                             <constraint firstItem="aeR-l2-vPv" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="ydx-mZ-GR7"/>
                             <constraint firstItem="kVl-Pj-2QW" firstAttribute="leading" secondItem="Urv-dX-94b" secondAttribute="leadingMargin" constant="10" id="zbv-ed-WFm"/>
@@ -2428,6 +2458,77 @@ Make bullets larger and look like they do in this application. </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bA9-hv-TtT" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1892" y="276"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V8i-Jq-zcC">
+            <objects>
+                <viewController id="d1f-uj-U6v" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Hk-io-d4M"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aqb-jf-fNI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="avS-Q7-Otf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="lER-7o-Ty9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZs-X7-t8a">
+                                <rect key="frame" x="81" y="20" width="158" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="OE5-Iz-sGc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASq-qd-gWY">
+                                <rect key="frame" x="16" y="65" width="288" height="574"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
+
+Text SOS Alert is committed to ensuring the privacy of all our users. This Privacy Policy governs all pages on the Text SOS Alert app. It does not apply to pages hosted by other organizations.
+
+By using Text SOS Alert, you consent to the terms of this Privacy Policy. Text SOS Alert may change its terms from time to time and, if such changes are made, we may place notices so that you will be aware of them. Your continued use of Text SOS Alert will be on the terms of this Privacy Policy as amended from time to time.
+
+Personal information which you choose to provide will be retained by Text SOS Alert on your device only. Messages transmitted by Text SOS Alert will exist on other services and will be outside the control of Text SOS Alert.
+
+Text SOS Alert makes no guarantees regarding your information security.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ASq-qd-gWY" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leadingMargin" id="23a-Qv-l2i"/>
+                            <constraint firstItem="ASq-qd-gWY" firstAttribute="trailing" secondItem="avS-Q7-Otf" secondAttribute="trailingMargin" id="6MC-hQ-idL"/>
+                            <constraint firstItem="oZs-X7-t8a" firstAttribute="top" secondItem="9Hk-io-d4M" secondAttribute="bottom" constant="8" id="Elx-TE-3bi"/>
+                            <constraint firstItem="oZs-X7-t8a" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leadingMargin" constant="65" id="FH6-De-qV5"/>
+                            <constraint firstItem="oZs-X7-t8a" firstAttribute="centerX" secondItem="ASq-qd-gWY" secondAttribute="centerX" id="Fm8-bN-uI4"/>
+                            <constraint firstItem="lER-7o-Ty9" firstAttribute="top" secondItem="avS-Q7-Otf" secondAttribute="top" id="Ob9-rX-rAp"/>
+                            <constraint firstItem="lER-7o-Ty9" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leading" id="Q6p-oO-VsH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="lER-7o-Ty9" secondAttribute="bottom" constant="-99" id="RLL-Ab-VaD"/>
+                            <constraint firstItem="oZs-X7-t8a" firstAttribute="top" secondItem="9Hk-io-d4M" secondAttribute="bottom" id="Xgo-rj-neq"/>
+                            <constraint firstItem="ASq-qd-gWY" firstAttribute="top" secondItem="oZs-X7-t8a" secondAttribute="bottom" constant="8" symbolic="YES" id="Xpa-V2-HBr"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ASq-qd-gWY" secondAttribute="bottom" constant="-71" id="cKg-Fe-9O3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lER-7o-Ty9" secondAttribute="trailing" constant="-71" id="tK9-ff-HDO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zeo-3e-51s"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tf-OX-Uiq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2274" y="276"/>
         </scene>
     </scenes>
     <resources>

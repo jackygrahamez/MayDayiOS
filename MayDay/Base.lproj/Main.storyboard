@@ -2262,7 +2262,7 @@ Make bullets larger and look like they do in this application. </string>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3a-c8-X1M">
                                         <rect key="frame" x="98" y="334" width="109" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="109" id="9VE-ub-DJG"/>
                                             <constraint firstAttribute="height" constant="50" id="Jul-ea-q1n"/>
@@ -2474,8 +2474,8 @@ Make bullets larger and look like they do in this application. </string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="lER-7o-Ty9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZs-X7-t8a">
-                                <rect key="frame" x="81" y="20" width="158" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="In-App Purchase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZs-X7-t8a">
+                                <rect key="frame" x="10" y="20" width="300" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="OE5-Iz-sGc"/>
                                 </constraints>
@@ -2484,18 +2484,13 @@ Make bullets larger and look like they do in this application. </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASq-qd-gWY">
-                                <rect key="frame" x="16" y="65" width="288" height="574"/>
+                                <rect key="frame" x="16" y="65" width="288" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="UgA-RD-xpM"/>
+                                    <constraint firstAttribute="width" constant="288" id="Uva-9v-yfd"/>
+                                </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
-
-Text SOS Alert is committed to ensuring the privacy of all our users. This Privacy Policy governs all pages on the Text SOS Alert app. It does not apply to pages hosted by other organizations.
-
-By using Text SOS Alert, you consent to the terms of this Privacy Policy. Text SOS Alert may change its terms from time to time and, if such changes are made, we may place notices so that you will be aware of them. Your continued use of Text SOS Alert will be on the terms of this Privacy Policy as amended from time to time.
-
-Personal information which you choose to provide will be retained by Text SOS Alert on your device only. Messages transmitted by Text SOS Alert will exist on other services and will be outside the control of Text SOS Alert.
-
-Text SOS Alert makes no guarantees regarding your information security.</string>
+                                    <fragment content="If your balance is low you can purchase 50 text messages for $0.99.">
                                         <attributes>
                                             <color key="NSColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
@@ -2505,26 +2500,79 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUZ-qW-5YG">
+                                <rect key="frame" x="16" y="193" width="288" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Buy 50 text messages for $0.99">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buyFiftyMessages:" destination="d1f-uj-U6v" eventType="touchUpInside" id="ml9-3u-hy8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Promo Code" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md1-lC-eXF">
+                                <rect key="frame" x="16" y="147" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fmM-XJ-pCb">
+                                <rect key="frame" x="122" y="143" width="130" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7lL-he-sMC"/>
+                                    <constraint firstAttribute="width" constant="130" id="QH2-H4-PAa"/>
+                                    <constraint firstAttribute="width" constant="182" id="bKa-2a-t6Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bKa-2a-t6Z"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ASq-qd-gWY" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leadingMargin" id="23a-Qv-l2i"/>
+                            <constraint firstItem="Md1-lC-eXF" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leadingMargin" constant="8" id="3bP-2G-2Fh"/>
                             <constraint firstItem="ASq-qd-gWY" firstAttribute="trailing" secondItem="avS-Q7-Otf" secondAttribute="trailingMargin" id="6MC-hQ-idL"/>
                             <constraint firstItem="oZs-X7-t8a" firstAttribute="top" secondItem="9Hk-io-d4M" secondAttribute="bottom" constant="8" id="Elx-TE-3bi"/>
                             <constraint firstItem="oZs-X7-t8a" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leadingMargin" constant="65" id="FH6-De-qV5"/>
                             <constraint firstItem="oZs-X7-t8a" firstAttribute="centerX" secondItem="ASq-qd-gWY" secondAttribute="centerX" id="Fm8-bN-uI4"/>
                             <constraint firstItem="lER-7o-Ty9" firstAttribute="top" secondItem="avS-Q7-Otf" secondAttribute="top" id="Ob9-rX-rAp"/>
                             <constraint firstItem="lER-7o-Ty9" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leading" id="Q6p-oO-VsH"/>
+                            <constraint firstItem="Md1-lC-eXF" firstAttribute="top" secondItem="ASq-qd-gWY" secondAttribute="bottom" constant="12" id="Q8v-dq-Pjz"/>
                             <constraint firstAttribute="bottomMargin" secondItem="lER-7o-Ty9" secondAttribute="bottom" constant="-99" id="RLL-Ab-VaD"/>
                             <constraint firstItem="oZs-X7-t8a" firstAttribute="top" secondItem="9Hk-io-d4M" secondAttribute="bottom" id="Xgo-rj-neq"/>
                             <constraint firstItem="ASq-qd-gWY" firstAttribute="top" secondItem="oZs-X7-t8a" secondAttribute="bottom" constant="8" symbolic="YES" id="Xpa-V2-HBr"/>
+                            <constraint firstItem="fmM-XJ-pCb" firstAttribute="leading" secondItem="Md1-lC-eXF" secondAttribute="trailing" constant="8" id="b0Y-S0-lab"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ASq-qd-gWY" secondAttribute="bottom" constant="-71" id="cKg-Fe-9O3"/>
+                            <constraint firstItem="Md1-lC-eXF" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leadingMargin" constant="10" id="fhw-Uk-h4Z"/>
+                            <constraint firstItem="fmM-XJ-pCb" firstAttribute="top" secondItem="ASq-qd-gWY" secondAttribute="bottom" constant="8" id="jUP-uB-enW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lER-7o-Ty9" secondAttribute="trailing" constant="-71" id="tK9-ff-HDO"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FH6-De-qV5"/>
+                                <exclude reference="cKg-Fe-9O3"/>
+                                <exclude reference="fhw-Uk-h4Z"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Zeo-3e-51s"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="promocode" destination="fmM-XJ-pCb" id="0nW-qT-bX3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tf-OX-Uiq" sceneMemberID="firstResponder"/>
             </objects>

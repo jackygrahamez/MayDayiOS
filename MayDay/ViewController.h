@@ -28,6 +28,7 @@
     NSInteger startTimeSeconds;
     NSDate *startDateObj;
     
+    __weak IBOutlet UITextField *promocode;
     __weak IBOutlet UILabel *balance;
     __weak IBOutlet UIButton *saveContactsNext;
     __weak IBOutlet UITextField *contact1SetupField;

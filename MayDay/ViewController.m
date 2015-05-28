@@ -18,7 +18,7 @@ NSInteger startTimeSeconds = 0,
         balanceInt = 10;
 NSDate *startDateObj = nil;
 ViewController *masterViewController;
-NSString *message, *first, *second, *third, *balanceString;
+NSString *message, *first, *second, *third, *balanceString, *appSandboxString = @"1!Sbx-qe";
 NSArray *contacts;
 BOOL alerting = false;
 
@@ -59,6 +59,21 @@ BOOL alerting = false;
 
 #pragma mark - View lifecycle
 
+- (IBAction)buyFiftyMessages:(id)sender {
+    
+    NSString *promocodeString = promocode.text;
+    NSString *purchaseDialogMessage = @"Do you want to buy 50 text messages for $0.99?";
+    if ([appSandboxString isEqualToString:promocodeString]) {
+        purchaseDialogMessage = @"Do you want to buy 50 text messages for $0.99?\n\n[Environment: Sandbox]";
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Confirm Your In-App Purchase"
+                          message:purchaseDialogMessage
+                          delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK",nil];
+    [alert show];
+    
+}
 
 - (IBAction)contact1SetupField:(id)sender {
     

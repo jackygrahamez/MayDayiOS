@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "AudioToolbox/AudioServices.h"
 #import <AddressBookUI/AddressBookUI.h>
+#import <StoreKit/StoreKit.h>
+
 
 NSUserDefaults *defaults;
 // Your global variable definition.
@@ -23,7 +25,7 @@ NSArray *contacts;
 BOOL alerting = false;
 
 
-@interface ViewController ()
+@interface ViewController () <SKProductsRequestDelegate, SKPaymentTransactionObserver>
 {
     NSArray *_pickerData;
     UISwipeGestureRecognizer *swipeLeftToRightGesture;

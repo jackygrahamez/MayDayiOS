@@ -60,6 +60,7 @@
 		814D954C1AD187D700224C86 /* mobile_fr.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D95191AD187D700224C86 /* mobile_fr.json */; };
 		814D954D1AD187D700224C86 /* mobile_ph.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D951A1AD187D700224C86 /* mobile_ph.json */; };
 		814D954E1AD187D700224C86 /* mobile_pt.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D951B1AD187D700224C86 /* mobile_pt.json */; };
+		817A43B21B19652E00E39967 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817A43B11B19652E00E39967 /* StoreKit.framework */; };
 		818C18CD1B08FBEA0097E51A /* AppNameAndTagLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 818C18CC1B08FBEA0097E51A /* AppNameAndTagLine.png */; };
 		81DCA2BE1AC88E0400AFBC15 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */; };
 		81DCA2C21AC893B300AFBC15 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2C11AC893B300AFBC15 /* AddressBookUI.framework */; };
@@ -176,6 +177,7 @@
 		814D951A1AD187D700224C86 /* mobile_ph.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_ph.json; sourceTree = "<group>"; };
 		814D951B1AD187D700224C86 /* mobile_pt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_pt.json; sourceTree = "<group>"; };
 		814D954F1AD1891A00224C86 /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
+		817A43B11B19652E00E39967 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		818C18CC1B08FBEA0097E51A /* AppNameAndTagLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppNameAndTagLine.png; sourceTree = "<group>"; };
 		81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		81DCA2BF1AC8932B00AFBC15 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -224,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817A43B21B19652E00E39967 /* StoreKit.framework in Frameworks */,
 				81DCA2C21AC893B300AFBC15 /* AddressBookUI.framework in Frameworks */,
 				81DCA2BE1AC88E0400AFBC15 /* AudioToolbox.framework in Frameworks */,
 				81ED61611ABF02EB00A76A62 /* CoreLocation.framework in Frameworks */,
@@ -380,6 +383,7 @@
 		8D3019CA1AA40596000C4FF7 = {
 			isa = PBXGroup;
 			children = (
+				817A43B11B19652E00E39967 /* StoreKit.framework */,
 				81DCA2C11AC893B300AFBC15 /* AddressBookUI.framework */,
 				81DCA2BF1AC8932B00AFBC15 /* AddressBook.framework */,
 				81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */,
@@ -761,7 +765,7 @@
 		8D005F781AABBD5F00D75004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Shultz (GBBN7F28T4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -771,7 +775,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "9bb24bbf-e937-431e-9933-1e7967a73583";
+				PROVISIONING_PROFILE = "b383e8b4-225e-4425-9423-8bcee50f98dd";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -779,14 +783,14 @@
 		8D005F791AABBD5F00D75004 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Shultz (GBBN7F28T4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "MayDay WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "9bb24bbf-e937-431e-9933-1e7967a73583";
+				PROVISIONING_PROFILE = "b383e8b4-225e-4425-9423-8bcee50f98dd";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -795,8 +799,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Shultz (GBBN7F28T4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John Shultz (GBBN7F28T4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Shultz";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -806,7 +810,7 @@
 				INFOPLIST_FILE = "MayDay WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9bb24bbf-e937-431e-9933-1e7967a73583";
+				PROVISIONING_PROFILE = "b383e8b4-225e-4425-9423-8bcee50f98dd";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -817,14 +821,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Shultz (GBBN7F28T4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				IBSC_MODULE = MayDay_WatchKit_Extension;
 				INFOPLIST_FILE = "MayDay WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9bb24bbf-e937-431e-9933-1e7967a73583";
+				PROVISIONING_PROFILE = "b383e8b4-225e-4425-9423-8bcee50f98dd";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -848,8 +852,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Shultz (GBBN7F28T4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John Shultz (GBBN7F28T4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Shultz";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -869,7 +873,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "9bb24bbf-e937-431e-9933-1e7967a73583";
+				PROVISIONING_PROFILE = "b383e8b4-225e-4425-9423-8bcee50f98dd";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -892,8 +896,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Shultz (GBBN7F28T4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John Shultz (GBBN7F28T4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Shultz";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -907,7 +911,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "9bb24bbf-e937-431e-9933-1e7967a73583";
+				PROVISIONING_PROFILE = "b383e8b4-225e-4425-9423-8bcee50f98dd";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -919,7 +923,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Shultz (GBBN7F28T4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -928,7 +932,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9bb24bbf-e937-431e-9933-1e7967a73583";
+				PROVISIONING_PROFILE = "b383e8b4-225e-4425-9423-8bcee50f98dd";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -938,7 +942,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Shultz (GBBN7F28T4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -947,7 +951,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9bb24bbf-e937-431e-9933-1e7967a73583";
+				PROVISIONING_PROFILE = "b383e8b4-225e-4425-9423-8bcee50f98dd";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -956,7 +960,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Shultz (GBBN7F28T4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -968,7 +972,7 @@
 				INFOPLIST_FILE = MayDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9bb24bbf-e937-431e-9933-1e7967a73583";
+				PROVISIONING_PROFILE = "b383e8b4-225e-4425-9423-8bcee50f98dd";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MayDay.app/MayDay";
 			};
 			name = Debug;
@@ -977,7 +981,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Shultz (GBBN7F28T4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -985,7 +989,7 @@
 				INFOPLIST_FILE = MayDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9bb24bbf-e937-431e-9933-1e7967a73583";
+				PROVISIONING_PROFILE = "b383e8b4-225e-4425-9423-8bcee50f98dd";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MayDay.app/MayDay";
 			};
 			name = Release;

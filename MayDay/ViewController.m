@@ -42,7 +42,7 @@ BOOL alerting = false;
     if (newVCsIndex < [self.viewControllers count]) {
         [self popToViewController:[self.viewControllers objectAtIndex:newVCsIndex] animated:useAnimation];
     }
-    
+
     [self.navigationBar setBackgroundImage:[UIImage new]
                              forBarMetrics:UIBarMetricsDefault];
     self.navigationBar.shadowImage = [UIImage new];
@@ -61,40 +61,160 @@ BOOL alerting = false;
 
 #pragma mark - View lifecycle
 
+/*
+ * START IN-APP PURCHASE
+ */
+#define kRemoveAdsProductIdentifier @"merchant.com.textsosalert.buyfifty"
+
+- (void)tapsBuyFifty{
+    NSLog(@"User requests to buy 50 text messages");
+
+    if([SKPaymentQueue canMakePayments]){
+        NSLog(@"User can make payments");
+        NSString *promocodeString = promocode.text;
+        if ([appSandboxString isEqualToString:promocodeString]) {
+            NSString *purchaseDialogMessage = @"Do you want to buy 50 text messages for $0.99?\n\n[Environment: Sandbox]";
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"Confirm Your In-App Purchase"
+                                  message:purchaseDialogMessage
+                                  delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Buy",nil];
+            alert.tag = 100;
+            [alert show];
+        } else {
+            SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:
+[NSSet setWithObject:kRemoveAdsProductIdentifier]];
+            productsRequest.delegate = self;
+            [productsRequest start];
+        }
+
+    }
+    else{
+        NSLog(@"User cannot make payments due to parental controls");
+        //this is called the user cannot make payments, most likely due to parental controls
+    }
+}
+
+- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{
+    SKProduct *validProduct = nil;
+    int count = [response.products count];
+    if(count > 0){
+        validProduct = [response.products objectAtIndex:0];
+        NSLog(@"Products Available!");
+        [self purchase:validProduct];
+    }
+    else if(!validProduct){
+        NSLog(@"No products available");
+        //this is called if your product id is not valid, this shouldn't be called unless that happens.
+    }
+}
+
+- (IBAction)purchase:(SKProduct *)product{
+    SKPayment *payment = [SKPayment paymentWithProduct:product];
+
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    [[SKPaymentQueue defaultQueue] addPayment:payment];
+}
+
+
+- (IBAction) restore{
+    //this is called when the user restores purchases, you should hook this up to a button
+    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+}
+- (void) paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
+{
+    NSLog(@"received restored transactions: %lu", (unsigned long)queue.transactions.count);
+    for(SKPaymentTransaction *transaction in queue.transactions){
+        if(transaction.transactionState == SKPaymentTransactionStateRestored){
+            //called when the user successfully restores a purchase
+            NSLog(@"Transaction state -> Restored");
+
+            [self addFiftyMessages];
+            [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+            break;
+        }
+    }
+}
+
+- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions{
+    for(SKPaymentTransaction *transaction in transactions){
+        switch(transaction.transactionState){
+            case SKPaymentTransactionStatePurchasing: NSLog(@"Transaction state -> Purchasing");
+                //called when the user is in the process of purchasing, do not add any of your own code here.
+                break;
+            case SKPaymentTransactionStatePurchased:
+                //this is called when the user has successfully purchased the package (Cha-Ching!)
+                [self addFiftyMessages]; //you can add your code for what you want to happen when the user buys the purchase here, for this tutorial we use removing ads
+                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                NSLog(@"Transaction state -> Purchased");
+                break;
+            case SKPaymentTransactionStateRestored:
+                NSLog(@"Transaction state -> Restored");
+                //add the same code as you did from SKPaymentTransactionStatePurchased here
+                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                break;
+            case SKPaymentTransactionStateFailed:
+                //called when the transaction does not finish
+                if(transaction.error.code == SKErrorPaymentCancelled){
+                    NSLog(@"Transaction state -> Cancelled");
+                    //the user cancelled the payment ;(
+                }
+                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                break;
+        }
+    }
+}
+
+-(void)addFiftyMessages
+{
+    balanceInt = balanceInt + 50;
+    balanceInt--;
+    NSString *balanceUpdate = [@(balanceInt) stringValue];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:balanceUpdate forKey:@"balance"];
+    [defaults synchronize];
+    UINavigationController *navigationController = self.navigationController;
+    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
+}
+
+/*
+ * END IN-APP PURCHASE
+ */
+
+
 - (IBAction)buyFiftyMessages:(id)sender {
-    
+
     NSString *promocodeString = promocode.text;
     NSString *purchaseDialogMessage = @"Do you want to buy 50 text messages for $0.99?";
     if ([appSandboxString isEqualToString:promocodeString]) {
         purchaseDialogMessage = @"Do you want to buy 50 text messages for $0.99?\n\n[Environment: Sandbox]";
     }
-    
+
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"Confirm Your In-App Purchase"
                           message:purchaseDialogMessage
                           delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Buy",nil];
     alert.tag = 100;
     [alert show];
-    
+
 }
 
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    
-    
+
+
     // Is this my Alert View?
     if (alertView.tag == 100) {
         //Yes
-        
-        
+
+
         // You need to compare 'buttonIndex' & 0 to other value(1,2,3) if u have more buttons.
         // Then u can check which button was pressed.
         if (buttonIndex == 0) {// 1st Other Button
-            
+
             NSLog(@"buttonIndex 0");
-            
+
         }
         else if (buttonIndex == 1) {// 2nd Other Button
-            
+
             NSLog(@"buttonIndex 1");
             balanceInt = balanceInt + 50;
             balanceInt--;
@@ -102,21 +222,21 @@ BOOL alerting = false;
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             [defaults setObject:balanceUpdate forKey:@"balance"];
             [defaults synchronize];
-            UINavigationController *navigationController = self.navigationController;            
+            UINavigationController *navigationController = self.navigationController;
             [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
         }
-        
+
     }
     else {
         //No
         // Other Alert View
-        
+
     }
-    
+
 }
 
 - (IBAction)contact1SetupField:(id)sender {
-    
+
     if (contact1SetupField.text.length > 3) {
         NSLog(@"length > 3");
         masterViewController.saveContactsNext.alpha = 1.0;
@@ -158,7 +278,7 @@ BOOL alerting = false;
     NSString *savestring3 = contact3.text;
     [defaults setObject:savestring3 forKey:@"contact3string"];
     NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
-    
+
     [defaults synchronize];
     //[masterViewController.navigationController popViewControllerAnimated:YES];
     UINavigationController *navigationController = self.navigationController;
@@ -168,7 +288,7 @@ BOOL alerting = false;
     [masterViewController vibrate];
     NSLog(@"saveContact");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
+
     NSString *savestring1 = contact1.text;
     [defaults setObject:savestring1 forKey:@"contact1string"];
     NSString *savestring2 = contact2.text;
@@ -176,7 +296,7 @@ BOOL alerting = false;
     NSString *savestring3 = contact3.text;
     [defaults setObject:savestring3 forKey:@"contact3string"];
     NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
-    
+
     [defaults synchronize];
 }
 
@@ -253,7 +373,7 @@ BOOL alerting = false;
 - (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person
 {
     NSLog(@"Went here 1 ...");
-    
+
     [masterViewController peoplePickerNavigationController:peoplePicker shouldContinueAfterSelectingPerson:person];
 }
 
@@ -261,10 +381,10 @@ BOOL alerting = false;
 - (BOOL)peoplePickerNavigationController:
 (ABPeoplePickerNavigationController *)peoplePicker
       shouldContinueAfterSelectingPerson:(ABRecordRef)person {
-    
+
     [masterViewController displayPerson:person];
     [masterViewController dismissModalViewControllerAnimated:YES];
-    
+
     return NO;
 }
 
@@ -283,7 +403,7 @@ BOOL alerting = false;
     NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(person, kABPersonFirstNameProperty);
     //masterViewController.firstName.text = name;
     //contact1.text = name;
-    
+
     NSString* phone = nil;
     ABMultiValueRef phoneNumbers = ABRecordCopyValue(person, kABPersonPhoneProperty);
     if (ABMultiValueGetCount(phoneNumbers) > 0) {
@@ -306,8 +426,8 @@ BOOL alerting = false;
     if (contactField == 3) {
         contact3.text = phone;
     }
-    
-    
+
+
     CFRelease(phoneNumbers);
 }
 
@@ -321,18 +441,18 @@ BOOL alerting = false;
     [swipeLeftToRightGesture setNumberOfTouchesRequired: 1];
     [swipeLeftToRightGesture setDirection: UISwipeGestureRecognizerDirectionRight];
     [[masterViewController view] addGestureRecognizer: swipeLeftToRightGesture];
-    
+
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
-    
+
     [masterViewController.view addGestureRecognizer:tap];
 }
 
 -(void)intervalPickerInit
 {
     int total = 121;
-    
+
     NSMutableArray *minutes = [[NSMutableArray alloc] init];
     NSMutableArray *label = [[NSMutableArray alloc] init];
     for(int x = 1; x < total; x++)
@@ -343,7 +463,7 @@ BOOL alerting = false;
         [label addObject:[NSString stringWithString:min]];
     }
     _pickerData = label;
-    
+
     // Connect data
     masterViewController.messageIntervalPicker.dataSource = self;
     masterViewController.messageIntervalPicker.delegate = self;
@@ -351,18 +471,18 @@ BOOL alerting = false;
 
 - (void)initLocationManager
 {
-    
-    
+
+
     //Location Manager
-    
+
     locationManager = [[CLLocationManager alloc] init];
-    
+
     [locationManager startUpdatingLocation];
     NSLog(@" lat: %f",locationManager.location.coordinate.latitude);
     NSLog(@" lon: %f",locationManager.location.coordinate.longitude);
-    
+
     [locationManager stopUpdatingLocation];
-    
+
     if (self.locationManager == nil)
     {
         self.locationManager = [[CLLocationManager alloc] init];
@@ -370,11 +490,11 @@ BOOL alerting = false;
         kCLLocationAccuracyNearestTenMeters;
         self.locationManager.delegate = self;
     }
-    
+
     //[masterViewController.locationManager requestWhenInUseAuthorization];
     [masterViewController.locationManager requestAlwaysAuthorization];
     [masterViewController.locationManager startUpdatingLocation];
-    
+
     CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
                                     NULL, // observer
                                     displayStatusChanged, // callback
@@ -390,7 +510,7 @@ BOOL alerting = false;
     /*
      self.window.rootViewController =
      (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeView"];*/
-    
+
 }
 
 - (void)viewDidLoad {
@@ -399,25 +519,25 @@ BOOL alerting = false;
     //[masterViewController keepAlive];
     [masterViewController swipeInit];
     [masterViewController intervalPickerInit];
-    
+
     // Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadstring = [defaults objectForKey:@"messagestring"];
     balanceString = [defaults objectForKey:@"balance"];
-    
+
     if (balanceString) {
         NSLog(@"balanceString %@", balanceString);
         balanceInt = [balanceString intValue];
         balanceString = [NSString stringWithFormat: @"Balance: %@", balanceString];
         [balance setText:balanceString];
     }
-    
+
     [message setText:loadstring];
-    
+
     masterViewController.saveContactsNext.alpha = 0.50;
     masterViewController.saveContactsNext.enabled = NO;
     masterViewController.saveContactsNext.userInteractionEnabled = NO;
-    
+
     contact1.keyboardType = UIKeyboardTypeNumberPad;
     contact2.keyboardType = UIKeyboardTypeNumberPad;
     contact3.keyboardType = UIKeyboardTypeNumberPad;
@@ -438,7 +558,7 @@ BOOL alerting = false;
     }
 
     [masterViewController initLocationManager];
-    
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -449,7 +569,7 @@ BOOL alerting = false;
     if ([restorationId  isEqual: @"homeView"]) {
         NSLog(@"homeView");
     }
-    
+
     [masterViewController animate];
 }
 
@@ -521,8 +641,8 @@ BOOL alerting = false;
         NSLog(@"%@",self.navigationController.viewControllers);
         [masterViewController.navigationController popViewControllerAnimated:YES];
     }
-    
-   
+
+
 }
 
 - (void) sendMessage
@@ -530,17 +650,17 @@ BOOL alerting = false;
     //Get GPS Location
     // 1. Get the current location
     CLLocation *curPos = locationManager.location;
-    
+
     NSString *latitude = [[NSNumber numberWithDouble:curPos.coordinate.latitude] stringValue];
-    
+
     NSString *longitude = [[NSNumber numberWithDouble:curPos.coordinate.longitude] stringValue];
-    
+
     NSLog(@"Lat: %@", latitude);
     NSLog(@"Long: %@", longitude);
-    
-    
+
+
     [masterViewController initData];
-    
+
     //Validation INFO
     //May need to implement JSON Token Authentication
     //EXAMPLE #1 http://www.sitepoint.com/using-json-web-tokens-node-js/
@@ -550,15 +670,15 @@ BOOL alerting = false;
     NSString *adId = @"PLACEHOLDER";
     NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     NSString *debug = @"false";
-    
+
     //Need to get a CA Certificate for the server
     NSURL *someURLSetBefore = [NSURL URLWithString:@"https://textsosalert.com/messaging"];
     //NSLog(@"someURLSetBefore %@",someURLSetBefore);
     //NSString *messageWithGPS = @"%@ test", *message;
-    
+
     NSString *messageWithGPS = @"";
     NSString *messageWithoutGPS = @"";
-    
+
     //Check if GPS is working
     if (latitude != 0 && longitude != 0) {
         messageWithGPS = [NSString stringWithFormat:@"%@ I'm here https://maps.google.com/maps?1=%@,%@ via gps", message, latitude, longitude];
@@ -567,11 +687,11 @@ BOOL alerting = false;
         messageWithoutGPS = [NSString stringWithFormat:@"%@", message];
         message = messageWithoutGPS;
     }
-    
+
     NSLog(@"messageWithGPS %@", messageWithGPS);
-    
+
     NSArray *loc = @[longitude, latitude];
-    
+
     //[[CTMessageCenter sharedMessageCenter]  sendSMSWithText:message serviceCenter:nil toAddress:number];
     //build an info object and convert to json
     NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -581,18 +701,18 @@ BOOL alerting = false;
                                     password, @"password",
                                     adId, @"adId",
                                     idfv, @"idfv", nil];
-    
+
     //convert object to data
     NSError *error = nil;
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:kNilOptions error:&error];
-    
+
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:someURLSetBefore];
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setHTTPBody:jsonData];
-    
+
     // print json:
     NSLog(@"JSON summary: %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
     //NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
@@ -606,7 +726,7 @@ BOOL alerting = false;
          NSLog(@"error: %@", error);
          NSLog(@"data: %@", data);
          NSLog(@"response: %@", response);
-         
+
          NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
          if ([data length] >0 && error == nil && [httpResponse statusCode] == 200)
          {
@@ -632,7 +752,7 @@ BOOL alerting = false;
                      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                      [defaults setObject:balanceUpdate forKey:@"balance"];
                      [defaults synchronize];
-                     
+
                      //[masterViewController showAlerting];
                      self.view.window.rootViewController = [self.storyboard
                                                             instantiateViewControllerWithIdentifier:@"homeAlertingView"];
@@ -644,14 +764,14 @@ BOOL alerting = false;
                                            delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                      [alert show];
                  }
-                 
+
              } else {
                  NSLog(@"Server unavailable");
              }
          }
-         
+
      }];
-    
+
 }
 
 - (void) initData
@@ -664,10 +784,10 @@ BOOL alerting = false;
 
     second = [defaults objectForKey:@"contact2string"];
     second = [[second componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789-+()"] invertedSet]] componentsJoinedByString:@""];
-    
+
     third = [defaults objectForKey:@"contact3string"];
     third = [[third componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789-+()"] invertedSet]] componentsJoinedByString:@""];
-    
+
     contacts = [NSArray arrayWithObjects:first,second,third,nil];
 }
 
@@ -684,7 +804,7 @@ BOOL alerting = false;
                                    selector:@selector(tick:)
                                    userInfo:nil
                                     repeats:YES];
-    
+
 }
 
 
@@ -699,17 +819,17 @@ BOOL alerting = false;
 }
 
 static void displayStatusChanged(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
-    
+
     NSLog(@"event received!");
-    
+
     [masterViewController powerButtonTrigger];
-    
+
     // you might try inspecting the `userInfo` dictionary, to see
     //  if it contains any useful info
     if (userInfo != nil) {
         CFShow(userInfo);
     }
-    
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -732,7 +852,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     settingsBorder.hidden=true;
     aboutButton.hidden=true;
     aboutBorder.hidden=true;
-    
+
     alertingText.hidden=false;
     stopAlertingButton.hidden=false;
 }
@@ -748,7 +868,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     settingsBorder.hidden=false;
     aboutButton.hidden=false;
     aboutBorder.hidden=false;
-    
+
     alertingText.hidden=true;
     stopAlertingButton.hidden=true;
 }
@@ -757,7 +877,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 {
     if (alerting == false) {
         NSDate *currentDateObj = [NSDate date];
-        
+
         if (startDateObj != nil) {
             NSTimeInterval interval = [currentDateObj timeIntervalSinceDate:startDateObj];
             if (interval<10) {
@@ -790,13 +910,13 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 }
 
 - (void) keepAlive {
-    
+
     UIApplication * application = [UIApplication sharedApplication];
-    
+
     if([[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)])
     {
         NSLog(@"Multitasking Supported");
-        
+
         __block UIBackgroundTaskIdentifier background_task;
         background_task = [application beginBackgroundTaskWithExpirationHandler:^ {
             NSLog(@"Ending timer");
@@ -805,10 +925,10 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
             background_task = UIBackgroundTaskInvalid;
             [masterViewController keepAlive];
         }];
-        
+
         //To make the code block asynchronous
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            
+
             //### background task starts
             NSLog(@"Running in the background\n");
             while(TRUE)
@@ -817,7 +937,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
                 [NSThread sleepForTimeInterval:1]; //wait for 1 sec
             }
             //#### background task ends
-            
+
             //Clean up code. Tell the system that we are done.
             [application endBackgroundTask: background_task];
             background_task = UIBackgroundTaskInvalid;
@@ -848,27 +968,27 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     /* your animation code */
     CGPoint startPoint = [pickerCircle center];
     CGPoint endPoint = [pickerButton1 center];
-    
+
     CGMutablePathRef thePath = CGPathCreateMutable();
     CGPathMoveToPoint(thePath, NULL, startPoint.x, startPoint.y);
     CGPathAddLineToPoint(thePath, NULL, endPoint.x, endPoint.y);
-    
+
     CAKeyframeAnimation *animation = [CAKeyframeAnimation
                                       animationWithKeyPath:@"position"];
     animation.duration = 2.f;
     animation.path = thePath;
     animation.repeatCount = 2;
     animation.removedOnCompletion = YES;
-    
-    
+
+
     [pickerCircle.layer addAnimation:animation forKey:@"position"];
     pickerCircle.layer.position = endPoint;
     [CATransaction commit];
-    
+
 }
 
 - (IBAction)triggerButton:(id)sender {
-    [masterViewController powerButtonTrigger];    
+    [masterViewController powerButtonTrigger];
 }
 
 @end

@@ -11,7 +11,7 @@
 #import <AddressBookUI/AddressBookUI.h>
 
 @interface UINavigationController(indexPoping) {
-    
+
 }
 @property NSInteger *newVCsIndex;
 @end
@@ -27,7 +27,7 @@
     NSTimer *autoTimer;
     NSInteger startTimeSeconds;
     NSDate *startDateObj;
-    
+
     __weak IBOutlet UITextField *promocode;
     __weak IBOutlet UILabel *balance;
     __weak IBOutlet UIButton *saveContactsNext;
@@ -47,6 +47,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *contactPicker2;
 @property (weak, nonatomic) IBOutlet UIButton *contactPicker3;
 
+/*
+ * START IN APP PURCHASE
+ */
+- (IBAction)purchase;
+- (IBAction)restore;
+- (IBAction)tapsBuyFifty;
+
+/*
+ * END IN APP PURCHASE
+ */
 
 -(IBAction)saveMessage:(id)sender;
 -(IBAction)saveContact:(id)sender;
@@ -67,7 +77,7 @@
 
 @interface PickerObject : NSObject
 {
-    
+
 }
 //@property (nonatomic, strong) int *minutes;
 //@property (nonatomic, strong) NSString *label;

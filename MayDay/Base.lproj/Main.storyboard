@@ -2269,7 +2269,7 @@ Make bullets larger and look like they do in this application. </string>
                                             <constraint firstAttribute="height" constant="50" id="Zu4-vz-3uV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Next">
+                                        <state key="normal" title="Save">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -2284,7 +2284,7 @@ Make bullets larger and look like they do in this application. </string>
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="saveContactsNext:" destination="Pso-Rd-qPb" eventType="touchUpInside" id="z01-mb-7y2"/>
+                                            <action selector="saveContact:" destination="Pso-Rd-qPb" eventType="touchUpInside" id="xKq-jU-BkX"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6az-ma-bVP">
@@ -2452,7 +2452,6 @@ Make bullets larger and look like they do in this application. </string>
                         <outlet property="contactPicker2" destination="Xdl-R0-nrV" id="Brf-Zi-TIl"/>
                         <outlet property="contactPicker3" destination="g2a-VH-N5p" id="yvp-JM-c6a"/>
                         <outlet property="pickerButton1" destination="x8I-9f-rbA" id="4Dl-B7-f02"/>
-                        <outlet property="saveContactsNext" destination="C3a-c8-X1M" id="4Lv-hr-bvc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bA9-hv-TtT" sceneMemberID="firstResponder"/>

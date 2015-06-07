@@ -511,6 +511,7 @@ BOOL alerting = false;
     /*
      self.window.rootViewController =
      (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeView"];*/
+    [masterViewController powerButtonTrigger];
 
 }
 

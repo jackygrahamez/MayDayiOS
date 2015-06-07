@@ -1,4 +1,12 @@
-(C) 2015 Text SOS Alert. All Rights Reserved.
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>FooterText</key>
+			<string>(C) 2015 Text SOS Alert. All Rights Reserved.
 
 This software may not, in whole or in any part, be copied, reproduced, transmitted, translated (into any language, natural or computer), stored in a retrieval system, reduced to any electronic medium or machine readable format, or by any other form or means without prior consent, in writing, from Text SOS Alert.
 
@@ -41,3 +49,14 @@ Text SOS Alert makes no guarantees regarding your information security.
 
 End of Life Policy:
 Text SOS Alert may at some point end of life as a service. In the event of an end of life, notifications will be sent to alert users that the service will end in one year. In-App purchases will be disabled and the app will no longer be available for purchase.
+</string>
+			<key>Title</key>
+			<string>eula</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>Acknowledgements</string>
+</dict>
+</plist>

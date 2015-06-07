@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		810072DA1B0AD013000E97CD /* AppNameAndTagLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 810072D91B0AD013000E97CD /* AppNameAndTagLine.png */; };
+		8111877F1B23C4350043BB39 /* license.py in Resources */ = {isa = PBXBuildFile; fileRef = 8111877E1B23C4350043BB39 /* license.py */; };
 		812CA6FE1AB79CF7000DB19C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */; };
 		812CA6FF1AB79CF7000DB19C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812CA6FD1AB79CF7000DB19C /* Fabric.framework */; };
 		814D94D21AD0E78000224C86 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 814D94D11AD0E78000224C86 /* Settings.bundle */; };
@@ -124,6 +125,7 @@
 
 /* Begin PBXFileReference section */
 		810072D91B0AD013000E97CD /* AppNameAndTagLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppNameAndTagLine.png; sourceTree = "<group>"; };
+		8111877E1B23C4350043BB39 /* license.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = license.py; sourceTree = "<group>"; };
 		812CA6FC1AB79CF7000DB19C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		812CA6FD1AB79CF7000DB19C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		814D94D11AD0E78000224C86 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			children = (
 				814D950E1AD187D700224C86 /* eula.license */,
 				814D954F1AD1891A00224C86 /* Script.sh */,
+				8111877E1B23C4350043BB39 /* license.py */,
 			);
 			path = Licenses;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				814D95481AD187D700224C86 /* help_pt.json in Resources */,
 				814D952B1AD187D700224C86 /* circle_drop_shadow_30p_stroke.png in Resources */,
 				814D952C1AD187D700224C86 /* circle_drop_shadow_60p_stroke.png in Resources */,
+				8111877F1B23C4350043BB39 /* license.py in Resources */,
 				814D95271AD187D700224C86 /* arrow_next.png in Resources */,
 				81F7B2531AB650060028D42E /* Images.xcassets in Resources */,
 				814D952D1AD187D700224C86 /* circle_solid.png in Resources */,

@@ -6,6 +6,14 @@
 	<array>
 		<dict>
 			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string></string>
+			<key>Key</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string>Tutorial</string>
@@ -33,20 +41,6 @@
 			<string>End User License Agreement</string>
 			<key>File</key>
 			<string>eula</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string>Privacy Policy</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSChildPaneSpecifier</string>
-			<key>Title</key>
-			<string>Privacy Policy</string>
-			<key>File</key>
-			<string>Privacy</string>
 		</dict>
 	</array>
 </dict>

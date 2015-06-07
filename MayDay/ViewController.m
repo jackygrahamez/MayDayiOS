@@ -257,17 +257,18 @@ BOOL alerting = false;
     [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
 }
 - (IBAction)saveMessageNext:(id)sender {
-    [masterViewController vibrate];
+    //[masterViewController vibrate];
     NSString *savestring = message.text;
     NSString *setupCompleted = @"true";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"messagestring"];
     [defaults setObject:setupCompleted forKey:@"setupcompleted"];
     [defaults synchronize];
+    [masterViewController setupLocalNotifications];
 }
 -(IBAction)saveContact:(id)sender
 {
-    [masterViewController vibrate];
+    //[masterViewController vibrate];
     NSLog(@"saveContact");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
@@ -285,7 +286,7 @@ BOOL alerting = false;
     [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
 }
 - (IBAction)saveContactsNext:(id)sender {
-    [masterViewController vibrate];
+    //[masterViewController vibrate];
     NSLog(@"saveContact");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
@@ -520,6 +521,7 @@ BOOL alerting = false;
     [masterViewController swipeInit];
     [masterViewController intervalPickerInit];
     //[masterViewController vibrate];
+    //[masterViewController setupLocalNotifications];
 
     // Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -620,6 +622,75 @@ BOOL alerting = false;
     //This is how you manually SET(!!) a selection!
     [masterViewController.messageIntervalPicker selectRow:row inComponent:0 animated:YES];
 }
+
+- (void)setupLocalNotifications {
+
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
+    {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        
+    }
+    else
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
+    }
+    
+    //[[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    
+    // current time plus 10 secs
+    NSDate *now = [NSDate date];
+    NSDate *dateToFire = [now dateByAddingTimeInterval:5];
+    
+    NSLog(@"Text SOS Installed: %@", now);
+    
+    localNotification.fireDate = dateToFire;
+    localNotification.alertBody = @"Text SOS Installed";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    localNotification.applicationIconBadgeNumber = 1; // increment
+    
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
+    localNotification.userInfo = infoDict;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
+- (void)sendLocalNotifications {
+    
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
+    {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        
+    }
+    else
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
+    }
+    
+    //[[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    
+    // current time plus 10 secs
+    NSDate *now = [NSDate date];
+    NSDate *dateToFire = [now dateByAddingTimeInterval:5];
+    
+    NSLog(@"Alerting your emergency contacts: %@", now);
+    
+    localNotification.fireDate = dateToFire;
+    localNotification.alertBody = @"Alerting your emergency contacts";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    localNotification.applicationIconBadgeNumber = 1; // increment
+    
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
+    localNotification.userInfo = infoDict;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
 
 - (void)swipedScreenRight:(UISwipeGestureRecognizer*)swipeGesture
 {
@@ -749,6 +820,7 @@ BOOL alerting = false;
                  if ([sent isEqualToString:@"true"]) {
                      NSLog(@"message sent");
                      [masterViewController vibrate];
+                     [masterViewController sendLocalNotifications];
                      balanceInt--;
                      NSString *balanceUpdate = [@(balanceInt) stringValue];
                      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

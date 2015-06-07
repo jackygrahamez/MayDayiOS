@@ -519,6 +519,7 @@ BOOL alerting = false;
     //[masterViewController keepAlive];
     [masterViewController swipeInit];
     [masterViewController intervalPickerInit];
+    //[masterViewController vibrate];
 
     // Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -747,6 +748,7 @@ BOOL alerting = false;
                  NSLog(@"Result for sent is %@", sent);
                  if ([sent isEqualToString:@"true"]) {
                      NSLog(@"message sent");
+                     [masterViewController vibrate];
                      balanceInt--;
                      NSString *balanceUpdate = [@(balanceInt) stringValue];
                      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -952,7 +954,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 -(void)vibrate
 {
     NSLog(@"I'm vibrating");
-    //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     //AudioServicesPlaySystemSound(1103);
 }
 

@@ -690,7 +690,7 @@ Make bullets larger and look like they do in this application. </string>
         <!--View Controller-->
         <scene sceneID="z5a-HG-wWY">
             <objects>
-                <viewController id="Ic7-CG-rQ4" customClass="ViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="settings" storyboardIdentifier="settings" id="Ic7-CG-rQ4" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KCj-6j-rSI"/>
                         <viewControllerLayoutGuide type="bottom" id="XrD-cp-Gz7"/>
@@ -706,7 +706,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstAttribute="height" constant="960" id="hjv-rK-0eo"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="left" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-l2-vPv">
+                            <button opaque="NO" contentMode="left" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-l2-vPv">
                                 <rect key="frame" x="16" y="148" width="288" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="6we-CG-stY"/>
@@ -722,7 +722,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <segue destination="Q3l-1A-MH6" kind="push" id="a3U-v3-OnL"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-fe-KWw">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-fe-KWw">
                                 <rect key="frame" x="16" y="198" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -730,7 +730,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstAttribute="width" constant="288" id="xeO-Zt-xAI"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Pj-2QW">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Pj-2QW">
                                 <rect key="frame" x="16" y="199" width="288" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1gn-mu-aAC"/>
@@ -746,7 +746,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <segue destination="Pso-Rd-qPb" kind="push" id="a8s-68-DS7"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJz-V3-2S1">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJz-V3-2S1">
                                 <rect key="frame" x="16" y="249" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -754,7 +754,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstAttribute="height" constant="1" id="RQz-VX-JZK"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-d0-hfr">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-d0-hfr">
                                 <rect key="frame" x="16" y="250" width="288" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="73A-o4-8Rf"/>
@@ -770,7 +770,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <segue destination="ogg-33-r79" kind="push" id="6JW-q7-LND"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-Td-WVw">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-Td-WVw">
                                 <rect key="frame" x="16" y="300" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -778,7 +778,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstAttribute="width" constant="288" id="leK-U6-vSy"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fQ-zV-QXV">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fQ-zV-QXV">
                                 <rect key="frame" x="16" y="301" width="288" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="Cg5-2q-XNt"/>
@@ -794,7 +794,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <segue destination="d1f-uj-U6v" kind="push" id="Fp4-L9-5j5"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2a-m6-Svz">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2a-m6-Svz">
                                 <rect key="frame" x="16" y="351" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -802,35 +802,35 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstAttribute="height" constant="1" id="UQ8-b6-zHs"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="OzK-sL-bNn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="OzK-sL-bNn">
                                 <rect key="frame" x="255" y="158" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qlm-k6-0PK"/>
                                     <constraint firstAttribute="width" constant="30" id="uGF-I7-gCz"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="dPK-ua-Bbi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="dPK-ua-Bbi">
                                 <rect key="frame" x="255" y="209" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="m0K-6o-zMl"/>
                                     <constraint firstAttribute="height" constant="30" id="nz8-7X-sWB"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="MU8-bP-9S9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="MU8-bP-9S9">
                                 <rect key="frame" x="255" y="260" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="BHG-A0-YUc"/>
                                     <constraint firstAttribute="height" constant="30" id="eDq-pK-YO1"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="3wk-Jm-CoM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="3wk-Jm-CoM">
                                 <rect key="frame" x="255" y="311" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KOX-dK-kgO"/>
                                     <constraint firstAttribute="width" constant="30" id="oMt-wB-SCw"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-gC-i02">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-gC-i02">
                                 <rect key="frame" x="81" y="28" width="158" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="NEP-qM-lO4"/>
@@ -843,6 +843,8 @@ Make bullets larger and look like they do in this application. </string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9fQ-zV-QXV" secondAttribute="centerX" id="22b-4s-jWS"/>
+                            <constraint firstAttribute="centerX" secondItem="aeR-l2-vPv" secondAttribute="centerX" id="5C6-Ga-G3W"/>
                             <constraint firstItem="f2a-m6-Svz" firstAttribute="top" secondItem="9fQ-zV-QXV" secondAttribute="bottom" id="5M9-oJ-u7c"/>
                             <constraint firstItem="RFL-Td-WVw" firstAttribute="top" secondItem="PnM-d0-hfr" secondAttribute="bottom" id="7eg-BK-7fx"/>
                             <constraint firstItem="OzK-sL-bNn" firstAttribute="top" secondItem="aeR-l2-vPv" secondAttribute="bottom" constant="-40" id="7qF-Eh-5XX"/>
@@ -850,15 +852,22 @@ Make bullets larger and look like they do in this application. </string>
                             <constraint firstItem="MU8-bP-9S9" firstAttribute="leading" secondItem="PnM-d0-hfr" secondAttribute="trailing" constant="-49" id="8vD-YO-EA2"/>
                             <constraint firstItem="aeR-l2-vPv" firstAttribute="top" secondItem="gtd-gC-i02" secondAttribute="bottom" constant="50" id="Axk-rb-g17"/>
                             <constraint firstItem="kVl-Pj-2QW" firstAttribute="top" secondItem="Upf-fe-KWw" secondAttribute="bottom" id="CAw-zP-RRi"/>
+                            <constraint firstAttribute="centerX" secondItem="f2a-m6-Svz" secondAttribute="centerX" id="COg-Tp-fI5"/>
                             <constraint firstItem="dPK-ua-Bbi" firstAttribute="top" secondItem="kVl-Pj-2QW" secondAttribute="bottom" constant="-40" id="E9M-Sl-6sg"/>
+                            <constraint firstAttribute="centerX" secondItem="Upf-fe-KWw" secondAttribute="centerX" id="Hfq-h2-Fkg"/>
                             <constraint firstItem="PnM-d0-hfr" firstAttribute="top" secondItem="MU8-bP-9S9" secondAttribute="bottom" constant="-40" id="IbO-sQ-gVp"/>
                             <constraint firstItem="QJz-V3-2S1" firstAttribute="top" secondItem="kVl-Pj-2QW" secondAttribute="bottom" id="Ksd-Gw-Lpb"/>
                             <constraint firstItem="Upf-fe-KWw" firstAttribute="top" secondItem="aeR-l2-vPv" secondAttribute="bottom" id="Mxz-tH-mmg"/>
+                            <constraint firstAttribute="centerX" secondItem="kVl-Pj-2QW" secondAttribute="centerX" id="OQN-cZ-i4F"/>
                             <constraint firstItem="gtd-gC-i02" firstAttribute="top" secondItem="KCj-6j-rSI" secondAttribute="bottom" constant="28" id="OvM-rJ-2Lc"/>
+                            <constraint firstAttribute="centerX" secondItem="RFL-Td-WVw" secondAttribute="centerX" id="QtX-ks-7aP"/>
+                            <constraint firstAttribute="centerX" secondItem="QJz-V3-2S1" secondAttribute="centerX" id="RjK-Uv-nBc"/>
                             <constraint firstItem="9fQ-zV-QXV" firstAttribute="top" secondItem="RFL-Td-WVw" secondAttribute="bottom" id="TJH-qT-idO"/>
                             <constraint firstAttribute="centerY" secondItem="OKi-PD-bcJ" secondAttribute="centerY" id="Wvc-6Q-VUK"/>
                             <constraint firstItem="9fQ-zV-QXV" firstAttribute="top" secondItem="3wk-Jm-CoM" secondAttribute="bottom" constant="-40" id="bk8-KD-WbF"/>
                             <constraint firstAttribute="centerX" secondItem="OKi-PD-bcJ" secondAttribute="centerX" id="fVp-de-ZNe"/>
+                            <constraint firstAttribute="centerX" secondItem="PnM-d0-hfr" secondAttribute="centerX" id="nFZ-eu-sEe"/>
+                            <constraint firstAttribute="centerX" secondItem="gtd-gC-i02" secondAttribute="centerX" id="nHy-Tn-znc"/>
                             <constraint firstItem="OzK-sL-bNn" firstAttribute="leading" secondItem="aeR-l2-vPv" secondAttribute="trailing" constant="-49" id="pTD-Sp-2As"/>
                             <constraint firstItem="PnM-d0-hfr" firstAttribute="top" secondItem="QJz-V3-2S1" secondAttribute="bottom" id="ulc-il-O6Z"/>
                             <constraint firstItem="dPK-ua-Bbi" firstAttribute="leading" secondItem="kVl-Pj-2QW" secondAttribute="trailing" constant="-49" id="zpy-rm-7tG"/>
@@ -2401,7 +2410,9 @@ Make bullets larger and look like they do in this application. </string>
                                     </textView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Bct-F4-1bs" firstAttribute="top" secondItem="LbX-36-JFi" secondAttribute="bottom" constant="-28" id="1hb-9c-P3t"/>
                                     <constraint firstItem="3OM-OX-u5Q" firstAttribute="top" secondItem="FaY-ca-llf" secondAttribute="topMargin" id="2Pp-tR-5QZ"/>
+                                    <constraint firstItem="hnM-Bi-uMl" firstAttribute="leading" secondItem="aUh-qx-4rJ" secondAttribute="trailing" constant="-17" id="2SF-44-58T"/>
                                     <constraint firstItem="g2a-VH-N5p" firstAttribute="bottom" secondItem="Svk-kI-Dob" secondAttribute="bottom" id="2VU-oA-eyK"/>
                                     <constraint firstItem="Bct-F4-1bs" firstAttribute="top" secondItem="x8I-9f-rbA" secondAttribute="top" id="2qF-bb-TP6"/>
                                     <constraint firstItem="3OM-OX-u5Q" firstAttribute="centerX" secondItem="6az-ma-bVP" secondAttribute="centerX" id="4Ux-Og-aLp"/>
@@ -2413,10 +2424,12 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstItem="2mI-Q8-UPj" firstAttribute="leading" secondItem="uj1-an-7iF" secondAttribute="trailing" constant="24" id="9yf-22-OhR"/>
                                     <constraint firstAttribute="trailing" secondItem="3OM-OX-u5Q" secondAttribute="trailing" constant="-1" id="9yz-Iu-AL6"/>
                                     <constraint firstItem="Svk-kI-Dob" firstAttribute="top" secondItem="hnM-Bi-uMl" secondAttribute="bottom" constant="24" id="Al4-Oa-H3C"/>
+                                    <constraint firstItem="LbX-36-JFi" firstAttribute="leading" secondItem="Bct-F4-1bs" secondAttribute="trailing" constant="-17" id="Awz-hQ-4OF"/>
                                     <constraint firstItem="C3a-c8-X1M" firstAttribute="leading" secondItem="FaY-ca-llf" secondAttribute="leading" constant="98" id="BT5-GS-TEK"/>
                                     <constraint firstItem="LbX-36-JFi" firstAttribute="top" secondItem="ZVl-OV-Kya" secondAttribute="bottom" constant="16" id="CBa-Uw-gFR"/>
                                     <constraint firstItem="Bct-F4-1bs" firstAttribute="leading" secondItem="Svk-kI-Dob" secondAttribute="leading" id="CTt-Sg-QN6"/>
                                     <constraint firstItem="x8I-9f-rbA" firstAttribute="leading" secondItem="hnM-Bi-uMl" secondAttribute="trailing" constant="8" symbolic="YES" id="Dhh-SP-ua7"/>
+                                    <constraint firstItem="Svk-kI-Dob" firstAttribute="top" secondItem="ZVl-OV-Kya" secondAttribute="bottom" constant="-27" id="Doy-4H-apX"/>
                                     <constraint firstItem="x8I-9f-rbA" firstAttribute="leading" secondItem="hnM-Bi-uMl" secondAttribute="trailing" constant="8" symbolic="YES" id="Ecw-Qi-SZo"/>
                                     <constraint firstItem="Bct-F4-1bs" firstAttribute="baseline" secondItem="LbX-36-JFi" secondAttribute="baseline" id="FaP-nc-Ryx"/>
                                     <constraint firstItem="Svk-kI-Dob" firstAttribute="bottom" secondItem="Xdl-R0-nrV" secondAttribute="bottom" id="HDd-88-ici"/>
@@ -2430,6 +2443,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstItem="ZVl-OV-Kya" firstAttribute="leading" secondItem="hnM-Bi-uMl" secondAttribute="leading" id="RW1-7V-Ajn"/>
                                     <constraint firstItem="7K2-jW-XAz" firstAttribute="top" secondItem="FaY-ca-llf" secondAttribute="top" constant="-49" id="Tzx-0B-owf"/>
                                     <constraint firstItem="aUh-qx-4rJ" firstAttribute="trailing" secondItem="Svk-kI-Dob" secondAttribute="trailing" id="WiK-tD-q53"/>
+                                    <constraint firstItem="ZVl-OV-Kya" firstAttribute="leading" secondItem="Svk-kI-Dob" secondAttribute="trailing" constant="-17" id="WjN-p3-61L"/>
                                     <constraint firstItem="x8I-9f-rbA" firstAttribute="trailing" secondItem="2mI-Q8-UPj" secondAttribute="trailing" id="X41-eT-dF1"/>
                                     <constraint firstItem="g2a-VH-N5p" firstAttribute="leading" secondItem="ZVl-OV-Kya" secondAttribute="trailing" constant="8" symbolic="YES" id="bFB-zt-BpH"/>
                                     <constraint firstAttribute="trailing" secondItem="i1h-Nd-Wqv" secondAttribute="trailing" constant="62" id="bz0-Us-vQU"/>
@@ -2446,6 +2460,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstItem="hnM-Bi-uMl" firstAttribute="top" secondItem="uj1-an-7iF" secondAttribute="bottom" constant="16" id="o3R-AG-Epi"/>
                                     <constraint firstAttribute="trailing" secondItem="7K2-jW-XAz" secondAttribute="trailing" id="o9w-Oc-X41"/>
                                     <constraint firstItem="hnM-Bi-uMl" firstAttribute="top" secondItem="2mI-Q8-UPj" secondAttribute="bottom" constant="8" symbolic="YES" id="pI2-6f-dBb"/>
+                                    <constraint firstItem="aUh-qx-4rJ" firstAttribute="top" secondItem="hnM-Bi-uMl" secondAttribute="bottom" constant="-27" id="rvv-Bi-hvv"/>
                                     <constraint firstItem="x8I-9f-rbA" firstAttribute="trailing" secondItem="g2a-VH-N5p" secondAttribute="trailing" id="sB1-Y5-2XA"/>
                                     <constraint firstAttribute="trailing" secondItem="i1h-Nd-Wqv" secondAttribute="trailing" constant="62" id="sLb-Pu-GuO"/>
                                     <constraint firstItem="x8I-9f-rbA" firstAttribute="leading" secondItem="g2a-VH-N5p" secondAttribute="leading" id="szl-hB-kuv"/>

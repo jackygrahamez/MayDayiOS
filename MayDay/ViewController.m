@@ -130,6 +130,8 @@ BOOL alerting = false;
 
             [self addFiftyMessages];
             [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+            UINavigationController *navigationController = self.navigationController;
+            [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
             break;
         }
     }
@@ -679,6 +681,10 @@ BOOL alerting = false;
         [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
         //[self.navigationController popToRootViewControllerAnimated:YES];
     } else if ([restorationId  isEqual: @"alertSettings"]) {
+        UINavigationController *navigationController = self.navigationController;
+        [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
+        //[self.navigationController popToRootViewControllerAnimated:YES];
+    } else if ([restorationId  isEqual: @"settings"]) {
         UINavigationController *navigationController = self.navigationController;
         [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
         //[self.navigationController popToRootViewControllerAnimated:YES];

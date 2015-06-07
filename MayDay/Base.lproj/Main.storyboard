@@ -51,7 +51,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3L-MV-7wb">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3L-MV-7wb">
                                 <rect key="frame" x="95" y="266" width="130" height="37"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -64,7 +64,7 @@
                                     <action selector="stopAlerting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HDz-6h-Je6"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMM-T6-b5S">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMM-T6-b5S">
                                 <rect key="frame" x="16" y="161" width="288" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="JNR-UV-23q"/>
@@ -88,7 +88,7 @@
                                     <constraint firstAttribute="height" constant="1" id="3Ph-dG-TrV"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Py-DHf">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Py-DHf">
                                 <rect key="frame" x="16" y="110" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -106,8 +106,12 @@
                                 <rect key="frame" x="16" y="386" width="288" height="1"/>
                                 <color key="backgroundColor" red="0.98099320339999996" green="1" blue="0.97473730030000005" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Md-xA-Hzk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Md-xA-Hzk">
                                 <rect key="frame" x="108" y="82" width="105" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="72y-eS-dQe"/>
+                                    <constraint firstAttribute="height" constant="21" id="U8s-SC-9AT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -136,8 +140,8 @@
                                     <segue destination="QXS-Qf-zOa" kind="push" id="PhP-xR-4K2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H42-Jx-TZe">
-                                <rect key="frame" x="16" y="119" width="288" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H42-Jx-TZe">
+                                <rect key="frame" x="16" y="150" width="288" height="90"/>
                                 <attributedString key="attributedText">
                                     <fragment content="In an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.">
                                         <attributes>
@@ -210,7 +214,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Balance: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i40-h8-eN0" customClass="balance">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Balance: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i40-h8-eN0" customClass="balance">
                                 <rect key="frame" x="16" y="119" width="288" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="152" id="3p7-bt-UKU"/>
@@ -245,6 +249,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstAttribute="trailingMargin" secondItem="TSW-X5-H0b" secondAttribute="trailing" constant="19" id="7hC-aR-CQB"/>
                             <constraint firstItem="4Md-xA-Hzk" firstAttribute="centerX" secondItem="6AP-gU-Ea7" secondAttribute="centerX" id="7mx-Qd-Kud"/>
                             <constraint firstItem="0Kj-Nl-4gc" firstAttribute="centerY" secondItem="urp-It-FY4" secondAttribute="centerY" id="8Q1-IY-nmR"/>
+                            <constraint firstAttribute="centerX" secondItem="4Md-xA-Hzk" secondAttribute="centerX" id="8gp-Nx-jMV"/>
                             <constraint firstItem="0Qc-6a-tNd" firstAttribute="top" secondItem="O3L-MV-7wb" secondAttribute="bottom" constant="31" id="8o2-8W-ZJs"/>
                             <constraint firstItem="urp-It-FY4" firstAttribute="leading" secondItem="0Kj-Nl-4gc" secondAttribute="trailing" constant="-49" id="AHC-y7-2LQ"/>
                             <constraint firstItem="0Qc-6a-tNd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="DCR-3V-1oi"/>
@@ -269,6 +274,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstItem="zMM-T6-b5S" firstAttribute="top" secondItem="K7D-Py-DHf" secondAttribute="bottom" constant="50" id="MXV-th-0bp"/>
                             <constraint firstItem="urp-It-FY4" firstAttribute="leading" secondItem="0Kj-Nl-4gc" secondAttribute="trailing" constant="-49" id="MbX-eA-ENf"/>
                             <constraint firstItem="TSW-X5-H0b" firstAttribute="trailing" secondItem="Orf-Gy-GCP" secondAttribute="trailing" id="Nem-Sv-QYY"/>
+                            <constraint firstItem="H42-Jx-TZe" firstAttribute="top" secondItem="i40-h8-eN0" secondAttribute="bottom" constant="10" id="Njc-Sd-kOy"/>
                             <constraint firstItem="O3L-MV-7wb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QLY-GM-jVS"/>
                             <constraint firstItem="ved-Dl-NPr" firstAttribute="top" secondItem="H42-Jx-TZe" secondAttribute="bottom" constant="44" id="QtY-3n-g8g"/>
                             <constraint firstItem="i40-h8-eN0" firstAttribute="top" secondItem="4Md-xA-Hzk" secondAttribute="bottom" constant="16" id="SCi-lb-y3b"/>
@@ -326,6 +332,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Nem-Sv-QYY"/>
+                                <exclude reference="FJ1-ML-pSK"/>
                                 <exclude reference="G7b-Tb-TgO"/>
                                 <exclude reference="kaw-ua-3DK"/>
                                 <exclude reference="yq4-po-vmV"/>
@@ -704,7 +711,6 @@ Make bullets larger and look like they do in this application. </string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="messageSettingsButton:" destination="Ic7-CG-rQ4" eventType="touchUpInside" id="OT2-Vt-TBU"/>
                                     <segue destination="Q3l-1A-MH6" kind="push" id="a3U-v3-OnL"/>
                                 </connections>
                             </button>
@@ -721,7 +727,6 @@ Make bullets larger and look like they do in this application. </string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="contactSettingsButton:" destination="Ic7-CG-rQ4" eventType="touchUpInside" id="hu3-RN-qLC"/>
                                     <segue destination="Pso-Rd-qPb" kind="push" id="a8s-68-DS7"/>
                                 </connections>
                             </button>
@@ -738,7 +743,6 @@ Make bullets larger and look like they do in this application. </string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="alertSettingsButton:" destination="Ic7-CG-rQ4" eventType="touchUpInside" id="gym-Bv-uXG"/>
                                     <segue destination="ogg-33-r79" kind="push" id="6JW-q7-LND"/>
                                 </connections>
                             </button>
@@ -755,7 +759,6 @@ Make bullets larger and look like they do in this application. </string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="alertSettingsButton:" destination="Ic7-CG-rQ4" eventType="touchUpInside" id="9Hl-z7-2nV"/>
                                     <segue destination="d1f-uj-U6v" kind="push" id="Fp4-L9-5j5"/>
                                 </connections>
                             </button>

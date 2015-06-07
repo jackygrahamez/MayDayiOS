@@ -2036,15 +2036,6 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
                                             <constraint firstAttribute="height" constant="800" id="hLc-wa-OQB"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-Zi-7Au">
-                                        <rect key="frame" x="81" y="18" width="158" height="37"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="tQu-00-3KI"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8lD-Fd-BAO">
                                         <rect key="frame" x="16" y="63" width="304" height="1200"/>
                                         <constraints>
@@ -2070,6 +2061,15 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-Zi-7Au">
+                                        <rect key="frame" x="81" y="18" width="158" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="tQu-00-3KI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="tLz-Fj-fR6" secondAttribute="trailing" constant="-27" id="3yD-XJ-mAw"/>
@@ -2114,20 +2114,19 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-h2-XkC">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-h2-XkC">
                                 <rect key="frame" x="0.0" y="-20" width="322" height="588"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="ml7-R8-FFN">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="ml7-R8-FFN">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="681" id="cpU-tE-9o6"/>
+                                            <constraint firstAttribute="height" constant="1200" id="Bjh-Fu-hBM"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XM-i5-n7A">
-                                        <rect key="frame" x="81" y="28" width="158" height="37"/>
+                                        <rect key="frame" x="82" y="28" width="158" height="37"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="Ily-0S-Twh"/>
-                                            <constraint firstAttribute="width" constant="158" id="dHF-JQ-GNf"/>
+                                            <constraint firstAttribute="height" constant="37" id="85d-ed-rPW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -2136,7 +2135,7 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdT-Ao-xFz">
                                         <rect key="frame" x="8" y="73" width="304" height="1200"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1200" id="07D-Zm-F4T"/>
+                                            <constraint firstAttribute="height" constant="1200" id="Fp6-rw-uWU"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -2163,25 +2162,36 @@ Make bullets larger and look like they do in this application. </string>
                                     </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="top" secondItem="5XM-i5-n7A" secondAttribute="bottom" constant="8" symbolic="YES" id="0As-nc-3R8"/>
-                                    <constraint firstItem="ml7-R8-FFN" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leading" id="4YA-Uc-E2Y"/>
-                                    <constraint firstItem="ml7-R8-FFN" firstAttribute="top" secondItem="dgh-h2-XkC" secondAttribute="top" id="5IG-nC-11q"/>
-                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="centerX" secondItem="5XM-i5-n7A" secondAttribute="centerX" id="Dje-2z-hBb"/>
-                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="top" secondItem="dgh-h2-XkC" secondAttribute="top" constant="28" id="Gqa-TR-h69"/>
-                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leadingMargin" id="J4O-eA-04p"/>
-                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leading" constant="81" id="aL0-vR-HlG"/>
-                                    <constraint firstAttribute="bottom" secondItem="ml7-R8-FFN" secondAttribute="bottom" constant="-113" id="lI8-3b-C7J"/>
-                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="centerX" secondItem="ml7-R8-FFN" secondAttribute="centerX" id="lu0-dO-RF7"/>
-                                    <constraint firstAttribute="trailing" secondItem="ml7-R8-FFN" secondAttribute="trailing" constant="2" id="qgH-nV-Duf"/>
+                                    <constraint firstItem="ml7-R8-FFN" firstAttribute="top" secondItem="dgh-h2-XkC" secondAttribute="top" id="2TP-if-0jY"/>
+                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="centerX" secondItem="SdT-Ao-xFz" secondAttribute="centerX" id="445-r6-4PJ"/>
+                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leading" constant="82" id="4zX-vO-OUB"/>
+                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="centerX" secondItem="ml7-R8-FFN" secondAttribute="centerX" id="8Y9-d2-9KN"/>
+                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leadingMargin" id="BWf-SP-282"/>
+                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="top" secondItem="5XM-i5-n7A" secondAttribute="bottom" constant="8" symbolic="YES" id="CfA-yS-yd2"/>
+                                    <constraint firstAttribute="trailing" secondItem="5XM-i5-n7A" secondAttribute="trailing" constant="82" id="G8R-72-pcX"/>
+                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="top" secondItem="dgh-h2-XkC" secondAttribute="top" constant="28" id="JyK-z2-WSu"/>
+                                    <constraint firstItem="ml7-R8-FFN" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leading" id="KV9-vG-HYr"/>
+                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="top" secondItem="5XM-i5-n7A" secondAttribute="bottom" constant="8" symbolic="YES" id="h7o-Ol-VHm"/>
+                                    <constraint firstAttribute="trailing" secondItem="ml7-R8-FFN" secondAttribute="trailing" constant="2" id="oXw-w5-i84"/>
+                                    <constraint firstAttribute="bottom" secondItem="5XM-i5-n7A" secondAttribute="bottom" constant="523" id="qYG-SJ-J2F"/>
+                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leadingMargin" id="yDw-Qi-Gdo"/>
+                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="centerX" secondItem="dgh-h2-XkC" secondAttribute="centerX" id="zqr-dA-ZNa"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CfA-yS-yd2"/>
+                                        <exclude reference="yDw-Qi-Gdo"/>
+                                        <exclude reference="445-r6-4PJ"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="dgh-h2-XkC" firstAttribute="top" secondItem="yDz-xj-UN6" secondAttribute="top" constant="-20" id="IK1-TE-AfR"/>
-                            <constraint firstItem="dgh-h2-XkC" firstAttribute="bottom" secondItem="vp3-XV-gEx" secondAttribute="top" id="RFN-Mp-H4m"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dgh-h2-XkC" secondAttribute="trailing" constant="-18" id="asB-U5-uuA"/>
-                            <constraint firstItem="dgh-h2-XkC" firstAttribute="leading" secondItem="yDz-xj-UN6" secondAttribute="leading" id="eXi-iV-gOe"/>
+                            <constraint firstItem="dgh-h2-XkC" firstAttribute="top" secondItem="yDz-xj-UN6" secondAttribute="topMargin" constant="-20" id="LdB-PA-ODg"/>
+                            <constraint firstItem="dgh-h2-XkC" firstAttribute="leading" secondItem="yDz-xj-UN6" secondAttribute="leading" id="QnP-ed-TY2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dgh-h2-XkC" secondAttribute="trailing" constant="-18" id="UDO-17-KTd"/>
+                            <constraint firstItem="dgh-h2-XkC" firstAttribute="bottom" secondItem="vp3-XV-gEx" secondAttribute="top" id="opQ-8n-FaZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lh4-Zs-VX9"/>

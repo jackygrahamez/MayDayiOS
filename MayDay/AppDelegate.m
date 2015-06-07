@@ -69,7 +69,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    NSLog(@"applicationDidBecomeActive");
+    NSLog(@"App delegate applicationDidBecomeActive");
+
     BOOL alertingBool = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *alerting = [defaults objectForKey:@"altering"];
@@ -182,6 +183,9 @@
             NSLog(@"alertingBool true");
             self.window.rootViewController =
             (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeAlertingView"];
+        } else {
+            NSLog(@"alertingBool false");
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"watchTrigger" object:nil];
         }
 
         

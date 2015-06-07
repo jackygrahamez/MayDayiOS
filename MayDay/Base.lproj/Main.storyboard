@@ -121,7 +121,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="settingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HbR-vh-cFU"/>
                                     <segue destination="Ic7-CG-rQ4" kind="push" identifier="homeSettings" id="DTu-HQ-P1E"/>
                                 </connections>
                             </button>
@@ -134,7 +133,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="aboutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xNp-ZG-YG8"/>
                                     <segue destination="QXS-Qf-zOa" kind="push" id="PhP-xR-4K2"/>
                                 </connections>
                             </button>
@@ -188,7 +186,6 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="aboutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BZp-iT-9Ql"/>
                                     <segue destination="rEb-yr-l1j" kind="push" id="ynd-4m-rOl"/>
                                 </connections>
                             </button>
@@ -363,12 +360,10 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="aboutBorder" destination="yic-lX-khO" id="yrd-qp-z01"/>
-                        <outlet property="aboutButton" destination="n8Y-yi-51F" id="z6F-tx-Oww"/>
                         <outlet property="alertingText" destination="zMM-T6-b5S" id="dlX-VS-KRM"/>
                         <outlet property="balance" destination="i40-h8-eN0" id="iGa-UK-zd7"/>
                         <outlet property="homeReadyCopy" destination="H42-Jx-TZe" id="lIs-vR-7kU"/>
                         <outlet property="settingsBorder" destination="0Qc-6a-tNd" id="fiO-tn-NDW"/>
-                        <outlet property="settingsButton" destination="ved-Dl-NPr" id="tEq-nk-bbL"/>
                         <outlet property="status" destination="4Md-xA-Hzk" id="iRD-gm-fcP"/>
                         <outlet property="stopAlertingButton" destination="O3L-MV-7wb" id="25T-Y5-3CE"/>
                     </connections>

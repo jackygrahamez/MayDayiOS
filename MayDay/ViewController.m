@@ -247,7 +247,6 @@ BOOL alerting = false;
 
 -(IBAction)saveMessage:(id)sender
 {
-    //[masterViewController vibrate];
     NSString *savestring = message.text;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"messagestring"];
@@ -257,7 +256,6 @@ BOOL alerting = false;
     [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
 }
 - (IBAction)saveMessageNext:(id)sender {
-    //[masterViewController vibrate];
     NSString *savestring = message.text;
     NSString *setupCompleted = @"true";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -268,7 +266,6 @@ BOOL alerting = false;
 }
 -(IBAction)saveContact:(id)sender
 {
-    //[masterViewController vibrate];
     NSLog(@"saveContact");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
@@ -286,7 +283,6 @@ BOOL alerting = false;
     [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
 }
 - (IBAction)saveContactsNext:(id)sender {
-    //[masterViewController vibrate];
     NSLog(@"saveContact");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
@@ -302,7 +298,6 @@ BOOL alerting = false;
 }
 
 - (IBAction)saveInterval:(id)sender {
-    [masterViewController vibrate];
     int row = [masterViewController.messageIntervalPicker selectedRowInComponent:0];
     NSLog(@"value at index %i %@", row, [_pickerData objectAtIndex:row]);
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -313,7 +308,6 @@ BOOL alerting = false;
     [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
 }
 - (IBAction)stopAlerting:(id)sender {
-    [masterViewController vibrate];
     NSLog(@"Stop Alerting");
     [autoTimer invalidate];
     autoTimer = nil;
@@ -326,21 +320,6 @@ BOOL alerting = false;
     //self.window.rootViewController =
     //(UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeView"];
 
-}
-- (IBAction)settingButton:(id)sender {
-    [masterViewController vibrate];
-}
-- (IBAction)aboutButton:(id)sender {
-    [masterViewController vibrate];
-}
-- (IBAction)messageSettingsButton:(id)sender {
-    [masterViewController vibrate];
-}
-- (IBAction)contactSettingsButton:(id)sender {
-    [masterViewController vibrate];
-}
-- (IBAction)alertSettingsButton:(id)sender {
-    [masterViewController vibrate];
 }
 
 - (IBAction)contactPicker1:(id)sender {
@@ -507,22 +486,15 @@ BOOL alerting = false;
 
 - (void)viewDidBecomeActive {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    NSLog(@"applicationDidBecomeActive");
-    /*
-     self.window.rootViewController =
-     (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeView"];*/
-    [masterViewController powerButtonTrigger];
-
+    NSLog(@"view applicationDidBecomeActive");
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     masterViewController = self;
-    //[masterViewController keepAlive];
     [masterViewController swipeInit];
     [masterViewController intervalPickerInit];
-    //[masterViewController vibrate];
-    //[masterViewController setupLocalNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchTrigger:) name:@"watchTrigger" object:nil];
 
     // Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -950,6 +922,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 
 - (void) powerButtonTrigger
 {
+    NSLog (@"powerButtonTrigger");
     if (alerting == false) {
         NSDate *currentDateObj = [NSDate date];
 
@@ -1060,6 +1033,12 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     pickerCircle.layer.position = endPoint;
     [CATransaction commit];
 
+}
+
+- (void)watchTrigger:(NSNotification *)notification
+{
+    NSLog(@"refreshView");
+    [masterViewController powerButtonTrigger];
 }
 
 - (IBAction)triggerButton:(id)sender {

@@ -1038,7 +1038,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 - (void)watchTrigger:(NSNotification *)notification
 {
     NSLog(@"refreshView");
-    [masterViewController powerButtonTrigger];
+    //[masterViewController powerButtonTrigger];
 }
 
 - (IBAction)triggerButton:(id)sender {

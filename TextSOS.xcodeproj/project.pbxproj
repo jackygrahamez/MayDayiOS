@@ -779,7 +779,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "34dd39d9-cef1-4f93-8f73-a4c8237b0902";
+				PROVISIONING_PROFILE = "c6167896-9ff5-4897-b5ff-7595c30dd3dd";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -794,7 +794,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "34dd39d9-cef1-4f93-8f73-a4c8237b0902";
+				PROVISIONING_PROFILE = "c6167896-9ff5-4897-b5ff-7595c30dd3dd";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -814,7 +814,7 @@
 				INFOPLIST_FILE = "MayDay WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "34dd39d9-cef1-4f93-8f73-a4c8237b0902";
+				PROVISIONING_PROFILE = "c6167896-9ff5-4897-b5ff-7595c30dd3dd";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -833,7 +833,7 @@
 				INFOPLIST_FILE = "MayDay WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "34dd39d9-cef1-4f93-8f73-a4c8237b0902";
+				PROVISIONING_PROFILE = "c6167896-9ff5-4897-b5ff-7595c30dd3dd";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -878,7 +878,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "34dd39d9-cef1-4f93-8f73-a4c8237b0902";
+				PROVISIONING_PROFILE = "c6167896-9ff5-4897-b5ff-7595c30dd3dd";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -916,7 +916,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "34dd39d9-cef1-4f93-8f73-a4c8237b0902";
+				PROVISIONING_PROFILE = "c6167896-9ff5-4897-b5ff-7595c30dd3dd";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -939,7 +939,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "34dd39d9-cef1-4f93-8f73-a4c8237b0902";
+				PROVISIONING_PROFILE = "c6167896-9ff5-4897-b5ff-7595c30dd3dd";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -960,7 +960,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "34dd39d9-cef1-4f93-8f73-a4c8237b0902";
+				PROVISIONING_PROFILE = "c6167896-9ff5-4897-b5ff-7595c30dd3dd";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -981,7 +981,7 @@
 				INFOPLIST_FILE = MayDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "34dd39d9-cef1-4f93-8f73-a4c8237b0902";
+				PROVISIONING_PROFILE = "c6167896-9ff5-4897-b5ff-7595c30dd3dd";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MayDay.app/MayDay";
 			};
 			name = Debug;
@@ -998,7 +998,7 @@
 				INFOPLIST_FILE = MayDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "34dd39d9-cef1-4f93-8f73-a4c8237b0902";
+				PROVISIONING_PROFILE = "c6167896-9ff5-4897-b5ff-7595c30dd3dd";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MayDay.app/MayDay";
 			};
 			name = Release;

@@ -1047,6 +1047,9 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Q3l-1A-MH6" id="Itr-9v-swu"/>
+                                        </connections>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktc-Gz-pQl">
                                         <rect key="frame" x="103" y="371" width="109" height="50"/>
@@ -1211,7 +1214,9 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="charactersUpdate" destination="6EF-d7-5qK" id="iTt-eR-MX2"/>
                         <outlet property="message" destination="EyK-QA-Tiu" id="crR-bB-iI9"/>
+                        <outlet property="messageUpdate" destination="EyK-QA-Tiu" id="qq2-fu-zje"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwu-2y-HL3" sceneMemberID="firstResponder"/>
@@ -1616,14 +1621,14 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YF-9Q-aRb">
-                                        <rect key="frame" x="42" y="198.5" width="245" height="21"/>
+                                        <rect key="frame" x="42" y="199" width="245" height="21"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPf-lP-GXC">
-                                        <rect key="frame" x="47" y="198.5" width="75" height="21"/>
+                                        <rect key="frame" x="47" y="199" width="75" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="cET-fE-cgT"/>
                                             <constraint firstAttribute="width" constant="75" id="oFE-vG-chP"/>
@@ -1632,7 +1637,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="I'm here http://maps.google.com/GPS-location" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-6J-Kn2">
-                                        <rect key="frame" x="42" y="303.5" width="245" height="41"/>
+                                        <rect key="frame" x="42" y="304" width="245" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="cW4-4X-fce"/>
@@ -1642,47 +1647,50 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3b3-O6-Bld">
-                                        <rect key="frame" x="30" y="8" width="268" height="36.5"/>
+                                        <rect key="frame" x="30" y="8" width="268" height="37"/>
                                         <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhN-cv-EGE">
-                                        <rect key="frame" x="41" y="45.5" width="233" height="83"/>
+                                        <rect key="frame" x="41" y="46" width="233" height="83"/>
                                         <string key="text">Below is the default message that will be sent with your location or you may enter your own text.
 </string>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters: 63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-xb-Hln">
-                                        <rect key="frame" x="180" y="198.5" width="100" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="characters" text="Characters: 63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-xb-Hln">
+                                        <rect key="frame" x="180" y="199" width="100" height="21"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I Need IMMEDIATE help! " translatesAutoresizingMaskIntoConstraints="NO" id="lds-Hr-N6T">
-                                        <rect key="frame" x="42" y="217.5" width="245" height="86"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="message" text="I Need IMMEDIATE help! " translatesAutoresizingMaskIntoConstraints="NO" id="lds-Hr-N6T">
+                                        <rect key="frame" x="42" y="218" width="245" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="d47-Dp-TkE" id="goC-Md-ytc"/>
+                                        </connections>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXA-SW-dnP">
-                                        <rect key="frame" x="41" y="116.5" width="46" height="48"/>
+                                        <rect key="frame" x="41" y="117" width="46" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="osS-BY-en9"/>
                                             <constraint firstAttribute="width" constant="46" id="wSt-Z5-k0d"/>
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gs-o0-35e">
-                                        <rect key="frame" x="103" y="116.5" width="185" height="66"/>
+                                        <rect key="frame" x="103" y="117" width="185" height="66"/>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-bs-u5M">
-                                        <rect key="frame" x="103" y="352.5" width="109" height="50"/>
+                                        <rect key="frame" x="103" y="353" width="109" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="wxw-Cx-SZV"/>
@@ -1703,7 +1711,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-r5-4Po">
-                                        <rect key="frame" x="30" y="402.5" width="268" height="400"/>
+                                        <rect key="frame" x="30" y="403" width="268" height="400"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="9RT-RJ-8LL"/>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="Jfg-pf-05R"/>
@@ -1814,6 +1822,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="charactersSave" destination="ne3-xb-Hln" id="sTs-6Q-S6j"/>
                         <outlet property="message" destination="lds-Hr-N6T" id="ecO-R8-tRj"/>
                     </connections>
                 </viewController>
@@ -1851,7 +1860,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsD-TM-OVq">
-                                <rect key="frame" x="94.5" y="266" width="130" height="37"/>
+                                <rect key="frame" x="95" y="266" width="130" height="37"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="hJn-6r-adi"/>

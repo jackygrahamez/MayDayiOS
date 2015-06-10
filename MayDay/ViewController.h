@@ -71,6 +71,12 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *messageIntervalPicker;
 
+@property (weak, nonatomic) IBOutlet UITextView *messageSave;
+@property (weak, nonatomic) IBOutlet UILabel *charactersSave;
+
+@property (weak, nonatomic) IBOutlet UITextView *messageUpdate;
+@property (weak, nonatomic) IBOutlet UILabel *charactersUpdate;
+
 @property (weak, nonatomic) UINavigationController *navigationBar;
 
 @end

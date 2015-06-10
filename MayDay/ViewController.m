@@ -491,12 +491,55 @@ BOOL alerting = false;
     NSLog(@"view applicationDidBecomeActive");
 }
 
+- (void)textFieldDidChange:(NSNotification *)notification {
+    // Do whatever you like to respond to text changes here.
+}
+
+//This method looks for the recent string entered by user and then takes appropriate action.
+
+- (void)textViewDidChange:(UITextView *)textView{
+    NSLog(@"textViewDidChange");
+    
+    NSString *stringCountSave = masterViewController.messageSave.text;
+    NSLog(@"%@",stringCountSave);
+    
+    int countSave = (int) stringCountSave.length;
+    countSave = 63 - countSave;
+    //assumes you have a label, see the attached gif
+    masterViewController.messageSave.text = stringCountSave;
+    if (countSave >= 0) {
+    masterViewController.charactersSave.text = [NSString stringWithFormat:@"Characters: %d",countSave];
+    }
+    NSRange stringRangeSave = {0, MIN([stringCountSave length], 63)};
+    // adjust the range to include dependent chars
+    stringRangeSave = [stringCountSave rangeOfComposedCharacterSequencesForRange:stringRangeSave];
+    // Now you can create the short string
+    masterViewController.messageSave.text = [stringCountSave substringWithRange:stringRangeSave];
+    
+    NSString *stringCountUpdate = masterViewController.messageUpdate.text;
+    NSLog(@"%@",stringCountUpdate);
+    int countUpdate = (int) stringCountUpdate.length;
+    countUpdate = 63 - countUpdate;
+    masterViewController.messageSave.text = stringCountUpdate;
+    if (countUpdate >= 0) {
+    //assumes you have a label, see the attached gif
+    masterViewController.charactersUpdate.text = [NSString stringWithFormat:@"Characters: %d",countUpdate];
+    }
+    NSRange stringRangeUpdate = {0, MIN([stringCountUpdate length], 63)};
+    // adjust the range to include dependent chars
+    stringRangeUpdate = [stringCountUpdate rangeOfComposedCharacterSequencesForRange:stringRangeUpdate];
+    // Now you can create the short string
+    masterViewController.messageUpdate.text = [stringCountUpdate substringWithRange:stringRangeUpdate];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     masterViewController = self;
     [masterViewController swipeInit];
     [masterViewController intervalPickerInit];
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchTrigger:) name:@"watchTrigger" object:nil];
+
 
     // Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

@@ -578,6 +578,19 @@ BOOL alerting = false;
         masterViewController.saveContactsNext.userInteractionEnabled = YES;
     }
 
+    NSString *stringCountSave = masterViewController.messageSave.text;
+    NSLog(@"%@",stringCountSave);
+    int countSave = (int) stringCountSave.length;
+    countSave = 63 - countSave;
+    masterViewController.messageSave.text = stringCountSave;
+    masterViewController.charactersSave.text = [NSString stringWithFormat:@"Characters: %d",countSave];
+    
+    NSString *stringCountUpdate = masterViewController.messageUpdate.text;
+    int countUpdate = (int) stringCountUpdate.length;
+    countUpdate = 63 - countUpdate;
+    masterViewController.messageSave.text = stringCountUpdate;
+    masterViewController.charactersUpdate.text = [NSString stringWithFormat:@"Characters: %d",countUpdate];
+    
     [masterViewController initLocationManager];
 
 }

@@ -851,28 +851,27 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="SiG-sU-ynZ">
-                                <rect key="frame" x="16" y="103" width="46" height="48"/>
+                                <rect key="frame" x="16" y="123" width="46" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="AcB-xl-mLB"/>
-                                    <constraint firstAttribute="width" constant="46" id="DIe-g4-Q8u"/>
+                                    <constraint firstAttribute="width" constant="46" id="gbp-2K-q2a"/>
+                                    <constraint firstAttribute="height" constant="48" id="z16-ce-tPY"/>
                                 </constraints>
                             </imageView>
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-5h-aSG">
-                                <rect key="frame" x="36" y="159" width="245" height="162"/>
+                                <rect key="frame" x="36" y="209" width="245" height="162"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="245" id="QlP-Q5-k1l"/>
-                                    <constraint firstAttribute="height" constant="162" id="YEE-DW-XTY"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="fc6-zP-cTK"/>
+                                    <constraint firstAttribute="height" constant="162" id="AFW-eB-my5"/>
+                                    <constraint firstAttribute="width" constant="245" id="HIh-nK-xHr"/>
                                 </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-as-8xI">
-                                <rect key="frame" x="104" y="329" width="109" height="50"/>
+                                <rect key="frame" x="106" y="397" width="109" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="109" id="WhG-Ux-3oQ"/>
+                                    <constraint firstAttribute="width" constant="109" id="0h1-bt-4sO"/>
                                     <constraint firstAttribute="height" constant="30" id="dMl-bf-ldG"/>
-                                    <constraint firstAttribute="height" constant="50" id="eGy-RX-lFU"/>
+                                    <constraint firstAttribute="height" constant="50" id="mVA-Lk-X55"/>
                                 </constraints>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -912,14 +911,24 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 </variation>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Be aware of your battery! Frequent alerts may drain your battery." translatesAutoresizingMaskIntoConstraints="NO" id="ZiH-ZA-lPI">
-                                <rect key="frame" x="70" y="93" width="191" height="67"/>
+                                <rect key="frame" x="70" y="103" width="211" height="98"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="Gqq-CY-fty"/>
+                                    <constraint firstAttribute="height" constant="98" id="LFW-74-hL0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="108" id="YUz-eB-xnb"/>
                                     <constraint firstAttribute="width" constant="191" id="db0-ww-uuN"/>
                                     <constraint firstAttribute="height" constant="67" id="eOI-QH-Ug0"/>
                                 </constraints>
                                 <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YUz-eB-xnb"/>
+                                        <exclude reference="db0-ww-uuN"/>
+                                        <exclude reference="eOI-QH-Ug0"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 </variation>
@@ -928,25 +937,30 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Q5v-lp-rif" secondAttribute="centerX" id="1T3-i1-3Qc"/>
-                            <constraint firstItem="SiG-sU-ynZ" firstAttribute="top" secondItem="D7F-Ev-q02" secondAttribute="bottom" constant="46" id="3L1-WV-fKq"/>
                             <constraint firstAttribute="bottomMargin" secondItem="FSK-6P-rEm" secondAttribute="bottom" constant="-100" id="3kP-2V-mMb"/>
-                            <constraint firstAttribute="centerX" secondItem="tKP-as-8xI" secondAttribute="centerX" id="4EA-m9-Tgp"/>
                             <constraint firstItem="ZiH-ZA-lPI" firstAttribute="leading" secondItem="SiG-sU-ynZ" secondAttribute="trailing" constant="8" id="5nS-mo-M4R"/>
+                            <constraint firstItem="tKP-as-8xI" firstAttribute="top" secondItem="dgg-5h-aSG" secondAttribute="bottom" constant="26" id="7J6-7L-qvg"/>
                             <constraint firstAttribute="centerX" secondItem="D7F-Ev-q02" secondAttribute="centerX" id="AgS-84-8UC"/>
                             <constraint firstItem="tKP-as-8xI" firstAttribute="top" secondItem="D7F-Ev-q02" secondAttribute="bottom" constant="272" id="I2L-de-naf"/>
                             <constraint firstItem="D7F-Ev-q02" firstAttribute="top" secondItem="30M-ev-A9r" secondAttribute="bottom" constant="10" id="KWP-Nb-XYC"/>
-                            <constraint firstAttribute="centerX" secondItem="dgg-5h-aSG" secondAttribute="centerX" id="MuR-tS-5s6"/>
                             <constraint firstItem="FSK-6P-rEm" firstAttribute="top" secondItem="n53-Yq-9zf" secondAttribute="topMargin" constant="-10" id="R9e-8l-bsY"/>
-                            <constraint firstItem="dgg-5h-aSG" firstAttribute="top" secondItem="D7F-Ev-q02" secondAttribute="bottom" constant="102" id="SAX-F1-rQu"/>
+                            <constraint firstItem="ZiH-ZA-lPI" firstAttribute="leading" secondItem="dgg-5h-aSG" secondAttribute="trailing" constant="-211" id="Rat-Cs-7vb"/>
+                            <constraint firstItem="ZiH-ZA-lPI" firstAttribute="top" secondItem="SiG-sU-ynZ" secondAttribute="bottom" constant="-68" id="U3v-1b-HdC"/>
                             <constraint firstItem="SiG-sU-ynZ" firstAttribute="leading" secondItem="Q5v-lp-rif" secondAttribute="leading" id="UAz-bm-wWs"/>
+                            <constraint firstItem="dgg-5h-aSG" firstAttribute="top" secondItem="ZiH-ZA-lPI" secondAttribute="bottom" constant="8" id="UG4-Sf-elD"/>
                             <constraint firstItem="ZiH-ZA-lPI" firstAttribute="top" secondItem="D7F-Ev-q02" secondAttribute="bottom" constant="36" id="VrG-rM-HgC"/>
+                            <constraint firstItem="ZiH-ZA-lPI" firstAttribute="leading" secondItem="SiG-sU-ynZ" secondAttribute="trailing" constant="8" id="ZLS-pq-8I3"/>
+                            <constraint firstItem="dgg-5h-aSG" firstAttribute="top" secondItem="ZiH-ZA-lPI" secondAttribute="bottom" constant="8" id="eGJ-LO-DRc"/>
                             <constraint firstItem="Q5v-lp-rif" firstAttribute="leading" secondItem="n53-Yq-9zf" secondAttribute="leadingMargin" id="ftf-8y-43M"/>
                             <constraint firstAttribute="centerX" secondItem="D7F-Ev-q02" secondAttribute="centerX" id="h39-Wq-Ngq"/>
                             <constraint firstAttribute="centerX" secondItem="ZiH-ZA-lPI" secondAttribute="centerX" id="hwX-YZ-jp9"/>
+                            <constraint firstItem="tKP-as-8xI" firstAttribute="leading" secondItem="dgg-5h-aSG" secondAttribute="trailing" constant="-175" id="lBA-mX-YXK"/>
                             <constraint firstItem="Q5v-lp-rif" firstAttribute="top" secondItem="D7F-Ev-q02" secondAttribute="bottom" constant="8" symbolic="YES" id="lFb-q0-gRH"/>
                             <constraint firstItem="dgg-5h-aSG" firstAttribute="top" secondItem="SiG-sU-ynZ" secondAttribute="bottom" constant="8" symbolic="YES" id="pog-WQ-1Yy"/>
                             <constraint firstItem="ZiH-ZA-lPI" firstAttribute="top" secondItem="D7F-Ev-q02" secondAttribute="bottom" constant="36" id="trq-lE-4D7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZiH-ZA-lPI" secondAttribute="trailing" constant="43" id="v2g-dd-JyN"/>
+                            <constraint firstItem="ZiH-ZA-lPI" firstAttribute="leading" secondItem="Q5v-lp-rif" secondAttribute="trailing" constant="-234" id="xTv-UQ-Tdn"/>
+                            <constraint firstItem="ZiH-ZA-lPI" firstAttribute="top" secondItem="Q5v-lp-rif" secondAttribute="bottom" constant="8" id="xaS-1X-yyH"/>
                             <constraint firstItem="Q5v-lp-rif" firstAttribute="top" secondItem="D7F-Ev-q02" secondAttribute="bottom" constant="8" id="yEn-FE-Rgy"/>
                         </constraints>
                         <variation key="default">
@@ -954,9 +968,14 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 <exclude reference="ftf-8y-43M"/>
                                 <exclude reference="lFb-q0-gRH"/>
                                 <exclude reference="UAz-bm-wWs"/>
+                                <exclude reference="5nS-mo-M4R"/>
+                                <exclude reference="VrG-rM-HgC"/>
+                                <exclude reference="hwX-YZ-jp9"/>
                                 <exclude reference="trq-lE-4D7"/>
                                 <exclude reference="v2g-dd-JyN"/>
+                                <exclude reference="eGJ-LO-DRc"/>
                                 <exclude reference="pog-WQ-1Yy"/>
+                                <exclude reference="I2L-de-naf"/>
                             </mask>
                         </variation>
                     </view>
@@ -1369,6 +1388,8 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <rect key="frame" x="98" y="392" width="109" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RWh-RQ-P8t"/>
+                                            <constraint firstAttribute="width" constant="109" id="VLk-pC-uHH"/>
                                             <constraint firstAttribute="height" constant="50" id="jbz-nT-PHa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -1466,6 +1487,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstItem="Nwj-pp-dtO" firstAttribute="top" secondItem="p3A-IM-Sj8" secondAttribute="bottom" constant="-48" id="Y4a-NG-vNI"/>
                                     <constraint firstItem="Yb5-k3-zME" firstAttribute="leading" secondItem="2Wc-Vz-TOd" secondAttribute="leading" id="YGe-gu-Zwb"/>
                                     <constraint firstItem="8JR-iI-Zsz" firstAttribute="trailing" secondItem="IMZ-gW-97Q" secondAttribute="trailing" id="YeM-dd-Ndx"/>
+                                    <constraint firstItem="JOg-m0-1RQ" firstAttribute="top" secondItem="hWy-bh-c7U" secondAttribute="bottom" constant="25" id="YmT-QY-p01"/>
                                     <constraint firstItem="2Wc-Vz-TOd" firstAttribute="top" secondItem="8JR-iI-Zsz" secondAttribute="top" id="a0i-Yg-BH8"/>
                                     <constraint firstItem="7IW-X4-KgL" firstAttribute="top" secondItem="Ikv-VP-pOr" secondAttribute="top" constant="-49" id="aWB-yg-1cS"/>
                                     <constraint firstItem="hqj-cH-nHm" firstAttribute="leading" secondItem="IMZ-gW-97Q" secondAttribute="leading" id="blg-Ma-oqG"/>
@@ -1511,6 +1533,8 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <exclude reference="a0i-Yg-BH8"/>
                                         <exclude reference="GNg-rp-x1q"/>
                                         <exclude reference="UJG-EY-cSJ"/>
+                                        <exclude reference="7Hp-bk-u8V"/>
+                                        <exclude reference="KGA-TJ-8Bq"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -1570,15 +1594,72 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YF-9Q-aRb">
-                                        <rect key="frame" x="42" y="198" width="245" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3b3-O6-Bld">
+                                        <rect key="frame" x="30" y="8.5" width="268" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhN-cv-EGE">
+                                        <rect key="frame" x="30" y="53" width="268" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="5Ro-r5-qCj"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="269" id="5aU-dw-MvE"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="Qcq-li-zRv"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="268" id="ib8-iM-W5Z"/>
+                                            <constraint firstAttribute="width" constant="247" id="xo0-Zf-b3Y"/>
+                                        </constraints>
+                                        <string key="text">Below is the default message that will be sent with your location or you may enter your own text.
+</string>
+                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="xo0-Zf-b3Y"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gs-o0-35e">
+                                        <rect key="frame" x="103" y="175" width="185" height="85"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXA-SW-dnP">
+                                        <rect key="frame" x="41" y="184" width="46" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="Ijq-OO-fMU"/>
+                                            <constraint firstAttribute="width" constant="46" id="dET-fo-Idu"/>
+                                            <constraint firstAttribute="height" constant="48" id="hVY-IY-bb6"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="iMx-7k-8SH"/>
+                                            <constraint firstAttribute="height" constant="48" id="osS-BY-en9"/>
+                                            <constraint firstAttribute="width" constant="46" id="wSt-Z5-k0d"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ijq-OO-fMU"/>
+                                                <exclude reference="iMx-7k-8SH"/>
+                                                <exclude reference="osS-BY-en9"/>
+                                                <exclude reference="wSt-Z5-k0d"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YF-9Q-aRb">
+                                        <rect key="frame" x="42" y="259" width="245" height="21"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPf-lP-GXC">
-                                        <rect key="frame" x="47" y="198" width="75" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Emergency message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPf-lP-GXC">
+                                        <rect key="frame" x="47" y="259" width="75" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="cET-fE-cgT"/>
                                             <constraint firstAttribute="width" constant="75" id="oFE-vG-chP"/>
@@ -1586,8 +1667,8 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="I'm here http://maps.google.com/GPS-location" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-6J-Kn2">
-                                        <rect key="frame" x="42" y="303" width="245" height="41"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="I'm here http://maps.google.com/GPS-location" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-6J-Kn2">
+                                        <rect key="frame" x="42" y="364" width="245" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="cW4-4X-fce"/>
@@ -1596,32 +1677,15 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3b3-O6-Bld">
-                                        <rect key="frame" x="30" y="8" width="268" height="36.5"/>
-                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhN-cv-EGE">
-                                        <rect key="frame" x="41" y="45" width="233" height="83"/>
-                                        <string key="text">Below is the default message that will be sent with your location or you may enter your own text.
-</string>
-                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=compact-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        </variation>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="characters" text="Characters: 63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-xb-Hln">
-                                        <rect key="frame" x="180" y="198" width="100" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="characters" text="Characters: 63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-xb-Hln">
+                                        <rect key="frame" x="180" y="259" width="100" height="21"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="message" text="I Need IMMEDIATE help! " translatesAutoresizingMaskIntoConstraints="NO" id="lds-Hr-N6T">
-                                        <rect key="frame" x="42" y="217" width="245" height="86"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="message" text="I Need IMMEDIATE help! " translatesAutoresizingMaskIntoConstraints="NO" id="lds-Hr-N6T">
+                                        <rect key="frame" x="42" y="278" width="245" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1629,26 +1693,15 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                             <outlet property="delegate" destination="d47-Dp-TkE" id="goC-Md-ytc"/>
                                         </connections>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXA-SW-dnP">
-                                        <rect key="frame" x="41" y="116" width="46" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="osS-BY-en9"/>
-                                            <constraint firstAttribute="width" constant="46" id="wSt-Z5-k0d"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gs-o0-35e">
-                                        <rect key="frame" x="103" y="116" width="185" height="66"/>
-                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=compact-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        </variation>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-bs-u5M">
-                                        <rect key="frame" x="103" y="352" width="109" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-bs-u5M">
+                                        <rect key="frame" x="110" y="430" width="109" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="109" id="6oA-s4-jf9"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="9av-Wb-IYK"/>
+                                            <constraint firstAttribute="width" constant="109" id="F3Y-88-0wo"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="Oix-i7-vgJ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qk5-rI-zyR"/>
                                             <constraint firstAttribute="height" constant="50" id="wxw-Cx-SZV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -1661,13 +1714,19 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6oA-s4-jf9"/>
+                                                <exclude reference="9av-Wb-IYK"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="saveMessageNext:" destination="d47-Dp-TkE" eventType="touchUpInside" id="Iuq-U8-RjY"/>
                                             <segue destination="BYZ-38-t0r" kind="push" id="luT-kI-Gpd"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-r5-4Po">
-                                        <rect key="frame" x="30" y="402" width="268" height="400"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-r5-4Po">
+                                        <rect key="frame" x="30" y="488" width="268" height="400"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="9RT-RJ-8LL"/>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="Jfg-pf-05R"/>
@@ -1702,19 +1761,23 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 <constraints>
                                     <constraint firstItem="aR2-6J-Kn2" firstAttribute="top" secondItem="lds-Hr-N6T" secondAttribute="bottom" id="0Hx-MQ-Tij"/>
                                     <constraint firstItem="qPf-lP-GXC" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="47" id="3LZ-nM-54e"/>
-                                    <constraint firstItem="ne3-xb-Hln" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="70" id="4dl-Qj-lQ2"/>
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="leading" secondItem="3b3-O6-Bld" secondAttribute="leading" id="6Ft-BF-5IK"/>
                                     <constraint firstItem="qPf-lP-GXC" firstAttribute="top" secondItem="5gs-o0-35e" secondAttribute="bottom" constant="16" id="76j-WJ-kTf"/>
                                     <constraint firstItem="lds-Hr-N6T" firstAttribute="top" secondItem="5gs-o0-35e" secondAttribute="bottom" constant="35" id="7fq-Ec-2Ai"/>
                                     <constraint firstItem="LAk-IX-vNh" firstAttribute="top" secondItem="jgE-LU-aVm" secondAttribute="top" constant="-48" id="7wF-dX-utQ"/>
+                                    <constraint firstAttribute="centerX" secondItem="Zbq-bs-u5M" secondAttribute="centerX" id="89c-aw-CR6"/>
                                     <constraint firstItem="qPf-lP-GXC" firstAttribute="firstBaseline" secondItem="0YF-9Q-aRb" secondAttribute="firstBaseline" id="9lw-Pm-S1J"/>
                                     <constraint firstItem="3b3-O6-Bld" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="30" id="A4l-Zs-Xhm"/>
                                     <constraint firstAttribute="trailing" secondItem="ne3-xb-Hln" secondAttribute="trailing" constant="48" id="BPz-uC-T8Y"/>
                                     <constraint firstItem="LAk-IX-vNh" firstAttribute="trailing" secondItem="jgE-LU-aVm" secondAttribute="trailingMargin" id="DZH-JS-YQa"/>
+                                    <constraint firstItem="Zbq-bs-u5M" firstAttribute="top" secondItem="aR2-6J-Kn2" secondAttribute="bottom" constant="25" id="E5h-FI-qeu"/>
                                     <constraint firstItem="aR2-6J-Kn2" firstAttribute="trailing" secondItem="lds-Hr-N6T" secondAttribute="trailing" id="EO4-Pf-68y"/>
+                                    <constraint firstAttribute="centerX" secondItem="EhN-cv-EGE" secondAttribute="centerX" id="Hpt-9N-sU2"/>
                                     <constraint firstAttribute="bottom" secondItem="EuZ-r5-4Po" secondAttribute="bottom" constant="-135" id="Jhh-HP-Jsx"/>
+                                    <constraint firstItem="EhN-cv-EGE" firstAttribute="top" secondItem="3b3-O6-Bld" secondAttribute="bottom" constant="7" id="JiX-Fp-Dbm"/>
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="leading" secondItem="qPf-lP-GXC" secondAttribute="trailing" constant="58" id="Kdw-nn-l51"/>
                                     <constraint firstItem="Zbq-bs-u5M" firstAttribute="top" secondItem="aR2-6J-Kn2" secondAttribute="bottom" constant="8" symbolic="YES" id="MJI-st-r1A"/>
+                                    <constraint firstItem="5gs-o0-35e" firstAttribute="top" secondItem="hXA-SW-dnP" secondAttribute="bottom" constant="-57" id="OF8-mK-yCM"/>
                                     <constraint firstItem="qPf-lP-GXC" firstAttribute="top" secondItem="hXA-SW-dnP" secondAttribute="bottom" constant="34" id="Ocv-Ye-Nov"/>
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="top" secondItem="Zbq-bs-u5M" secondAttribute="bottom" constant="8" symbolic="YES" id="Ots-RB-Xbt"/>
                                     <constraint firstItem="aR2-6J-Kn2" firstAttribute="top" secondItem="qPf-lP-GXC" secondAttribute="bottom" constant="84" id="Pce-3R-TUk"/>
@@ -1723,46 +1786,52 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="top" secondItem="Zbq-bs-u5M" secondAttribute="bottom" id="SIj-ia-iij"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="leading" secondItem="lds-Hr-N6T" secondAttribute="leading" id="SRu-12-eZ5"/>
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="trailing" secondItem="aR2-6J-Kn2" secondAttribute="trailing" id="STR-r4-6fO"/>
+                                    <constraint firstItem="Zbq-bs-u5M" firstAttribute="top" secondItem="aR2-6J-Kn2" secondAttribute="bottom" constant="25" id="VgR-kL-A9Y"/>
                                     <constraint firstAttribute="trailing" secondItem="3b3-O6-Bld" secondAttribute="trailing" constant="30" id="WWN-UN-DMM"/>
+                                    <constraint firstItem="EhN-cv-EGE" firstAttribute="top" secondItem="3b3-O6-Bld" secondAttribute="bottom" constant="8" id="YC1-af-Zgi"/>
                                     <constraint firstItem="lds-Hr-N6T" firstAttribute="trailing" secondItem="0YF-9Q-aRb" secondAttribute="trailing" id="YUL-cl-Y23"/>
                                     <constraint firstItem="lds-Hr-N6T" firstAttribute="leading" secondItem="aR2-6J-Kn2" secondAttribute="leading" id="aGc-vU-EHO"/>
                                     <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="4" id="bne-rg-7pD"/>
-                                    <constraint firstItem="EhN-cv-EGE" firstAttribute="centerX" secondItem="Zbq-bs-u5M" secondAttribute="centerX" id="cMq-gO-j2l"/>
                                     <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-18" id="cht-MG-arS"/>
                                     <constraint firstAttribute="bottom" secondItem="EuZ-r5-4Po" secondAttribute="bottom" constant="29" id="d19-9h-5jT"/>
                                     <constraint firstAttribute="centerY" secondItem="LAk-IX-vNh" secondAttribute="centerY" id="eQi-cZ-CzI"/>
                                     <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-12" id="f8t-xn-bfX"/>
                                     <constraint firstItem="3b3-O6-Bld" firstAttribute="top" secondItem="jgE-LU-aVm" secondAttribute="topMargin" id="fKL-8V-k0K"/>
-                                    <constraint firstItem="EhN-cv-EGE" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="41" id="fg7-Z1-KEy"/>
                                     <constraint firstItem="LAk-IX-vNh" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="-68" id="gBn-en-bwQ"/>
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="firstBaseline" secondItem="qPf-lP-GXC" secondAttribute="firstBaseline" id="hGa-en-Waw"/>
                                     <constraint firstAttribute="bottom" secondItem="LAk-IX-vNh" secondAttribute="bottom" id="hav-dC-7cm"/>
                                     <constraint firstItem="3b3-O6-Bld" firstAttribute="top" secondItem="jgE-LU-aVm" secondAttribute="top" constant="28" id="ip1-lX-8Pn"/>
-                                    <constraint firstItem="hXA-SW-dnP" firstAttribute="leading" secondItem="EhN-cv-EGE" secondAttribute="leading" id="lxs-5G-5FM"/>
                                     <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-12" id="mBU-LB-akH"/>
+                                    <constraint firstAttribute="centerX" secondItem="EhN-cv-EGE" secondAttribute="centerX" id="mDf-zi-98e"/>
                                     <constraint firstItem="Zbq-bs-u5M" firstAttribute="leading" secondItem="5gs-o0-35e" secondAttribute="leading" id="mPF-iD-bAV"/>
                                     <constraint firstItem="EhN-cv-EGE" firstAttribute="top" secondItem="3b3-O6-Bld" secondAttribute="bottom" constant="1" id="o9H-pd-nQB"/>
                                     <constraint firstItem="3b3-O6-Bld" firstAttribute="centerX" secondItem="0YF-9Q-aRb" secondAttribute="centerX" id="pdE-Kf-6N6"/>
                                     <constraint firstItem="5gs-o0-35e" firstAttribute="leading" secondItem="hXA-SW-dnP" secondAttribute="trailing" constant="16" id="qOc-9a-kZG"/>
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="baseline" secondItem="0YF-9Q-aRb" secondAttribute="baseline" id="qh4-c1-Xee"/>
+                                    <constraint firstItem="5gs-o0-35e" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-8" id="s1s-dW-Hdh"/>
                                     <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="3b3-O6-Bld" secondAttribute="bottom" constant="72" id="t1Z-Pg-v55"/>
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="53" id="u3H-4E-QXi"/>
                                     <constraint firstAttribute="trailing" secondItem="5gs-o0-35e" secondAttribute="trailing" constant="40" id="u8X-GQ-wDK"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="42" id="uRT-R7-hTX"/>
                                     <constraint firstAttribute="centerX" secondItem="EuZ-r5-4Po" secondAttribute="centerX" id="utq-G7-bPf"/>
-                                    <constraint firstAttribute="trailing" secondItem="EhN-cv-EGE" secondAttribute="trailing" constant="54" id="wez-jO-USq"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="centerX" secondItem="jgE-LU-aVm" secondAttribute="centerX" id="xKM-Hg-G2r"/>
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="baseline" secondItem="qPf-lP-GXC" secondAttribute="baseline" id="zhi-7A-97l"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="ip1-lX-8Pn"/>
+                                        <exclude reference="JiX-Fp-Dbm"/>
+                                        <exclude reference="o9H-pd-nQB"/>
                                         <exclude reference="7wF-dX-utQ"/>
                                         <exclude reference="gBn-en-bwQ"/>
                                         <exclude reference="bne-rg-7pD"/>
                                         <exclude reference="cht-MG-arS"/>
                                         <exclude reference="f8t-xn-bfX"/>
                                         <exclude reference="mBU-LB-akH"/>
+                                        <exclude reference="t1Z-Pg-v55"/>
+                                        <exclude reference="OF8-mK-yCM"/>
+                                        <exclude reference="E5h-FI-qeu"/>
+                                        <exclude reference="MJI-st-r1A"/>
                                         <exclude reference="Jhh-HP-Jsx"/>
                                         <exclude reference="Ots-RB-Xbt"/>
                                         <exclude reference="STR-r4-6fO"/>
@@ -2115,10 +2184,12 @@ Make bullets larger and look like they do in this application. </string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1h-Nd-Wqv">
-                                        <rect key="frame" x="27" y="53" width="233" height="50"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1h-Nd-Wqv">
+                                        <rect key="frame" x="18" y="53" width="268" height="67"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="5oM-eK-3uR"/>
                                             <constraint firstAttribute="height" constant="50" id="93A-5c-iHI"/>
+                                            <constraint firstAttribute="width" constant="268" id="TxV-OW-Zjp"/>
                                             <constraint firstAttribute="height" constant="50" id="XBz-jO-gLb"/>
                                         </constraints>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2133,8 +2204,54 @@ Make bullets larger and look like they do in this application. </string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         </variation>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUh-qx-4rJ">
-                                        <rect key="frame" x="27" y="180" width="42" height="21"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mI-Q8-UPj">
+                                        <rect key="frame" x="81" y="119" width="201" height="102"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="185" id="FqD-TU-wW8"/>
+                                            <constraint firstAttribute="width" constant="201" id="HVo-lI-MYn"/>
+                                            <constraint firstAttribute="height" constant="102" id="INO-49-UCp"/>
+                                            <constraint firstAttribute="height" constant="85" id="ZIb-IZ-42t"/>
+                                            <constraint firstAttribute="height" constant="85" id="wtg-Qb-NaP"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="FqD-TU-wW8"/>
+                                                <exclude reference="ZIb-IZ-42t"/>
+                                                <exclude reference="wtg-Qb-NaP"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="uj1-an-7iF">
+                                        <rect key="frame" x="27" y="128" width="46" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="1vn-8c-MJ3"/>
+                                            <constraint firstAttribute="height" constant="48" id="PTk-fD-fII"/>
+                                            <constraint firstAttribute="width" constant="46" id="YbG-Jw-k0o"/>
+                                            <constraint firstAttribute="width" constant="46" id="fKe-0W-idM"/>
+                                            <constraint firstAttribute="height" constant="48" id="oGj-T1-Hou"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="t59-gf-AV4"/>
+                                            <constraint firstAttribute="width" constant="46" id="vYG-Yp-V3h"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="xvC-LR-nGa"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1vn-8c-MJ3"/>
+                                                <exclude reference="PTk-fD-fII"/>
+                                                <exclude reference="YbG-Jw-k0o"/>
+                                                <exclude reference="fKe-0W-idM"/>
+                                                <exclude reference="t59-gf-AV4"/>
+                                                <exclude reference="xvC-LR-nGa"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUh-qx-4rJ">
+                                        <rect key="frame" x="27" y="230" width="42" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="lpZ-TR-JYX"/>
                                         </constraints>
@@ -2142,41 +2259,50 @@ Make bullets larger and look like they do in this application. </string>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LbX-36-JFi">
-                                        <rect key="frame" x="52" y="274" width="200" height="35"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LbX-36-JFi">
+                                        <rect key="frame" x="52" y="324" width="200" height="35"/>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="gbL-ym-2K1"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svk-kI-Dob">
-                                        <rect key="frame" x="27" y="231" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVl-OV-Kya">
-                                        <rect key="frame" x="52" y="223" width="200" height="35"/>
-                                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bct-F4-1bs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svk-kI-Dob">
                                         <rect key="frame" x="27" y="281" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnM-Bi-uMl">
-                                        <rect key="frame" x="52" y="172" width="200" height="35"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVl-OV-Kya">
+                                        <rect key="frame" x="52" y="273" width="200" height="35"/>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="z3J-oG-5xS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bct-F4-1bs">
+                                        <rect key="frame" x="27" y="331" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnM-Bi-uMl">
+                                        <rect key="frame" x="52" y="222" width="200" height="35"/>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="XNc-qm-Gbc"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="contact1SetupField:" destination="Pso-Rd-qPb" eventType="editingDidEnd" id="koc-lD-XQx"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8I-9f-rbA">
-                                        <rect key="frame" x="260" y="179" width="22" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8I-9f-rbA">
+                                        <rect key="frame" x="260" y="229" width="22" height="22"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -2184,8 +2310,8 @@ Make bullets larger and look like they do in this application. </string>
                                             <action selector="contactPicker1:" destination="Pso-Rd-qPb" eventType="touchUpInside" id="mUk-TD-br0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2a-VH-N5p">
-                                        <rect key="frame" x="260" y="230" width="22" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2a-VH-N5p">
+                                        <rect key="frame" x="260" y="280" width="22" height="22"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -2194,11 +2320,13 @@ Make bullets larger and look like they do in this application. </string>
                                             <action selector="contactPicker3:" destination="Pso-Rd-qPb" eventType="touchUpInside" id="Oix-PT-WO7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3a-c8-X1M">
-                                        <rect key="frame" x="98" y="334" width="109" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3a-c8-X1M">
+                                        <rect key="frame" x="98" y="384" width="109" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Zu4-vz-3uV"/>
+                                            <constraint firstAttribute="width" constant="109" id="h08-p9-CuF"/>
+                                            <constraint firstAttribute="height" constant="50" id="xdf-tC-5XD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Save">
@@ -2219,8 +2347,8 @@ Make bullets larger and look like they do in this application. </string>
                                             <action selector="saveContact:" destination="Pso-Rd-qPb" eventType="touchUpInside" id="xKq-jU-BkX"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6az-ma-bVP">
-                                        <rect key="frame" x="27" y="392" width="269" height="600"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6az-ma-bVP">
+                                        <rect key="frame" x="27" y="442" width="269" height="600"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="269" id="gCM-bl-d5y"/>
                                             <constraint firstAttribute="height" constant="600" id="hiA-hk-7et"/>
@@ -2236,23 +2364,8 @@ Make bullets larger and look like they do in this application. </string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         </variation>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="uj1-an-7iF">
-                                        <rect key="frame" x="27" y="108" width="46" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="1vn-8c-MJ3"/>
-                                            <constraint firstAttribute="height" constant="48" id="PTk-fD-fII"/>
-                                            <constraint firstAttribute="width" constant="46" id="YbG-Jw-k0o"/>
-                                            <constraint firstAttribute="width" constant="46" id="fKe-0W-idM"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="1vn-8c-MJ3"/>
-                                                <exclude reference="fKe-0W-idM"/>
-                                            </mask>
-                                        </variation>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdl-R0-nrV">
-                                        <rect key="frame" x="260" y="281" width="22" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdl-R0-nrV">
+                                        <rect key="frame" x="260" y="331" width="22" height="22"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -2261,15 +2374,6 @@ Make bullets larger and look like they do in this application. </string>
                                             <action selector="contactPicker2:" destination="Pso-Rd-qPb" eventType="touchUpInside" id="9eD-ub-EU7"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mI-Q8-UPj">
-                                        <rect key="frame" x="97" y="99" width="185" height="65"/>
-                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=compact-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        </variation>
-                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Bct-F4-1bs" firstAttribute="top" secondItem="LbX-36-JFi" secondAttribute="bottom" constant="-28" id="1hb-9c-P3t"/>
@@ -2285,6 +2389,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstItem="g2a-VH-N5p" firstAttribute="top" secondItem="aUh-qx-4rJ" secondAttribute="top" id="9Pw-CN-ddb"/>
                                     <constraint firstItem="2mI-Q8-UPj" firstAttribute="leading" secondItem="uj1-an-7iF" secondAttribute="trailing" constant="24" id="9yf-22-OhR"/>
                                     <constraint firstAttribute="trailing" secondItem="3OM-OX-u5Q" secondAttribute="trailing" constant="-1" id="9yz-Iu-AL6"/>
+                                    <constraint firstItem="2mI-Q8-UPj" firstAttribute="leading" secondItem="i1h-Nd-Wqv" secondAttribute="trailing" constant="-189" id="AUF-pS-OIf"/>
                                     <constraint firstItem="Svk-kI-Dob" firstAttribute="top" secondItem="hnM-Bi-uMl" secondAttribute="bottom" constant="24" id="Al4-Oa-H3C"/>
                                     <constraint firstItem="LbX-36-JFi" firstAttribute="leading" secondItem="Bct-F4-1bs" secondAttribute="trailing" constant="-17" id="Awz-hQ-4OF"/>
                                     <constraint firstItem="C3a-c8-X1M" firstAttribute="leading" secondItem="FaY-ca-llf" secondAttribute="leading" constant="98" id="BT5-GS-TEK"/>
@@ -2293,32 +2398,43 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstItem="x8I-9f-rbA" firstAttribute="leading" secondItem="hnM-Bi-uMl" secondAttribute="trailing" constant="8" symbolic="YES" id="Dhh-SP-ua7"/>
                                     <constraint firstItem="Svk-kI-Dob" firstAttribute="top" secondItem="ZVl-OV-Kya" secondAttribute="bottom" constant="-27" id="Doy-4H-apX"/>
                                     <constraint firstItem="x8I-9f-rbA" firstAttribute="leading" secondItem="hnM-Bi-uMl" secondAttribute="trailing" constant="8" symbolic="YES" id="Ecw-Qi-SZo"/>
+                                    <constraint firstAttribute="centerX" secondItem="C3a-c8-X1M" secondAttribute="centerX" id="FMc-Rf-nmx"/>
                                     <constraint firstItem="Bct-F4-1bs" firstAttribute="baseline" secondItem="LbX-36-JFi" secondAttribute="baseline" id="FaP-nc-Ryx"/>
                                     <constraint firstItem="Svk-kI-Dob" firstAttribute="bottom" secondItem="Xdl-R0-nrV" secondAttribute="bottom" id="HDd-88-ici"/>
                                     <constraint firstItem="x8I-9f-rbA" firstAttribute="top" secondItem="2mI-Q8-UPj" secondAttribute="bottom" constant="15" id="IXv-eC-UqS"/>
+                                    <constraint firstItem="2mI-Q8-UPj" firstAttribute="leading" secondItem="uj1-an-7iF" secondAttribute="trailing" constant="24" id="Icg-Fh-eNI"/>
                                     <constraint firstItem="3OM-OX-u5Q" firstAttribute="leading" secondItem="FaY-ca-llf" secondAttribute="leading" id="J3E-f4-3xJ"/>
+                                    <constraint firstItem="2mI-Q8-UPj" firstAttribute="top" secondItem="uj1-an-7iF" secondAttribute="bottom" constant="-57" id="NK0-L3-a44"/>
                                     <constraint firstItem="Bct-F4-1bs" firstAttribute="centerY" secondItem="LbX-36-JFi" secondAttribute="centerY" id="OAI-Up-rrH"/>
                                     <constraint firstItem="2mI-Q8-UPj" firstAttribute="top" secondItem="3OM-OX-u5Q" secondAttribute="bottom" constant="55" id="OHY-e0-lla"/>
+                                    <constraint firstItem="2mI-Q8-UPj" firstAttribute="top" secondItem="i1h-Nd-Wqv" secondAttribute="bottom" constant="-1" id="OPR-Ft-xck"/>
                                     <constraint firstItem="uj1-an-7iF" firstAttribute="top" secondItem="i1h-Nd-Wqv" secondAttribute="bottom" constant="5" id="P4l-hG-kva"/>
                                     <constraint firstItem="3OM-OX-u5Q" firstAttribute="centerX" secondItem="FaY-ca-llf" secondAttribute="centerX" id="PWM-Aq-E0O"/>
                                     <constraint firstItem="Bct-F4-1bs" firstAttribute="trailing" secondItem="Svk-kI-Dob" secondAttribute="trailing" id="RB3-Bp-BEa"/>
                                     <constraint firstItem="ZVl-OV-Kya" firstAttribute="leading" secondItem="hnM-Bi-uMl" secondAttribute="leading" id="RW1-7V-Ajn"/>
+                                    <constraint firstItem="2mI-Q8-UPj" firstAttribute="leading" secondItem="i1h-Nd-Wqv" secondAttribute="trailing" constant="-205" id="Svx-di-bpH"/>
                                     <constraint firstItem="7K2-jW-XAz" firstAttribute="top" secondItem="FaY-ca-llf" secondAttribute="top" constant="-49" id="Tzx-0B-owf"/>
+                                    <constraint firstAttribute="centerX" secondItem="hnM-Bi-uMl" secondAttribute="centerX" id="UMo-XN-Vem"/>
                                     <constraint firstItem="aUh-qx-4rJ" firstAttribute="trailing" secondItem="Svk-kI-Dob" secondAttribute="trailing" id="WiK-tD-q53"/>
                                     <constraint firstItem="ZVl-OV-Kya" firstAttribute="leading" secondItem="Svk-kI-Dob" secondAttribute="trailing" constant="-17" id="WjN-p3-61L"/>
                                     <constraint firstItem="x8I-9f-rbA" firstAttribute="trailing" secondItem="2mI-Q8-UPj" secondAttribute="trailing" id="X41-eT-dF1"/>
                                     <constraint firstItem="g2a-VH-N5p" firstAttribute="leading" secondItem="ZVl-OV-Kya" secondAttribute="trailing" constant="8" symbolic="YES" id="bFB-zt-BpH"/>
                                     <constraint firstAttribute="trailing" secondItem="i1h-Nd-Wqv" secondAttribute="trailing" constant="62" id="bz0-Us-vQU"/>
+                                    <constraint firstAttribute="centerX" secondItem="i1h-Nd-Wqv" secondAttribute="centerX" id="cHr-Un-jUi"/>
+                                    <constraint firstItem="2mI-Q8-UPj" firstAttribute="top" secondItem="uj1-an-7iF" secondAttribute="bottom" constant="-57" id="dwU-u3-OsE"/>
+                                    <constraint firstAttribute="centerX" secondItem="LbX-36-JFi" secondAttribute="centerX" id="gf7-MQ-ieo"/>
                                     <constraint firstItem="i1h-Nd-Wqv" firstAttribute="top" secondItem="3OM-OX-u5Q" secondAttribute="bottom" constant="8" symbolic="YES" id="hkM-6e-l2Y"/>
                                     <constraint firstItem="aUh-qx-4rJ" firstAttribute="bottom" secondItem="x8I-9f-rbA" secondAttribute="bottom" id="iX1-q3-ROj"/>
                                     <constraint firstItem="g2a-VH-N5p" firstAttribute="centerY" secondItem="Svk-kI-Dob" secondAttribute="centerY" id="ioe-Ul-09q"/>
                                     <constraint firstItem="Bct-F4-1bs" firstAttribute="top" secondItem="ZVl-OV-Kya" secondAttribute="bottom" constant="23" id="ixG-TC-qsm"/>
+                                    <constraint firstAttribute="centerX" secondItem="ZVl-OV-Kya" secondAttribute="centerX" id="jeQ-uV-Mst"/>
                                     <constraint firstItem="hnM-Bi-uMl" firstAttribute="leading" secondItem="FaY-ca-llf" secondAttribute="leading" constant="52" id="jgX-0n-zlp"/>
                                     <constraint firstItem="6az-ma-bVP" firstAttribute="top" secondItem="Xdl-R0-nrV" secondAttribute="bottom" constant="89" id="k9k-6k-ZNW"/>
                                     <constraint firstItem="g2a-VH-N5p" firstAttribute="leading" secondItem="Xdl-R0-nrV" secondAttribute="leading" id="la9-Qt-3a3"/>
                                     <constraint firstItem="uj1-an-7iF" firstAttribute="leading" secondItem="i1h-Nd-Wqv" secondAttribute="leading" id="ltJ-6I-uiq"/>
                                     <constraint firstItem="LbX-36-JFi" firstAttribute="top" secondItem="Svk-kI-Dob" secondAttribute="bottom" constant="22" id="ltx-g6-Wgz"/>
                                     <constraint firstItem="2mI-Q8-UPj" firstAttribute="top" secondItem="3OM-OX-u5Q" secondAttribute="bottom" constant="54" id="moF-Cc-89v"/>
+                                    <constraint firstItem="2mI-Q8-UPj" firstAttribute="top" secondItem="i1h-Nd-Wqv" secondAttribute="bottom" constant="-1" id="o1p-V7-zpA"/>
                                     <constraint firstItem="hnM-Bi-uMl" firstAttribute="top" secondItem="uj1-an-7iF" secondAttribute="bottom" constant="16" id="o3R-AG-Epi"/>
                                     <constraint firstAttribute="trailing" secondItem="7K2-jW-XAz" secondAttribute="trailing" id="o9w-Oc-X41"/>
                                     <constraint firstItem="hnM-Bi-uMl" firstAttribute="top" secondItem="2mI-Q8-UPj" secondAttribute="bottom" constant="8" symbolic="YES" id="pI2-6f-dBb"/>
@@ -2329,6 +2445,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstItem="aUh-qx-4rJ" firstAttribute="leading" secondItem="uj1-an-7iF" secondAttribute="leading" id="u77-Ka-tAx"/>
                                     <constraint firstItem="Svk-kI-Dob" firstAttribute="leading" secondItem="aUh-qx-4rJ" secondAttribute="leading" id="uGB-uX-CgB"/>
                                     <constraint firstItem="Xdl-R0-nrV" firstAttribute="leading" secondItem="LbX-36-JFi" secondAttribute="trailing" constant="8" symbolic="YES" id="urm-pA-ysN"/>
+                                    <constraint firstItem="2mI-Q8-UPj" firstAttribute="top" secondItem="uj1-an-7iF" secondAttribute="bottom" constant="-57" id="wrq-om-qWL"/>
                                     <constraint firstItem="aUh-qx-4rJ" firstAttribute="centerY" secondItem="x8I-9f-rbA" secondAttribute="centerY" id="xjA-y6-Gkv"/>
                                     <constraint firstAttribute="trailing" secondItem="2mI-Q8-UPj" secondAttribute="trailing" constant="40" id="xzO-tJ-ouO"/>
                                     <constraint firstItem="C3a-c8-X1M" firstAttribute="top" secondItem="LbX-36-JFi" secondAttribute="bottom" constant="25" id="y0A-Ic-a2p"/>
@@ -2341,11 +2458,24 @@ Make bullets larger and look like they do in this application. </string>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="sLb-Pu-GuO"/>
+                                        <exclude reference="P4l-hG-kva"/>
+                                        <exclude reference="ltJ-6I-uiq"/>
+                                        <exclude reference="9yf-22-OhR"/>
+                                        <exclude reference="AUF-pS-OIf"/>
                                         <exclude reference="OHY-e0-lla"/>
+                                        <exclude reference="dwU-u3-OsE"/>
+                                        <exclude reference="moF-Cc-89v"/>
+                                        <exclude reference="o1p-V7-zpA"/>
+                                        <exclude reference="wrq-om-qWL"/>
+                                        <exclude reference="xzO-tJ-ouO"/>
+                                        <exclude reference="o3R-AG-Epi"/>
+                                        <exclude reference="u77-Ka-tAx"/>
                                         <exclude reference="HDd-88-ici"/>
                                         <exclude reference="2qF-bb-TP6"/>
                                         <exclude reference="Dhh-SP-ua7"/>
+                                        <exclude reference="X41-eT-dF1"/>
                                         <exclude reference="9Pw-CN-ddb"/>
+                                        <exclude reference="BT5-GS-TEK"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -2407,7 +2537,7 @@ Make bullets larger and look like they do in this application. </string>
                                     <constraint firstAttribute="width" constant="288" id="Uva-9v-yfd"/>
                                 </constraints>
                                 <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

@@ -1719,6 +1719,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                             <constraint firstAttribute="width" constant="268" id="UGA-B8-vF7"/>
                                             <constraint firstAttribute="height" constant="300" id="YW9-9I-Wu7"/>
                                             <constraint firstAttribute="height" constant="204" id="fcQ-FA-cSE"/>
+                                            <constraint firstAttribute="width" constant="268" id="rSc-eZ-5c8"/>
                                         </constraints>
                                         <string key="text">Security Tips
 • Consider creating code words or phrases in your message that only your contacts will understand.
@@ -1732,6 +1733,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                             <mask key="constraints">
                                                 <exclude reference="Jfg-pf-05R"/>
                                                 <exclude reference="R6n-my-cJF"/>
+                                                <exclude reference="UGA-B8-vF7"/>
                                                 <exclude reference="YW9-9I-Wu7"/>
                                                 <exclude reference="fcQ-FA-cSE"/>
                                             </mask>
@@ -1788,6 +1790,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="53" id="u3H-4E-QXi"/>
                                     <constraint firstAttribute="trailing" secondItem="5gs-o0-35e" secondAttribute="trailing" constant="40" id="u8X-GQ-wDK"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="42" id="uRT-R7-hTX"/>
+                                    <constraint firstAttribute="centerX" secondItem="EuZ-r5-4Po" secondAttribute="centerX" id="utq-G7-bPf"/>
                                     <constraint firstAttribute="trailing" secondItem="EhN-cv-EGE" secondAttribute="trailing" constant="54" id="wez-jO-USq"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="centerX" secondItem="jgE-LU-aVm" secondAttribute="centerX" id="xKM-Hg-G2r"/>
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="baseline" secondItem="qPf-lP-GXC" secondAttribute="baseline" id="zhi-7A-97l"/>

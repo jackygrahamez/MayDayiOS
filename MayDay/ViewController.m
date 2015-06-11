@@ -501,12 +501,13 @@ BOOL alerting = false;
     NSLog(@"textViewDidChange");
     
     NSString *stringCountSave = masterViewController.messageSave.text;
-    NSLog(@"%@",stringCountSave);
+    NSLog(@"stringCountSave %@",stringCountSave);
     
     int countSave = (int) stringCountSave.length;
     countSave = 63 - countSave;
     //assumes you have a label, see the attached gif
     masterViewController.messageSave.text = stringCountSave;
+    
     if (countSave >= 0) {
     masterViewController.charactersSave.text = [NSString stringWithFormat:@"Characters: %d",countSave];
     }
@@ -517,10 +518,10 @@ BOOL alerting = false;
     masterViewController.messageSave.text = [stringCountSave substringWithRange:stringRangeSave];
     
     NSString *stringCountUpdate = masterViewController.messageUpdate.text;
-    NSLog(@"%@",stringCountUpdate);
+    NSLog(@"stringCountUpdate %@",stringCountUpdate);
     int countUpdate = (int) stringCountUpdate.length;
     countUpdate = 63 - countUpdate;
-    masterViewController.messageSave.text = stringCountUpdate;
+    masterViewController.messageUpdate.text = stringCountUpdate;
     if (countUpdate >= 0) {
     //assumes you have a label, see the attached gif
     masterViewController.charactersUpdate.text = [NSString stringWithFormat:@"Characters: %d",countUpdate];
@@ -579,13 +580,14 @@ BOOL alerting = false;
     }
 
     NSString *stringCountSave = masterViewController.messageSave.text;
-    NSLog(@"%@",stringCountSave);
+    NSLog(@"stringCountSave %@",stringCountSave);
     int countSave = (int) stringCountSave.length;
     countSave = 63 - countSave;
     masterViewController.messageSave.text = stringCountSave;
     masterViewController.charactersSave.text = [NSString stringWithFormat:@"Characters: %d",countSave];
     
     NSString *stringCountUpdate = masterViewController.messageUpdate.text;
+    NSLog(@"stringCountUpdate %@",stringCountUpdate);
     int countUpdate = (int) stringCountUpdate.length;
     countUpdate = 63 - countUpdate;
     masterViewController.messageSave.text = stringCountUpdate;

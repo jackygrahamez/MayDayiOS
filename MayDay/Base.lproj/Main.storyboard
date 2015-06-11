@@ -1824,6 +1824,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                     <connections>
                         <outlet property="charactersSave" destination="ne3-xb-Hln" id="sTs-6Q-S6j"/>
                         <outlet property="message" destination="lds-Hr-N6T" id="ecO-R8-tRj"/>
+                        <outlet property="messageSave" destination="lds-Hr-N6T" id="D1w-ec-JN3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZA-g6-h4q" sceneMemberID="firstResponder"/>

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>3292180F-6F17-4EAF-BCD9-18A4732320C9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>TextSOS</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9CF2528BF0768AAB1FDAC3B2426E814BDA2B8F61</key>
 		<string>github.com:jackygrahamez/MayDayiOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TextSOS.xcodeproj</string>
+	<string>TextSOS.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9CF2528BF0768AAB1FDAC3B2426E814BDA2B8F61</key>

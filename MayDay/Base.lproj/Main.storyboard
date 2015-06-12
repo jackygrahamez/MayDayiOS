@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Snn-jc-ylz">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -115,8 +116,8 @@
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ved-Dl-NPr">
-                                <rect key="frame" x="16" y="316" width="288" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ved-Dl-NPr">
+                                <rect key="frame" x="16" y="284" width="288" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal" title="Settings" backgroundImage="state_settings_480x50.jpg">
@@ -127,8 +128,8 @@
                                     <segue destination="Ic7-CG-rQ4" kind="push" identifier="homeSettings" id="DTu-HQ-P1E"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-yi-51F">
-                                <rect key="frame" x="16" y="368" width="288" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-yi-51F">
+                                <rect key="frame" x="16" y="336" width="288" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal" title="About" backgroundImage="state_settings_480x50.jpg">
@@ -139,24 +140,34 @@
                                     <segue destination="QXS-Qf-zOa" kind="push" id="PhP-xR-4K2"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="256" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="Orf-Gy-GCP">
-                                <rect key="frame" x="255" y="326" width="30" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H42-Jx-TZe">
+                                <rect key="frame" x="16" y="150" width="288" height="90"/>
+                                <string key="text">In an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device. 
+First check your Text SOS Alert settings to ensure your alerts are delivered to the correct people.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="Orf-Gy-GCP">
+                                <rect key="frame" x="255" y="294" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1hN-TB-2Vf"/>
                                     <constraint firstAttribute="width" constant="30" id="NCC-JP-GHc"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="T1v-Mt-g4L"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="256" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-Go-Fxb">
-                                <rect key="frame" x="255" y="377" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-Go-Fxb">
+                                <rect key="frame" x="255" y="345" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="idJ-7a-ZZa"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="lMc-3P-h5I"/>
                                     <constraint firstAttribute="width" constant="30" id="z6a-Bs-eZS"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kj-Nl-4gc">
-                                <rect key="frame" x="16" y="420" width="288" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kj-Nl-4gc">
+                                <rect key="frame" x="16" y="388" width="288" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal" title="Privacy" backgroundImage="state_settings_480x50.jpg">
@@ -167,8 +178,8 @@
                                     <segue destination="rEb-yr-l1j" kind="push" id="ynd-4m-rOl"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="256" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="urp-It-FY4">
-                                <rect key="frame" x="255" y="429" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="urp-It-FY4">
+                                <rect key="frame" x="255" y="397" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="8PL-EZ-pcE"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="A5n-64-Ovv"/>
@@ -188,7 +199,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Balance: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i40-h8-eN0" customClass="balance">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Balance: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i40-h8-eN0" customClass="balance">
                                 <rect key="frame" x="16" y="119" width="288" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="152" id="3p7-bt-UKU"/>
@@ -208,20 +219,6 @@
                                         <exclude reference="J5q-FP-TX1"/>
                                         <exclude reference="Jwb-mx-600"/>
                                     </mask>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H42-Jx-TZe">
-                                <rect key="frame" x="16" y="148" width="288" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="168" id="wOM-q2-Wws"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="170" id="zTR-aD-YJx"/>
-                                </constraints>
-                                <string key="text">In an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device. 
-First check your Text SOS Alert settings to ensure your alerts are delivered to the correct people.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -285,7 +282,6 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstItem="urp-It-FY4" firstAttribute="top" secondItem="WAb-Go-Fxb" secondAttribute="bottom" constant="22" id="emY-1a-cGI"/>
                             <constraint firstItem="zMM-T6-b5S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fCx-Oa-yve"/>
                             <constraint firstItem="Hqn-BN-3C4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fuu-P6-ksg"/>
-                            <constraint firstItem="H42-Jx-TZe" firstAttribute="top" secondItem="i40-h8-eN0" secondAttribute="bottom" constant="8" id="g68-Wy-XEP"/>
                             <constraint firstAttribute="centerX" secondItem="WAb-Go-Fxb" secondAttribute="centerX" id="gQY-Nk-fgg"/>
                             <constraint firstItem="WAb-Go-Fxb" firstAttribute="leading" secondItem="n8Y-yi-51F" secondAttribute="trailing" constant="-49" id="icc-Pu-z7p"/>
                             <constraint firstItem="ved-Dl-NPr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="jOe-LC-T9l"/>
@@ -303,7 +299,6 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstAttribute="centerX" secondItem="0Qc-6a-tNd" secondAttribute="centerX" id="qSA-0L-jCV"/>
                             <constraint firstItem="n8Y-yi-51F" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="qg2-Js-8LT"/>
                             <constraint firstAttribute="centerY" secondItem="Hqn-BN-3C4" secondAttribute="centerY" id="qlw-gH-Od5"/>
-                            <constraint firstItem="ved-Dl-NPr" firstAttribute="top" secondItem="H42-Jx-TZe" secondAttribute="bottom" constant="-2" id="qzZ-GX-hi1"/>
                             <constraint firstItem="Hqn-BN-3C4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s4d-nu-h9q"/>
                             <constraint firstItem="urp-It-FY4" firstAttribute="top" secondItem="WAb-Go-Fxb" secondAttribute="bottom" constant="22" id="scs-YO-QWF"/>
                             <constraint firstItem="WAb-Go-Fxb" firstAttribute="leading" secondItem="Orf-Gy-GCP" secondAttribute="leading" id="uXX-gC-i70"/>
@@ -323,10 +318,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <mask key="constraints">
                                 <exclude reference="Nem-Sv-QYY"/>
                                 <exclude reference="FJ1-ML-pSK"/>
-                                <exclude reference="Njc-Sd-kOy"/>
-                                <exclude reference="dWw-ol-sXU"/>
                                 <exclude reference="G7b-Tb-TgO"/>
-                                <exclude reference="QtY-3n-g8g"/>
                                 <exclude reference="kaw-ua-3DK"/>
                                 <exclude reference="yq4-po-vmV"/>
                                 <exclude reference="8o2-8W-ZJs"/>
@@ -336,11 +328,11 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 <exclude reference="zDD-BV-sYt"/>
                                 <exclude reference="qg2-Js-8LT"/>
                                 <exclude reference="jcd-DU-VaC"/>
+                                <exclude reference="8Q1-IY-nmR"/>
                                 <exclude reference="F6e-O9-8ak"/>
                                 <exclude reference="Fyv-Er-sMK"/>
                                 <exclude reference="V0L-cI-DNe"/>
                                 <exclude reference="Zsv-VX-1em"/>
-                                <exclude reference="8Q1-IY-nmR"/>
                                 <exclude reference="0cf-Tm-8vV"/>
                                 <exclude reference="gQY-Nk-fgg"/>
                                 <exclude reference="uXX-gC-i70"/>

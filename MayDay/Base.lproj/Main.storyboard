@@ -140,11 +140,15 @@
                                     <segue destination="QXS-Qf-zOa" kind="push" id="PhP-xR-4K2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H42-Jx-TZe">
-                                <rect key="frame" x="16" y="150" width="288" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H42-Jx-TZe">
+                                <rect key="frame" x="16" y="149" width="288" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="136" id="lNK-jB-4a7"/>
+                                    <constraint firstAttribute="height" constant="136" id="wFS-kf-tMc"/>
+                                </constraints>
                                 <string key="text">In an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device. 
 First check your Text SOS Alert settings to ensure your alerts are delivered to the correct people.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1876,27 +1880,44 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="4ne-w0-hUa">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1200" id="bhE-G9-n1b"/>
+                                </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z59-MI-7eL">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z59-MI-7eL">
                                 <rect key="frame" x="16" y="124" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Lh0-Tc-L4J"/>
+                                    <constraint firstAttribute="width" constant="288" id="wgV-uR-0nH"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JoK-eq-TBC">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JoK-eq-TBC">
                                 <rect key="frame" x="16" y="162" width="288" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.34603944590000002" blue="0.039561671440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="5H9-TC-rFv"/>
+                                    <constraint firstAttribute="height" constant="1" id="iZJ-p2-any"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Alerting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evS-vm-KPx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Alerting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evS-vm-KPx">
                                 <rect key="frame" x="108" y="133" width="105" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="R50-sF-YqC"/>
+                                    <constraint firstAttribute="height" constant="21" id="ZsZ-69-WG4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.34901960780000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsD-TM-OVq">
-                                <rect key="frame" x="95" y="266" width="130" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsD-TM-OVq">
+                                <rect key="frame" x="95" y="266" width="130" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="hJn-6r-adi"/>
-                                    <constraint firstAttribute="width" constant="130" id="iD7-UW-nAw"/>
+                                    <constraint firstAttribute="height" constant="37" id="3H9-KO-SSv"/>
+                                    <constraint firstAttribute="height" constant="50" id="Jnj-lq-GEw"/>
+                                    <constraint firstAttribute="width" constant="130" id="UJ1-2z-4TN"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="nu5-rO-wN0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
@@ -1904,45 +1925,81 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3H9-KO-SSv"/>
+                                        <exclude reference="nu5-rO-wN0"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="stopAlerting:" destination="XTZ-T7-65N" eventType="touchUpInside" id="jQi-zL-0Xw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Text SOS Alert is currently sending alert messages. Click Stop Alerting to cancel. " lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0H4-dj-CvZ">
-                                <rect key="frame" x="16" y="162" width="288" height="57"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Text SOS Alert is currently sending alert messages. Click Stop Alerting to cancel. " lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0H4-dj-CvZ">
+                                <rect key="frame" x="16" y="162" width="288" height="102"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="K3s-xB-Hpa"/>
+                                    <constraint firstAttribute="height" constant="57" id="C4Z-fv-Vz0"/>
+                                    <constraint firstAttribute="width" constant="288" id="Xdq-wZ-yXP"/>
+                                    <constraint firstAttribute="height" constant="102" id="nCx-dn-g6t"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="C4Z-fv-Vz0"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="37" text="Text SOS Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heP-Qc-WNY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="37" text="Text SOS Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heP-Qc-WNY">
                                 <rect key="frame" x="16" y="72" width="288" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="6Nu-CJ-91s"/>
+                                    <constraint firstAttribute="width" constant="288" id="7TA-24-ZMC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="BPK-Mj-mJ6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="UN4-ai-aie"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="JoK-eq-TBC" secondAttribute="centerX" id="6mM-2z-K8g"/>
-                            <constraint firstAttribute="centerX" secondItem="evS-vm-KPx" secondAttribute="centerX" id="8N9-8J-6Nq"/>
-                            <constraint firstAttribute="centerX" secondItem="nsD-TM-OVq" secondAttribute="centerX" id="9Q8-LP-epN"/>
-                            <constraint firstAttribute="centerX" secondItem="evS-vm-KPx" secondAttribute="centerX" id="B0k-0R-4H4"/>
-                            <constraint firstAttribute="centerX" secondItem="0H4-dj-CvZ" secondAttribute="centerX" id="JXI-2U-ejz"/>
-                            <constraint firstItem="heP-Qc-WNY" firstAttribute="leading" secondItem="vnW-si-bx4" secondAttribute="leadingMargin" constant="10" id="Mgu-vl-Sgd"/>
-                            <constraint firstAttribute="centerX" secondItem="JoK-eq-TBC" secondAttribute="centerX" id="ae0-hz-rT8"/>
-                            <constraint firstAttribute="centerX" secondItem="Z59-MI-7eL" secondAttribute="centerX" id="c7S-Xa-LDe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="heP-Qc-WNY" secondAttribute="trailing" constant="10" id="f9R-aV-b3f"/>
-                            <constraint firstAttribute="centerX" secondItem="heP-Qc-WNY" secondAttribute="centerX" id="hCo-si-Fa8"/>
-                            <constraint firstItem="4ne-w0-hUa" firstAttribute="leading" secondItem="vnW-si-bx4" secondAttribute="leadingMargin" id="inc-SY-7Gy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4ne-w0-hUa" secondAttribute="trailing" id="iou-cb-lgW"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="4ne-w0-hUa" secondAttribute="bottom" id="oN1-Hu-hHo"/>
-                            <constraint firstAttribute="centerY" secondItem="4ne-w0-hUa" secondAttribute="centerY" id="ojq-Zv-9c5"/>
-                            <constraint firstAttribute="centerX" secondItem="Z59-MI-7eL" secondAttribute="centerX" id="pwZ-3l-P2c"/>
+                            <constraint firstItem="JoK-eq-TBC" firstAttribute="top" secondItem="heP-Qc-WNY" secondAttribute="bottom" constant="53" id="EiW-t8-7fO"/>
+                            <constraint firstItem="0H4-dj-CvZ" firstAttribute="top" secondItem="heP-Qc-WNY" secondAttribute="bottom" constant="53" id="FJW-m4-cZv"/>
+                            <constraint firstItem="nsD-TM-OVq" firstAttribute="top" secondItem="heP-Qc-WNY" secondAttribute="bottom" constant="157" id="Q47-yG-GhD"/>
+                            <constraint firstItem="evS-vm-KPx" firstAttribute="top" secondItem="heP-Qc-WNY" secondAttribute="bottom" constant="24" id="R1w-Cp-JXl"/>
+                            <constraint firstItem="OYJ-r3-4Mq" firstAttribute="top" secondItem="nsD-TM-OVq" secondAttribute="bottom" constant="265" id="U3x-bY-A7W"/>
+                            <constraint firstItem="evS-vm-KPx" firstAttribute="top" secondItem="Z59-MI-7eL" secondAttribute="bottom" constant="8" symbolic="YES" id="Xqb-m2-3Wz"/>
+                            <constraint firstAttribute="centerY" secondItem="4ne-w0-hUa" secondAttribute="centerY" id="ZJL-nG-JC0"/>
+                            <constraint firstAttribute="centerX" secondItem="evS-vm-KPx" secondAttribute="centerX" id="dEd-NF-brz"/>
+                            <constraint firstAttribute="bottom" secondItem="JoK-eq-TBC" secondAttribute="bottom" constant="405" id="iMC-fy-MKC"/>
+                            <constraint firstAttribute="centerX" secondItem="4ne-w0-hUa" secondAttribute="centerX" id="ieD-GG-ZpM"/>
+                            <constraint firstAttribute="centerX" secondItem="Z59-MI-7eL" secondAttribute="centerX" id="kWs-qx-WxR"/>
+                            <constraint firstAttribute="centerX" secondItem="heP-Qc-WNY" secondAttribute="centerX" id="q94-cv-Np2"/>
+                            <constraint firstAttribute="centerX" secondItem="0H4-dj-CvZ" secondAttribute="centerX" id="qjz-1T-V30"/>
+                            <constraint firstAttribute="centerX" secondItem="nsD-TM-OVq" secondAttribute="centerX" id="syg-yP-inv"/>
+                            <constraint firstItem="heP-Qc-WNY" firstAttribute="top" secondItem="3v5-pI-ZSm" secondAttribute="bottom" constant="28" id="tuT-hZ-eb0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="4ne-w0-hUa" secondAttribute="bottom" id="uR2-3n-TX7"/>
+                            <constraint firstItem="nsD-TM-OVq" firstAttribute="top" secondItem="0H4-dj-CvZ" secondAttribute="bottom" constant="47" id="vBf-9f-ZDX"/>
+                            <constraint firstAttribute="centerX" secondItem="JoK-eq-TBC" secondAttribute="centerX" id="vyz-ex-pDq"/>
+                            <constraint firstItem="Z59-MI-7eL" firstAttribute="top" secondItem="heP-Qc-WNY" secondAttribute="bottom" constant="15" id="ynP-GF-Yed"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="iMC-fy-MKC"/>
+                                <exclude reference="Xqb-m2-3Wz"/>
+                                <exclude reference="vBf-9f-ZDX"/>
+                                <exclude reference="U3x-bY-A7W"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="2An-rs-UaE"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>

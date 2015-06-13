@@ -1287,6 +1287,9 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="7IW-X4-KgL">
                                         <rect key="frame" x="-68" y="-49" width="390" height="1200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1200" id="fr6-LL-y2N"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ha-sa-PFy">
                                         <rect key="frame" x="0.0" y="8" width="323" height="37"/>
@@ -2081,8 +2084,9 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 <rect key="frame" x="0.0" y="0.0" width="322" height="568"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="7K2-jW-XAz">
-                                        <rect key="frame" x="-68" y="-49" width="390" height="800"/>
+                                        <rect key="frame" x="-68" y="-49" width="390" height="1000"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="P1B-z7-Aq3"/>
                                             <constraint firstAttribute="height" constant="800" id="z6P-gC-vKR"/>
                                         </constraints>
                                         <variation key="default">

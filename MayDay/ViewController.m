@@ -108,18 +108,7 @@ BOOL alerting = false;
     }
 }
 
-- (IBAction)purchase:(SKProduct *)product{
-    SKPayment *payment = [SKPayment paymentWithProduct:product];
 
-    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-    [[SKPaymentQueue defaultQueue] addPayment:payment];
-}
-
-
-- (IBAction) restore{
-    //this is called when the user restores purchases, you should hook this up to a button
-    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
-}
 - (void) paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
 {
     NSLog(@"received restored transactions: %lu", (unsigned long)queue.transactions.count);
@@ -183,22 +172,7 @@ BOOL alerting = false;
  */
 
 
-- (IBAction)buyFiftyMessages:(id)sender {
 
-    NSString *promocodeString = promocode.text;
-    NSString *purchaseDialogMessage = @"Do you want to buy 50 text messages for $0.99?";
-    if ([appSandboxString isEqualToString:promocodeString]) {
-        purchaseDialogMessage = @"Do you want to buy 50 text messages for $0.99?\n\n[Environment: Sandbox]";
-    }
-
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle:@"Confirm Your In-App Purchase"
-                          message:purchaseDialogMessage
-                          delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Buy",nil];
-    alert.tag = 100;
-    [alert show];
-
-}
 
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
 
@@ -236,116 +210,6 @@ BOOL alerting = false;
     }
 
 }
-
-- (IBAction)contact1SetupField:(id)sender {
-
-    if (contact1SetupField.text.length > 3) {
-        NSLog(@"length > 3");
-        masterViewController.saveContactsNext.alpha = 1.0;
-        masterViewController.saveContactsNext.enabled = YES;
-        masterViewController.saveContactsNext.userInteractionEnabled = YES;
-    }
-}
-
--(IBAction)saveMessage:(id)sender
-{
-    NSString *savestring = message.text;
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:savestring forKey:@"messagestring"];
-    [defaults synchronize];
-    //[masterViewController.navigationController popViewControllerAnimated:YES];
-    UINavigationController *navigationController = self.navigationController;
-    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
-}
-- (IBAction)saveMessageNext:(id)sender {
-    NSString *savestring = message.text;
-    NSString *setupCompleted = @"true";
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:savestring forKey:@"messagestring"];
-    [defaults setObject:setupCompleted forKey:@"setupcompleted"];
-    [defaults synchronize];
-    [masterViewController setupLocalNotifications];
-}
--(IBAction)saveContact:(id)sender
-{
-    NSLog(@"saveContact");
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    NSString *savestring1 = contact1.text;
-    [defaults setObject:savestring1 forKey:@"contact1string"];
-    NSString *savestring2 = contact2.text;
-    [defaults setObject:savestring2 forKey:@"contact2string"];
-    NSString *savestring3 = contact3.text;
-    [defaults setObject:savestring3 forKey:@"contact3string"];
-    NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
-
-    [defaults synchronize];
-    //[masterViewController.navigationController popViewControllerAnimated:YES];
-    UINavigationController *navigationController = self.navigationController;
-    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
-}
-- (IBAction)saveContactsNext:(id)sender {
-    NSLog(@"saveContact");
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    NSString *savestring1 = contact1.text;
-    [defaults setObject:savestring1 forKey:@"contact1string"];
-    NSString *savestring2 = contact2.text;
-    [defaults setObject:savestring2 forKey:@"contact2string"];
-    NSString *savestring3 = contact3.text;
-    [defaults setObject:savestring3 forKey:@"contact3string"];
-    NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
-
-    [defaults synchronize];
-}
-
-- (IBAction)saveInterval:(id)sender {
-    int row = [masterViewController.messageIntervalPicker selectedRowInComponent:0];
-    NSLog(@"value at index %i %@", row, [_pickerData objectAtIndex:row]);
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* interval = [NSString stringWithFormat:@"%i", row];
-    [defaults setObject:interval forKey:@"interval"];
-    //[masterViewController.navigationController popViewControllerAnimated:YES];
-    UINavigationController *navigationController = self.navigationController;
-    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
-}
-- (IBAction)stopAlerting:(id)sender {
-    NSLog(@"Stop Alerting");
-    [autoTimer invalidate];
-    autoTimer = nil;
-    alerting = false;
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:nil forKey:@"alerting"];
-    [defaults synchronize];
-    //[masterViewController hideAlerting];
-    self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeView"];
-    //self.window.rootViewController =
-    //(UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeView"];
-
-}
-
-- (IBAction)contactPicker1:(id)sender {
-    NSLog(@"contactPicker1");
-    contactField = 1;
-    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
-    picker.peoplePickerDelegate = masterViewController;
-    [masterViewController presentModalViewController:picker animated:YES];
-}
-- (IBAction)contactPicker2:(id)sender {
-    NSLog(@"contactPicker2");
-    contactField = 2;
-    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
-    picker.peoplePickerDelegate = masterViewController;
-    [masterViewController presentModalViewController:picker animated:YES];
-}
-- (IBAction)contactPicker3:(id)sender {
-    NSLog(@"contactPicker3");
-    contactField = 3;
-    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
-    picker.peoplePickerDelegate = masterViewController;
-    [masterViewController presentModalViewController:picker animated:YES];
-}
-
 - (void)peoplePickerNavigationControllerDidCancel:
 (ABPeoplePickerNavigationController *)peoplePicker
 {
@@ -1108,5 +972,141 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 - (IBAction)triggerButton:(id)sender {
     [masterViewController powerButtonTrigger];
 }
+- (IBAction)purchase:(SKProduct *)product{
+    SKPayment *payment = [SKPayment paymentWithProduct:product];
+    
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    [[SKPaymentQueue defaultQueue] addPayment:payment];
+}
+- (IBAction) restore{
+    //this is called when the user restores purchases, you should hook this up to a button
+    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+}
+- (IBAction)buyFiftyMessages:(id)sender {
+    
+    NSString *promocodeString = promocode.text;
+    NSString *purchaseDialogMessage = @"Do you want to buy 50 text messages for $0.99?";
+    if ([appSandboxString isEqualToString:promocodeString]) {
+        purchaseDialogMessage = @"Do you want to buy 50 text messages for $0.99?\n\n[Environment: Sandbox]";
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Confirm Your In-App Purchase"
+                          message:purchaseDialogMessage
+                          delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Buy",nil];
+    alert.tag = 100;
+    [alert show];
+    
+}
+
+- (IBAction)contact1SetupField:(id)sender {
+    
+    if (contact1SetupField.text.length > 3) {
+        NSLog(@"length > 3");
+        masterViewController.saveContactsNext.alpha = 1.0;
+        masterViewController.saveContactsNext.enabled = YES;
+        masterViewController.saveContactsNext.userInteractionEnabled = YES;
+    }
+}
+
+-(IBAction)saveMessage:(id)sender
+{
+    NSString *savestring = message.text;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:savestring forKey:@"messagestring"];
+    [defaults synchronize];
+    //[masterViewController.navigationController popViewControllerAnimated:YES];
+    UINavigationController *navigationController = self.navigationController;
+    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
+}
+- (IBAction)saveMessageNext:(id)sender {
+    NSString *savestring = message.text;
+    NSString *setupCompleted = @"true";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:savestring forKey:@"messagestring"];
+    [defaults setObject:setupCompleted forKey:@"setupcompleted"];
+    [defaults synchronize];
+    [masterViewController setupLocalNotifications];
+}
+-(IBAction)saveContact:(id)sender
+{
+    NSLog(@"saveContact");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *savestring1 = contact1.text;
+    [defaults setObject:savestring1 forKey:@"contact1string"];
+    NSString *savestring2 = contact2.text;
+    [defaults setObject:savestring2 forKey:@"contact2string"];
+    NSString *savestring3 = contact3.text;
+    [defaults setObject:savestring3 forKey:@"contact3string"];
+    NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
+    
+    [defaults synchronize];
+    //[masterViewController.navigationController popViewControllerAnimated:YES];
+    UINavigationController *navigationController = self.navigationController;
+    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
+}
+- (IBAction)saveContactsNext:(id)sender {
+    NSLog(@"saveContact");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *savestring1 = contact1.text;
+    [defaults setObject:savestring1 forKey:@"contact1string"];
+    NSString *savestring2 = contact2.text;
+    [defaults setObject:savestring2 forKey:@"contact2string"];
+    NSString *savestring3 = contact3.text;
+    [defaults setObject:savestring3 forKey:@"contact3string"];
+    NSLog(@"%@,%@,%@",savestring1,savestring2,savestring3);
+    
+    [defaults synchronize];
+}
+
+- (IBAction)saveInterval:(id)sender {
+    int row = [masterViewController.messageIntervalPicker selectedRowInComponent:0];
+    NSLog(@"value at index %i %@", row, [_pickerData objectAtIndex:row]);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* interval = [NSString stringWithFormat:@"%i", row];
+    [defaults setObject:interval forKey:@"interval"];
+    //[masterViewController.navigationController popViewControllerAnimated:YES];
+    UINavigationController *navigationController = self.navigationController;
+    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
+}
+- (IBAction)stopAlerting:(id)sender {
+    NSLog(@"Stop Alerting");
+    [autoTimer invalidate];
+    autoTimer = nil;
+    alerting = false;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:nil forKey:@"alerting"];
+    [defaults synchronize];
+    //[masterViewController hideAlerting];
+    self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeView"];
+    //self.window.rootViewController =
+    //(UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"homeView"];
+    
+}
+
+- (IBAction)contactPicker1:(id)sender {
+    NSLog(@"contactPicker1");
+    contactField = 1;
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = masterViewController;
+    [masterViewController presentModalViewController:picker animated:YES];
+}
+- (IBAction)contactPicker2:(id)sender {
+    NSLog(@"contactPicker2");
+    contactField = 2;
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = masterViewController;
+    [masterViewController presentModalViewController:picker animated:YES];
+}
+- (IBAction)contactPicker3:(id)sender {
+    NSLog(@"contactPicker3");
+    contactField = 3;
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = masterViewController;
+    [masterViewController presentModalViewController:picker animated:YES];
+}
+
 
 @end

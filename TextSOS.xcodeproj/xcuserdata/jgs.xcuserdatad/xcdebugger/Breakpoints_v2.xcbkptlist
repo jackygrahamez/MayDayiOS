@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MayDay/ViewController.m"
-            timestampString = "455516431.594834"
+            timestampString = "455854012.855446"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "498"
-            endingLineNumber = "498"
-            landmarkName = "@implementation ViewController"
-            landmarkType = "3">
+            startingLineNumber = "499"
+            endingLineNumber = "499"
+            landmarkName = "-textViewDidChange:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,13 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MayDay/ViewController.m"
-            timestampString = "455680856.634526"
+            timestampString = "455907023.152257"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1100"
-            endingLineNumber = "1100"
-            landmarkName = "-animate"
-            landmarkType = "5">
+            startingLineNumber = "1133"
+            endingLineNumber = "1133">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

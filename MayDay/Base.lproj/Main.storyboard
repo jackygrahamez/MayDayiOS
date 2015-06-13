@@ -134,7 +134,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QXS-Qf-zOa" kind="push" id="PhP-xR-4K2"/>
+                                    <segue destination="iPj-Gl-OY4" kind="push" id="hfn-fA-Xpl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kj-Nl-4gc">
@@ -146,24 +146,24 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rEb-yr-l1j" kind="push" id="ynd-4m-rOl"/>
+                                    <segue destination="MKG-ij-qWM" kind="push" id="Zuw-EP-5Uf"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="Orf-Gy-GCP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="Orf-Gy-GCP">
                                 <rect key="frame" x="255" y="323" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VCr-TC-tL0"/>
                                     <constraint firstAttribute="width" constant="30" id="iYS-K1-6ak"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-Go-Fxb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-Go-Fxb">
                                 <rect key="frame" x="255" y="374" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="FB3-a1-rXT"/>
                                     <constraint firstAttribute="height" constant="30" id="fbc-oZ-RVg"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="urp-It-FY4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="urp-It-FY4">
                                 <rect key="frame" x="255" y="426" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="8PL-EZ-pcE"/>
@@ -492,7 +492,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstAttribute="width" constant="288" id="iLP-wf-YHr"/>
                                 </constraints>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -575,7 +575,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 <string key="text">Text SOS is a tool to alert your loved ones when you need them most. It can’t guarantee your security, but can give you piece of mind. Make plans with your emergency contacts so they’re prepared to act fast.
 </string>
                                 <color key="textColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -918,7 +918,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstAttribute="width" constant="288" id="c8M-hB-MLv"/>
                                 </constraints>
                                 <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -934,7 +934,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstAttribute="height" constant="67" id="eOI-QH-Ug0"/>
                                 </constraints>
                                 <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1100,9 +1100,12 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="This is the message that will be sent with your location." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJ9-kf-K29">
-                                        <rect key="frame" x="41" y="56" width="233" height="50"/>
+                                        <rect key="frame" x="41" y="56" width="245" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="245" id="wyC-MV-NWx"/>
+                                        </constraints>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="heightClass=compact-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1118,7 +1121,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbd-ZE-Jn4">
                                         <rect key="frame" x="95" y="114" width="185" height="65"/>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="heightClass=compact-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1138,7 +1141,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
 • Enable GPS tracking from your phone settings if you want your location to be included with your message.
   </string>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -1303,7 +1306,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="71" id="uuy-dc-z06"/>
                                         </constraints>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -1321,7 +1324,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                             <constraint firstAttribute="width" constant="185" id="yyr-OR-tkO"/>
                                         </constraints>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="heightClass=compact-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1608,13 +1611,13 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3b3-O6-Bld">
-                                        <rect key="frame" x="30" y="8.5" width="268" height="36.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Setup Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3b3-O6-Bld">
+                                        <rect key="frame" x="30" y="8" width="268" height="36.5"/>
                                         <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhN-cv-EGE">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhN-cv-EGE">
                                         <rect key="frame" x="30" y="53" width="268" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="5Ro-r5-qCj"/>
@@ -1626,7 +1629,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <string key="text">Below is the default message that will be sent with your location or you may enter your own text.
 </string>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -1637,17 +1640,8 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         </variation>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gs-o0-35e">
-                                        <rect key="frame" x="103" y="175" width="185" height="85"/>
-                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=compact-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        </variation>
-                                    </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXA-SW-dnP">
-                                        <rect key="frame" x="41" y="184" width="46" height="48"/>
+                                        <rect key="frame" x="42" y="135" width="46" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="Ijq-OO-fMU"/>
                                             <constraint firstAttribute="width" constant="46" id="dET-fo-Idu"/>
@@ -1666,14 +1660,14 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YF-9Q-aRb">
-                                        <rect key="frame" x="42" y="259" width="245" height="21"/>
+                                        <rect key="frame" x="42" y="225" width="245" height="21"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Emergency message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPf-lP-GXC">
-                                        <rect key="frame" x="47" y="259" width="75" height="21"/>
+                                        <rect key="frame" x="47" y="225" width="75" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="cET-fE-cgT"/>
                                             <constraint firstAttribute="width" constant="75" id="oFE-vG-chP"/>
@@ -1682,7 +1676,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="I'm here http://maps.google.com/GPS-location" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-6J-Kn2">
-                                        <rect key="frame" x="42" y="364" width="245" height="41"/>
+                                        <rect key="frame" x="42" y="330" width="245" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="cW4-4X-fce"/>
@@ -1692,14 +1686,14 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="characters" text="Characters: 63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-xb-Hln">
-                                        <rect key="frame" x="180" y="259" width="100" height="21"/>
+                                        <rect key="frame" x="180" y="225" width="100" height="21"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="message" text="I Need IMMEDIATE help! " translatesAutoresizingMaskIntoConstraints="NO" id="lds-Hr-N6T">
-                                        <rect key="frame" x="42" y="278" width="245" height="86"/>
+                                        <rect key="frame" x="42" y="244" width="245" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1708,7 +1702,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         </connections>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-bs-u5M">
-                                        <rect key="frame" x="110" y="430" width="109" height="50"/>
+                                        <rect key="frame" x="110" y="396" width="109" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="109" id="6oA-s4-jf9"/>
@@ -1740,7 +1734,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-r5-4Po">
-                                        <rect key="frame" x="30" y="488" width="268" height="400"/>
+                                        <rect key="frame" x="30" y="454" width="268" height="400"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="9RT-RJ-8LL"/>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="Jfg-pf-05R"/>
@@ -1756,7 +1750,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
 • Enable GPS tracking from your phone settings if you want your location to be included with your message.
 </string>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -1767,6 +1761,15 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                                 <exclude reference="fcQ-FA-cSE"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Create a plan so your contacts know what to do when they receive this" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gs-o0-35e">
+                                        <rect key="frame" x="110" y="135" width="185" height="85"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="heightClass=compact-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         </variation>
@@ -1786,10 +1789,12 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstItem="LAk-IX-vNh" firstAttribute="trailing" secondItem="jgE-LU-aVm" secondAttribute="trailingMargin" id="DZH-JS-YQa"/>
                                     <constraint firstItem="Zbq-bs-u5M" firstAttribute="top" secondItem="aR2-6J-Kn2" secondAttribute="bottom" constant="25" id="E5h-FI-qeu"/>
                                     <constraint firstItem="aR2-6J-Kn2" firstAttribute="trailing" secondItem="lds-Hr-N6T" secondAttribute="trailing" id="EO4-Pf-68y"/>
+                                    <constraint firstItem="5gs-o0-35e" firstAttribute="leading" secondItem="EhN-cv-EGE" secondAttribute="trailing" constant="-188" id="GUF-0Q-c56"/>
                                     <constraint firstAttribute="centerX" secondItem="EhN-cv-EGE" secondAttribute="centerX" id="Hpt-9N-sU2"/>
                                     <constraint firstAttribute="bottom" secondItem="EuZ-r5-4Po" secondAttribute="bottom" constant="-135" id="Jhh-HP-Jsx"/>
                                     <constraint firstItem="EhN-cv-EGE" firstAttribute="top" secondItem="3b3-O6-Bld" secondAttribute="bottom" constant="7" id="JiX-Fp-Dbm"/>
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="leading" secondItem="qPf-lP-GXC" secondAttribute="trailing" constant="58" id="Kdw-nn-l51"/>
+                                    <constraint firstItem="0YF-9Q-aRb" firstAttribute="top" secondItem="5gs-o0-35e" secondAttribute="bottom" constant="5" id="M2M-OL-FUx"/>
                                     <constraint firstItem="Zbq-bs-u5M" firstAttribute="top" secondItem="aR2-6J-Kn2" secondAttribute="bottom" constant="8" symbolic="YES" id="MJI-st-r1A"/>
                                     <constraint firstItem="5gs-o0-35e" firstAttribute="top" secondItem="hXA-SW-dnP" secondAttribute="bottom" constant="-57" id="OF8-mK-yCM"/>
                                     <constraint firstItem="qPf-lP-GXC" firstAttribute="top" secondItem="hXA-SW-dnP" secondAttribute="bottom" constant="34" id="Ocv-Ye-Nov"/>
@@ -1800,6 +1805,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="top" secondItem="Zbq-bs-u5M" secondAttribute="bottom" id="SIj-ia-iij"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="leading" secondItem="lds-Hr-N6T" secondAttribute="leading" id="SRu-12-eZ5"/>
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="trailing" secondItem="aR2-6J-Kn2" secondAttribute="trailing" id="STR-r4-6fO"/>
+                                    <constraint firstItem="5gs-o0-35e" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-48" id="VIw-gq-Eb6"/>
                                     <constraint firstItem="Zbq-bs-u5M" firstAttribute="top" secondItem="aR2-6J-Kn2" secondAttribute="bottom" constant="25" id="VgR-kL-A9Y"/>
                                     <constraint firstAttribute="trailing" secondItem="3b3-O6-Bld" secondAttribute="trailing" constant="30" id="WWN-UN-DMM"/>
                                     <constraint firstItem="EhN-cv-EGE" firstAttribute="top" secondItem="3b3-O6-Bld" secondAttribute="bottom" constant="8" id="YC1-af-Zgi"/>
@@ -1824,9 +1830,11 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="baseline" secondItem="0YF-9Q-aRb" secondAttribute="baseline" id="qh4-c1-Xee"/>
                                     <constraint firstItem="5gs-o0-35e" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-8" id="s1s-dW-Hdh"/>
                                     <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="3b3-O6-Bld" secondAttribute="bottom" constant="72" id="t1Z-Pg-v55"/>
+                                    <constraint firstItem="hXA-SW-dnP" firstAttribute="top" secondItem="EhN-cv-EGE" secondAttribute="bottom" constant="-48" id="tGF-6N-a37"/>
                                     <constraint firstItem="EuZ-r5-4Po" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="53" id="u3H-4E-QXi"/>
                                     <constraint firstAttribute="trailing" secondItem="5gs-o0-35e" secondAttribute="trailing" constant="40" id="u8X-GQ-wDK"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="leading" secondItem="jgE-LU-aVm" secondAttribute="leading" constant="42" id="uRT-R7-hTX"/>
+                                    <constraint firstItem="lds-Hr-N6T" firstAttribute="top" secondItem="0YF-9Q-aRb" secondAttribute="bottom" constant="-2" id="urg-N1-tng"/>
                                     <constraint firstAttribute="centerX" secondItem="EuZ-r5-4Po" secondAttribute="centerX" id="utq-G7-bPf"/>
                                     <constraint firstItem="0YF-9Q-aRb" firstAttribute="centerX" secondItem="jgE-LU-aVm" secondAttribute="centerX" id="xKM-Hg-G2r"/>
                                     <constraint firstItem="ne3-xb-Hln" firstAttribute="baseline" secondItem="qPf-lP-GXC" secondAttribute="baseline" id="zhi-7A-97l"/>
@@ -1957,7 +1965,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstAttribute="width" constant="288" id="Xdq-wZ-yXP"/>
                                     <constraint firstAttribute="height" constant="102" id="nCx-dn-g6t"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -2043,185 +2051,6 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
             <point key="canvasLocation" x="221" y="984"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="bRH-il-Wkl">
-            <objects>
-                <viewController id="rEb-yr-l1j" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="t4f-Cp-dbN"/>
-                        <viewControllerLayoutGuide type="bottom" id="Zow-UE-M4q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tk3-Nf-k5S">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKc-g0-ymM">
-                                <rect key="frame" x="0.0" y="-3" width="320" height="574"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="tLz-Fj-fR6">
-                                        <rect key="frame" x="-28" y="-46" width="375" height="800"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="800" id="hLc-wa-OQB"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lD-Fd-BAO">
-                                        <rect key="frame" x="16" y="63" width="304" height="1200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1200" id="Eeg-wu-wZT"/>
-                                        </constraints>
-                                        <string key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
-
-Text SOS Alert is committed to ensuring the privacy of all our users. This Privacy Policy governs all pages on the Text SOS Alert app. It does not apply to pages hosted by other organizations.
-
-By using Text SOS Alert, you consent to the terms of this Privacy Policy. Text SOS Alert may change its terms from time to time and, if such changes are made, we may place notices so that you will be aware of them. Your continued use of Text SOS Alert will be on the terms of this Privacy Policy as amended from time to time.
-
-Personal information which you choose to provide will be retained by Text SOS Alert on your device only. Messages transmitted by Text SOS Alert will exist on other services and will be outside the control of Text SOS Alert.
-
-Text SOS Alert makes no guarantees regarding your information security.</string>
-                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=compact-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        </variation>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-Zi-7Au">
-                                        <rect key="frame" x="81" y="18" width="158" height="37"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="tQu-00-3KI"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="tLz-Fj-fR6" secondAttribute="trailing" constant="-27" id="3yD-XJ-mAw"/>
-                                    <constraint firstItem="gaY-Zi-7Au" firstAttribute="leading" secondItem="pKc-g0-ymM" secondAttribute="leading" constant="81" id="8rZ-CA-CRk"/>
-                                    <constraint firstItem="tLz-Fj-fR6" firstAttribute="leading" secondItem="pKc-g0-ymM" secondAttribute="leading" constant="-28" id="G9R-Ix-pMK"/>
-                                    <constraint firstItem="gaY-Zi-7Au" firstAttribute="top" secondItem="pKc-g0-ymM" secondAttribute="top" constant="18" id="JWo-gl-PYs"/>
-                                    <constraint firstItem="gaY-Zi-7Au" firstAttribute="centerX" secondItem="pKc-g0-ymM" secondAttribute="centerX" id="KDA-yl-86E"/>
-                                    <constraint firstItem="8lD-Fd-BAO" firstAttribute="leading" secondItem="pKc-g0-ymM" secondAttribute="leading" constant="16" id="YSG-bk-Z0k"/>
-                                    <constraint firstAttribute="bottom" secondItem="tLz-Fj-fR6" secondAttribute="bottom" constant="-180" id="YzA-Wt-glw"/>
-                                    <constraint firstItem="8lD-Fd-BAO" firstAttribute="top" secondItem="gaY-Zi-7Au" secondAttribute="bottom" constant="8" symbolic="YES" id="eQH-bJ-DRi"/>
-                                    <constraint firstAttribute="trailing" secondItem="gaY-Zi-7Au" secondAttribute="trailing" constant="81" id="rLJ-CC-AGg"/>
-                                    <constraint firstAttribute="trailing" secondItem="8lD-Fd-BAO" secondAttribute="trailing" id="v07-LV-8u9"/>
-                                    <constraint firstItem="tLz-Fj-fR6" firstAttribute="top" secondItem="pKc-g0-ymM" secondAttribute="top" constant="-46" id="vM6-0L-8Mi"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="pKc-g0-ymM" firstAttribute="top" secondItem="tk3-Nf-k5S" secondAttribute="topMargin" constant="-3" id="MnS-OA-gWB"/>
-                            <constraint firstItem="pKc-g0-ymM" firstAttribute="centerY" secondItem="tk3-Nf-k5S" secondAttribute="centerY" id="Tcg-Z3-HVf"/>
-                            <constraint firstItem="pKc-g0-ymM" firstAttribute="leading" secondItem="tk3-Nf-k5S" secondAttribute="leading" id="WQ4-6Q-DPz"/>
-                            <constraint firstAttribute="trailing" secondItem="pKc-g0-ymM" secondAttribute="trailing" id="tjQ-gh-z8B"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="WJG-U0-mqI"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HIn-Ns-QEL" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1519" y="968"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="WNY-V1-fSG">
-            <objects>
-                <viewController id="QXS-Qf-zOa" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="F9F-Pj-BK6"/>
-                        <viewControllerLayoutGuide type="bottom" id="vp3-XV-gEx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yDz-xj-UN6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-h2-XkC">
-                                <rect key="frame" x="0.0" y="-20" width="322" height="588"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="ml7-R8-FFN">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1200" id="Bjh-Fu-hBM"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XM-i5-n7A">
-                                        <rect key="frame" x="82" y="28" width="158" height="37"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="85d-ed-rPW"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdT-Ao-xFz">
-                                        <rect key="frame" x="8" y="73" width="304" height="1200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1200" id="Fp6-rw-uWU"/>
-                                        </constraints>
-                                        <string key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
-               
- How Does Text SOS Work?
-                
-Text SOS Alert can be installed on either smartphones or smartwatches which pair with each other. 
-You provide 3 emergency contacts. 
-In the event of an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.
-3 emergency contacts will continually receive texts along with your GPS location.
-To stop an emergency alert, open Text SOS and press the green "Stop Alerting" button on screen.
-                
-We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™ and LG G Watch R™. It has not been tested but it may work with LG G Watch™, Samsung Gear Live™, Asus ZenWatch™ and Sony SmartWatch 3™.
-Make bullets larger and look like they do in this application. </string>
-                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=compact-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        </variation>
-                                    </textView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ml7-R8-FFN" firstAttribute="top" secondItem="dgh-h2-XkC" secondAttribute="top" id="2TP-if-0jY"/>
-                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="centerX" secondItem="SdT-Ao-xFz" secondAttribute="centerX" id="445-r6-4PJ"/>
-                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leading" constant="82" id="4zX-vO-OUB"/>
-                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="centerX" secondItem="ml7-R8-FFN" secondAttribute="centerX" id="8Y9-d2-9KN"/>
-                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leadingMargin" id="BWf-SP-282"/>
-                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="top" secondItem="5XM-i5-n7A" secondAttribute="bottom" constant="8" symbolic="YES" id="CfA-yS-yd2"/>
-                                    <constraint firstAttribute="trailing" secondItem="5XM-i5-n7A" secondAttribute="trailing" constant="82" id="G8R-72-pcX"/>
-                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="top" secondItem="dgh-h2-XkC" secondAttribute="top" constant="28" id="JyK-z2-WSu"/>
-                                    <constraint firstItem="ml7-R8-FFN" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leading" id="KV9-vG-HYr"/>
-                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="top" secondItem="5XM-i5-n7A" secondAttribute="bottom" constant="8" symbolic="YES" id="h7o-Ol-VHm"/>
-                                    <constraint firstAttribute="trailing" secondItem="ml7-R8-FFN" secondAttribute="trailing" constant="2" id="oXw-w5-i84"/>
-                                    <constraint firstAttribute="bottom" secondItem="5XM-i5-n7A" secondAttribute="bottom" constant="523" id="qYG-SJ-J2F"/>
-                                    <constraint firstItem="SdT-Ao-xFz" firstAttribute="leading" secondItem="dgh-h2-XkC" secondAttribute="leadingMargin" id="yDw-Qi-Gdo"/>
-                                    <constraint firstItem="5XM-i5-n7A" firstAttribute="centerX" secondItem="dgh-h2-XkC" secondAttribute="centerX" id="zqr-dA-ZNa"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="CfA-yS-yd2"/>
-                                        <exclude reference="yDw-Qi-Gdo"/>
-                                        <exclude reference="445-r6-4PJ"/>
-                                    </mask>
-                                </variation>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="dgh-h2-XkC" firstAttribute="top" secondItem="yDz-xj-UN6" secondAttribute="topMargin" constant="-20" id="LdB-PA-ODg"/>
-                            <constraint firstItem="dgh-h2-XkC" firstAttribute="leading" secondItem="yDz-xj-UN6" secondAttribute="leading" id="QnP-ed-TY2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dgh-h2-XkC" secondAttribute="trailing" constant="-18" id="UDO-17-KTd"/>
-                            <constraint firstItem="dgh-h2-XkC" firstAttribute="bottom" secondItem="vp3-XV-gEx" secondAttribute="top" id="opQ-8n-FaZ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="lh4-Zs-VX9"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fg0-rW-xF8" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1158" y="968"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="Ryv-Fi-gK4">
             <objects>
                 <viewController id="Pso-Rd-qPb" customClass="ViewController" sceneMemberID="viewController">
@@ -2260,7 +2089,7 @@ Make bullets larger and look like they do in this application. </string>
                                             <constraint firstAttribute="height" constant="50" id="XBz-jO-gLb"/>
                                         </constraints>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -2281,7 +2110,7 @@ Make bullets larger and look like they do in this application. </string>
                                             <constraint firstAttribute="height" constant="85" id="wtg-Qb-NaP"/>
                                         </constraints>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -2425,7 +2254,7 @@ Make bullets larger and look like they do in this application. </string>
 • Make necessary plans with these contacts so they are prepared to act fast. Having a predetermined course of action could save your life.
 </string>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="heightClass=compact-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2751,12 +2580,12 @@ Make bullets larger and look like they do in this application. </string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfI-9A-IX9">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfI-9A-IX9">
                                         <rect key="frame" x="8" y="73" width="304" height="1200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1200" id="YsU-Wd-jDw"/>
                                         </constraints>
-                                        <string key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
+                                        <mutableString key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
                
  How Does Text SOS Work?
                 
@@ -2766,10 +2595,15 @@ In the event of an emergency, repeatedly press the power button on your phone 5x
 3 emergency contacts will continually receive texts along with your GPS location.
 To stop an emergency alert, open Text SOS and press the green "Stop Alerting" button on screen.
                 
-We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™ and LG G Watch R™. It has not been tested but it may work with LG G Watch™, Samsung Gear Live™, Asus ZenWatch™ and Sony SmartWatch 3™. </string>
+We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™ and LG G Watch R™. It has not been tested but it may work with LG G Watch™, Samsung Gear Live™, Asus ZenWatch™ and Sony SmartWatch 3™. </mutableString>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="YsU-Wd-jDw"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="heightClass=compact">
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         </variation>
@@ -2779,14 +2613,18 @@ We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™
                                     <constraint firstAttribute="trailing" secondItem="HPq-mi-L7E" secondAttribute="trailing" constant="82" id="9MK-Hf-t0Z"/>
                                     <constraint firstItem="HPq-mi-L7E" firstAttribute="leading" secondItem="AZn-uT-NtE" secondAttribute="leading" constant="82" id="DI2-RR-ve2"/>
                                     <constraint firstItem="dfI-9A-IX9" firstAttribute="top" secondItem="HPq-mi-L7E" secondAttribute="bottom" constant="8" symbolic="YES" id="IzY-IX-jUA"/>
+                                    <constraint firstItem="dfI-9A-IX9" firstAttribute="leading" secondItem="AZn-uT-NtE" secondAttribute="leading" id="LeB-6C-O04"/>
                                     <constraint firstAttribute="bottom" secondItem="HPq-mi-L7E" secondAttribute="bottom" constant="523" id="QhR-3y-HP5"/>
                                     <constraint firstItem="HPq-mi-L7E" firstAttribute="centerX" secondItem="dfI-9A-IX9" secondAttribute="centerX" id="UJn-UP-nOr"/>
                                     <constraint firstItem="dfI-9A-IX9" firstAttribute="top" secondItem="HPq-mi-L7E" secondAttribute="bottom" constant="8" symbolic="YES" id="VfR-cZ-nHx"/>
+                                    <constraint firstAttribute="trailing" secondItem="dfI-9A-IX9" secondAttribute="trailing" id="Yza-Vq-YRf"/>
+                                    <constraint firstAttribute="bottom" secondItem="dfI-9A-IX9" secondAttribute="bottom" id="bOE-Pg-UL7"/>
                                     <constraint firstAttribute="trailing" secondItem="STG-Cm-xyt" secondAttribute="trailing" constant="2" id="c85-vi-1Ve"/>
                                     <constraint firstItem="HPq-mi-L7E" firstAttribute="top" secondItem="AZn-uT-NtE" secondAttribute="top" constant="28" id="fl9-Z6-l4s"/>
                                     <constraint firstItem="dfI-9A-IX9" firstAttribute="leading" secondItem="AZn-uT-NtE" secondAttribute="leadingMargin" id="g2Y-np-KWr"/>
                                     <constraint firstItem="STG-Cm-xyt" firstAttribute="top" secondItem="AZn-uT-NtE" secondAttribute="top" id="gt8-QG-0N8"/>
                                     <constraint firstItem="HPq-mi-L7E" firstAttribute="centerX" secondItem="AZn-uT-NtE" secondAttribute="centerX" id="hek-y4-spr"/>
+                                    <constraint firstItem="dfI-9A-IX9" firstAttribute="top" secondItem="HPq-mi-L7E" secondAttribute="bottom" id="rKB-Rn-88H"/>
                                     <constraint firstItem="dfI-9A-IX9" firstAttribute="leading" secondItem="AZn-uT-NtE" secondAttribute="leadingMargin" id="tme-75-Pm9"/>
                                     <constraint firstItem="STG-Cm-xyt" firstAttribute="leading" secondItem="AZn-uT-NtE" secondAttribute="leading" id="vJG-0I-FTo"/>
                                     <constraint firstItem="dfI-9A-IX9" firstAttribute="centerX" secondItem="STG-Cm-xyt" secondAttribute="centerX" id="xIA-di-CaT"/>
@@ -2794,7 +2632,10 @@ We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="IzY-IX-jUA"/>
+                                        <exclude reference="VfR-cZ-nHx"/>
+                                        <exclude reference="g2Y-np-KWr"/>
                                         <exclude reference="tme-75-Pm9"/>
+                                        <exclude reference="xIA-di-CaT"/>
                                         <exclude reference="UJn-UP-nOr"/>
                                     </mask>
                                 </variation>
@@ -2846,12 +2687,12 @@ We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV5-VU-i6y">
-                                        <rect key="frame" x="16" y="63" width="304" height="1200"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV5-VU-i6y">
+                                        <rect key="frame" x="16" y="63" width="296" height="1200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1200" id="vB2-Fe-2qk"/>
                                         </constraints>
-                                        <string key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
+                                        <mutableString key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
 
 Text SOS Alert is committed to ensuring the privacy of all our users. This Privacy Policy governs all pages on the Text SOS Alert app. It does not apply to pages hosted by other organizations.
 
@@ -2859,10 +2700,15 @@ By using Text SOS Alert, you consent to the terms of this Privacy Policy. Text S
 
 Personal information which you choose to provide will be retained by Text SOS Alert on your device only. Messages transmitted by Text SOS Alert will exist on other services and will be outside the control of Text SOS Alert.
 
-Text SOS Alert makes no guarantees regarding your information security.</string>
+Text SOS Alert makes no guarantees regarding your information security.</mutableString>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="vB2-Fe-2qk"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="heightClass=compact-widthClass=compact">
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         </variation>
@@ -2873,14 +2719,25 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
                                     <constraint firstItem="cyK-50-xHR" firstAttribute="leading" secondItem="zp0-Hh-osR" secondAttribute="leading" constant="81" id="7SV-TD-WrC"/>
                                     <constraint firstAttribute="trailing" secondItem="wV5-VU-i6y" secondAttribute="trailing" id="EXR-dX-aIX"/>
                                     <constraint firstItem="cyK-50-xHR" firstAttribute="top" secondItem="zp0-Hh-osR" secondAttribute="top" constant="18" id="MxZ-8j-dwh"/>
+                                    <constraint firstItem="wV5-VU-i6y" firstAttribute="top" secondItem="cyK-50-xHR" secondAttribute="bottom" id="RBc-VS-rfb"/>
+                                    <constraint firstAttribute="trailing" secondItem="wV5-VU-i6y" secondAttribute="trailing" id="TV7-LX-AGp"/>
+                                    <constraint firstAttribute="bottom" secondItem="wV5-VU-i6y" secondAttribute="bottom" id="Xna-1u-R4R"/>
                                     <constraint firstAttribute="trailing" secondItem="Zoo-4h-Ywh" secondAttribute="trailing" constant="-27" id="aCI-Pt-9Er"/>
                                     <constraint firstAttribute="trailing" secondItem="cyK-50-xHR" secondAttribute="trailing" constant="81" id="fgI-vh-ocn"/>
                                     <constraint firstItem="wV5-VU-i6y" firstAttribute="leading" secondItem="zp0-Hh-osR" secondAttribute="leading" constant="16" id="ho5-zH-9jY"/>
+                                    <constraint firstItem="wV5-VU-i6y" firstAttribute="leading" secondItem="zp0-Hh-osR" secondAttribute="leading" id="jlJ-pa-Dq3"/>
                                     <constraint firstItem="Zoo-4h-Ywh" firstAttribute="top" secondItem="zp0-Hh-osR" secondAttribute="top" constant="-46" id="kSm-dS-ozz"/>
                                     <constraint firstItem="Zoo-4h-Ywh" firstAttribute="leading" secondItem="zp0-Hh-osR" secondAttribute="leading" constant="-28" id="lA0-rh-02p"/>
                                     <constraint firstAttribute="bottom" secondItem="Zoo-4h-Ywh" secondAttribute="bottom" constant="-180" id="qpt-wt-Q6U"/>
                                     <constraint firstItem="wV5-VU-i6y" firstAttribute="top" secondItem="cyK-50-xHR" secondAttribute="bottom" constant="8" symbolic="YES" id="ugn-16-vL5"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EXR-dX-aIX"/>
+                                        <exclude reference="ho5-zH-9jY"/>
+                                        <exclude reference="ugn-16-vL5"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2899,6 +2756,212 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
             </objects>
             <point key="canvasLocation" x="629" y="-848"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="aUr-wm-7Rv">
+            <objects>
+                <viewController id="MKG-ij-qWM" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jgW-IH-peU"/>
+                        <viewControllerLayoutGuide type="bottom" id="UJi-bB-RtA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R7T-9E-Qmv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MN4-Z9-qKL">
+                                <rect key="frame" x="0.0" y="-3" width="320" height="574"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="wrr-DF-dUD">
+                                        <rect key="frame" x="-28" y="-46" width="375" height="800"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="800" id="Pmi-h6-Na4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRK-y4-cdd">
+                                        <rect key="frame" x="81" y="18" width="158" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="7tQ-uV-WMW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVA-yb-83i">
+                                        <rect key="frame" x="16" y="63" width="296" height="1200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1200" id="pp9-4B-Izm"/>
+                                        </constraints>
+                                        <mutableString key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
+
+Text SOS Alert is committed to ensuring the privacy of all our users. This Privacy Policy governs all pages on the Text SOS Alert app. It does not apply to pages hosted by other organizations.
+
+By using Text SOS Alert, you consent to the terms of this Privacy Policy. Text SOS Alert may change its terms from time to time and, if such changes are made, we may place notices so that you will be aware of them. Your continued use of Text SOS Alert will be on the terms of this Privacy Policy as amended from time to time.
+
+Personal information which you choose to provide will be retained by Text SOS Alert on your device only. Messages transmitted by Text SOS Alert will exist on other services and will be outside the control of Text SOS Alert.
+
+Text SOS Alert makes no guarantees regarding your information security.</mutableString>
+                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="pp9-4B-Izm"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        </variation>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wrr-DF-dUD" secondAttribute="trailing" constant="-27" id="4iB-Gt-Fj8"/>
+                                    <constraint firstItem="sVA-yb-83i" firstAttribute="leading" secondItem="MN4-Z9-qKL" secondAttribute="leading" id="4wZ-s5-VLZ"/>
+                                    <constraint firstItem="RRK-y4-cdd" firstAttribute="top" secondItem="MN4-Z9-qKL" secondAttribute="top" constant="18" id="7NH-yy-a1l"/>
+                                    <constraint firstItem="sVA-yb-83i" firstAttribute="leading" secondItem="MN4-Z9-qKL" secondAttribute="leading" constant="16" id="7W0-R6-wC6"/>
+                                    <constraint firstItem="RRK-y4-cdd" firstAttribute="leading" secondItem="MN4-Z9-qKL" secondAttribute="leading" constant="81" id="9aw-Jv-Re1"/>
+                                    <constraint firstItem="sVA-yb-83i" firstAttribute="top" secondItem="RRK-y4-cdd" secondAttribute="bottom" id="D1C-wb-wuJ"/>
+                                    <constraint firstItem="wrr-DF-dUD" firstAttribute="leading" secondItem="MN4-Z9-qKL" secondAttribute="leading" constant="-28" id="Fik-Fr-R7f"/>
+                                    <constraint firstAttribute="bottom" secondItem="wrr-DF-dUD" secondAttribute="bottom" constant="-180" id="I5d-pD-EWo"/>
+                                    <constraint firstItem="wrr-DF-dUD" firstAttribute="top" secondItem="MN4-Z9-qKL" secondAttribute="top" constant="-46" id="IAz-tQ-7cz"/>
+                                    <constraint firstItem="RRK-y4-cdd" firstAttribute="centerX" secondItem="MN4-Z9-qKL" secondAttribute="centerX" id="QlF-tJ-0Nu"/>
+                                    <constraint firstAttribute="trailing" secondItem="sVA-yb-83i" secondAttribute="trailing" id="Tjb-Mv-xPn"/>
+                                    <constraint firstItem="sVA-yb-83i" firstAttribute="top" secondItem="RRK-y4-cdd" secondAttribute="bottom" constant="8" symbolic="YES" id="cBe-qG-gsd"/>
+                                    <constraint firstAttribute="trailing" secondItem="RRK-y4-cdd" secondAttribute="trailing" constant="81" id="dHe-du-cT3"/>
+                                    <constraint firstAttribute="trailing" secondItem="sVA-yb-83i" secondAttribute="trailing" id="lq9-Io-Fjr"/>
+                                    <constraint firstAttribute="bottom" secondItem="sVA-yb-83i" secondAttribute="bottom" id="tOE-LV-rr1"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Tjb-Mv-xPn"/>
+                                        <exclude reference="7W0-R6-wC6"/>
+                                        <exclude reference="cBe-qG-gsd"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MN4-Z9-qKL" secondAttribute="trailing" id="4Te-0Y-pUJ"/>
+                            <constraint firstItem="MN4-Z9-qKL" firstAttribute="centerY" secondItem="R7T-9E-Qmv" secondAttribute="centerY" id="FwQ-YU-go4"/>
+                            <constraint firstItem="MN4-Z9-qKL" firstAttribute="leading" secondItem="R7T-9E-Qmv" secondAttribute="leading" id="jrB-XS-Twe"/>
+                            <constraint firstItem="MN4-Z9-qKL" firstAttribute="top" secondItem="R7T-9E-Qmv" secondAttribute="topMargin" constant="-3" id="yZ0-of-7bZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RCG-oj-pht"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dp-65-ND3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1527" y="994"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uTc-rE-CpM">
+            <objects>
+                <viewController id="iPj-Gl-OY4" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XxV-yU-Ody"/>
+                        <viewControllerLayoutGuide type="bottom" id="zum-Ap-wPZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="26r-F8-1IL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeG-ob-FL1">
+                                <rect key="frame" x="0.0" y="-20" width="322" height="588"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="wde-T1-1sc">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1200" id="g3D-m1-gi1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaI-AV-IKk">
+                                        <rect key="frame" x="82" y="28" width="158" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="8V9-ub-6SG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jir-U4-GI5">
+                                        <rect key="frame" x="8" y="73" width="304" height="1200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1200" id="az1-d0-Aa2"/>
+                                        </constraints>
+                                        <mutableString key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
+               
+ How Does Text SOS Work?
+                
+Text SOS Alert can be installed on either smartphones or smartwatches which pair with each other. 
+You provide 3 emergency contacts. 
+In the event of an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.
+3 emergency contacts will continually receive texts along with your GPS location.
+To stop an emergency alert, open Text SOS and press the green "Stop Alerting" button on screen.
+                
+We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™ and LG G Watch R™. It has not been tested but it may work with LG G Watch™, Samsung Gear Live™, Asus ZenWatch™ and Sony SmartWatch 3™. </mutableString>
+                                        <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="az1-d0-Aa2"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        </variation>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eaI-AV-IKk" firstAttribute="centerX" secondItem="XeG-ob-FL1" secondAttribute="centerX" id="3MX-ge-L0h"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jir-U4-GI5" secondAttribute="bottom" id="94Q-1q-DOZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="eaI-AV-IKk" secondAttribute="bottom" constant="523" id="DSF-eX-XlV"/>
+                                    <constraint firstItem="eaI-AV-IKk" firstAttribute="top" secondItem="XeG-ob-FL1" secondAttribute="top" constant="28" id="G3t-1A-evo"/>
+                                    <constraint firstItem="wde-T1-1sc" firstAttribute="top" secondItem="XeG-ob-FL1" secondAttribute="top" id="HJg-86-pmw"/>
+                                    <constraint firstItem="eaI-AV-IKk" firstAttribute="leading" secondItem="XeG-ob-FL1" secondAttribute="leading" constant="82" id="HS4-fo-NRC"/>
+                                    <constraint firstItem="Jir-U4-GI5" firstAttribute="top" secondItem="eaI-AV-IKk" secondAttribute="bottom" id="Hvx-Za-eE3"/>
+                                    <constraint firstItem="Jir-U4-GI5" firstAttribute="top" secondItem="eaI-AV-IKk" secondAttribute="bottom" constant="8" symbolic="YES" id="KRT-Wm-Jcg"/>
+                                    <constraint firstItem="Jir-U4-GI5" firstAttribute="leading" secondItem="XeG-ob-FL1" secondAttribute="leadingMargin" id="OIg-aC-cEb"/>
+                                    <constraint firstItem="Jir-U4-GI5" firstAttribute="centerX" secondItem="wde-T1-1sc" secondAttribute="centerX" id="RAs-Ch-5PP"/>
+                                    <constraint firstItem="wde-T1-1sc" firstAttribute="leading" secondItem="XeG-ob-FL1" secondAttribute="leading" id="YMf-5O-wk4"/>
+                                    <constraint firstAttribute="trailing" secondItem="wde-T1-1sc" secondAttribute="trailing" constant="2" id="ai3-hm-Y3W"/>
+                                    <constraint firstItem="Jir-U4-GI5" firstAttribute="leading" secondItem="XeG-ob-FL1" secondAttribute="leadingMargin" id="az0-OY-UeG"/>
+                                    <constraint firstItem="eaI-AV-IKk" firstAttribute="centerX" secondItem="Jir-U4-GI5" secondAttribute="centerX" id="cVW-YD-7ga"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jir-U4-GI5" secondAttribute="trailing" id="jxu-zS-ICj"/>
+                                    <constraint firstAttribute="trailing" secondItem="eaI-AV-IKk" secondAttribute="trailing" constant="82" id="mFt-nu-pLy"/>
+                                    <constraint firstItem="Jir-U4-GI5" firstAttribute="top" secondItem="eaI-AV-IKk" secondAttribute="bottom" constant="8" symbolic="YES" id="z7a-h4-vw1"/>
+                                    <constraint firstItem="Jir-U4-GI5" firstAttribute="leading" secondItem="XeG-ob-FL1" secondAttribute="leading" id="zbs-Pb-Hlt"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="z7a-h4-vw1"/>
+                                        <exclude reference="KRT-Wm-Jcg"/>
+                                        <exclude reference="az0-OY-UeG"/>
+                                        <exclude reference="OIg-aC-cEb"/>
+                                        <exclude reference="RAs-Ch-5PP"/>
+                                        <exclude reference="cVW-YD-7ga"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XeG-ob-FL1" firstAttribute="leading" secondItem="26r-F8-1IL" secondAttribute="leading" id="8lq-IS-No1"/>
+                            <constraint firstItem="XeG-ob-FL1" firstAttribute="top" secondItem="26r-F8-1IL" secondAttribute="topMargin" constant="-20" id="IOE-so-RDf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XeG-ob-FL1" secondAttribute="trailing" constant="-18" id="dWI-cp-A37"/>
+                            <constraint firstItem="XeG-ob-FL1" firstAttribute="bottom" secondItem="zum-Ap-wPZ" secondAttribute="top" id="lSo-EG-QW2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mw0-18-Y0u"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulQ-3e-g4N" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1154" y="994"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Texture" width="768" height="1024"/>
@@ -2908,6 +2971,6 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
         <image name="warning.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="luT-kI-Gpd"/>
+        <segue reference="BvY-oe-PhT"/>
     </inferredMetricsTieBreakers>
 </document>

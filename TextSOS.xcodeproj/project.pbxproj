@@ -879,7 +879,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "12342fd9-406d-458a-a342-5661c4df2ceb";
+				PROVISIONING_PROFILE = "a15549f2-2772-4589-9ea3-ae61315f943c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -917,7 +917,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "12342fd9-406d-458a-a342-5661c4df2ceb";
+				PROVISIONING_PROFILE = "a15549f2-2772-4589-9ea3-ae61315f943c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -929,8 +929,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Shultz";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -940,7 +940,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "12342fd9-406d-458a-a342-5661c4df2ceb";
+				PROVISIONING_PROFILE = "a15549f2-2772-4589-9ea3-ae61315f943c";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -950,8 +950,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: John Shultz";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Shultz";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -961,7 +961,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "12342fd9-406d-458a-a342-5661c4df2ceb";
+				PROVISIONING_PROFILE = "a15549f2-2772-4589-9ea3-ae61315f943c";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -983,7 +983,7 @@
 				INFOPLIST_FILE = MayDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "efee8e5e-577f-4bc5-a940-e7e5c063ea74";
+				PROVISIONING_PROFILE = "2db7ce57-5abd-46f0-a37c-7854e6d043e9";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MayDay.app/MayDay";
 			};
 			name = Debug;
@@ -1001,7 +1001,7 @@
 				INFOPLIST_FILE = MayDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "efee8e5e-577f-4bc5-a940-e7e5c063ea74";
+				PROVISIONING_PROFILE = "2db7ce57-5abd-46f0-a37c-7854e6d043e9";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MayDay.app/MayDay";
 			};
 			name = Release;

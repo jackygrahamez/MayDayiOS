@@ -344,7 +344,7 @@ BOOL alerting = false;
     CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
                                     NULL, // observer
                                     displayStatusChanged, // callback
-                                    CFSTR("com.apple.iokit.hid.displayStatus"), // event name
+                                    CFSTR("com.apple.springboard.hasBlankedScreen"), // event name
                                     NULL, // object
                                     CFNotificationSuspensionBehaviorDeliverImmediately);
 }

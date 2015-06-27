@@ -21,6 +21,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    #if DEBUG
+        [ZeroPush engageWithAPIKey:@"iosdev_apptoken" delegate:self];
+    #else
+        [ZeroPush engageWithAPIKey:@"iosprod_apptoken" delegate:self];
+    #endif
+    
+    //Ask users to recieve push notifications.
+    //You can place this in another part of your app.
+    [[ZeroPush shared] registerForRemoteNotifications];
+    
+    
     // Override point for customization after application launch.
     if (![CLLocationManager locationServicesEnabled]) {
         // location services is disabled, alert user
@@ -51,6 +63,31 @@
         (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"setupNavigation"];
     }
     return YES;
+}
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)tokenData
+{
+    [[ZeroPush shared] registerDeviceToken:tokenData];
+    
+    //This would be a good time to save the token and associate it with a user that you want to notify later.
+    NSString *tokenString = [ZeroPush deviceTokenFromData:tokenData];
+    NSLog(@"%@", tokenString);
+    
+    // For instance you can associate it with a user's email address
+    // [[ZeroPush shared] subscribeToChannel:@"user@example.com"];
+    // You can then use the /broadcast endpoint to notify all devices subscribed to that email address. No need to save tokens!
+    // Don't forget to unsubscribe from the channel when the user logs out of your app!
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"%@", [error description]);
+    //Common reason for errors:
+    //  1.) Simulator does not support receiving push notifications
+    //  2.) User rejected push alert
+    //  3.) "no valid 'aps-environment' entitlement string found for application"
+    //      This means your provisioning profile does not have Push Notifications configured. https://zeropush.com/documentation/generating_certificates
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

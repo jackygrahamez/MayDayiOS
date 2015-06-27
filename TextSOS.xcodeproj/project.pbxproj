@@ -61,6 +61,7 @@
 		814D954C1AD187D700224C86 /* mobile_fr.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D95191AD187D700224C86 /* mobile_fr.json */; };
 		814D954D1AD187D700224C86 /* mobile_ph.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D951A1AD187D700224C86 /* mobile_ph.json */; };
 		814D954E1AD187D700224C86 /* mobile_pt.json in Resources */ = {isa = PBXBuildFile; fileRef = 814D951B1AD187D700224C86 /* mobile_pt.json */; };
+		815CAE6F1B3F67EA001080D3 /* ZeroPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CAE6E1B3F67EA001080D3 /* ZeroPush.m */; };
 		817A43B21B19652E00E39967 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817A43B11B19652E00E39967 /* StoreKit.framework */; };
 		818C18CD1B08FBEA0097E51A /* AppNameAndTagLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 818C18CC1B08FBEA0097E51A /* AppNameAndTagLine.png */; };
 		81DCA2BE1AC88E0400AFBC15 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */; };
@@ -179,6 +180,8 @@
 		814D951A1AD187D700224C86 /* mobile_ph.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_ph.json; sourceTree = "<group>"; };
 		814D951B1AD187D700224C86 /* mobile_pt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile_pt.json; sourceTree = "<group>"; };
 		814D954F1AD1891A00224C86 /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
+		815CAE6D1B3F67EA001080D3 /* ZeroPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZeroPush.h; sourceTree = "<group>"; };
+		815CAE6E1B3F67EA001080D3 /* ZeroPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZeroPush.m; sourceTree = "<group>"; };
 		817A43B11B19652E00E39967 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		818C18CC1B08FBEA0097E51A /* AppNameAndTagLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppNameAndTagLine.png; sourceTree = "<group>"; };
 		81DCA2BD1AC88E0400AFBC15 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -427,6 +430,8 @@
 				8D3019DD1AA40597000C4FF7 /* MayDay.xcdatamodeld */,
 				8D3019D61AA40596000C4FF7 /* Supporting Files */,
 				81ED61621ABF035400A76A62 /* DetailViewController.h */,
+				815CAE6D1B3F67EA001080D3 /* ZeroPush.h */,
+				815CAE6E1B3F67EA001080D3 /* ZeroPush.m */,
 			);
 			name = TextSOS;
 			path = MayDay;
@@ -704,6 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815CAE6F1B3F67EA001080D3 /* ZeroPush.m in Sources */,
 				8D3019DC1AA40597000C4FF7 /* AppDelegate.m in Sources */,
 				8D3019D91AA40596000C4FF7 /* main.m in Sources */,
 				8D3019E21AA40597000C4FF7 /* ViewController.m in Sources */,

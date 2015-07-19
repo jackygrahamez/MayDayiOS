@@ -39,7 +39,7 @@
                                                               otherButtonTitles:nil];
         [servicesDisabledAlert show];
     }
-    //[Fabric with:@[CrashlyticsKit]];
+    [Fabric with:@[CrashlyticsKit]];
     BOOL setupCompletedBool = false,
     SettingsShowTutorialOnLaunchBool = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

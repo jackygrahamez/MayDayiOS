@@ -11,7 +11,6 @@
 		818E8C051B5BE9F300B79B86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 818E8C041B5BE9F300B79B86 /* AppDelegate.m */; };
 		818E8C081B5BE9F300B79B86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818E8C071B5BE9F300B79B86 /* ViewController.m */; };
 		818E8C0B1B5BE9F300B79B86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818E8C091B5BE9F300B79B86 /* Main.storyboard */; };
-		818E8C0D1B5BE9F300B79B86 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818E8C0C1B5BE9F300B79B86 /* Images.xcassets */; };
 		818E8C1C1B5BE9F300B79B86 /* textsosalertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 818E8C1B1B5BE9F300B79B86 /* textsosalertTests.m */; };
 		818E8C301B5BEC4A00B79B86 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818E8C2F1B5BEC4A00B79B86 /* InterfaceController.m */; };
 		818E8C331B5BEC4A00B79B86 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818E8C321B5BEC4A00B79B86 /* NotificationController.m */; };
@@ -86,6 +85,7 @@
 		818E8CD31B5BED2500B79B86 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818E8CCF1B5BED2500B79B86 /* Slt.framework */; };
 		818E8CD71B5BED4D00B79B86 /* ZeroPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 818E8CD61B5BED4D00B79B86 /* ZeroPush.m */; };
 		818E8CD91B5BEDA700B79B86 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 818E8CD81B5BEDA700B79B86 /* LaunchScreen.xib */; };
+		818E8CDB1B5BEDEA00B79B86 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818E8CDA1B5BEDEA00B79B86 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,7 +135,6 @@
 		818E8C061B5BE9F300B79B86 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		818E8C071B5BE9F300B79B86 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		818E8C0A1B5BE9F300B79B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		818E8C0C1B5BE9F300B79B86 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		818E8C151B5BE9F300B79B86 /* textsosalertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = textsosalertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		818E8C1A1B5BE9F300B79B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		818E8C1B1B5BE9F300B79B86 /* textsosalertTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = textsosalertTests.m; sourceTree = "<group>"; };
@@ -219,6 +218,7 @@
 		818E8CD51B5BED4D00B79B86 /* ZeroPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZeroPush.h; sourceTree = "<group>"; };
 		818E8CD61B5BED4D00B79B86 /* ZeroPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZeroPush.m; sourceTree = "<group>"; };
 		818E8CD81B5BEDA700B79B86 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		818E8CDA1B5BEDEA00B79B86 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,7 +296,7 @@
 				818E8CD51B5BED4D00B79B86 /* ZeroPush.h */,
 				818E8CD61B5BED4D00B79B86 /* ZeroPush.m */,
 				818E8C091B5BE9F300B79B86 /* Main.storyboard */,
-				818E8C0C1B5BE9F300B79B86 /* Images.xcassets */,
+				818E8CDA1B5BEDEA00B79B86 /* Images.xcassets */,
 				818E8CD81B5BEDA700B79B86 /* LaunchScreen.xib */,
 				818E8C4E1B5BEC9A00B79B86 /* Resources */,
 				818E8BFF1B5BE9F300B79B86 /* Supporting Files */,
@@ -635,7 +635,6 @@
 				818E8CA71B5BEC9A00B79B86 /* target.png in Resources */,
 				818E8CA61B5BEC9A00B79B86 /* state_settings_480x50.jpg in Resources */,
 				818E8CA51B5BEC9A00B79B86 /* splash.png in Resources */,
-				818E8C0D1B5BE9F300B79B86 /* Images.xcassets in Resources */,
 				818E8CA91B5BEC9A00B79B86 /* tick_green.png in Resources */,
 				818E8CA41B5BEC9A00B79B86 /* socialperson.png in Resources */,
 				818E8C9F1B5BEC9A00B79B86 /* icon_setup.png in Resources */,
@@ -652,6 +651,7 @@
 				818E8CA21B5BEC9A00B79B86 /* save.png in Resources */,
 				818E8C961B5BEC9A00B79B86 /* circle_drop_shadow.png in Resources */,
 				818E8CB71B5BEC9A00B79B86 /* mobile_de.json in Resources */,
+				818E8CDB1B5BEDEA00B79B86 /* Images.xcassets in Resources */,
 				818E8C8B1B5BEC9A00B79B86 /* 320x480_iOS.jpg in Resources */,
 				818E8C971B5BEC9A00B79B86 /* circle_drop_shadow_30p.png in Resources */,
 			);

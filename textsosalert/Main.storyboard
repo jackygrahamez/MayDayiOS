@@ -2503,33 +2503,8 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 </variation>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Promo Code" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md1-lC-eXF">
-                                <rect key="frame" x="16" y="147" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                </variation>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fmM-XJ-pCb">
-                                <rect key="frame" x="122" y="143" width="130" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7lL-he-sMC"/>
-                                    <constraint firstAttribute="width" constant="130" id="QH2-H4-PAa"/>
-                                    <constraint firstAttribute="width" constant="182" id="bKa-2a-t6Z"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="bKa-2a-t6Z"/>
-                                    </mask>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUZ-qW-5YG">
-                                <rect key="frame" x="16" y="193" width="288" height="50"/>
+                                <rect key="frame" x="16" y="259" width="288" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3XU-rZ-bVo"/>
@@ -2548,67 +2523,34 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <action selector="tapsBuyFifty" destination="d1f-uj-U6v" eventType="touchUpInside" id="svu-fR-Rqe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omo-Qk-8uQ">
-                                <rect key="frame" x="16" y="259" width="288" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="iHf-so-Dv1"/>
-                                    <constraint firstAttribute="height" constant="50" id="xnE-4e-xxx"/>
-                                </constraints>
-                                <state key="normal" title="Restore In-App Purchases">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="restore" destination="d1f-uj-U6v" eventType="touchUpInside" id="WIh-6m-J1R"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ASq-qd-gWY" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leadingMargin" id="23a-Qv-l2i"/>
-                            <constraint firstItem="Md1-lC-eXF" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leadingMargin" constant="8" id="3bP-2G-2Fh"/>
                             <constraint firstItem="ASq-qd-gWY" firstAttribute="trailing" secondItem="avS-Q7-Otf" secondAttribute="trailingMargin" id="6MC-hQ-idL"/>
                             <constraint firstItem="oZs-X7-t8a" firstAttribute="top" secondItem="9Hk-io-d4M" secondAttribute="bottom" constant="8" id="Elx-TE-3bi"/>
                             <constraint firstItem="oZs-X7-t8a" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leadingMargin" constant="65" id="FH6-De-qV5"/>
                             <constraint firstItem="oZs-X7-t8a" firstAttribute="centerX" secondItem="ASq-qd-gWY" secondAttribute="centerX" id="Fm8-bN-uI4"/>
                             <constraint firstItem="lER-7o-Ty9" firstAttribute="top" secondItem="avS-Q7-Otf" secondAttribute="top" id="Ob9-rX-rAp"/>
-                            <constraint firstAttribute="centerX" secondItem="omo-Qk-8uQ" secondAttribute="centerX" id="PWC-GO-klG"/>
                             <constraint firstItem="lER-7o-Ty9" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leading" id="Q6p-oO-VsH"/>
-                            <constraint firstItem="Md1-lC-eXF" firstAttribute="top" secondItem="ASq-qd-gWY" secondAttribute="bottom" constant="12" id="Q8v-dq-Pjz"/>
                             <constraint firstAttribute="bottomMargin" secondItem="lER-7o-Ty9" secondAttribute="bottom" constant="-99" id="RLL-Ab-VaD"/>
                             <constraint firstAttribute="centerX" secondItem="YUZ-qW-5YG" secondAttribute="centerX" id="SBs-Ap-dAr"/>
                             <constraint firstItem="oZs-X7-t8a" firstAttribute="top" secondItem="9Hk-io-d4M" secondAttribute="bottom" id="Xgo-rj-neq"/>
                             <constraint firstItem="ASq-qd-gWY" firstAttribute="top" secondItem="oZs-X7-t8a" secondAttribute="bottom" constant="8" symbolic="YES" id="Xpa-V2-HBr"/>
-                            <constraint firstItem="omo-Qk-8uQ" firstAttribute="top" secondItem="YUZ-qW-5YG" secondAttribute="bottom" constant="16" id="YH9-oY-3a3"/>
-                            <constraint firstItem="YUZ-qW-5YG" firstAttribute="top" secondItem="fmM-XJ-pCb" secondAttribute="bottom" constant="20" id="YPu-4x-8y5"/>
-                            <constraint firstItem="fmM-XJ-pCb" firstAttribute="leading" secondItem="Md1-lC-eXF" secondAttribute="trailing" constant="8" id="b0Y-S0-lab"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ASq-qd-gWY" secondAttribute="bottom" constant="-71" id="cKg-Fe-9O3"/>
-                            <constraint firstItem="Md1-lC-eXF" firstAttribute="leading" secondItem="avS-Q7-Otf" secondAttribute="leadingMargin" constant="10" id="fhw-Uk-h4Z"/>
-                            <constraint firstItem="fmM-XJ-pCb" firstAttribute="top" secondItem="ASq-qd-gWY" secondAttribute="bottom" constant="8" id="jUP-uB-enW"/>
-                            <constraint firstItem="YUZ-qW-5YG" firstAttribute="centerX" secondItem="omo-Qk-8uQ" secondAttribute="centerX" id="pSh-tk-vuU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lER-7o-Ty9" secondAttribute="trailing" constant="-71" id="tK9-ff-HDO"/>
+                            <constraint firstItem="YUZ-qW-5YG" firstAttribute="top" secondItem="ASq-qd-gWY" secondAttribute="bottom" constant="124" id="wct-mT-1KZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="FH6-De-qV5"/>
                                 <exclude reference="cKg-Fe-9O3"/>
-                                <exclude reference="fhw-Uk-h4Z"/>
-                                <exclude reference="pSh-tk-vuU"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Zeo-3e-51s"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="promocode" destination="fmM-XJ-pCb" id="0nW-qT-bX3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tf-OX-Uiq" sceneMemberID="firstResponder"/>
             </objects>

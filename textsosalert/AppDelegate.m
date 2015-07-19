@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  textsosalert
+//  MayDay
 //
-//  Created by John Shultz on 7/19/15.
+//  Created by John Shultz on 3/1/15.
 //  Copyright (c) 2015 John Shultz. All rights reserved.
 //
 
@@ -10,6 +10,8 @@
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import <CoreLocation/CoreLocation.h>
+
+
 
 @interface AppDelegate ()
 
@@ -19,15 +21,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    #if DEBUG
-        [ZeroPush engageWithAPIKey:@"iosdev_apptoken" delegate:self];
-    #else
-        [ZeroPush engageWithAPIKey:@"iosprod_apptoken" delegate:self];
-    #endif
+    
+#if DEBUG
+    [ZeroPush engageWithAPIKey:@"iosdev_apptoken" delegate:self];
+#else
+    [ZeroPush engageWithAPIKey:@"iosprod_apptoken" delegate:self];
+#endif
+    
     //Ask users to recieve push notifications.
     //You can place this in another part of your app.
     [[ZeroPush shared] registerForRemoteNotifications];
-    // Override point for customization after application launch.
+    
     
     // Override point for customization after application launch.
     if (![CLLocationManager locationServicesEnabled]) {
@@ -40,6 +44,7 @@
         [servicesDisabledAlert show];
     }
     [Fabric with:@[CrashlyticsKit]];
+    
     BOOL setupCompletedBool = false,
     SettingsShowTutorialOnLaunchBool = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -49,11 +54,17 @@
     NSLog(@"SettingsShowTutorialOnLaunch %@", SettingsShowTutorialOnLaunch);
     
     setupCompletedBool = [setupCompleted boolValue];
+    
     if(!setupCompletedBool || [[NSUserDefaults standardUserDefaults] boolForKey:@"SettingsShowTutorialOnLaunch"]) {
-        //self.window.rootViewController = (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"setupNavigation"];
+        //UIViewController *newRoot = [];
+        //self.window.rootViewController = newRoot;
+        /* For storyboards... */
+        self.window.rootViewController =
+        (UIViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier:@"setupNavigation"];
     }
     return YES;
 }
+
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)tokenData
 {
@@ -220,5 +231,6 @@
     }
     
 }
+
 
 @end

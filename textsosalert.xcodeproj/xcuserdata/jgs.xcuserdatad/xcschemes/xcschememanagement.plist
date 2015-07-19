@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - textsosalert WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>textsosalert WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>textsosalert.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>818E8C141B5BE9F300B79B86</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>818E8C371B5BEC4A00B79B86</key>
 		<dict>
 			<key>primary</key>
 			<true/>

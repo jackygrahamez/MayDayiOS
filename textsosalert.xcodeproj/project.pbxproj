@@ -974,6 +974,7 @@
 				818E8C211B5BE9F300B79B86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		818E8C221B5BE9F300B79B86 /* Build configuration list for PBXNativeTarget "textsosalertTests" */ = {
 			isa = XCConfigurationList;
@@ -982,6 +983,7 @@
 				818E8C241B5BE9F300B79B86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		818E8C471B5BEC4A00B79B86 /* Build configuration list for PBXNativeTarget "textsosalert WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -990,6 +992,7 @@
 				818E8C491B5BEC4A00B79B86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		818E8C4A1B5BEC4A00B79B86 /* Build configuration list for PBXNativeTarget "textsosalert WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -998,6 +1001,7 @@
 				818E8C4C1B5BEC4A00B79B86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -25,14 +25,18 @@
     IBOutlet UITextField *contact1;
     IBOutlet UITextField *contact2;
     IBOutlet UITextField *contact3;
+    IBOutlet UITextView *codewordSave;
+    IBOutlet UITextView *codewordNext;
     CLLocationManager *locationManager;
     NSTimer *autoTimer;
     NSInteger startTimeSeconds;
     NSDate *startDateObj;
     
+
     __weak IBOutlet UITextView *codeword;
     __weak IBOutlet UITextField *promocode;
     __weak IBOutlet UILabel *balance;
+    __weak IBOutlet UIButton *saveCodeword;
     __weak IBOutlet UIButton *saveCodewordNext;
     __weak IBOutlet UIButton *saveContactsNext;
     __weak IBOutlet UITextField *contact1SetupField;

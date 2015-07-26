@@ -692,15 +692,15 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="neg-bC-V0B"/>
                                         <exclude reference="MQ6-OV-Nxs"/>
+                                        <exclude reference="neg-bC-V0B"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 </variation>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="codeword" text="WORD" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P0z-WE-5GQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="codeword" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P0z-WE-5GQ">
                                 <rect key="frame" x="38" y="205" width="245" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -773,6 +773,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="codeword" destination="P0z-WE-5GQ" id="yNp-K7-kXR"/>
+                        <outlet property="codewordNext" destination="P0z-WE-5GQ" id="kU9-Zg-qcJ"/>
                         <outlet property="saveCodewordNext" destination="hjf-A3-zxs" id="hqg-Mi-tkf"/>
                     </connections>
                 </viewController>
@@ -3199,7 +3200,7 @@ We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 </variation>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="codeword" text="WORD" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8zo-fM-zxj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="codeword" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8zo-fM-zxj">
                                 <rect key="frame" x="38" y="205" width="245" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -3219,7 +3220,7 @@ We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™
                                     <constraint firstAttribute="height" constant="50" id="GCE-ng-k8J"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3229,7 +3230,7 @@ We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="saveCodeNext:" destination="v0s-Xu-n0i" eventType="touchUpInside" id="qrB-dD-e9c"/>
+                                    <action selector="saveCode:" destination="v0s-Xu-n0i" eventType="touchUpInside" id="468-ol-J3V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3257,9 +3258,9 @@ We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="iGF-JT-jkO"/>
                                 <exclude reference="jIG-nQ-si7"/>
                                 <exclude reference="ky5-MB-QSd"/>
-                                <exclude reference="iGF-JT-jkO"/>
                                 <exclude reference="JJY-qT-SXV"/>
                                 <exclude reference="fOB-Bg-0Pd"/>
                                 <exclude reference="tdH-ji-LFl"/>
@@ -3270,13 +3271,13 @@ We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="codeword" destination="8zo-fM-zxj" id="8eM-ER-k2B"/>
-                        <outlet property="saveCodewordNext" destination="w0n-pe-kY0" id="0xi-SJ-LA2"/>
+                        <outlet property="codewordSave" destination="8zo-fM-zxj" id="l8F-ak-Vey"/>
+                        <outlet property="saveCodeword" destination="w0n-pe-kY0" id="cq1-jA-tXC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhg-Es-Iph" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1555" y="260"/>
+            <point key="canvasLocation" x="1736" y="292"/>
         </scene>
     </scenes>
     <resources>

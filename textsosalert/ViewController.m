@@ -1134,10 +1134,9 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
         masterViewController.saveContactsNext.userInteractionEnabled = YES;
     }
 }
-
--(IBAction)saveCode:(id)sender
-{
-    NSString *savestring = codeword.text;
+- (IBAction)saveCode:(id)sender {
+    NSString *savestring = codewordSave.text;
+    NSLog(@"saveCode %@",savestring);
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"codeword"];
     [defaults synchronize];
@@ -1146,7 +1145,8 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
 }
 - (IBAction)saveCodeNext:(id)sender {
-    NSString *savestring = message.text;
+    NSString *savestring = codewordNext.text;
+    NSLog(@"saveCodeNext %@",savestring);
     NSString *setupCompleted = @"true";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"codeword"];

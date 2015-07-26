@@ -26,7 +26,7 @@ contactField = 1,
 balanceInt = 10;
 NSDate *startDateObj = nil;
 ViewController *masterViewController;
-NSString *message, *first, *second, *third, *balanceString, *appSandboxString = @"1!Sbx-qe";
+NSString *safeword, *message, *first, *second, *third, *balanceString, *appSandboxString = @"1!Sbx-qe";
 NSArray *contacts;
 BOOL alerting = false;
 
@@ -417,6 +417,7 @@ BOOL alerting = false;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadstring = [defaults objectForKey:@"messagestring"];
     NSString *codestring = [defaults objectForKey:@"codeword"];
+    safeword = codestring;
     balanceString = [defaults objectForKey:@"balance"];
     
     if (balanceString) {
@@ -475,7 +476,7 @@ BOOL alerting = false;
     
     OELanguageModelGenerator *lmGenerator = [[OELanguageModelGenerator alloc] init];
     
-    NSArray *words = [NSArray arrayWithObjects:@"WORD", @"STATEMENT", @"OTHER WORD", @"A PHRASE", nil];
+    NSArray *words = [NSArray arrayWithObjects: safeword, nil];
     NSString *name = @"NameIWantForMyLanguageModelFiles";
     NSError *err = [lmGenerator generateLanguageModelFromArray:words withFilesNamed:name forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]]; // Change "AcousticModelEnglish" to "AcousticModelSpanish" to create a Spanish language model instead of an English one.
     
@@ -502,7 +503,7 @@ BOOL alerting = false;
     NSRange range = NSMakeRange(0, length);
     while(range.location != NSNotFound)
     {
-        range = [hypothesis rangeOfString: @"WORD" options:0 range:range];
+        range = [hypothesis rangeOfString: safeword options:0 range:range];
         if(range.location != NSNotFound)
         {
             range = NSMakeRange(range.location + range.length, length - (range.location + range.length));
@@ -1138,6 +1139,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 }
 - (IBAction)saveCode:(id)sender {
     NSString *savestring = codewordSave.text;
+    safeword = savestring;
     NSLog(@"saveCode %@",savestring);
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:savestring forKey:@"codeword"];
@@ -1148,6 +1150,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 }
 - (IBAction)saveCodeNext:(id)sender {
     NSString *savestring = codewordNext.text;
+    safeword = savestring;
     NSLog(@"saveCodeNext %@",savestring);
     NSString *setupCompleted = @"true";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

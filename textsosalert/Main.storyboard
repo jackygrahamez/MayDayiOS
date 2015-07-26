@@ -707,7 +707,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstAttribute="height" constant="35" id="Zix-Sz-2fe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                 <connections>
                                     <outlet property="delegate" destination="d47-Dp-TkE" id="RJS-C4-fqW"/>
                                 </connections>
@@ -3207,7 +3207,7 @@ We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™
                                     <constraint firstAttribute="height" constant="35" id="07t-0I-zRT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                 <connections>
                                     <outlet property="delegate" destination="d47-Dp-TkE" id="a5l-Wu-TDg"/>
                                 </connections>

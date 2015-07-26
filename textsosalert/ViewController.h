@@ -10,12 +10,14 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AddressBookUI/AddressBookUI.h>
 
+#import <OpenEars/OEEventsObserver.h> // We need to import this here in order to use the delegate.
+
 @interface UINavigationController(indexPoping) {
     
 }
 @property NSInteger *newVCsIndex;
 @end
-@interface ViewController : UIViewController<UIGestureRecognizerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate, ABPeoplePickerNavigationControllerDelegate> {
+@interface ViewController : UIViewController<OEEventsObserverDelegate, UIGestureRecognizerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate, ABPeoplePickerNavigationControllerDelegate> {
     IBOutlet UILabel *label;
     IBOutlet UITextView *message;
     IBOutlet UITextField *firstNumber;
@@ -46,6 +48,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *contactPicker1;
 @property (weak, nonatomic) IBOutlet UIButton *contactPicker2;
 @property (weak, nonatomic) IBOutlet UIButton *contactPicker3;
+//openEars Class Property
+@property (strong, nonatomic) OEEventsObserver *openEarsEventsObserver;
 
 /*
  * START IN APP PURCHASE

@@ -11,6 +11,12 @@
 #import <AddressBookUI/AddressBookUI.h>
 #import <StoreKit/StoreKit.h>
 
+#import <OpenEars/OEPocketsphinxController.h>
+#import <OpenEars/OEFliteController.h>
+#import <OpenEars/OELanguageModelGenerator.h>
+#import <OpenEars/OELogging.h>
+#import <OpenEars/OEAcousticModel.h>
+#import <Slt/Slt.h>
 
 NSUserDefaults *defaults;
 // Your global variable definition.
@@ -25,12 +31,13 @@ NSArray *contacts;
 BOOL alerting = false;
 
 
-@interface ViewController () <SKProductsRequestDelegate, SKPaymentTransactionObserver>
+@interface ViewController () <OEEventsObserverDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver>
 {
     NSArray *_pickerData;
     UISwipeGestureRecognizer *swipeLeftToRightGesture;
 }
 @end
+
 
 @interface UINavigationController(indexPoping)
 - (void)popToViewControllerAtIndex:(NSInteger)newVCsIndex animated:(BOOL)animated;
@@ -400,6 +407,8 @@ BOOL alerting = false;
 - (void)viewDidLoad {
     [super viewDidLoad];
     masterViewController = self;
+    masterViewController.openEarsEventsObserver = [[OEEventsObserver alloc] init];
+    [masterViewController.openEarsEventsObserver setDelegate:masterViewController];
     [masterViewController swipeInit];
     [masterViewController intervalPickerInit];
     
@@ -458,7 +467,76 @@ BOOL alerting = false;
     masterViewController.charactersUpdate.text = [NSString stringWithFormat:@"Characters: %d",countUpdate];
     
     [masterViewController initLocationManager];
+    [masterViewController openEarsInit];
     
+}
+
+- (void) openEarsInit {
+    
+    OELanguageModelGenerator *lmGenerator = [[OELanguageModelGenerator alloc] init];
+    
+    NSArray *words = [NSArray arrayWithObjects:@"WORD", @"STATEMENT", @"OTHER WORD", @"A PHRASE", nil];
+    NSString *name = @"NameIWantForMyLanguageModelFiles";
+    NSError *err = [lmGenerator generateLanguageModelFromArray:words withFilesNamed:name forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]]; // Change "AcousticModelEnglish" to "AcousticModelSpanish" to create a Spanish language model instead of an English one.
+    
+    NSString *lmPath = nil;
+    NSString *dicPath = nil;
+    
+    if(err == nil) {
+        
+        lmPath = [lmGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"NameIWantForMyLanguageModelFiles"];
+        dicPath = [lmGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"NameIWantForMyLanguageModelFiles"];
+        
+    } else {
+        NSLog(@"Error: %@",[err localizedDescription]);
+    }
+
+    [[OEPocketsphinxController sharedInstance] setActive:TRUE error:nil];
+    [[OEPocketsphinxController sharedInstance] startListeningWithLanguageModelAtPath:lmPath dictionaryAtPath:dicPath acousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"] languageModelIsJSGF:NO]; // Change "AcousticModelEnglish" to "AcousticModelSpanish" to perform Spanish recognition instead of English.
+}
+
+- (void) pocketsphinxDidReceiveHypothesis:(NSString *)hypothesis recognitionScore:(NSString *)recognitionScore utteranceID:(NSString *)utteranceID {
+    NSLog(@"The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
+}
+
+- (void) pocketsphinxDidStartListening {
+    NSLog(@"Pocketsphinx is now listening.");
+}
+
+- (void) pocketsphinxDidDetectSpeech {
+    NSLog(@"Pocketsphinx has detected speech.");
+}
+
+- (void) pocketsphinxDidDetectFinishedSpeech {
+    NSLog(@"Pocketsphinx has detected a period of silence, concluding an utterance.");
+}
+
+- (void) pocketsphinxDidStopListening {
+    NSLog(@"Pocketsphinx has stopped listening.");
+}
+
+- (void) pocketsphinxDidSuspendRecognition {
+    NSLog(@"Pocketsphinx has suspended recognition.");
+}
+
+- (void) pocketsphinxDidResumeRecognition {
+    NSLog(@"Pocketsphinx has resumed recognition.");
+}
+
+- (void) pocketsphinxDidChangeLanguageModelToFile:(NSString *)newLanguageModelPathAsString andDictionary:(NSString *)newDictionaryPathAsString {
+    NSLog(@"Pocketsphinx is now using the following language model: \n%@ and the following dictionary: %@",newLanguageModelPathAsString,newDictionaryPathAsString);
+}
+
+- (void) pocketSphinxContinuousSetupDidFailWithReason:(NSString *)reasonForFailure {
+    NSLog(@"Listening setup wasn't successful and returned the failure reason: %@", reasonForFailure);
+}
+
+- (void) pocketSphinxContinuousTeardownDidFailWithReason:(NSString *)reasonForFailure {
+    NSLog(@"Listening teardown wasn't successful and returned the failure reason: %@", reasonForFailure);
+}
+
+- (void) testRecognitionCompleted {
+    NSLog(@"A test file that was submitted for recognition is now complete.");
 }
 
 - (void)viewDidAppear:(BOOL)animated

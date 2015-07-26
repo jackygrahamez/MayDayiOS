@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "ZeroPush.h"
+#import <OpenEars/OEEventsObserver.h>
+
+@class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, ZeroPushDelegate>
 
@@ -17,6 +20,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (strong, nonatomic) ViewController *viewController;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

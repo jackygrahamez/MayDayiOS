@@ -22,6 +22,8 @@
             <string>MomsTypewriter</string>
             <string>MomsTypewriter</string>
             <string>MomsTypewriter</string>
+            <string>MomsTypewriter</string>
+            <string>MomsTypewriter</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -605,7 +607,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="saveMessage:" destination="Q3l-1A-MH6" eventType="touchUpInside" id="CZF-uW-gxe"/>
-                                    <segue destination="qIH-vn-bv1" kind="push" id="McN-z4-zLU"/>
+                                    <segue destination="3gl-iv-wSs" kind="push" id="oUR-oW-UmS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -644,7 +646,139 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usi-RF-J5N" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="-1553"/>
+            <point key="canvasLocation" x="939" y="-1561"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uHK-Fb-Uq3">
+            <objects>
+                <viewController id="3gl-iv-wSs" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jUR-ab-oD1"/>
+                        <viewControllerLayoutGuide type="bottom" id="OR0-YP-BR3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5uc-5s-mgg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="e4Y-Wl-a47">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1200" id="DxP-WP-yR9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Code Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd3-NG-x66">
+                                <rect key="frame" x="19" y="28" width="282" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="z3R-Rj-CJz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzY-Uf-lZE">
+                                <rect key="frame" x="21" y="73" width="279" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="MQ6-OV-Nxs"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="123" id="neg-bC-V0B"/>
+                                </constraints>
+                                <string key="text">Enter your code word for triggering Text SOS Alert. This word should be a word that you say 5 times to trigger the distress alert. </string>
+                                <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="neg-bC-V0B"/>
+                                        <exclude reference="MQ6-OV-Nxs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="codeword" text="WORD" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P0z-WE-5GQ">
+                                <rect key="frame" x="38" y="205" width="245" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Zix-Sz-2fe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="d47-Dp-TkE" id="RJS-C4-fqW"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-A3-zxs">
+                                <rect key="frame" x="81" y="259" width="158" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fP4-8c-i0S"/>
+                                    <constraint firstAttribute="width" constant="158" id="x0B-3D-S51"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveCodeNext:" destination="3gl-iv-wSs" eventType="touchUpInside" id="XS4-NJ-vHp"/>
+                                    <segue destination="qIH-vn-bv1" kind="push" id="Vo0-jK-C4K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="e4Y-Wl-a47" secondAttribute="trailing" constant="-71" id="4my-T3-G8f"/>
+                            <constraint firstItem="P0z-WE-5GQ" firstAttribute="centerX" secondItem="yzY-Uf-lZE" secondAttribute="centerX" id="5id-39-VZK"/>
+                            <constraint firstItem="hjf-A3-zxs" firstAttribute="top" secondItem="P0z-WE-5GQ" secondAttribute="bottom" constant="20" id="HZF-6d-dfI"/>
+                            <constraint firstAttribute="centerX" secondItem="hjf-A3-zxs" secondAttribute="centerX" id="S3o-dA-foo"/>
+                            <constraint firstItem="hjf-A3-zxs" firstAttribute="top" secondItem="yzY-Uf-lZE" secondAttribute="bottom" constant="8" id="Vy3-xW-v2Y"/>
+                            <constraint firstItem="e4Y-Wl-a47" firstAttribute="top" secondItem="5uc-5s-mgg" secondAttribute="top" id="b57-7d-v9t"/>
+                            <constraint firstItem="yzY-Uf-lZE" firstAttribute="top" secondItem="wd3-NG-x66" secondAttribute="bottom" constant="8" symbolic="YES" id="b88-uc-LWD"/>
+                            <constraint firstItem="e4Y-Wl-a47" firstAttribute="leading" secondItem="5uc-5s-mgg" secondAttribute="leading" id="c4K-Q4-z6h"/>
+                            <constraint firstItem="hjf-A3-zxs" firstAttribute="top" secondItem="yzY-Uf-lZE" secondAttribute="bottom" constant="8" id="dkY-q4-wXI"/>
+                            <constraint firstItem="P0z-WE-5GQ" firstAttribute="top" secondItem="yzY-Uf-lZE" secondAttribute="bottom" constant="8" symbolic="YES" id="epF-8O-kB7"/>
+                            <constraint firstItem="yzY-Uf-lZE" firstAttribute="top" secondItem="wd3-NG-x66" secondAttribute="bottom" constant="8" symbolic="YES" id="f6Q-9m-GA2"/>
+                            <constraint firstItem="yzY-Uf-lZE" firstAttribute="leading" secondItem="5uc-5s-mgg" secondAttribute="leadingMargin" constant="9" id="gN3-af-4NR"/>
+                            <constraint firstItem="yzY-Uf-lZE" firstAttribute="centerX" secondItem="wd3-NG-x66" secondAttribute="centerX" id="iA1-GG-cEo"/>
+                            <constraint firstItem="hjf-A3-zxs" firstAttribute="top" secondItem="yzY-Uf-lZE" secondAttribute="bottom" constant="8" symbolic="YES" id="jeq-pX-4Yr"/>
+                            <constraint firstItem="wd3-NG-x66" firstAttribute="top" secondItem="jUR-ab-oD1" secondAttribute="bottom" constant="8" symbolic="YES" id="l6x-gH-2GW"/>
+                            <constraint firstItem="P0z-WE-5GQ" firstAttribute="centerX" secondItem="5uc-5s-mgg" secondAttribute="centerX" id="m67-bG-Hyq"/>
+                            <constraint firstItem="P0z-WE-5GQ" firstAttribute="leading" secondItem="5uc-5s-mgg" secondAttribute="leadingMargin" constant="22" id="ovz-jB-lRh"/>
+                            <constraint firstItem="yzY-Uf-lZE" firstAttribute="trailing" secondItem="5uc-5s-mgg" secondAttribute="trailingMargin" id="rDS-DH-Mdu"/>
+                            <constraint firstItem="yzY-Uf-lZE" firstAttribute="leading" secondItem="5uc-5s-mgg" secondAttribute="leadingMargin" constant="5" id="zjT-dK-gFJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="f6Q-9m-GA2"/>
+                                <exclude reference="gN3-af-4NR"/>
+                                <exclude reference="rDS-DH-Mdu"/>
+                                <exclude reference="Vy3-xW-v2Y"/>
+                                <exclude reference="dkY-q4-wXI"/>
+                                <exclude reference="jeq-pX-4Yr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="qSF-AJ-vTe"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="codeword" destination="P0z-WE-5GQ" id="yNp-K7-kXR"/>
+                        <outlet property="saveCodewordNext" destination="hjf-A3-zxs" id="hqg-Mi-tkf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JgO-5j-J4X" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="-1561"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="z5a-HG-wWY">
@@ -737,11 +871,35 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstAttribute="width" constant="288" id="leK-U6-vSy"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fQ-zV-QXV">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZB-vj-fMq">
                                 <rect key="frame" x="16" y="301" width="288" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="Cg5-2q-XNt"/>
-                                    <constraint firstAttribute="height" constant="50" id="IQH-Ft-Vra"/>
+                                    <constraint firstAttribute="height" constant="50" id="3ID-nt-4Sk"/>
+                                    <constraint firstAttribute="width" constant="288" id="4vP-N6-7lF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Code Word Settings" backgroundImage="state_settings_480x50.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="v0s-Xu-n0i" kind="push" id="eAz-EI-foX"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQO-Ad-RYT">
+                                <rect key="frame" x="16" y="352" width="288" height="1"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="b0j-1d-J1n"/>
+                                    <constraint firstAttribute="width" constant="288" id="b6Z-Uh-QqH"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fQ-zV-QXV">
+                                <rect key="frame" x="16" y="353" width="288" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="VAr-di-ZhK"/>
+                                    <constraint firstAttribute="height" constant="50" id="n3l-gy-joI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -753,14 +911,6 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <segue destination="d1f-uj-U6v" kind="push" id="Fp4-L9-5j5"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2a-m6-Svz">
-                                <rect key="frame" x="16" y="351" width="288" height="1"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="Opj-aX-UZL"/>
-                                    <constraint firstAttribute="height" constant="1" id="UQ8-b6-zHs"/>
-                                </constraints>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="OzK-sL-bNn">
                                 <rect key="frame" x="255" y="158" width="30" height="30"/>
                                 <constraints>
@@ -782,11 +932,18 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                     <constraint firstAttribute="height" constant="30" id="eDq-pK-YO1"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="3wk-Jm-CoM">
-                                <rect key="frame" x="255" y="311" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="18K-ND-32h">
+                                <rect key="frame" x="255" y="312" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="KOX-dK-kgO"/>
-                                    <constraint firstAttribute="width" constant="30" id="oMt-wB-SCw"/>
+                                    <constraint firstAttribute="height" constant="30" id="GCu-ro-EhC"/>
+                                    <constraint firstAttribute="width" constant="30" id="OGp-Hx-UDP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="3wk-Jm-CoM">
+                                <rect key="frame" x="255" y="363" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Nig-n3-d0E"/>
+                                    <constraint firstAttribute="height" constant="30" id="mWC-8g-Zai"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-gC-i02">
@@ -802,16 +959,16 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="9fQ-zV-QXV" secondAttribute="centerX" id="22b-4s-jWS"/>
                             <constraint firstAttribute="centerX" secondItem="aeR-l2-vPv" secondAttribute="centerX" id="5C6-Ga-G3W"/>
-                            <constraint firstItem="f2a-m6-Svz" firstAttribute="top" secondItem="9fQ-zV-QXV" secondAttribute="bottom" id="5M9-oJ-u7c"/>
+                            <constraint firstItem="3wk-Jm-CoM" firstAttribute="top" secondItem="9fQ-zV-QXV" secondAttribute="bottom" constant="-40" id="5mw-la-OsL"/>
+                            <constraint firstItem="3wk-Jm-CoM" firstAttribute="top" secondItem="18K-ND-32h" secondAttribute="bottom" constant="21" id="60b-jb-aCd"/>
                             <constraint firstItem="RFL-Td-WVw" firstAttribute="top" secondItem="PnM-d0-hfr" secondAttribute="bottom" id="7eg-BK-7fx"/>
                             <constraint firstItem="OzK-sL-bNn" firstAttribute="top" secondItem="aeR-l2-vPv" secondAttribute="bottom" constant="-40" id="7qF-Eh-5XX"/>
-                            <constraint firstItem="3wk-Jm-CoM" firstAttribute="leading" secondItem="9fQ-zV-QXV" secondAttribute="trailing" constant="-49" id="8GK-xw-D5k"/>
                             <constraint firstItem="MU8-bP-9S9" firstAttribute="leading" secondItem="PnM-d0-hfr" secondAttribute="trailing" constant="-49" id="8vD-YO-EA2"/>
+                            <constraint firstItem="gZB-vj-fMq" firstAttribute="top" secondItem="RFL-Td-WVw" secondAttribute="bottom" id="Abc-xi-Wuf"/>
                             <constraint firstItem="aeR-l2-vPv" firstAttribute="top" secondItem="gtd-gC-i02" secondAttribute="bottom" constant="50" id="Axk-rb-g17"/>
                             <constraint firstItem="kVl-Pj-2QW" firstAttribute="top" secondItem="Upf-fe-KWw" secondAttribute="bottom" id="CAw-zP-RRi"/>
-                            <constraint firstAttribute="centerX" secondItem="f2a-m6-Svz" secondAttribute="centerX" id="COg-Tp-fI5"/>
+                            <constraint firstItem="18K-ND-32h" firstAttribute="leading" secondItem="gZB-vj-fMq" secondAttribute="trailing" constant="-49" id="CXG-BZ-bua"/>
                             <constraint firstItem="dPK-ua-Bbi" firstAttribute="top" secondItem="kVl-Pj-2QW" secondAttribute="bottom" constant="-40" id="E9M-Sl-6sg"/>
                             <constraint firstAttribute="centerX" secondItem="Upf-fe-KWw" secondAttribute="centerX" id="Hfq-h2-Fkg"/>
                             <constraint firstItem="PnM-d0-hfr" firstAttribute="top" secondItem="MU8-bP-9S9" secondAttribute="bottom" constant="-40" id="IbO-sQ-gVp"/>
@@ -819,18 +976,30 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                             <constraint firstItem="Upf-fe-KWw" firstAttribute="top" secondItem="aeR-l2-vPv" secondAttribute="bottom" id="Mxz-tH-mmg"/>
                             <constraint firstAttribute="centerX" secondItem="kVl-Pj-2QW" secondAttribute="centerX" id="OQN-cZ-i4F"/>
                             <constraint firstItem="gtd-gC-i02" firstAttribute="top" secondItem="KCj-6j-rSI" secondAttribute="bottom" constant="28" id="OvM-rJ-2Lc"/>
+                            <constraint firstAttribute="centerX" secondItem="gZB-vj-fMq" secondAttribute="centerX" id="QTF-wM-lQP"/>
                             <constraint firstAttribute="centerX" secondItem="RFL-Td-WVw" secondAttribute="centerX" id="QtX-ks-7aP"/>
                             <constraint firstAttribute="centerX" secondItem="QJz-V3-2S1" secondAttribute="centerX" id="RjK-Uv-nBc"/>
-                            <constraint firstItem="9fQ-zV-QXV" firstAttribute="top" secondItem="RFL-Td-WVw" secondAttribute="bottom" id="TJH-qT-idO"/>
                             <constraint firstAttribute="centerY" secondItem="OKi-PD-bcJ" secondAttribute="centerY" id="Wvc-6Q-VUK"/>
-                            <constraint firstItem="9fQ-zV-QXV" firstAttribute="top" secondItem="3wk-Jm-CoM" secondAttribute="bottom" constant="-40" id="bk8-KD-WbF"/>
+                            <constraint firstAttribute="centerX" secondItem="aQO-Ad-RYT" secondAttribute="centerX" id="ajr-8Y-RjP"/>
+                            <constraint firstItem="9fQ-zV-QXV" firstAttribute="top" secondItem="aQO-Ad-RYT" secondAttribute="bottom" id="dtP-2v-UzZ"/>
                             <constraint firstAttribute="centerX" secondItem="OKi-PD-bcJ" secondAttribute="centerX" id="fVp-de-ZNe"/>
+                            <constraint firstItem="aQO-Ad-RYT" firstAttribute="top" secondItem="gZB-vj-fMq" secondAttribute="bottom" constant="1" id="gXD-iG-aRq"/>
+                            <constraint firstItem="18K-ND-32h" firstAttribute="top" secondItem="gZB-vj-fMq" secondAttribute="bottom" constant="-39" id="mrD-io-Kkg"/>
                             <constraint firstAttribute="centerX" secondItem="PnM-d0-hfr" secondAttribute="centerX" id="nFZ-eu-sEe"/>
                             <constraint firstAttribute="centerX" secondItem="gtd-gC-i02" secondAttribute="centerX" id="nHy-Tn-znc"/>
+                            <constraint firstItem="3wk-Jm-CoM" firstAttribute="leading" secondItem="9fQ-zV-QXV" secondAttribute="trailing" constant="-49" id="pGt-pn-2bH"/>
                             <constraint firstItem="OzK-sL-bNn" firstAttribute="leading" secondItem="aeR-l2-vPv" secondAttribute="trailing" constant="-49" id="pTD-Sp-2As"/>
+                            <constraint firstAttribute="centerX" secondItem="9fQ-zV-QXV" secondAttribute="centerX" id="scB-fA-UlS"/>
                             <constraint firstItem="PnM-d0-hfr" firstAttribute="top" secondItem="QJz-V3-2S1" secondAttribute="bottom" id="ulc-il-O6Z"/>
+                            <constraint firstItem="3wk-Jm-CoM" firstAttribute="leading" secondItem="9fQ-zV-QXV" secondAttribute="trailing" constant="-49" id="yCN-cm-8iF"/>
                             <constraint firstItem="dPK-ua-Bbi" firstAttribute="leading" secondItem="kVl-Pj-2QW" secondAttribute="trailing" constant="-49" id="zpy-rm-7tG"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="60b-jb-aCd"/>
+                                <exclude reference="pGt-pn-2bH"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="DrJ-tP-gsg"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -1001,7 +1170,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dls-ya-a0X" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="968"/>
+            <point key="canvasLocation" x="1862" y="1008"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ifc-9j-M9I">
@@ -1599,7 +1768,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJH-7w-AtD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1412" y="-1553"/>
+            <point key="canvasLocation" x="1696" y="-1561"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Afg-7n-WAA">
@@ -1899,7 +2068,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZA-g6-h4q" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802" y="-1553"/>
+            <point key="canvasLocation" x="2078" y="-1561"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pya-kM-KS2">
@@ -2464,7 +2633,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bA9-hv-TtT" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1741" y="276"/>
+            <point key="canvasLocation" x="2301" y="188"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="V8i-Jq-zcC">
@@ -2554,7 +2723,7 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tf-OX-Uiq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2274" y="276"/>
+            <point key="canvasLocation" x="2354" y="-548"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8Bc-ev-Sh7">
@@ -2859,7 +3028,7 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dp-65-ND3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="532"/>
+            <point key="canvasLocation" x="1509" y="994"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uTc-rE-CpM">
@@ -2965,8 +3134,149 @@ We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulQ-3e-g4N" sceneMemberID="firstResponder"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="message" text="I Need IMMEDIATE help! " id="v6n-Ro-2nD">
+                    <rect key="frame" x="0.0" y="0.0" width="245" height="86"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="d47-Dp-TkE" id="EhA-XF-nW2"/>
+                    </connections>
+                </textView>
             </objects>
             <point key="canvasLocation" x="1154" y="994"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Wvq-2X-ffu">
+            <objects>
+                <viewController id="v0s-Xu-n0i" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oaW-d9-tON"/>
+                        <viewControllerLayoutGuide type="bottom" id="PiA-Kb-8Cj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TsS-Zw-WQk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Texture" translatesAutoresizingMaskIntoConstraints="NO" id="uZi-xC-iyY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1200" id="5wK-m6-cwS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Code Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbf-ZR-jCk">
+                                <rect key="frame" x="19" y="28" width="282" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="uHY-wc-zj1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="MomsTypewriter" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBh-xh-F0H">
+                                <rect key="frame" x="21" y="73" width="279" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="123" id="EVH-4d-Raf"/>
+                                    <constraint firstAttribute="height" constant="123" id="cdP-EQ-Jfr"/>
+                                </constraints>
+                                <string key="text">Enter your code word for triggering Text SOS Alert. This word should be a word that you say 5 times to trigger the distress alert. </string>
+                                <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EVH-4d-Raf"/>
+                                        <exclude reference="cdP-EQ-Jfr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="codeword" text="WORD" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8zo-fM-zxj">
+                                <rect key="frame" x="38" y="205" width="245" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="07t-0I-zRT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="d47-Dp-TkE" id="a5l-Wu-TDg"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0n-pe-kY0">
+                                <rect key="frame" x="81" y="259" width="158" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="8rB-c8-5kU"/>
+                                    <constraint firstAttribute="height" constant="50" id="GCE-ng-k8J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveCodeNext:" destination="v0s-Xu-n0i" eventType="touchUpInside" id="qrB-dD-e9c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8zo-fM-zxj" firstAttribute="centerX" secondItem="IBh-xh-F0H" secondAttribute="centerX" id="2T5-YK-eUz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uZi-xC-iyY" secondAttribute="trailing" constant="-71" id="5C9-Ss-P89"/>
+                            <constraint firstItem="IBh-xh-F0H" firstAttribute="leading" secondItem="TsS-Zw-WQk" secondAttribute="leadingMargin" constant="5" id="B0H-Ly-dfg"/>
+                            <constraint firstItem="w0n-pe-kY0" firstAttribute="top" secondItem="IBh-xh-F0H" secondAttribute="bottom" constant="8" id="JJY-qT-SXV"/>
+                            <constraint firstItem="8zo-fM-zxj" firstAttribute="centerX" secondItem="TsS-Zw-WQk" secondAttribute="centerX" id="Ljr-ZE-FGV"/>
+                            <constraint firstItem="IBh-xh-F0H" firstAttribute="top" secondItem="Jbf-ZR-jCk" secondAttribute="bottom" constant="8" symbolic="YES" id="POC-Z9-ots"/>
+                            <constraint firstAttribute="centerX" secondItem="w0n-pe-kY0" secondAttribute="centerX" id="PgI-Df-iad"/>
+                            <constraint firstItem="8zo-fM-zxj" firstAttribute="top" secondItem="IBh-xh-F0H" secondAttribute="bottom" constant="8" symbolic="YES" id="XZ0-Et-cjl"/>
+                            <constraint firstItem="uZi-xC-iyY" firstAttribute="leading" secondItem="TsS-Zw-WQk" secondAttribute="leading" id="YRQ-in-4F8"/>
+                            <constraint firstItem="w0n-pe-kY0" firstAttribute="top" secondItem="8zo-fM-zxj" secondAttribute="bottom" constant="20" id="b2u-9J-gNX"/>
+                            <constraint firstItem="w0n-pe-kY0" firstAttribute="top" secondItem="IBh-xh-F0H" secondAttribute="bottom" constant="8" id="fOB-Bg-0Pd"/>
+                            <constraint firstItem="IBh-xh-F0H" firstAttribute="trailing" secondItem="TsS-Zw-WQk" secondAttribute="trailingMargin" id="iGF-JT-jkO"/>
+                            <constraint firstItem="IBh-xh-F0H" firstAttribute="centerX" secondItem="Jbf-ZR-jCk" secondAttribute="centerX" id="jBk-zL-igq"/>
+                            <constraint firstItem="IBh-xh-F0H" firstAttribute="top" secondItem="Jbf-ZR-jCk" secondAttribute="bottom" constant="8" symbolic="YES" id="jIG-nQ-si7"/>
+                            <constraint firstItem="IBh-xh-F0H" firstAttribute="leading" secondItem="TsS-Zw-WQk" secondAttribute="leadingMargin" constant="9" id="ky5-MB-QSd"/>
+                            <constraint firstItem="8zo-fM-zxj" firstAttribute="leading" secondItem="TsS-Zw-WQk" secondAttribute="leadingMargin" constant="22" id="rQr-VX-ilo"/>
+                            <constraint firstItem="w0n-pe-kY0" firstAttribute="top" secondItem="IBh-xh-F0H" secondAttribute="bottom" constant="8" symbolic="YES" id="tdH-ji-LFl"/>
+                            <constraint firstItem="uZi-xC-iyY" firstAttribute="top" secondItem="TsS-Zw-WQk" secondAttribute="top" id="ttn-1O-4RL"/>
+                            <constraint firstItem="Jbf-ZR-jCk" firstAttribute="top" secondItem="oaW-d9-tON" secondAttribute="bottom" constant="8" symbolic="YES" id="vlx-ti-Omw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jIG-nQ-si7"/>
+                                <exclude reference="ky5-MB-QSd"/>
+                                <exclude reference="iGF-JT-jkO"/>
+                                <exclude reference="JJY-qT-SXV"/>
+                                <exclude reference="fOB-Bg-0Pd"/>
+                                <exclude reference="tdH-ji-LFl"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="2pf-dU-oIm"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="codeword" destination="8zo-fM-zxj" id="8eM-ER-k2B"/>
+                        <outlet property="saveCodewordNext" destination="w0n-pe-kY0" id="0xi-SJ-LA2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lhg-Es-Iph" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1555" y="260"/>
         </scene>
     </scenes>
     <resources>

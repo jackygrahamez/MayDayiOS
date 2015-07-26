@@ -30,8 +30,10 @@
     NSInteger startTimeSeconds;
     NSDate *startDateObj;
     
+    __weak IBOutlet UITextView *codeword;
     __weak IBOutlet UITextField *promocode;
     __weak IBOutlet UILabel *balance;
+    __weak IBOutlet UIButton *saveCodewordNext;
     __weak IBOutlet UIButton *saveContactsNext;
     __weak IBOutlet UITextField *contact1SetupField;
     __weak IBOutlet UIButton *pickerButton1;
@@ -67,6 +69,8 @@
 -(IBAction)saveInterval:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *stopAlerting;
 @property (weak, nonatomic) IBOutlet UIButton *saveContactsNext;
+@property (weak, nonatomic) IBOutlet UIButton *saveCodewordNext;
+- (IBAction)saveCodewordNext:(id)sender;
 
 -(IBAction)controlTextDidChange:(id)sender;
 -(IBAction)trigger:(id)sender;
@@ -75,7 +79,7 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *messageIntervalPicker;
 
-
+@property (weak, nonatomic) IBOutlet UITextView *codeword;
 @property (weak, nonatomic) IBOutlet UITextView *messageSave;
 @property (weak, nonatomic) IBOutlet UILabel *charactersSave;
 

@@ -1104,7 +1104,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     [[SKPaymentQueue defaultQueue] addPayment:payment];
 }
-- (IBAction) restore{
+- (IBAction)restore {
     //this is called when the user restores purchases, you should hook this up to a button
     [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
 }
@@ -1133,6 +1133,25 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
         masterViewController.saveContactsNext.enabled = YES;
         masterViewController.saveContactsNext.userInteractionEnabled = YES;
     }
+}
+
+-(IBAction)saveCode:(id)sender
+{
+    NSString *savestring = codeword.text;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:savestring forKey:@"codeword"];
+    [defaults synchronize];
+    //[masterViewController.navigationController popViewControllerAnimated:YES];
+    UINavigationController *navigationController = self.navigationController;
+    [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"]] animated:NO];
+}
+- (IBAction)saveCodeNext:(id)sender {
+    NSString *savestring = message.text;
+    NSString *setupCompleted = @"true";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:savestring forKey:@"codeword"];
+    [defaults synchronize];
+    [masterViewController setupLocalNotifications];
 }
 
 -(IBAction)saveMessage:(id)sender
@@ -1235,4 +1254,6 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 }
 
 
+- (IBAction)saveCodewordNext:(id)sender {
+}
 @end

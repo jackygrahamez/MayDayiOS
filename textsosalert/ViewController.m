@@ -416,6 +416,7 @@ BOOL alerting = false;
     // Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadstring = [defaults objectForKey:@"messagestring"];
+    NSString *codestring = [defaults objectForKey:@"codeword"];
     balanceString = [defaults objectForKey:@"balance"];
     
     if (balanceString) {
@@ -426,6 +427,7 @@ BOOL alerting = false;
     }
     
     [message setText:loadstring];
+    [codewordSave setText:codestring];
     
     masterViewController.saveContactsNext.alpha = 0.50;
     masterViewController.saveContactsNext.enabled = NO;

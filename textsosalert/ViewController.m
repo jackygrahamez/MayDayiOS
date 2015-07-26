@@ -891,7 +891,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     
     NSLog(@"event received!");
     
-    [masterViewController powerButtonTrigger];
+    //[masterViewController powerButtonTrigger];
     
     // you might try inspecting the `userInfo` dictionary, to see
     //  if it contains any useful info

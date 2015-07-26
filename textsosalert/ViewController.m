@@ -179,8 +179,6 @@ BOOL alerting = false;
  */
 
 
-
-
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     
@@ -497,6 +495,21 @@ BOOL alerting = false;
 
 - (void) pocketsphinxDidReceiveHypothesis:(NSString *)hypothesis recognitionScore:(NSString *)recognitionScore utteranceID:(NSString *)utteranceID {
     NSLog(@"The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
+    
+    NSUInteger count = 0, length = [hypothesis length];
+    NSRange range = NSMakeRange(0, length);
+    while(range.location != NSNotFound)
+    {
+        range = [hypothesis rangeOfString: @"WORD" options:0 range:range];
+        if(range.location != NSNotFound)
+        {
+            range = NSMakeRange(range.location + range.length, length - (range.location + range.length));
+            [masterViewController voiceTrigger];
+            count++; 
+        }
+    }
+    NSLog(@"Count %lu", (unsigned long)count);
+    
 }
 
 - (void) pocketsphinxDidStartListening {
@@ -948,6 +961,41 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
                         //[masterViewController showAlerting];
                         self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeAlertingView"];
                     }
+                }
+            } else {
+                NSLog(@"reset trigger");
+                startDateObj = nil;
+                triggerCount = 0;
+            }
+        } else {
+            NSLog (@"first button press");
+            startDateObj = [NSDate date];
+            triggerCount = 0;
+        }
+    }
+    
+}
+
+- (void) voiceTrigger
+{
+    NSLog (@"voiceTrigger");
+    if (alerting == false) {
+        NSDate *currentDateObj = [NSDate date];
+        
+        if (startDateObj != nil) {
+            NSTimeInterval interval = [currentDateObj timeIntervalSinceDate:startDateObj];
+            if (interval<10) {
+                triggerCount++;
+                NSLog (@"press number %i first press was %.0f seconds ago", triggerCount, interval);
+                if (triggerCount >= 5 ) {
+                    NSLog(@"triggering MayDay Alert");
+                    [masterViewController sendMessage];
+                    [masterViewController startTimer];
+                    startDateObj = nil;
+                    triggerCount = 0;
+                    alerting = true;
+                    //[masterViewController showAlerting];
+                    self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"homeAlertingView"];
                 }
             } else {
                 NSLog(@"reset trigger");

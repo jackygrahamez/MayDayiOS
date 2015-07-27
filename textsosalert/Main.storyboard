@@ -2761,17 +2761,23 @@ First check your Text SOS Alert settings to ensure your alerts are delivered to 
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1200" id="YsU-Wd-jDw"/>
                                         </constraints>
-                                        <string key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
+                                        <mutableString key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
                
- How Does Text SOS Work?
+How Does Text SOS Alert Work?
                 
 Text SOS Alert can be installed on either smartphones or smartwatches which pair with each other. 
-You provide 3 emergency contacts. 
-In the event of an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.
+
+You enter an emergency code word in the app. You provide 3 emergency contacts. 
+
+In the event of an emergency, repeatedly say your emergency code word 5x or tap on the app 5x on your Apple Watch™.
+
 3 emergency contacts will continually receive texts along with your GPS location.
+
 To stop an emergency alert, open Text SOS and press the green "Stop Alerting" button on screen.
                 
-We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™ and LG G Watch R™. It has not been tested but it may work with LG G Watch™, Samsung Gear Live™, Asus ZenWatch™ and Sony SmartWatch 3™. </string>
+We’ve tested Text SOS Alert with the Apple Watch™. 
+
+Text SOS Alert uses the CMU Pocketsphinx library, the CMU Flite library, the CMU CMUCMLTK library (http://cmusphinx.sourceforge.net) and Politepix’s OpenEars (http://www.politepix.com/openears).</mutableString>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -3066,9 +3072,9 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1200" id="az1-d0-Aa2"/>
                                         </constraints>
-                                        <string key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
+                                        <mutableString key="text">Text SOS Alert will turn the device it's running on into a silent SMS alarm alerting your emergency contact list along with your GPS location.
                
- How Does Text SOS Work?
+How Does Text SOS Alert Work?
                 
 Text SOS Alert can be installed on either smartphones or smartwatches which pair with each other. 
 You provide 3 emergency contacts. 
@@ -3076,7 +3082,9 @@ In the event of an emergency, repeatedly press the power button on your phone 5x
 3 emergency contacts will continually receive texts along with your GPS location.
 To stop an emergency alert, open Text SOS and press the green "Stop Alerting" button on screen.
                 
-We’ve tested Text SOS Alert with the Samsung Gear Fit™, Motorola Moto 360™ and LG G Watch R™. It has not been tested but it may work with LG G Watch™, Samsung Gear Live™, Asus ZenWatch™ and Sony SmartWatch 3™. </string>
+We’ve tested Text SOS Alert with the Apple Watch. 
+
+Text SOS Alert uses the CMU Pocketsphinx library, the CMU Flite library, the CMU CMUCMLTK library (http://cmusphinx.sourceforge.net) and Politepix’s OpenEars (http://www.politepix.com/openears).</mutableString>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

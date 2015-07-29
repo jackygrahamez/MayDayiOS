@@ -71,7 +71,7 @@ BOOL alerting = false;
 /*
  * START IN-APP PURCHASE
  */
-#define kRemoveAdsProductIdentifier @"merchant.com.textsosalert.buyfifty"
+#define kRemoveAdsProductIdentifier @"merchant.com.textsosalert.fifty"
 
 - (void)tapsBuyFifty{
     NSLog(@"User requests to buy 50 text messages");
@@ -945,7 +945,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
 - (void) powerButtonTrigger
 {
     NSLog (@"powerButtonTrigger");
-    if (alerting == false) {
+    if (alerting == false && balanceInt > 0) {
         NSDate *currentDateObj = [NSDate date];
         
         if (startDateObj != nil) {

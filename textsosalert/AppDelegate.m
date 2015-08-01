@@ -25,9 +25,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
 #if DEBUG
-    [ZeroPush engageWithAPIKey:@"iosdev_apptoken" delegate:self];
+    [ZeroPush engageWithAPIKey:@"dev_xrBaTKFAZmykRAf7CzaD" delegate:self];
 #else
-    [ZeroPush engageWithAPIKey:@"iosprod_apptoken" delegate:self];
+    [ZeroPush engageWithAPIKey:@"prod_Ld21Z3EXNqoaVSSxni6v" delegate:self];
 #endif
     
     //Ask users to recieve push notifications.

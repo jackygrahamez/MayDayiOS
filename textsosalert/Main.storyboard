@@ -190,8 +190,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="136" id="mb0-F2-AbC"/>
                                 </constraints>
-                                <string key="text">In an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device. 
-First check your Text SOS Alert settings to ensure your alerts are delivered to the correct people.</string>
+                                <string key="text">In an emergency, while the app runs in the background, repeatedly say your code word 5x or tap on the app 5x on your wearable device. 
+First enter a code word and check your Text SOS Alert settings to ensure your alerts are delivered to the correct people.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -2798,6 +2798,7 @@ Text SOS Alert uses the CMU Pocketsphinx library, the CMU Flite library, the CMU
                                     <constraint firstItem="dfI-9A-IX9" firstAttribute="leading" secondItem="AZn-uT-NtE" secondAttribute="leading" id="LeB-6C-O04"/>
                                     <constraint firstAttribute="bottom" secondItem="HPq-mi-L7E" secondAttribute="bottom" constant="523" id="QhR-3y-HP5"/>
                                     <constraint firstItem="HPq-mi-L7E" firstAttribute="centerX" secondItem="dfI-9A-IX9" secondAttribute="centerX" id="UJn-UP-nOr"/>
+                                    <constraint firstAttribute="bottom" secondItem="dfI-9A-IX9" secondAttribute="bottom" constant="-1000" id="UZ7-Vd-VsC"/>
                                     <constraint firstItem="dfI-9A-IX9" firstAttribute="top" secondItem="HPq-mi-L7E" secondAttribute="bottom" constant="8" symbolic="YES" id="VfR-cZ-nHx"/>
                                     <constraint firstAttribute="trailing" secondItem="dfI-9A-IX9" secondAttribute="trailing" id="Yza-Vq-YRf"/>
                                     <constraint firstAttribute="bottom" secondItem="dfI-9A-IX9" secondAttribute="bottom" id="bOE-Pg-UL7"/>
@@ -2973,7 +2974,7 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1200" id="pp9-4B-Izm"/>
                                         </constraints>
-                                        <string key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
+                                        <mutableString key="text">The terms and conditions set out below (the "Privacy Policy") apply to all pages within this app called Text SOS Alert.
 
 Text SOS Alert is committed to ensuring the privacy of all our users. This Privacy Policy governs all pages on the Text SOS Alert app. It does not apply to pages hosted by other organizations.
 
@@ -2981,7 +2982,7 @@ By using Text SOS Alert, you consent to the terms of this Privacy Policy. Text S
 
 Personal information which you choose to provide will be retained by Text SOS Alert on your device only. Messages transmitted by Text SOS Alert will exist on other services and will be outside the control of Text SOS Alert.
 
-Text SOS Alert makes no guarantees regarding your information security.</string>
+Text SOS Alert makes no guarantees regarding your information security.</mutableString>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -3068,7 +3069,7 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jir-U4-GI5">
-                                        <rect key="frame" x="8" y="73" width="304" height="1200"/>
+                                        <rect key="frame" x="8" y="73" width="304" height="800"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1200" id="az1-d0-Aa2"/>
                                         </constraints>
@@ -3077,12 +3078,16 @@ Text SOS Alert makes no guarantees regarding your information security.</string>
 How Does Text SOS Alert Work?
                 
 Text SOS Alert can be installed on either smartphones or smartwatches which pair with each other. 
-You provide 3 emergency contacts. 
-In the event of an emergency, repeatedly press the power button on your phone 5x or tap on the app 5x on your wearable device.
+
+You enter an emergency code word in the app. You provide 3 emergency contacts. 
+
+In the event of an emergency, repeatedly say your emergency code word 5x or tap on the app 5x on your Apple Watch™.
+
 3 emergency contacts will continually receive texts along with your GPS location.
+
 To stop an emergency alert, open Text SOS and press the green "Stop Alerting" button on screen.
                 
-We’ve tested Text SOS Alert with the Apple Watch. 
+We’ve tested Text SOS Alert with the Apple Watch™. 
 
 Text SOS Alert uses the CMU Pocketsphinx library, the CMU Flite library, the CMU CMUCMLTK library (http://cmusphinx.sourceforge.net) and Politepix’s OpenEars (http://www.politepix.com/openears).</mutableString>
                                         <color key="textColor" red="0.23921568630000001" green="0.12941176469999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3103,6 +3108,7 @@ Text SOS Alert uses the CMU Pocketsphinx library, the CMU Flite library, the CMU
                                     <constraint firstAttribute="bottom" secondItem="Jir-U4-GI5" secondAttribute="bottom" id="94Q-1q-DOZ"/>
                                     <constraint firstAttribute="bottom" secondItem="eaI-AV-IKk" secondAttribute="bottom" constant="523" id="DSF-eX-XlV"/>
                                     <constraint firstItem="eaI-AV-IKk" firstAttribute="top" secondItem="XeG-ob-FL1" secondAttribute="top" constant="28" id="G3t-1A-evo"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jir-U4-GI5" secondAttribute="bottom" constant="-400" id="G9G-AB-5jK"/>
                                     <constraint firstItem="wde-T1-1sc" firstAttribute="top" secondItem="XeG-ob-FL1" secondAttribute="top" id="HJg-86-pmw"/>
                                     <constraint firstItem="eaI-AV-IKk" firstAttribute="leading" secondItem="XeG-ob-FL1" secondAttribute="leading" constant="82" id="HS4-fo-NRC"/>
                                     <constraint firstItem="Jir-U4-GI5" firstAttribute="top" secondItem="eaI-AV-IKk" secondAttribute="bottom" id="Hvx-Za-eE3"/>

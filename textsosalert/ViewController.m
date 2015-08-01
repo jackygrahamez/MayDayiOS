@@ -26,7 +26,7 @@ contactField = 1,
 balanceInt = 10;
 NSDate *startDateObj = nil;
 ViewController *masterViewController;
-NSString *safeword, *message, *first, *second, *third, *balanceString, *appSandboxString = @"1!Sbx-qe";
+NSString *receiptStr, *safeword, *message, *first, *second, *third, *balanceString, *appSandboxString = @"1!Sbx-qe";
 NSArray *contacts;
 BOOL alerting = false;
 
@@ -410,6 +410,19 @@ BOOL alerting = false;
     [masterViewController swipeInit];
     [masterViewController intervalPickerInit];
     
+    // Load the receipt from the app bundle.
+    NSURL *receiptURL = [[NSBundle mainBundle] appStoreReceiptURL];
+    NSData *receipt = [NSData dataWithContentsOfURL:receiptURL];
+    if (!receipt) {
+        receiptStr = nil;
+    } else {
+        NSString* receiptStr = [[NSString alloc] initWithData:receipt encoding:NSUTF8StringEncoding];
+    }
+    
+    /* ... Send the receipt data to your server ... */
+    
+
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchTrigger:) name:@"watchTrigger" object:nil];
     
     
@@ -764,6 +777,7 @@ BOOL alerting = false;
     NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:
                                     contacts, @"contacts",
                                     message, @"message",
+                                    receiptStr, @"receiptStr",
                                     loc, @"loc",
                                     password, @"password",
                                     adId, @"adId",
